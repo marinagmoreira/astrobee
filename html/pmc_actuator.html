@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>NASA Astrobee Robot Software: PMC actuator</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" href="favicon.png" type="image/png" />
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
@@ -17,17 +19,18 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="freeflyer.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png"/></td>
+ <tr style="height: 70px;">
+  <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.11.1</span>
+   &#160;<span id="projectnumber">0.12.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -88,12 +91,12 @@ $(document).ready(function(){initNavTree('pmc_actuator.html',''); initResizable(
 <div class="title">PMC actuator </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md61"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md165"></a>
 How to test the PMC - Using bare C++ program</h1>
 <p>On the <code>llp</code>, run the following program: </p><div class="fragment"><div class="line">pmc_actuator_tool -h</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md62"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md166"></a>
 How to test the PMC - Using ROS Nodes</h1>
-<h2><a class="anchor" id="autotoc_md63"></a>
+<h2><a class="anchor" id="autotoc_md167"></a>
 Basic procedure</h2>
 <p>Open two ssh sessions on LLP</p>
 <p>Terminal 1 on LLP: </p><pre class="fragment">source setup.bash
@@ -101,7 +104,7 @@ roslaunch pmc_actuator pmc_actuator.launch
 </pre><p>Terminal 2 on LLP: </p><pre class="fragment">source setup.bash
 rosrun pmc_actuator pmc_actuator_cmd_test
 </pre><p><b>Note:</b> Detailed procedure to run the sound tests is in the attached document&#160;<code>sound-test-process.txt</code>.</p>
-<h2><a class="anchor" id="autotoc_md64"></a>
+<h2><a class="anchor" id="autotoc_md168"></a>
 Control the type of nozzle motions</h2>
 <p><code>pmc_actuator_cmd_test</code> performs by default a triangular profile for the nozzles with the blowers at the nominal speed.</p>
 <p><b>WARNING: The instructions below are obsolete. Run <code>pmc_actuator_test -h</code> to check the new command line arguments! Text below is waiting for cleaning...</b></p>
@@ -121,11 +124,11 @@ Control the type of nozzle motions</h2>
 <p>Command all nozzles closed at 2000rpm: </p><pre class="fragment">rosrun pmc_actuator pmc_actuator_cmd_test 166 166 25 25 0 0
 </pre><p>Command all nozzles open at 3000rpm: </p><pre class="fragment">rosrun pmc_actuator pmc_actuator_cmd_test 249 249 96 96 0 0
 </pre><p>Triangular pattern with slow open/close: </p><pre class="fragment">rosrun pmc_actuator pmc_actuator_cmd_test 207 207 25 25 0.2 0.2
-</pre><h2><a class="anchor" id="autotoc_md65"></a>
+</pre><h2><a class="anchor" id="autotoc_md169"></a>
 Disable the blowers</h2>
 <p>The PMC firmware cannot put the servo in idle mode. However, the shutdown command can turn off the motor controller on the blowers. So the servos can be controlled with the above commands without the blower spinning by issuing first this command: </p><pre class="fragment">rosservice call /pmc_actuator/enable false
 </pre><p>To re-enable the blowers: </p><pre class="fragment">rosservice call /pmc_actuator/enable true
-</pre><h2><a class="anchor" id="autotoc_md66"></a>
+</pre><h2><a class="anchor" id="autotoc_md170"></a>
 PWM values</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -148,7 +151,7 @@ PWM values</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyRight">Open  </td><td class="markdownTableBodyCenter">96   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md68"></a>
+<h2><a class="anchor" id="autotoc_md172"></a>
 Create arbitrary nozzle pattern and blower speeds</h2>
 <p>The program <code>pmc_actuator_feeder</code> allow to describe any sequence of motion using a csv file.</p>
 <p>For example, the following command will cycle through each nozzle and open it for a few seconds: </p><pre class="fragment">rosrun pmc_actuator pmc_actuator_feeder ./nozzle_identification.csv
@@ -163,18 +166,13 @@ Create arbitrary nozzle pattern and blower speeds</h2>
 #     - side 2 nozzle position x 6
 #     - side 2 blower speed
 #     - side 2 nozzle position x 6
-</pre><h2><a class="anchor" id="autotoc_md69"></a>
+</pre><h2><a class="anchor" id="autotoc_md173"></a>
 Check telemetry from the PMCs</h2>
 <p>In a terminal with the correct ROS setup, just type: </p><pre class="fragment">rostopic echo /pmc_actuator/telemetry
 </pre> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="subsystems.html">Subsystems</a></li><li class="navelem"><a class="el" href="hw.html">Hardware</a></li>
-    <li class="footer">Generated on Tue Aug 11 2020 12:56:31 for NASA Astrobee Robot Software by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
-  </ul>
-</div>
 </body>
 </html>

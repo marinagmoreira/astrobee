@@ -1,0 +1,23 @@
+digraph "hardware/vive/include/vive/vive.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="hardware/vive/include\l/vive/vive.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="hardware/vive/src/vive\l_driver/vive_data_button.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vive__data__button_8h.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="hardware/vive/src/vive\l_driver/vive_data_imu.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vive__data__imu_8h.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="hardware/vive/src/vive\l_driver/vive_data_light.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vive__data__light_8h.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="hardware/vive/src/vive\l_driver/vive_data_ootx.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vive__data__ootx_8h.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="hardware/vive/src/vive\l_driver/vive_dev_tracker.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vive__dev__tracker_8h.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="hardware/vive/src/vive\l_driver/vive_dev_watchman.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vive__dev__watchman_8h.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="hardware/vive/src/vive\l_driver/vive_usb.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vive__usb_8h.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="hardware/vive/src/vive\l_nodelet/vive_nodelet.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vive__nodelet_8cc.html",tooltip=" "];
+}

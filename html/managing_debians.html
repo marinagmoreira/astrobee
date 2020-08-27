@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>NASA Astrobee Robot Software: Debians management for deployment on the physical robots</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" href="favicon.png" type="image/png" />
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
@@ -17,17 +19,18 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="freeflyer.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png"/></td>
+ <tr style="height: 70px;">
+  <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.11.1</span>
+   &#160;<span id="projectnumber">0.12.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -90,84 +93,80 @@ $(document).ready(function(){initNavTree('managing_debians.html',''); initResiza
 <div class="contents">
 <div class="textblock"><p>This page describes the steps to deploy FSW Debian packages on the server.</p>
 <p>The Debian are deploy in 3 phases:</p><ol type="1">
-<li>Build the Debian package (astrobee or astrobee_avionics)</li>
+<li>Build the Debian package (freeflyer or freeflyer_avionics)</li>
 <li>Stage the package on volar</li>
 <li>Create a new Debian snapshot on the astrobee server</li>
 </ol>
 <p>Steps 2 and 3 are similar for any Debian update Step 1 is slightly different for freeflyer or freeflyer_avionics.</p>
-<p>Setup: </p><pre class="fragment">export FF_SOURCE=&lt;path_to_your_astrobee_repository&gt;
+<p>Setup: </p><pre class="fragment">export FF_SOURCE=&lt;path_to_your_freeflyer_repository&gt;
 export FF_AVIONICS=&lt;path_to_your_avionics_repository&gt;
 </pre><p>More information on how Astrobee is using <a href="https://www.aptly.info/doc/overview/">aptly</a> is described in: ../scripts/setup/Debians/mirror/README.md "Debians mirror documentation"</p>
-<h2><a class="anchor" id="autotoc_md6"></a>
-Build Astrobee Debian</h2>
-<p>Your environment needs to be configured properly to cross-compile Astrobee Robot Software for the <code>armhf</code> architecture: see NASA Install documentation</p>
-<h3><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md89"></a>
+Build Freeflyer Debian</h2>
+<p>Your environment needs to be configured properly to cross-compile Astrobee Robot Software for the <code>armhf</code> architecture: ../NASA_INSTALL.md "see NASA Install documentation"</p>
+<h3><a class="anchor" id="autotoc_md90"></a>
 Update the release version</h3>
 <pre class="fragment">cd $FF_SOURCE
 ./scripts/setup/debians/update_release.sh
 </pre><p><em>Note: make sure that your EDITOR variable is set to your preferred editor before invoking this script</em></p>
-<h3><a class="anchor" id="autotoc_md8"></a>
+<h3><a class="anchor" id="autotoc_md91"></a>
 Push the changelog</h3>
 <pre class="fragment">git commit -m "meaningful message" files_that_changed
 git push
-</pre><h3><a class="anchor" id="autotoc_md9"></a>
+</pre><h3><a class="anchor" id="autotoc_md92"></a>
 Create an official release</h3>
 <p>If creating a Debian for deployment on a flight robot, or a public release, make sure to create a git release following the process described in <code>./gitrelease.md</code></p>
 <p><em>It is required that all Debians deployed on space have an associated release branch</em></p>
-<h3><a class="anchor" id="autotoc_md10"></a>
+<h3><a class="anchor" id="autotoc_md93"></a>
 Create the Debian package</h3>
 <pre class="fragment">./scripts/build/build_debian.sh
-</pre><h2><a class="anchor" id="autotoc_md11"></a>
+</pre><h2><a class="anchor" id="autotoc_md94"></a>
 Build Avionics Debian</h2>
-<p>The <code>avionics</code> Debian is build separatly from the <code>astrobee</code> Debian because it does not rely on the same toolchain, follow a different release schedule and is not yet open source.</p>
-<h3><a class="anchor" id="autotoc_md12"></a>
+<p>The <code>avionics</code> Debian is build separatly from the <code>freeflyer</code> Debian because it does not rely on the same toolchain, follow a different release schedule and is not yet open source.</p>
+<h3><a class="anchor" id="autotoc_md95"></a>
 Update changelog</h3>
 <pre class="fragment">cd $FF_AVIONICS
 dch -v &lt;version.number&gt; -c debian/changelog
-</pre><h3><a class="anchor" id="autotoc_md13"></a>
+</pre><h3><a class="anchor" id="autotoc_md96"></a>
 Push the new changelog</h3>
 <pre class="fragment">git commit -m"meaningful message" debian/changelog
 git push
-</pre><h3><a class="anchor" id="autotoc_md14"></a>
+</pre><h3><a class="anchor" id="autotoc_md97"></a>
 Create the Debian package</h3>
 <pre class="fragment">./tools/build_debian.sh
 # answer y/n when the prompt ask about Harmony install
-</pre><h2><a class="anchor" id="autotoc_md15"></a>
+</pre><h2><a class="anchor" id="autotoc_md98"></a>
 Common steps: staging and snapshoting</h2>
-<h3><a class="anchor" id="autotoc_md16"></a>
+<h3><a class="anchor" id="autotoc_md99"></a>
 Stage the Debian on volar</h3>
 <pre class="fragment">cd ..
 export ASTROBEE_DEBIAN_DIR=/home/p-free-flyer/free-flyer/FSW/ars_debs/dists/xenial/main
 scp astrobee-avionics_&lt;version&gt;_*.deb \
   &lt;ndc_username&gt;@volar:$ASTROBEE_DEBIAN_DIR/binary-armhf
-</pre><h3><a class="anchor" id="autotoc_md17"></a>
+</pre><h3><a class="anchor" id="autotoc_md100"></a>
 Update the Debian mirror on volar</h3>
 <pre class="fragment">ssh volar
 cd /home/p-free-flyer/free-flyer/FSW/aptly/scripts
 ./update_astrobee_debians.sh
 </pre><p>Warnings [!] will be displayed for the existing packages, but the new generated debian should be listed with a [+].</p>
-<h3><a class="anchor" id="autotoc_md18"></a>
+<h3><a class="anchor" id="autotoc_md101"></a>
 Sign the Debian</h3>
 <p>This step is only required if you do not already have imported the key to sign the Debians. This step requires to have access to the private key maintained by Brian Coltin.</p>
 <p>Master key owner: </p><pre class="fragment">gpg --export-secret-key
 </pre><p>New user: </p><pre class="fragment">gpg --import ~bcoltin/secret.key
 </pre><p>Master key owner deletes <code>secret.key</code></p>
-<h3><a class="anchor" id="autotoc_md19"></a>
+<h3><a class="anchor" id="autotoc_md102"></a>
 Push Debian to the server</h3>
 <pre class="fragment">./publish_snapshot.sh &lt;snapshot_date_and_tag&gt;
 </pre><p>Convention for the argument: follow this example 20180702_pre-dock-flight-release. Input the Master Password when asked (twice).</p>
-<h2><a class="anchor" id="autotoc_md20"></a>
+<h2><a class="anchor" id="autotoc_md103"></a>
 Build FSW dependencies Debians packages</h2>
 <p>When a FSW dependecy is changed, it is necessary to rebuild the Debian packages: </p><pre class="fragment">./scripts/setup/debians/build_install_debians.sh
 </pre><p>Then, follow the common step above to stage the Debian packages on volar and create the snapshot on the server. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated on Tue Aug 11 2020 12:56:30 for NASA Astrobee Robot Software by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
-  </ul>
-</div>
 </body>
 </html>

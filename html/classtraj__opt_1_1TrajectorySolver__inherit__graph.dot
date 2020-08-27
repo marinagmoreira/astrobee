@@ -1,0 +1,9 @@
+digraph "traj_opt::TrajectorySolver"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{traj_opt::TrajectorySolver\n|# waypoints_\l# trajectory_solved_\l# traj_\l# v_max_\l# a_max_\l# j_max_\l# time_eps_\l# time_its_\l|+ TrajectorySolver()\l+ solveTrajectory()\l+ trajectoryStatus()\l+ getTrajectory()\l+ adjustTimes()\l+ setParams()\l+ checkMax()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{traj_opt::GurobiSolver\n|+ use_lp_\l|+ GurobiSolver()\l+ solveTrajectory()\l+ getTrajectory()\l+ addPathCost()\l+ solveConvexifyed()\l+ seedDs()\l+ sikangSeed()\l+ setPolyParams()\l+ setConParam()\l+ getCost()\l+ checkMax()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtraj__opt_1_1GurobiSolver.html",tooltip=" "];
+}

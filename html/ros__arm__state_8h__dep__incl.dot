@@ -1,0 +1,13 @@
+digraph "communications/dds_ros_bridge/include/dds_ros_bridge/ros_arm_state.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="communications/dds\l_ros_bridge/include\l/dds_ros_bridge/ros_arm\l_state.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="communications/dds\l_ros_bridge/include\l/dds_ros_bridge/dds_ros\l_bridge.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dds__ros__bridge_8h.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="communications/dds\l_ros_bridge/src/dds\l_ros_bridge.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dds__ros__bridge_8cc.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="communications/dds\l_ros_bridge/src/ros\l_arm_state.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ros__arm__state_8cc.html",tooltip=" "];
+}

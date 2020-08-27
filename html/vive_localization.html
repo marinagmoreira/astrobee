@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>NASA Astrobee Robot Software: Vive Localization</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" href="favicon.png" type="image/png" />
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
@@ -17,17 +19,18 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="freeflyer.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png"/></td>
+ <tr style="height: 70px;">
+  <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.11.1</span>
+   &#160;<span id="projectnumber">0.12.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -97,7 +100,7 @@ $(document).ready(function(){initNavTree('vive_localization.html',''); initResiz
 <li>Registration (optional) - Kabsch is used to find the projection of the trajectory into the world frame in such a way that aligns it to the solution from another localization sytem. In our case, this is the vision-based EKF.</li>
 <li>Projection - The solution is projected from the master lighthouse (vive frame) to the world frame, using the transform given by the registration phase.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md157"></a>
+<h1><a class="anchor" id="autotoc_md261"></a>
 Calibration</h1>
 <p>In order to calibrate the system, you must first collect a rosbag containing the raw Vive data hw/vive/* and output from the Astrobee localization system loc/pose. Let's assume this bag is located at /path/to/test.bag.</p>
 <p>First, examine the bag or use the vive_tool to determine your lighthouse and tracker serial numbers.</p>
@@ -135,7 +138,7 @@ refine = true
 register = true
 </pre><p>Finally, post-process the bag using the following command: </p><pre class="fragment">roslaunch vive_localization vive_localization.launch bag:=/path/to/test.bag rviz:=true
 </pre><p>Once the command has run check in the GUI to make sure that there is a good match between the EKF (red) and Vive (green) trajectories, and that the master and slave lighthouses look correct. If this is the case, then follow the instructions written to the console and update the lighthouse and registration information in your world config file.</p>
-<h1><a class="anchor" id="autotoc_md158"></a>
+<h1><a class="anchor" id="autotoc_md262"></a>
 Tracking (offline)</h1>
 <p>To do this you will need a calibrated system and a rosbag containing the raw Vive data /hw/vive/*. This bag may also optional have output from the Astrobee localization system at /loc/pose.</p>
 <p>First, turn off the calibration and registration steps of the solver. By doing this you use the default values in your world config, which maximizes accuracy. In other words, make sure the following variables are set in astrobee/localization/vive_localization.config. </p><pre class="fragment">calibrate = false
@@ -143,18 +146,13 @@ refine = true
 register = false
 </pre><p>Next, post-process the bag using the following command: </p><pre class="fragment">roslaunch vive_localization vive_localization.launch bag:=/path/to/test.bag rviz:=true
 </pre><p>Once the command has run check in the GUI to make sure that the Vive (green) trajectory looks sensible. If the bag file included EKF data, you will also see a red trajectory. By default, a CSV file comparing the Vive to EKF results for pose only will be written to ~/.ros/performance.csv. You can change this location with the argument out:=/path/to/file.csv. </p><pre class="fragment">roslaunch vive_localization vive_localization.launch bag:=/path/to/test.bag out:=/path/to/performance.csv rviz:=true
-</pre><h1><a class="anchor" id="autotoc_md159"></a>
+</pre><h1><a class="anchor" id="autotoc_md263"></a>
 Notes</h1>
 <p>There are a number of additional options in the astrobee/localization/vive_localization.config file. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="subsystems.html">Subsystems</a></li><li class="navelem"><a class="el" href="localization.html">Localization</a></li>
-    <li class="footer">Generated on Tue Aug 11 2020 12:56:31 for NASA Astrobee Robot Software by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
-  </ul>
-</div>
 </body>
 </html>

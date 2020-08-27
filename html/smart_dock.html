@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>NASA Astrobee Robot Software: Smart dock driver</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" href="favicon.png" type="image/png" />
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
@@ -17,17 +19,18 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="freeflyer.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png"/></td>
+ <tr style="height: 70px;">
+  <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.11.1</span>
+   &#160;<span id="projectnumber">0.12.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -89,10 +92,10 @@ $(document).ready(function(){initNavTree('smart_dock.html',''); initResizable();
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The <a class="el" href="namespacesmart__dock.html">smart_dock</a> package provides a single non-ROS service that accepts a DDS command to wake up an Astrobee that is docked to berth 1 or 2. It is essentially a proxy that converts this command to a <a class="el" href="namespacei2c.html">i2c</a> transaction that is sent from the amrt dock running Linux to the slave dock controller. The dock controller then sets an internal register, which is then collected at some future point in time by the astrobee, which is an <a class="el" href="namespacei2c.html">i2c</a> master on a separate bus. </p><pre class="fragment">[smart dock] &lt;(m)-i2c-(s)&gt; [dock controller] &lt;-(s)-i2c-(m)-&gt; [astrobee]
-</pre><h1><a class="anchor" id="autotoc_md72"></a>
+</pre><h1><a class="anchor" id="autotoc_md176"></a>
 Implementation details</h1>
 <p>Like most of the hardware drivers, there is a proxy library (<a class="el" href="namespacesmart__dock.html">smart_dock</a>) that provides an abstraction away from the <a class="el" href="namespacei2c.html">i2c</a> bus transactions. The smart_dock_node is a free-standing DDS application that provides a bridge between the network and the proxy library. The smart_dock_tool is a simple command-line utility that allows one to manually probe the smart dock.</p>
-<h1><a class="anchor" id="autotoc_md73"></a>
+<h1><a class="anchor" id="autotoc_md177"></a>
 Functional test</h1>
 <p>Ultimately, smart dock will bem automatically launched as a systemd service. Take a look in the scripts/daemon/dock folder of the astrobee robot software for example service files for doing this. If you have not installed the service then you can run it manually:</p>
 <p>First, make sure nothing is docked to either of the berths. Then, make sure you are connected to the ISS network. You can not SSH into the dock using its ISS IP and run the smart_dock_service application: </p><pre class="fragment">ssh astrobee@$DOCK_IP
@@ -102,7 +105,7 @@ Functional test</h1>
 <p>Now, turn on the power switch to an astrobee but do not wake it up with the wake button. In stead, plug the astrobee into berth 1. In less than 10 seconds you should see berth 1 update to reflect the name of the astrobee and the fact that it's in hibernate mode. You might also notice that you can now wake the astrobee using the button underneath the status panes.</p>
 <p>Finally, press the "wake" button in the "Wake Commanding" pane. You should see the status change to "Awake" and, if your computer, the dock and the freeflyer are all connected to the ISS network, then after 30 seconds or so you should see the astrobee you woke up in the "Bee Status" pane.</p>
 <p>If any of the above fails, check that your network configuration is correct and try using the command-line tool to verify the dock functionality.</p>
-<h1><a class="anchor" id="autotoc_md74"></a>
+<h1><a class="anchor" id="autotoc_md178"></a>
 Command-line tool</h1>
 <p>The tool cannot be run if the the service is already running. Before running any of the commands below, make please use systemctl to make sure that the service is not running.</p>
 <p>You can retrieve help on using the tool in the following way: </p><pre class="fragment">smart_dock_tool -help
@@ -133,12 +136,7 @@ ONE-SHOT COMMANDS
 </pre> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="subsystems.html">Subsystems</a></li><li class="navelem"><a class="el" href="hw.html">Hardware</a></li>
-    <li class="footer">Generated on Tue Aug 11 2020 12:56:31 for NASA Astrobee Robot Software by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
-  </ul>
-</div>
 </body>
 </html>

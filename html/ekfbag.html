@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>NASA Astrobee Robot Software: EKF Bag</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" href="favicon.png" type="image/png" />
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
@@ -17,17 +19,18 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="freeflyer.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png"/></td>
+ <tr style="height: 70px;">
+  <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.11.1</span>
+   &#160;<span id="projectnumber">0.12.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -90,13 +93,13 @@ $(document).ready(function(){initNavTree('ekfbag.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><p>This package provides scripts used to evaluate the EKF and localization on recorded bag files. To record the bags, use the command </p><pre class="fragment">rosbag record /hw/cam_nav /hw/imu /loc/truth
 </pre><p>The bag files should begin with at least 5 seconds of the robot remaining stationary so that we can estimate the imu bias.</p>
-<h1><a class="anchor" id="autotoc_md289"></a>
+<h1><a class="anchor" id="autotoc_md388"></a>
 ekf_graph</h1>
 <p>Run <code>ekf_graph bag.bag</code> to create a pdf showing the results of the EKF on the recorded bag.</p>
-<h1><a class="anchor" id="autotoc_md290"></a>
+<h1><a class="anchor" id="autotoc_md389"></a>
 rosbag_to_csv</h1>
 <p>Run <code>rosbag_to_csv bag.bag</code> to create a CSV file detailing the results of a run, which can then be passed to the GNC Matlab code for testing.</p>
-<h1><a class="anchor" id="autotoc_md291"></a>
+<h1><a class="anchor" id="autotoc_md390"></a>
 sparse_map_eval</h1>
 <p>This tool evaluates how well a robot localizes images from a bag against a sparse map.</p>
 <p>To use, first copy the desired robot's config file to the current directory, for example, as:</p>
@@ -108,37 +111,32 @@ sparse_map_eval</h1>
 <p>If, before launching this tool one runs:</p>
 <p>export SAVE_FAILED_IMAGES_DIR=failed_images mkdir -p $SAVE_FAILED_IMAGES_DIR</p>
 <p>it will save the images for which localization failed (with the image timestamp as image name) in the specified directory.</p>
-<h1><a class="anchor" id="autotoc_md292"></a>
+<h1><a class="anchor" id="autotoc_md391"></a>
 ekf_diff</h1>
 <p>This is a tool for regression testing localization. It plots the difference between the ekf output of two sets of data generated from a single bag file, and has several features defined as flags. To run, first generate text files containing EKF output using ekf_graph. Then, run ekf_diff:: 'rosrun <a class="el" href="namespaceekf__bag.html">ekf_bag</a> ekf_diff bag1.txt bag2.txt' The flags are defined as follows: -s: define start time -e: define end time -p: define a minimum time difference between poses to compare, rather than all of them -i: resample data to match the first .txt file rather than selecting the neares timestamped data -r: use relative poses; at each measurement, report the difference between the current measurement and the last one rather than absolute positions on the global map -m: generate a heatmap of where in the ISS localization is less accurate -sm: use the sparse mapping poses from the first text file supplied as ground truth This tool relies on scipy 1.2.0: to upgrade this, run: 'python -m pip install scipy==1.2'</p>
-<h1><a class="anchor" id="autotoc_md293"></a>
+<h1><a class="anchor" id="autotoc_md392"></a>
 streamlit webserver</h1>
-<p>This is a webserver to run some of the <a class="el" href="namespaceekf__bag.html">ekf_bag</a> scripts and automatically cache results. The server requires python &gt;= 3.6 (which will not be already installed from ROS) and the streamlit package installed using pip. After installing python3.6, run 'python3.6 -m pip install streamlit'. If this command fails, upgrade pip and retry. Additionally, install pdf2image by running: 'python3.6 -m pip install pdf2image'. Create a folder to store all data in. Then, inside that folder, create folders named "bags" and "maps". Put any map files in the "maps" folder, and any bag files in the "bags" folder. The "bags" folder also must contain a configuration file named robot.config (can be copied from freeflyer/astrobee/config directory). Then, from the first folder you created, run: 'streamlit run /path/to/streamlit_server.py'</p>
-<h1><a class="anchor" id="autotoc_md294"></a>
+<p>This is a webserver to run some of the <a class="el" href="namespaceekf__bag.html">ekf_bag</a> scripts and automatically cache results. The server requires python &gt;= 3.6 (which will not be already installed from ROS) and the streamlit package installed using pip. After installing python3.6, run 'python3.6 -m pip install streamlit'. If this command fails, upgrade pip and retry. Additionally, install pdf2image by running: 'python3.6 -m pip install pdf2image'. Create a folder to store all data in. Then, inside that folder, create folders named "bags" and "maps". Put any map files in the "maps" folder, and any bag files in the "bags" folder. The "bags" folder also must contain a configuration file named robot.config (can be copied from astrobee/astrobee/config directory). Then, from the first folder you created, run: 'streamlit run /path/to/streamlit_server.py'</p>
+<h1><a class="anchor" id="autotoc_md393"></a>
 parameter_sweep.py</h1>
 <p>This tool runs ekf_graph tests for a set of parameter combinations. Parameter ranges and names are defined in parameter_sweep.py and a gnc.config file is created for each parameter combination in the sweep. Each parameter combination is tested in parallel and results are saved locally to a timestamped directory or user defined directory.</p>
-<h1><a class="anchor" id="autotoc_md295"></a>
+<h1><a class="anchor" id="autotoc_md394"></a>
 create_plots.py</h1>
 <p>Uses output of parameter_sweep.py and generates plots comparing the results of the sweep.</p>
-<h1><a class="anchor" id="autotoc_md296"></a>
+<h1><a class="anchor" id="autotoc_md395"></a>
 bag_sweep.py</h1>
 <p>Runs ekf tests using a given gnc config file on a set of bag files in parallel.</p>
-<h1><a class="anchor" id="autotoc_md297"></a>
+<h1><a class="anchor" id="autotoc_md396"></a>
 bag_and_parameter_sweep.py</h1>
 <p>Calls parameter_sweep on a set of bag files. <br  />
 </p>
-<h1><a class="anchor" id="autotoc_md298"></a>
+<h1><a class="anchor" id="autotoc_md397"></a>
 create_average_plots.py</h1>
 <p>Averages results for each job_id run over multiple tests and creates plots. Used for plotting bag_sweep.py results. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="tools.html">Tools</a></li>
-    <li class="footer">Generated on Tue Aug 11 2020 12:56:31 for NASA Astrobee Robot Software by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
-  </ul>
-</div>
 </body>
 </html>

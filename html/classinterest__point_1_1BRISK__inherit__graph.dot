@@ -1,0 +1,11 @@
+digraph "interest_point::BRISK"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{interest_point::BRISK\n||+ getDefaultName()\l+ setThreshold()\l+ getThreshold()\l+ setOctaves()\l+ getOctaves()\l+ create()\l+ create()\l+ create()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Class implementing the BRISK keypoint detector and descriptor extractor, described in  ."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{Feature2D\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{interest_point::BRISK_Impl\n|# threshold\l# octaves\l# patternPoints_\l# points_\l# scaleList_\l# sizeList_\l# strings_\l# dMax_\l# dMin_\l# shortPairs_\l# longPairs_\l# noShortPairs_\l# noLongPairs_\l# scales_\l# scalerange_\l# n_rot_\l# basicSize_\l|+ BRISK_Impl()\l+ BRISK_Impl()\l+ BRISK_Impl()\l+ ~BRISK_Impl()\l+ descriptorSize()\l+ descriptorType()\l+ defaultNorm()\l+ setThreshold()\l+ getThreshold()\l+ setOctaves()\l+ getOctaves()\l+ generateKernel()\l+ detectAndCompute()\l# computeKeypointsNoOrientation()\l# computeDescriptorsAndOrOrientation()\l# smoothedIntensity()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classinterest__point_1_1BRISK__Impl.html",tooltip=" "];
+}

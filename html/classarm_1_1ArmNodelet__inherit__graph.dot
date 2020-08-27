@@ -1,0 +1,11 @@
+digraph "arm::ArmNodelet"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{arm::ArmNodelet\n|# fsm_\l# cfg_\l# server_\l# joints_\l# dictionary_\l# timer_goal_\l# timer_watchdog_\l# pub_state_\l# srv_set_state_\l# sub_joint_states_\l# pub_joint_goals_\l# pub_arm_state_\land 8 more...\l# K_PAN_OFFSET\l# K_PAN_MIN\l# K_PAN_MAX\l# K_PAN_STOW\l# K_PAN_DEPLOY\l# K_TILT_OFFSET\l# K_TILT_MIN\l# K_TILT_MAX\l# K_TILT_STOW\l# K_TILT_DEPLOY\l# K_TILT_SAFE\l# K_TILT_GRIP\l# K_GRIPPER_STOW\l# K_GRIPPER_DEPLOY\l# K_GRIPPER_OPEN\l# K_GRIPPER_CLOSE\l# K_RADS_TO_DEGS\l# K_DEGS_TO_RADS\l|+ ArmNodelet()\l+ ~ArmNodelet()\l# Initialize()\l# ReconfigureCallback()\l# UpdateCallback()\l# Result()\l# SetStateCallback()\l# Equal()\l# IsStowed()\l# RequiresClosing()\l# Arm()\l# JointStateCallback()\l# TimeoutCallback()\l# WatchdogCallback()\l# GoalCallback()\l# PreemptCallback()\l# CancelCallback()\l# CalibrateGripper()\l# EnableServo()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{ff_util::FreeFlyerNodelet\n|# faults_\l|+ FreeFlyerNodelet()\l+ FreeFlyerNodelet()\l+ ~FreeFlyerNodelet()\l+ AssertFault()\l+ ClearAllFaults()\l+ ClearFault()\l+ PrintFaults()\l+ GetPlatformHandle()\l+ GetPrivateHandle()\l+ GetName()\l+ GetPlatform()\l+ GetTransform()\l# Initialize()\l# Reset()\l# Sleep()\l# Wakeup()\l# StopHeartbeat()\l# SendDiagnostics()\l# Setup()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classff__util_1_1FreeFlyerNodelet.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{Nodelet\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

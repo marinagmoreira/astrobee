@@ -1,0 +1,13 @@
+digraph "planner_qp::Planner"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{planner_qp::Planner\n|# cfg_\l# timer_d_\l# timer_a_\l# timer_fb_\l# trajectory_\l# start_orientation_\l# axis_\l# planner_dt_\l# map_res_\l|+ Planner()\l+ ~Planner()\l# InitializePlanner()\l# SendFeedback()\l# ReconfigureCallback()\l# AnimateTimer()\l# sort_verticies()\l# viz_cooridor()\l# DiagnosticsCallback()\l# PlanCallback()\l# CancelCallback()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{planner::PlannerImplementation\n||+ PlannerImplementation()\l+ ~PlannerImplementation()\l# InitializePlanner()\l# PlanCallback()\l# PlanResult()\l# PlanFeedback()\l# GetZones()\l# GetFreeMap()\l# GetObstacleMap()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classplanner_1_1PlannerImplementation.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{ff_util::FreeFlyerNodelet\n|# faults_\l|+ FreeFlyerNodelet()\l+ FreeFlyerNodelet()\l+ ~FreeFlyerNodelet()\l+ AssertFault()\l+ ClearAllFaults()\l+ ClearFault()\l+ PrintFaults()\l+ GetPlatformHandle()\l+ GetPrivateHandle()\l+ GetName()\l+ GetPlatform()\l+ GetTransform()\l# Initialize()\l# Reset()\l# Sleep()\l# Wakeup()\l# StopHeartbeat()\l# SendDiagnostics()\l# Setup()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classff__util_1_1FreeFlyerNodelet.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{Nodelet\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

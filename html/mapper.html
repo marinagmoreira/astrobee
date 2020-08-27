@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>NASA Astrobee Robot Software: Mapper</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" href="favicon.png" type="image/png" />
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
@@ -17,17 +19,18 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="freeflyer.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png"/></td>
+ <tr style="height: 70px;">
+  <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.11.1</span>
+   &#160;<span id="projectnumber">0.12.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -96,7 +99,7 @@ $(document).ready(function(){initNavTree('mapper.html',''); initResizable(); });
 <li><code>Octomapper</code> - Maps Astrobee's surroundings using an octomap (octree-based map);</li>
 <li><code>Sentinel</code> - Checks for imminent collisions and notifies the controller if an imminent collision has been detected;</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md163"></a>
+<h2><a class="anchor" id="autotoc_md267"></a>
 Trajectory Validator</h2>
 <p>The keep-in and keep-out zones describe safe and unsafe areas for flight respectively. Each zone is a cuboid in 3-space, and is fully-defined by the coordinates of two diagonally opposite vertices. The union of all keep-in zones minus the union of all keep-out zones describes the free space in which safe flight can occur. The default zones are provided as JSON formatted files with suffix <code>.json</code> in the <code>astrobee/gds_config</code> directory.</p>
 <p>An example of a keep-in and keep-out zone JSON file might look like this:</p>
@@ -107,7 +110,7 @@ Trajectory Validator</h2>
 <p>The resulting data structure is serialized into a binary file. If the option <code>zone_overwrite</code> in <code>mobility/choreographer.config</code> is activated (default), it will overwrite the current <code>&lt;world&gt;.bin</code> file containing the default set of zones at start-up.</p>
 <p>The <a class="el" href="mapper.html">Mapper</a> node publishes <a href="http://docs.ros.org/kinetic/api/visualization_msgs/html/msg/MarkerArray.html">visualization_msgs::MarkerArrays</a> on the namespace <code>~/mob/mapper/zones</code>. When listened to in rviz, these marker arrays render keep-in and keep-out zones as semi-transparent green and red cuboids. The two example zones should be rendered as shown below:</p>
 <p><img src="../images/mobility/zones.png" alt="alt text" title="How the RVIZ user interface draws zones" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md164"></a>
+<h2><a class="anchor" id="autotoc_md268"></a>
 Octomapper</h2>
 <p>The Octomapper portion of the <a class="el" href="mapper.html">Mapper</a> creates a 3D occupancy map of the environment that maps known areas probabilistically. The Octomapper builds a representation of the environment (clutter topology) using measurements from the <a class="el" href="picoflexx.html">PicoFlexx ROS Driver</a> depth sensor. Mapping is done in the world frame, and the TF2 library is used to transform from the sensor frame to the world frame based on dynamic transforms published by the EKF, and static transforms published by <a class="el" href="framestore.html">Framestore</a>. It is based on the following work:</p>
 <div class="fragment"><div class="line">@article{hornung2013octomap,</div>
@@ -165,7 +168,7 @@ Octomapper</h2>
 <li><code>mapper/update_inflation_radius</code> - Updates the inflation radius of the map. When called, this service will erase the whole map.</li>
 <li><code>mapper/reset_map</code> - When called, this service will erase the whole map.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md165"></a>
+<h2><a class="anchor" id="autotoc_md269"></a>
 Sentinel</h2>
 <p>As its name suggests, the responsibility of the Sentinel is to look out for the safety of the platform. Unlike the <a class="el" href="namespaceplanner.html">planner</a>, which depends on map-building to proactively plan a safe path through a representation of the world, the sentinel node reacts to sensed data to check if the platform is likely to collide with an obstacle over some fixed time horizon, based on the segment it is currently following.</p>
 <p><img src="../images/mobility/sentinel2.png" alt="alt text" title="Collision avoidance" class="inline"/></p>
@@ -196,12 +199,7 @@ Sentinel</h2>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="subsystems.html">Subsystems</a></li><li class="navelem"><a class="el" href="mobility.html">Mobility</a></li>
-    <li class="footer">Generated on Tue Aug 11 2020 12:56:31 for NASA Astrobee Robot Software by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
-  </ul>
-</div>
 </body>
 </html>

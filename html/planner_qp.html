@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>NASA Astrobee Robot Software: Quadratic Program (QP) planner</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" href="favicon.png" type="image/png" />
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
@@ -17,17 +19,18 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="freeflyer.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png"/></td>
+ <tr style="height: 70px;">
+  <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.11.1</span>
+   &#160;<span id="projectnumber">0.12.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -88,16 +91,16 @@ $(document).ready(function(){initNavTree('planner_qp.html',''); initResizable();
 <div class="title">Quadratic Program (QP) planner </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md166"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md270"></a>
 Overview</h1>
 <p>This planner is based off Michael Watterson's PhD thesis. We generate trajectories by running an optimization which minimizes the functional:</p>
 <p><img src="../images/mobility/planner_qp_cost.png" alt="alt text" class="inline"/></p>
 <p>With collision avoidance constraints and scaling to ensure dynamic feasibility.</p>
-<h1><a class="anchor" id="autotoc_md167"></a>
+<h1><a class="anchor" id="autotoc_md271"></a>
 Usage</h1>
 <p>To generate and execute a optimized plan one should use the move command in conjunction with the "qp" planner flag. Here is an example command that shows how to move to the origin of the world: </p><pre class="fragment">rosrun mobility teleop -move -pos "0 0 0" -att "0" -planner qp
 </pre><p>By default the teleop tool configures the platform to operate in holomonic mode. To enforce face-forward mode the "-ff" flag can be used. For example: </p><pre class="fragment">rosrun mobility teleop -move -pos "0 0 0" -att "0" -planner qp -ff
-</pre><h1><a class="anchor" id="autotoc_md168"></a>
+</pre><h1><a class="anchor" id="autotoc_md272"></a>
 Trajectory Display</h1>
 <p>This planner comes with an rviz plug-in to view the generated trajectories. <br  />
 </p>
@@ -105,7 +108,7 @@ Trajectory Display</h1>
 <p>From the display panel, add the traj_opt_ros trajectory plug-in.</p>
 <p><img src="../images/mobility/planner_qp_rviz_2.png" alt="alt text" class="inline"/></p>
 <p>Change the topic in the plug-in to either the current trajectory or a debug version. Here the regular trajectory is plotted in magenta and the debug is plotted in red. The debug shows the optimization at each iteration as it converges to the current trajectory.</p>
-<h1><a class="anchor" id="autotoc_md169"></a>
+<h1><a class="anchor" id="autotoc_md273"></a>
 Parameter Description</h1>
 <p>The planner has adjustable parameters which can affect the optimizer's performance which are configurable through the reconfigure GUI. </p><pre class="fragment">rosrun rqt_reconfigure rqt_reconfigure
 </pre><p><img src="../images/mobility/planner_qp_config.png" alt="alt text" class="inline"/></p>
@@ -122,12 +125,7 @@ Parameter Description</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="subsystems.html">Subsystems</a></li><li class="navelem"><a class="el" href="mobility.html">Mobility</a></li>
-    <li class="footer">Generated on Tue Aug 11 2020 12:56:31 for NASA Astrobee Robot Software by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
-  </ul>
-</div>
 </body>
 </html>

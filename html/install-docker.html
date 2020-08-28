@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('install-docker.html',''); initResizabl
 <div class="title">Docker build </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md138"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md140"></a>
 Usage instructions for NASA users</h1>
 <p>Here there are instructions on how to build and run the FSW using Docker.</p>
 <p>The docker image for the astrobee FSW is divided throughout 2 docker files.</p>
@@ -99,13 +99,13 @@ Usage instructions for NASA users</h1>
 <p>astrobee_base_kinetic - Contains installation of all astrobee dependencies the Ubuntu 16.04 + ROS kinetic setup. astrobee_base_melodic - Contains installation of all astrobee dependencies the Ubuntu 18.04 + ROS melodic setup.</p>
 <p>astrobee_kinetic - Builds the astrobee FSW code on top of astrobee_base_kinetic. astrobee_melodic - Builds the astrobee FSW code on top of astrobee_base_melodic.</p>
 <p>rebuild_and_test_astrobee_kinetic - Rebuilds the astrobee FSW code on top of astrobee_kinetic and performs the unit tests. This makes for a faster rebuild leveraging the cached data and rebuilding only the nodes that were changed, for testing purposes only. rebuild_and_test_astrobee_melodic - Rebuilds the astrobee FSW code on top of astrobee_melodic and performs the unit tests. This makes for a faster rebuild leveraging the cached data and rebuilding only the nodes that were changed, for testing purposes only.</p>
-<h2><a class="anchor" id="autotoc_md139"></a>
+<h2><a class="anchor" id="autotoc_md141"></a>
 Building the docker images</h2>
 <p>To build the docker images, run: </p><pre class="fragment">./build.sh
 </pre><p> The option -a is used to select the location of the astrobee source code, otherwise it is assumed we are in the scripts/docker folder. The option -n is used for ubuntu 18 docker images</p>
 <p>To rebuild the docker image, use:</p>
 <p>./rebuild-and-test.sh The extra options are the same as the build command. The resulting image will overwrite the previous image and can be used for testing purposes. Do not upload this image to the docker hub, instead use the build.sh command for size purposes, no need to have an extra layer.</p>
-<h2><a class="anchor" id="autotoc_md140"></a>
+<h2><a class="anchor" id="autotoc_md142"></a>
 Run the container</h2>
 <p>To run the docker container: </p><pre class="fragment">./run.sh
 </pre><p> The option -n is used for ubuntu 18 docker images</p>

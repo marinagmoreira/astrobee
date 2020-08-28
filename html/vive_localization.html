@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('vive_localization.html',''); initResiz
 <li>Registration (optional) - Kabsch is used to find the projection of the trajectory into the world frame in such a way that aligns it to the solution from another localization sytem. In our case, this is the vision-based EKF.</li>
 <li>Projection - The solution is projected from the master lighthouse (vive frame) to the world frame, using the transform given by the registration phase.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md261"></a>
+<h1><a class="anchor" id="autotoc_md263"></a>
 Calibration</h1>
 <p>In order to calibrate the system, you must first collect a rosbag containing the raw Vive data hw/vive/* and output from the Astrobee localization system loc/pose. Let's assume this bag is located at /path/to/test.bag.</p>
 <p>First, examine the bag or use the vive_tool to determine your lighthouse and tracker serial numbers.</p>
@@ -138,7 +138,7 @@ refine = true
 register = true
 </pre><p>Finally, post-process the bag using the following command: </p><pre class="fragment">roslaunch vive_localization vive_localization.launch bag:=/path/to/test.bag rviz:=true
 </pre><p>Once the command has run check in the GUI to make sure that there is a good match between the EKF (red) and Vive (green) trajectories, and that the master and slave lighthouses look correct. If this is the case, then follow the instructions written to the console and update the lighthouse and registration information in your world config file.</p>
-<h1><a class="anchor" id="autotoc_md262"></a>
+<h1><a class="anchor" id="autotoc_md264"></a>
 Tracking (offline)</h1>
 <p>To do this you will need a calibrated system and a rosbag containing the raw Vive data /hw/vive/*. This bag may also optional have output from the Astrobee localization system at /loc/pose.</p>
 <p>First, turn off the calibration and registration steps of the solver. By doing this you use the default values in your world config, which maximizes accuracy. In other words, make sure the following variables are set in astrobee/localization/vive_localization.config. </p><pre class="fragment">calibrate = false
@@ -146,7 +146,7 @@ refine = true
 register = false
 </pre><p>Next, post-process the bag using the following command: </p><pre class="fragment">roslaunch vive_localization vive_localization.launch bag:=/path/to/test.bag rviz:=true
 </pre><p>Once the command has run check in the GUI to make sure that the Vive (green) trajectory looks sensible. If the bag file included EKF data, you will also see a red trajectory. By default, a CSV file comparing the Vive to EKF results for pose only will be written to ~/.ros/performance.csv. You can change this location with the argument out:=/path/to/file.csv. </p><pre class="fragment">roslaunch vive_localization vive_localization.launch bag:=/path/to/test.bag out:=/path/to/performance.csv rviz:=true
-</pre><h1><a class="anchor" id="autotoc_md263"></a>
+</pre><h1><a class="anchor" id="autotoc_md265"></a>
 Notes</h1>
 <p>There are a number of additional options in the astrobee/localization/vive_localization.config file. </p>
 </div></div><!-- contents -->

@@ -234,5 +234,5 @@ var searchData=
   ['ayp_234',['AYP',['../classpmc__actuator_1_1PmcActuatorNodelet.html#a365cd69451c7e3d35188648e3f4f08eaa21d1142a28c6b8136637b22cac8431db',1,'pmc_actuator::PmcActuatorNodelet']]],
   ['astrobee_20robot_20software_235',['Astrobee Robot Software',['../index.html',1,'']]],
   ['astrobee_20usage_236',['Astrobee Usage',['../md_doc_general_documentation_astrobee_usage.html',1,'']]],
-  ['astrobee_20robot_20software_20v1_237',['Astrobee Robot Software v1',['../release.html',1,'md_doc_general_documentation_astrobee_usage']]]
+  ['astrobee_20robot_20software_20v1_237',['Astrobee Robot Software v1',['../md_RELEASE.html',1,'']]]
 ];

@@ -442,5 +442,6 @@ var searchData=
   ['io_2040',['io',['../namespacegoogle_1_1protobuf_1_1io.html',1,'google::protobuf']]],
   ['gnc_20matlab_20code_2041',['GNC Matlab Code',['../matlab.html',1,'gnc']]],
   ['protobuf_2042',['protobuf',['../namespacegoogle_1_1protobuf.html',1,'google']]],
-  ['gnc_20simulation_20wrapper_2043',['GNC Simulation Wrapper',['../simwrapper.html',1,'gnc']]]
+  ['generate_20github_20release_2043',['Generate GitHub release',['../release.html',1,'md_doc_general_documentation_astrobee_usage']]],
+  ['gnc_20simulation_20wrapper_2044',['GNC Simulation Wrapper',['../simwrapper.html',1,'gnc']]]
 ];

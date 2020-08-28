@@ -114,7 +114,7 @@ var searchData=
   ['getheight_7666',['GetHeight',['../classpico__driver_1_1PicoDriver.html#a7f53c3e61205c83f978bafae8e92f0c3',1,'pico_driver::PicoDriver']]],
   ['gethistogramequalization_7667',['GetHistogramEqualization',['../structsparse__mapping_1_1SparseMap.html#a6194eb0da0ed4568881bf6a95b3300e4',1,'sparse_mapping::SparseMap']]],
   ['gethousekeeping_7668',['GetHousekeeping',['../classeps__driver_1_1EPS.html#aff89033c5308d015d63119de93307244',1,'eps_driver::EPS::GetHousekeeping()'],['../classsmart__dock_1_1SmartDock.html#aa2a71881ffb786358ad113db1e1e1828',1,'smart_dock::SmartDock::GetHousekeeping()']]],
-  ['getid_7669',['GetId',['../classcpu__monitor_1_1Core.html#ae88d4666fc9511a8f093131073403046',1,'cpu_monitor::Core::GetId()'],['../classcpu__monitor_1_1ThermalZone.html#a498fc226ab79f61ef4bf23b6e24196a6',1,'cpu_monitor::ThermalZone::GetId()'],['../classtraj__opt_1_1Variable.html#ab70ccea0c97de05a4da6c6f4d590aac4',1,'traj_opt::Variable::getId()']]],
+  ['getid_7669',['getId',['../classtraj__opt_1_1Variable.html#ab70ccea0c97de05a4da6c6f4d590aac4',1,'traj_opt::Variable::getId()'],['../classcpu__monitor_1_1Core.html#ae88d4666fc9511a8f093131073403046',1,'cpu_monitor::Core::GetId()'],['../classcpu__monitor_1_1ThermalZone.html#a498fc226ab79f61ef4bf23b6e24196a6',1,'cpu_monitor::ThermalZone::GetId()']]],
   ['getindexform_7670',['getIndexForm',['../structtraj__opt_1_1Waypoint.html#a904ac2436acf19eb97da5d46d37ba40d',1,'traj_opt::Waypoint']]],
   ['getinertia_7671',['GetInertia',['../classsequencer_1_1Sequencer.html#a40d920eb6e99e58b00fcb50bd6df0e7a',1,'sequencer::Sequencer']]],
   ['getinertiaconfig_7672',['GetInertiaConfig',['../classff__util_1_1FlightUtil.html#a80c530fc27f00e30e6db13bda68859d3',1,'ff_util::FlightUtil']]],

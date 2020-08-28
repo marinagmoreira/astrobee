@@ -1,7 +1,7 @@
 var searchData=
 [
   ['h_5f_2045',['h_',['../classRectBW.html#af16fc0dc821d93acf79f69e8d936ddf6',1,'RectBW']]],
-  ['halfsample_2046',['HALFSAMPLE',['../structinterest__point_1_1BriskLayer_1_1CommonParams.html#a542d3abc13265b767882d529a89d2654',1,'interest_point::BriskLayer::CommonParams::HALFSAMPLE()'],['../classinterest__point_1_1BriskLayer.html#ace1ee1b78b42a07fcf35d383f7d3b7c7',1,'interest_point::BriskLayer::halfsample()']]],
+  ['halfsample_2046',['halfsample',['../classinterest__point_1_1BriskLayer.html#ace1ee1b78b42a07fcf35d383f7d3b7c7',1,'interest_point::BriskLayer::halfsample()'],['../structinterest__point_1_1BriskLayer_1_1CommonParams.html#a542d3abc13265b767882d529a89d2654',1,'interest_point::BriskLayer::CommonParams::HALFSAMPLE()']]],
   ['hand_5f_2047',['hand_',['../classekf_1_1Ekf.html#af8603e023981eb785740b00eb74aec8d',1,'ekf::Ekf::hand_()'],['../classgnc__autocode_1_1GncEkfAutocode.html#a2b0a9e7eac2169ecf2a43e010298b4d6',1,'gnc_autocode::GncEkfAutocode::hand_()']]],
   ['hand_5fmsg_5f_2048',['hand_msg_',['../classgnc__autocode_1_1GncSimAutocode.html#aa9ce890f1167799dae5d645431fb5d68',1,'gnc_autocode::GncSimAutocode']]],
   ['handle_5ferr_2049',['HANDLE_ERR',['../flashlight__test_8cc.html#a7e6a68a6a60d045f383a6d81e384ff3d',1,'HANDLE_ERR():&#160;flashlight_test.cc'],['../laser__test_8cc.html#a7e6a68a6a60d045f383a6d81e384ff3d',1,'HANDLE_ERR():&#160;laser_test.cc']]],

@@ -1,5 +1,0 @@
-<map id="ff::RapidSubRosPub" name="ff::RapidSubRosPub">
-<area shape="rect" id="node1" title="base class for rapid subscriber to ros publisher" alt="" coords="179,5,332,215"/>
-<area shape="rect" id="node2" href="$classff_1_1RapidCommandRosCommand.html" title=" " alt="" coords="5,270,225,362"/>
-<area shape="rect" id="node3" href="$classff_1_1RapidCompressedFileRosCompressedFile.html" title=" " alt="" coords="250,263,541,369"/>
-</map>

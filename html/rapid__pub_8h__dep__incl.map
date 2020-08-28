@@ -1,7 +1,0 @@
-<map id="communications/dds_ros_bridge/include/dds_ros_bridge/rapid_pub.h" name="communications/dds_ros_bridge/include/dds_ros_bridge/rapid_pub.h">
-<area shape="rect" id="node1" title=" " alt="" coords="67,5,252,61"/>
-<area shape="rect" id="node2" href="$dds__ros__bridge_8h.html" title=" " alt="" coords="5,228,169,299"/>
-<area shape="rect" id="node4" href="$ros__command__config__rapid__command__config_8h.html" title=" " alt="" coords="125,109,341,180"/>
-<area shape="rect" id="node3" href="$dds__ros__bridge_8cc.html" title=" " alt="" coords="16,347,159,403"/>
-<area shape="rect" id="node5" href="$ros__command__config__rapid__command__config_8cc.html" title=" " alt="" coords="194,228,357,299"/>
-</map>

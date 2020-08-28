@@ -1,9 +1,0 @@
-<map id="tools/visualeyez/include/visualeyez/visualeyez.h" name="tools/visualeyez/include/visualeyez/visualeyez.h">
-<area shape="rect" id="node1" title=" " alt="" coords="428,5,593,47"/>
-<area shape="rect" id="node2" href="$visualeyez_8cc.html" title=" " alt="" coords="5,95,144,136"/>
-<area shape="rect" id="node3" href="$visualeyez__bridge_8cc.html" title=" " alt="" coords="169,95,317,136"/>
-<area shape="rect" id="node4" href="$visualeyez__server_8cc.html" title=" " alt="" coords="341,95,491,136"/>
-<area shape="rect" id="node5" href="$test__visualeyez__stream_8cc.html" title=" " alt="" coords="515,95,698,136"/>
-<area shape="rect" id="node6" href="$test__visualeyez__util_8cc.html" title=" " alt="" coords="722,95,881,136"/>
-<area shape="rect" id="node7" href="$visualeyez__tool_8cc.html" title=" " alt="" coords="905,95,1053,136"/>
-</map>

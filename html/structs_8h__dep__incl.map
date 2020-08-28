@@ -1,8 +1,0 @@
-<map id="mobility/mapper/include/mapper/structs.h" name="mobility/mapper/include/mapper/structs.h">
-<area shape="rect" id="node1" title=" " alt="" coords="234,5,393,47"/>
-<area shape="rect" id="node2" href="$mapper__nodelet_8h.html" title=" " alt="" coords="225,95,401,136"/>
-<area shape="rect" id="node3" href="$callbacks_8cc.html" title=" " alt="" coords="5,184,141,225"/>
-<area shape="rect" id="node4" href="$mapper__nodelet_8cc.html" title=" " alt="" coords="165,184,301,225"/>
-<area shape="rect" id="node5" href="$services_8cc.html" title=" " alt="" coords="325,184,461,225"/>
-<area shape="rect" id="node6" href="$threads_8cc.html" title=" " alt="" coords="485,184,621,225"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="jsonloader::Field" name="jsonloader::Field">
-<area shape="rect" id="node1" title=" " alt="" coords="394,5,511,112"/>
-<area shape="rect" id="node2" href="$classjsonloader_1_1EnumField.html" title=" " alt="" coords="5,160,156,252"/>
-<area shape="rect" id="node3" href="$classjsonloader_1_1ObjectField.html" title=" " alt="" coords="181,160,335,252"/>
-<area shape="rect" id="node4" href="$classjsonloader_1_1RangeField.html" title=" " alt="" coords="359,160,546,252"/>
-<area shape="rect" id="node5" href="$classjsonloader_1_1StringField.html" title=" " alt="" coords="571,160,721,252"/>
-<area shape="rect" id="node6" href="$classjsonloader_1_1ValueField.html" title=" " alt="" coords="745,160,928,252"/>
-</map>

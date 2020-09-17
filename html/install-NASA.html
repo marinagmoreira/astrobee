@@ -125,9 +125,13 @@ If not on the ARC TI private network</h4>
 <h3><a class="anchor" id="autotoc_md120"></a>
 Checkout the project source code</h3>
 <p>At this point you need to decide where you'd like to put the source code (<code>SOURCE_PATH</code>) on your machine: </p><pre class="fragment">export SOURCE_PATH=$HOME/astrobee
-</pre><p>First, clone the flight software repository: </p><pre class="fragment">git clone --recursive https://github.com/nasa/astrobee.git \
-    --branch develop $SOURCE_PATH
-</pre><p>(Note: re-enter your username and password for every submodules that are cloned)</p>
+</pre><p>First, clone the flight software repository: </p><pre class="fragment">git clone https://github.com/nasa/astrobee.git --branch develop $SOURCE_PATH
+git submodule update --init --depth 1 description/media
+</pre><p>You can either choose which optional submodules to clone and log depth with: </p><pre class="fragment">git submodule update --init --depth 1 submodules/android
+git submodule update --init --depth 1 submodules/avionics
+git submodule update --init --depth 1 submodules/platform
+</pre><p>Or checkout all the submodules as: </p><pre class="fragment">git submodule update --init --depth 1
+</pre><p>(Note: re-enter your username and password for every submodule that is cloned) The android module is necessary for guest science code; the avionics and platform module is used when cross-compiling to test on the robot hardware.</p>
 <h3><a class="anchor" id="autotoc_md121"></a>
 Dependencies</h3>
 <p>Next, install all required dependencies: </p><pre class="fragment">pushd $SOURCE_PATH

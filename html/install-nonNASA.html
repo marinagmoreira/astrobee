@@ -102,8 +102,9 @@ Machine setup</h2>
 <h3><a class="anchor" id="autotoc_md92"></a>
 Checkout the project source code</h3>
 <p>At this point you need to decide where you'd like to put the source code (<code>SOURCE_PATH</code>) on your machine: </p><pre class="fragment">export SOURCE_PATH=$HOME/astrobee
-</pre><p>First, clone the flight software repository: </p><pre class="fragment">git clone https://github.com/nasa/astrobee.git $SOURCE_PATH
-</pre><p>If you are planning to work on guest science stuff, you will also need the <code>astrobee_android</code> repository. You should checkout the repository in the same directory you checked out the source code in: </p><pre class="fragment">export ANDROID_PATH="${SOURCE_PATH}_android"
+</pre><p>First, clone the flight software repository and media: </p><pre class="fragment">git clone https://github.com/nasa/astrobee.git $SOURCE_PATH
+git submodule update --init --depth 1 description/media
+</pre><p>If you are planning to work with guest science code, you will also need the <code>astrobee_android</code> repository. You should checkout the repository in the same directory you checked out the source code in: </p><pre class="fragment">export ANDROID_PATH="${SOURCE_PATH}_android"
 </pre><p>Clone the android repository: </p><pre class="fragment">git clone https://github.com/nasa/astrobee_android.git $ANDROID_PATH
 </pre><h3><a class="anchor" id="autotoc_md93"></a>
 Dependencies Ubuntu 16 + ROS Melodic</h3>

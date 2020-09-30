@@ -59,7 +59,7 @@ var searchData=
   ['client1_7206',['Client1',['../classClient1.html#a3d32eade3f87a47e4f8b3c107202fd3e',1,'Client1']]],
   ['client2_7207',['Client2',['../classClient2.html#a0b5df7f606f40fb3ed3559ef4a58653b',1,'Client2']]],
   ['close_7208',['Close',['../classconfig__reader_1_1ConfigReader.html#abb4f0e5d866c8549cca537d2c0222758',1,'config_reader::ConfigReader::Close()'],['../classff__serial_1_1Serial.html#a842059dcc5093721ce0fe79c4a25c552',1,'ff_serial::Serial::Close()'],['../classI2c_1_1I2c.html#a733fb11414a341d1bee5037fd4e5718f',1,'I2c::I2c::Close()']]],
-  ['closeenoughtoapproach_7209',['CloseEnoughToApproach',['../classdock_1_1DockNodelet.html#acd4914c7d37edb1b908518d94ec7e262',1,'dock::DockNodelet']]],
+  ['closeenoughtoapproach_7209',['CloseEnoughToApproach',['../classdock_1_1DockNodelet.html#a806b2e137534e40aa4837fdb84743b93',1,'dock::DockNodelet']]],
   ['closegripper_7210',['CloseGripper',['../classperching__arm_1_1PerchingArm.html#a55f35872419ffedc2d614a9e904a736c',1,'perching_arm::PerchingArm']]],
   ['closeloop_7211',['CloseLoop',['../namespacesparse__mapping.html#a5d68dec8c95250eb80c40f56d008db55',1,'sparse_mapping::CloseLoop()'],['../build__map_8cc.html#ab3311bda68fd094801725449be3a49cf',1,'CloseLoop():&#160;build_map.cc']]],
   ['closelua_7212',['CloseLua',['../classconfig__reader_1_1ConfigReader.html#a2eea95c3f6530111b31fdf9332f53957',1,'config_reader::ConfigReader']]],

@@ -309,10 +309,8 @@ Examine the performance and features on MLP</h3>
 <ol type="1">
 <li>Look at the load with htop</li>
 <li>Watch the frequency of feature production <div class="fragment"><div class="line">rostopic hz -w 5 /loc/ml/features</div>
+</div><!-- fragment --> and echo the pose being output with the features: <div class="fragment"><div class="line">rostopic echo /loc/ml/features | grep -A 17 header:</div>
 </div><!-- fragment --></li>
-</ol>
-<p>and echo the pose being output with the features: </p><div class="fragment"><div class="line">rostopic echo /loc/ml/features | grep -A 17 header:</div>
-</div><!-- fragment --><ol type="1">
 <li>Watch the number of features being produced <div class="fragment"><div class="line">~/features_counter.py ml</div>
 </div><!-- fragment --></li>
 </ol>

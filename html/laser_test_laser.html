@@ -92,12 +92,12 @@ $(document).ready(function(){initNavTree('laser_test_laser.html',''); initResiza
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The laser node is responsible for turning the laser on and off. It contains a test program to do this. The program must be run on the llp. The executable should be found in armhf/bin and is called laser test. To turn the laser on, run: </p><pre class="fragment">./armhf/bin/laser_test -init -on
-</pre><p>To turn the laser off, run: </p><pre class="fragment">./armhf/bin/laser_test -noinit -off
-</pre><p>If running on P4C, please add the following flag: -dev /dev/i2c-0</p>
+</pre><p> To turn the laser off, run: </p><pre class="fragment">./armhf/bin/laser_test -noinit -off
+</pre><p> If running on P4C, please add the following flag: -dev /dev/i2c-0</p>
 <p>There are two ways to turn on and off the laser while running the fsw. The first way is by calling the laser enable service from the command line. To turn on the laser this way, run: </p><pre class="fragment">rosservice call /hw/laser/enable true
-</pre><p>To turn off the laser, run: </p><pre class="fragment">rosservice call /hw/laser/enable false
-</pre><p>The second way is to send a power on or power off command to the executive. You can either do this by using the teleop command tab in GDS or publishing the command to the /command topic from the command line. To turn on the laser this way, run: </p><pre class="fragment">rostopic pub --once /command ff_msgs/CommandStamped '{cmd_name: "powerOnItem", args: [{data_type: 5, s: Laser Pointer}]}'
-</pre><p>To turn off the laser, run: </p><pre class="fragment">rostopic pub --once /command ff_msgs/CommandStamped '{cmd_name: "powerOffItem", args: [{data_type: 5, s: Laser Pointer}]}'
+</pre><p> To turn off the laser, run: </p><pre class="fragment">rosservice call /hw/laser/enable false
+</pre><p> The second way is to send a power on or power off command to the executive. You can either do this by using the teleop command tab in GDS or publishing the command to the /command topic from the command line. To turn on the laser this way, run: </p><pre class="fragment">rostopic pub --once /command ff_msgs/CommandStamped '{cmd_name: "powerOnItem", args: [{data_type: 5, s: Laser Pointer}]}'
+</pre><p> To turn off the laser, run: </p><pre class="fragment">rostopic pub --once /command ff_msgs/CommandStamped '{cmd_name: "powerOffItem", args: [{data_type: 5, s: Laser Pointer}]}'
 </pre> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

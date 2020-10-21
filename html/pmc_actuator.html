@@ -101,9 +101,9 @@ Basic procedure</h2>
 <p>Open two ssh sessions on LLP</p>
 <p>Terminal 1 on LLP: </p><pre class="fragment">source setup.bash
 roslaunch pmc_actuator pmc_actuator.launch
-</pre><p>Terminal 2 on LLP: </p><pre class="fragment">source setup.bash
+</pre><p> Terminal 2 on LLP: </p><pre class="fragment">source setup.bash
 rosrun pmc_actuator pmc_actuator_cmd_test
-</pre><p><b>Note:</b> Detailed procedure to run the sound tests is in the attached document&#160;<code>sound-test-process.txt</code>.</p>
+</pre><p> <b>Note:</b> Detailed procedure to run the sound tests is in the attached document&#160;<code>sound-test-process.txt</code>.</p>
 <h2><a class="anchor" id="autotoc_md178"></a>
 Control the type of nozzle motions</h2>
 <p><code>pmc_actuator_cmd_test</code> performs by default a triangular profile for the nozzles with the blowers at the nominal speed.</p>
@@ -120,15 +120,15 @@ Control the type of nozzle motions</h2>
 </ol>
 <p>All nozzles on one propulsion module are given the same position and increment/decrement in a triangular pattern. An zero increment will simply keep the nozzle positions static.</p>
 <p>For example, to have the left and right nozzles working in opposition at nominal blower speed: </p><pre class="fragment">rosrun pmc_actuator pmc_actuator_cmd_test 207 207 25 96 1 -1 5
-</pre><p>Side 1 will start at nozzle position 25 (fully closed) and increment at each cycle (62.5Hz) by 1. When it reaches the maximum value it starts to decrements. Side 2 will start at nozzle position 96 (fully open) and decrements at each cycle by 1. When it reaches the minimum value, it will start to increment. The nozzle positions keep oscillating following a triangular profile between the min and max acceptable nozzle positions.</p>
+</pre><p> Side 1 will start at nozzle position 25 (fully closed) and increment at each cycle (62.5Hz) by 1. When it reaches the maximum value it starts to decrements. Side 2 will start at nozzle position 96 (fully open) and decrements at each cycle by 1. When it reaches the minimum value, it will start to increment. The nozzle positions keep oscillating following a triangular profile between the min and max acceptable nozzle positions.</p>
 <p>Command all nozzles closed at 2000rpm: </p><pre class="fragment">rosrun pmc_actuator pmc_actuator_cmd_test 166 166 25 25 0 0
-</pre><p>Command all nozzles open at 3000rpm: </p><pre class="fragment">rosrun pmc_actuator pmc_actuator_cmd_test 249 249 96 96 0 0
-</pre><p>Triangular pattern with slow open/close: </p><pre class="fragment">rosrun pmc_actuator pmc_actuator_cmd_test 207 207 25 25 0.2 0.2
-</pre><h2><a class="anchor" id="autotoc_md179"></a>
+</pre><p> Command all nozzles open at 3000rpm: </p><pre class="fragment">rosrun pmc_actuator pmc_actuator_cmd_test 249 249 96 96 0 0
+</pre><p> Triangular pattern with slow open/close: </p><pre class="fragment">rosrun pmc_actuator pmc_actuator_cmd_test 207 207 25 25 0.2 0.2
+</pre> <h2><a class="anchor" id="autotoc_md179"></a>
 Disable the blowers</h2>
 <p>The PMC firmware cannot put the servo in idle mode. However, the shutdown command can turn off the motor controller on the blowers. So the servos can be controlled with the above commands without the blower spinning by issuing first this command: </p><pre class="fragment">rosservice call /pmc_actuator/enable false
-</pre><p>To re-enable the blowers: </p><pre class="fragment">rosservice call /pmc_actuator/enable true
-</pre><h2><a class="anchor" id="autotoc_md180"></a>
+</pre><p> To re-enable the blowers: </p><pre class="fragment">rosservice call /pmc_actuator/enable true
+</pre> <h2><a class="anchor" id="autotoc_md180"></a>
 PWM values</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">

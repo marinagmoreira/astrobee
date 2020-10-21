@@ -120,15 +120,15 @@ Basic operation</h2>
 <h2><a class="anchor" id="autotoc_md290"></a>
 Using the mobility subsystem</h2>
 <p>Typically, mobility will be controlled through the Ground Data System (GDS). However, The arm behavior is packaged with its own gflags-based tool called teleop. This tool is essentially a convenience wrapper around an action client can be used to control the arm from the command-line. </p><pre class="fragment">rosrun mobility teleop -helpshort
-</pre><p>Here are some examples of how to use the tool. You will need an active simulator to run these examples.</p>
+</pre><p> Here are some examples of how to use the tool. You will need an active simulator to run these examples.</p>
 <p>To switch to AR tag localization: </p><pre class="fragment">rosrun mobility teleop -loc ar
-</pre><p>To move to coordinate X=0.3 Y=0.4, keeping the Z and rotation the same: </p><pre class="fragment">rosrun mobility teleop -move -pos "0.3 0.4"
-</pre><p>To rotate around Z (axis X=0 Y=0 Z=1) by -1.5 radians: </p><pre class="fragment">rosrun mobility teleop -move -att "-1.5 0 0 1"
-</pre><p>To switch to AR target localization, use the docking flight mode and move: </p><pre class="fragment">rosrun mobility teleop -loc ar -mode docking -move -pos "0 0"
-</pre><p>To use the QP planner to move to X=0.6 Y=0.6: </p><pre class="fragment">rosrun mobility teleop -move -pos "0.6 0.6" -planner qp
-</pre><p>At any point one can inspect the internal state of the mobility subsystem using the following command. The command will return a sequence of numbers, which represent a time ordered sequence of states. Please refer to <code>ff_msgs::MotionState</code> for a mapping from numbers to states. </p><pre class="fragment">rostopic echo /mob/motion/state
-</pre><p>If you ever need to manually set the motion state to a specific value, you can call the <code>set_state</code> service with the new state as the single argument. </p><pre class="fragment">rosservice call /mob/motion/set_state 1
-</pre><h2><a class="anchor" id="autotoc_md291"></a>
+</pre><p> To move to coordinate X=0.3 Y=0.4, keeping the Z and rotation the same: </p><pre class="fragment">rosrun mobility teleop -move -pos "0.3 0.4"
+</pre><p> To rotate around Z (axis X=0 Y=0 Z=1) by -1.5 radians: </p><pre class="fragment">rosrun mobility teleop -move -att "-1.5 0 0 1"
+</pre><p> To switch to AR target localization, use the docking flight mode and move: </p><pre class="fragment">rosrun mobility teleop -loc ar -mode docking -move -pos "0 0"
+</pre><p> To use the QP planner to move to X=0.6 Y=0.6: </p><pre class="fragment">rosrun mobility teleop -move -pos "0.6 0.6" -planner qp
+</pre><p> At any point one can inspect the internal state of the mobility subsystem using the following command. The command will return a sequence of numbers, which represent a time ordered sequence of states. Please refer to <code>ff_msgs::MotionState</code> for a mapping from numbers to states. </p><pre class="fragment">rostopic echo /mob/motion/state
+</pre><p> If you ever need to manually set the motion state to a specific value, you can call the <code>set_state</code> service with the new state as the single argument. </p><pre class="fragment">rosservice call /mob/motion/set_state 1
+</pre> <h2><a class="anchor" id="autotoc_md291"></a>
 Generating a plan from a sequence of poses.</h2>
 <p>Given a list of poses (positions in meters, and angles in degrees) the plangen tool can use the trapezoidal planner to create planned trajectory that goes between these poses.</p>
 <p>This tool does not enforce the robot following this plan to always face forward. If that is desired, the input poses should be created accordingly.</p>
@@ -151,7 +151,7 @@ x    y      z  roll pitch   yaw (degrees)</h3>
 -accel : maximum desired linear acceleration in m/s^2
 -omega : maximum desired angular velocity in rads/s
 -alpha : maximum desired angular acceleration in rads/s^2
-</pre><p>It is very important to note that the order in which the the roll, pitch, and yaw rotations are multiplied gives rise to different rotation matrices. This tool supports the option</p>
+</pre><p> It is very important to note that the order in which the the roll, pitch, and yaw rotations are multiplied gives rise to different rotation matrices. This tool supports the option</p>
 <p>-rotations_multiplication_order</p>
 <p>The default value is 'yaw-pitch-roll', hence the rotations matrices with these angles are multiplied as</p>
 <p>rotation(yaw) * rotation(pitch) * rotation(roll)</p>

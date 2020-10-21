@@ -117,7 +117,7 @@ Calibration</h1>
             quat4(0.0, 1.0, 0.0, 0.0))
     }
 }
-</pre><p>Third, declare the lighthouses in your system in the world config file. It doesn't really matter what transforms you choose, because you will be solving for them as part of the calibration phase. </p><pre class="fragment">world_vive_lighthouses = {
+</pre><p> Third, declare the lighthouses in your system in the world config file. It doesn't really matter what transforms you choose, because you will be solving for them as part of the calibration phase. </p><pre class="fragment">world_vive_lighthouses = {
     {
         -- back
         serial = "2935772913", pose = transform(
@@ -130,23 +130,23 @@ Calibration</h1>
             quat4(0, 0, 0, 1))
     }
 }
-</pre><p>Fourth, declare the registration transform in your world config file. It doesn't really matter what transform you choose, because you will be solving for them as part of the registration phase. </p><pre class="fragment">world_vive_registration = transform(
+</pre><p> Fourth, declare the registration transform in your world config file. It doesn't really matter what transform you choose, because you will be solving for them as part of the registration phase. </p><pre class="fragment">world_vive_registration = transform(
     vec3(0.634971, 1.17579, -1.63761),
     quat4(0.321928, -0.355711, 0.436771, 0.7609629))
-</pre><p>Fifth, turn on all optional steps in the solver stage. make sure the following variables are set in astrobee/localization/vive_localization.config. </p><pre class="fragment">calibrate = true
+</pre><p> Fifth, turn on all optional steps in the solver stage. make sure the following variables are set in astrobee/localization/vive_localization.config. </p><pre class="fragment">calibrate = true
 refine = true
 register = true
-</pre><p>Finally, post-process the bag using the following command: </p><pre class="fragment">roslaunch vive_localization vive_localization.launch bag:=/path/to/test.bag rviz:=true
-</pre><p>Once the command has run check in the GUI to make sure that there is a good match between the EKF (red) and Vive (green) trajectories, and that the master and slave lighthouses look correct. If this is the case, then follow the instructions written to the console and update the lighthouse and registration information in your world config file.</p>
+</pre><p> Finally, post-process the bag using the following command: </p><pre class="fragment">roslaunch vive_localization vive_localization.launch bag:=/path/to/test.bag rviz:=true
+</pre><p> Once the command has run check in the GUI to make sure that there is a good match between the EKF (red) and Vive (green) trajectories, and that the master and slave lighthouses look correct. If this is the case, then follow the instructions written to the console and update the lighthouse and registration information in your world config file.</p>
 <h1><a class="anchor" id="autotoc_md272"></a>
 Tracking (offline)</h1>
 <p>To do this you will need a calibrated system and a rosbag containing the raw Vive data /hw/vive/*. This bag may also optional have output from the Astrobee localization system at /loc/pose.</p>
 <p>First, turn off the calibration and registration steps of the solver. By doing this you use the default values in your world config, which maximizes accuracy. In other words, make sure the following variables are set in astrobee/localization/vive_localization.config. </p><pre class="fragment">calibrate = false
 refine = true
 register = false
-</pre><p>Next, post-process the bag using the following command: </p><pre class="fragment">roslaunch vive_localization vive_localization.launch bag:=/path/to/test.bag rviz:=true
-</pre><p>Once the command has run check in the GUI to make sure that the Vive (green) trajectory looks sensible. If the bag file included EKF data, you will also see a red trajectory. By default, a CSV file comparing the Vive to EKF results for pose only will be written to ~/.ros/performance.csv. You can change this location with the argument out:=/path/to/file.csv. </p><pre class="fragment">roslaunch vive_localization vive_localization.launch bag:=/path/to/test.bag out:=/path/to/performance.csv rviz:=true
-</pre><h1><a class="anchor" id="autotoc_md273"></a>
+</pre><p> Next, post-process the bag using the following command: </p><pre class="fragment">roslaunch vive_localization vive_localization.launch bag:=/path/to/test.bag rviz:=true
+</pre><p> Once the command has run check in the GUI to make sure that the Vive (green) trajectory looks sensible. If the bag file included EKF data, you will also see a red trajectory. By default, a CSV file comparing the Vive to EKF results for pose only will be written to ~/.ros/performance.csv. You can change this location with the argument out:=/path/to/file.csv. </p><pre class="fragment">roslaunch vive_localization vive_localization.launch bag:=/path/to/test.bag out:=/path/to/performance.csv rviz:=true
+</pre> <h1><a class="anchor" id="autotoc_md273"></a>
 Notes</h1>
 <p>There are a number of additional options in the astrobee/localization/vive_localization.config file. </p>
 </div></div><!-- contents -->

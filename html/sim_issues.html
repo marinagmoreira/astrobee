@@ -104,8 +104,8 @@ Rospack Error Finding Package</h3>
 <h3><a class="anchor" id="autotoc_md364"></a>
 Issues Starting up the Simulator</h3>
 <p>There is a small chance that you will have issues when starting up the simulator. This mainly happens in computers with less computing power. If you are experiencing issues, try launching the world and Astrobee seperately. To do this, you will need to open 2 terminals. Please make sure you setup your environment in both terminals (see <a href="#setting-up-your-environment">Setting up your environment</a>). In the first terminal, run: </p><pre class="fragment">roslaunch astrobee sim.launch default:=false rviz:=true
-</pre><p>After everything in the first terminal starts up, in the second terminal, run: </p><pre class="fragment">roslaunch astrobee spawn.launch dds:=false robot:=sim_pub
-</pre><p>If the robot body doesn't show up in RVIZ, please see the <a href="#robot-body-does-not-show-up-in-RVIZ">Robot Body Doesn't Show up in RVIZ</a> section on how to fix this.</p>
+</pre><p> After everything in the first terminal starts up, in the second terminal, run: </p><pre class="fragment">roslaunch astrobee spawn.launch dds:=false robot:=sim_pub
+</pre><p> If the robot body doesn't show up in RVIZ, please see the <a href="#robot-body-does-not-show-up-in-RVIZ">Robot Body Doesn't Show up in RVIZ</a> section on how to fix this.</p>
 <p>If this doesn't fix the problem, you may need to slow down the simulation to a speed that your computer can handle. Please see the <a href="#tolerance-violated-errors">Tolerance Violated Errors</a> section.</p>
 <h3><a class="anchor" id="autotoc_md365"></a>
 Robot Body Does Not Show up in RVIZ</h3>

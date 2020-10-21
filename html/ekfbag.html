@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('ekfbag.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This package provides scripts used to evaluate the EKF and localization on recorded bag files. To record the bags, use the command </p><pre class="fragment">rosbag record /hw/cam_nav /hw/imu /loc/truth
-</pre><p>The bag files should begin with at least 5 seconds of the robot remaining stationary so that we can estimate the imu bias.</p>
+</pre><p> The bag files should begin with at least 5 seconds of the robot remaining stationary so that we can estimate the imu bias.</p>
 <h1><a class="anchor" id="autotoc_md398"></a>
 ekf_graph</h1>
 <p>Run <code>ekf_graph bag.bag</code> to create a pdf showing the results of the EKF on the recorded bag.</p>

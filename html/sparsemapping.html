@@ -150,7 +150,7 @@ Building a map</h3>
 <h3><a class="anchor" id="autotoc_md261"></a>
 Visualization</h3>
 <p>To visualize a map, or just a list of images, use the command: </p><pre class="fragment">nvm_visualize [ &lt;output.map&gt; ] [ &lt;image1.jpg&gt; &lt;image2.jpg&gt; ... ]
-</pre><p>In the viewer, press <code>a</code> and <code>d</code> (or the left and right arrow keys, or the Ins and Del keys on the num pad) to navigate through the images. The current image being displayed will be echoed on the command line. Press <code>c</code> to show the cameras and triangulated points in 3D. Press <code>q</code> to exit the viewer. Press 'Home' and 'End' to go to first and last image.</p>
+</pre><p> In the viewer, press <code>a</code> and <code>d</code> (or the left and right arrow keys, or the Ins and Del keys on the num pad) to navigate through the images. The current image being displayed will be echoed on the command line. Press <code>c</code> to show the cameras and triangulated points in 3D. Press <code>q</code> to exit the viewer. Press 'Home' and 'End' to go to first and last image.</p>
 <p>In <code>c</code> mode, press left and right to visualize the localization results for the input image <code>imageN.jpg</code>. If no images are passed in, the arrow keys display each frame of the map.</p>
 <p>Also, in the <code>c</code> mode, when points and cameras are shown in 3D, pressing <code>a</code> will save the current 3D pose to disk, while pressing <code>b</code> will read a 3D pose from disk and apply it. This way, when two viewers are open side by side, they can be made to show the results from the same perspective.</p>
 <p>The viewer can display just a subset of the cameras, using the <code>-first</code> and <code>-last</code> options, and the size of cameras can be set with <code>-scale</code>.</p>
@@ -163,7 +163,7 @@ Visualization</h3>
 Localize a single frame</h3>
 <p>All the commands below assume that the environment was set up, as specified in <a class="el" href="build__map_8md.html">build_map.md</a>.</p>
 <p>To test localization of a single frame, use the command: </p><pre class="fragment">localize &lt;map.map&gt; &lt;image.jpg&gt; -histogram_equalization
-</pre><p>If invoked with the option -verbose_localization, it will list the images most similar to the one being localized. To increase the number of similar images, use the -num_similar option. Another useful flag is &ndash;v 2 when it will print more verbose information. Most of the options of the localize_cams tool (see below) are also accepted.</p>
+</pre><p> If invoked with the option -verbose_localization, it will list the images most similar to the one being localized. To increase the number of similar images, use the -num_similar option. Another useful flag is &ndash;v 2 when it will print more verbose information. Most of the options of the localize_cams tool (see below) are also accepted.</p>
 <h3><a class="anchor" id="autotoc_md263"></a>
 Testing localization using two maps</h3>
 <p>To test localization of many images, one can acquire two sets of images of the same indoor environment, and create two maps ready for localization. That is, maps are built, registered to the world coordinate system, rebuilt with BRISK, and then a vocabulary database is created. Name those maps reference and source.</p>
@@ -183,12 +183,12 @@ Testing localization using a bag</h3>
 Extract sub-maps</h3>
 <p>The tool <code>extract_submap</code> can be used to extract a submap from a map, containing only a specified list of images, or a given range of image indices, or images with camera center in a given box. Usage: </p><pre class="fragment">extract_submap -input_map &lt;input map&gt; -output_map &lt;output map&gt; \
   &lt;images to keep&gt;
-</pre><p>or extract_submap -input_map &lt;input map&gt; -output_map &lt;output map&gt; \ -image_list &lt;file&gt; or extract_submap -input_map &lt;input map&gt; -output_map &lt;output map&gt; \ -exclude &lt;images to exclude&gt;</p>
+</pre><p> or extract_submap -input_map &lt;input map&gt; -output_map &lt;output map&gt; \ -image_list &lt;file&gt; or extract_submap -input_map &lt;input map&gt; -output_map &lt;output map&gt; \ -exclude &lt;images to exclude&gt;</p>
 <p>or </p><pre class="fragment">extract_submap -input_map &lt;input map&gt; -output_map &lt;output map&gt; \
   -cid_range "min_cid max_cid"
-</pre><p>(here first image has cid = 0, and the range is inclusive at both ends), or </p><pre class="fragment">extract_submap -input_map &lt;input map&gt; -output_map &lt;output map&gt; \
+</pre><p> (here first image has cid = 0, and the range is inclusive at both ends), or </p><pre class="fragment">extract_submap -input_map &lt;input map&gt; -output_map &lt;output map&gt; \
   -xyz_box "xmin xmax ymin ymax zmin zmax"
-</pre><p>If it is desired to not re-adjust the cameras after the submap is extracted (for example, if the map is already registered), use the <code>-skip_bundle_adjustment</code> option.</p>
+</pre><p> If it is desired to not re-adjust the cameras after the submap is extracted (for example, if the map is already registered), use the <code>-skip_bundle_adjustment</code> option.</p>
 <p>If the input map has a vocabulary database of features, it will need to be rebuilt for the extracted submap using</p>
 <p>build_map -vocab_db</p>
 <h4><a class="anchor" id="autotoc_md266"></a>
@@ -197,7 +197,7 @@ Merge maps</h4>
 <p>merge_maps &lt;input maps&gt; -output_map merged.map \ -num_image_overlaps_at_endpoints 50</p>
 <p>It is very important to note that only maps with SURF features (see <a class="el" href="build__map_8md.html">build_map.md</a>) can be merged. If a map has BRISK features, it needs to be rebuilt with SURF features, as follows: </p><pre class="fragment">build_map -rebuild -histogram_equalization \
   -rebuild_detector SURF -output_map &lt;output map&gt;
-</pre><p>and then these regenerated maps can be merged.</p>
+</pre><p> and then these regenerated maps can be merged.</p>
 <p>Merging is more likely to succeed if the images at the endpoints of one map are similar to images at the endpoints of the second map, and in particular, if some of the same images show up at the endpoints of both maps. A larger value of <code>-num_image_overlaps_at_endpoints</code> may result in higher success but will take more time.</p>
 <p>Registration to the real-world coordinate system must be (re-)done after the maps are merged, as the bundle adjustment done during merging may move things somewhat.</p>
 <p>The input maps to be merged need not be registered, but that may help improve the success of merging. Also, it may be preferable that the images at the beginning and end of the maps to merge be close to points used in registration. The implication here is that the more geometrically correct the input maps are, and the more similar to each other, the more likely merging will succeed.</p>

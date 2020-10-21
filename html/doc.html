@@ -105,7 +105,7 @@ UML diagraming</h2>
 <p>Plantuml relies on <a href="http://www.graphviz.org/">Graphviz</a> that should be already installed since ROS is also using this tool to render runtime node/topic graphs. There are many ways to write/generate plantuml diagrams: <a href="http://plantuml.com/running">http://plantuml.com/running</a>. Choose the integration that best suit you, but vim + command line java works perfectly.</p>
 <p>Note: some diagrams are not generated correctly when using graphviz 2.40 (layout stretched vertically). So for now please use graphviz 2.38.</p>
 <p>Note: to re-active the 2.38 that keep being updated on Mac: </p><pre class="fragment">sudo port activate graphviz @2.38.0_3+pangocairo
-</pre><p>To generate the diagrams from the <code>doc\diagrams</code> directory: </p><div class="fragment"><div class="line">make</div>
+</pre><p> To generate the diagrams from the <code>doc\diagrams</code> directory: </p><div class="fragment"><div class="line">make</div>
 <div class="line"># or to get PNG versions:</div>
 <div class="line">make png</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md87"></a>
@@ -125,8 +125,8 @@ ROS Unit Tests</h1>
 <p>The ROS test framework (rostest) is build upon the Google test framework. The idea behind a ROS test is that it first launches a collection of ROS nodes, and then starts the unit test, which runs tests against the ROS nodes.</p>
 <p>Writing a unit test for a package involves modifying the package's <code>CMakeLists.txt</code> and <code>package.xml</code> files, and writing a collection of test cases. To see an example, have a look in the <code>./tools/visualeyez</code> folder.</p>
 <p>To build all ROS tests, use the following: </p><pre class="fragment">make -j6 tests
-</pre><p>To execute all ROS tests run the following: </p><pre class="fragment">make -j6 run_tests
-</pre><p>Note that by default all ROS console messages (ROS_INFO, ROS_WARN, etc.) called from within the test cases are suppressed. To print all messages, as well as a more comprehensive test result, add the <code>--text</code> argument: </p><div class="fragment"><div class="line">rostest &lt;package&gt; &lt;*.test&gt; --text</div>
+</pre><p> To execute all ROS tests run the following: </p><pre class="fragment">make -j6 run_tests
+</pre><p> Note that by default all ROS console messages (ROS_INFO, ROS_WARN, etc.) called from within the test cases are suppressed. To print all messages, as well as a more comprehensive test result, add the <code>--text</code> argument: </p><div class="fragment"><div class="line">rostest &lt;package&gt; &lt;*.test&gt; --text</div>
 </div><!-- fragment --><p>Sometimes you want to debug your unit tests, but it's unclear on which port rostest started the ROS master. A simpler approach is to manually start the ROS master using <code>roscore</code> and then latch the rostest to this master with the <code>reuse-master</code> argument as follows: </p><div class="fragment"><div class="line">rostest &lt;package&gt; &lt;*.test&gt; --reuse-master</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md135"></a>
 Tools used for FSW documentation</h1>
@@ -141,7 +141,7 @@ UML diagraming</h2>
 <p>Plantuml relies on <a href="http://www.graphviz.org/">Graphviz</a> that should be already installed since ROS is also using this tool to render runtime node/topic graphs. There are many ways to write/generate plantuml diagrams: <a href="http://plantuml.com/running">http://plantuml.com/running</a>. Choose the integration that best suit you, but vim + command line java works perfectly.</p>
 <p>Note: some diagrams are not generated correctly when using graphviz 2.40 (layout stretched vertically). So for now please use graphviz 2.38.</p>
 <p>Note: to re-active the 2.38 that keep being updated on Mac: </p><pre class="fragment">sudo port activate graphviz @2.38.0_3+pangocairo
-</pre><p>To generate the diagrams from the <code>doc\diagrams</code> directory: </p><div class="fragment"><div class="line">make</div>
+</pre><p> To generate the diagrams from the <code>doc\diagrams</code> directory: </p><div class="fragment"><div class="line">make</div>
 <div class="line"># or to get PNG versions:</div>
 <div class="line">make png</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md138"></a>
@@ -161,8 +161,8 @@ ROS Unit Tests</h1>
 <p>The ROS test framework (rostest) is build upon the Google test framework. The idea behind a ROS test is that it first launches a collection of ROS nodes, and then starts the unit test, which runs tests against the ROS nodes.</p>
 <p>Writing a unit test for a package involves modifying the package's <code>CMakeLists.txt</code> and <code>package.xml</code> files, and writing a collection of test cases. To see an example, have a look in the <code>./tools/visualeyez</code> folder.</p>
 <p>To build all ROS tests, use the following: </p><pre class="fragment">make -j6 tests
-</pre><p>To execute all ROS tests run the following: </p><pre class="fragment">make -j6 run_tests
-</pre><p>Note that by default all ROS console messages (ROS_INFO, ROS_WARN, etc.) called from within the test cases are suppressed. To print all messages, as well as a more comprehensive test result, add the <code>--text</code> argument: </p><div class="fragment"><div class="line">rostest &lt;package&gt; &lt;*.test&gt; --text</div>
+</pre><p> To execute all ROS tests run the following: </p><pre class="fragment">make -j6 run_tests
+</pre><p> Note that by default all ROS console messages (ROS_INFO, ROS_WARN, etc.) called from within the test cases are suppressed. To print all messages, as well as a more comprehensive test result, add the <code>--text</code> argument: </p><div class="fragment"><div class="line">rostest &lt;package&gt; &lt;*.test&gt; --text</div>
 </div><!-- fragment --><p>Sometimes you want to debug your unit tests, but it's unclear on which port rostest started the ROS master. A simpler approach is to manually start the ROS master using <code>roscore</code> and then latch the rostest to this master with the <code>reuse-master</code> argument as follows: </p><div class="fragment"><div class="line">rostest &lt;package&gt; &lt;*.test&gt; --reuse-master</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->

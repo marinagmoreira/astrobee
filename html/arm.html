@@ -123,19 +123,19 @@ Arm finite state machine</div>
 Using the test tool</h1>
 <p>Typically, the arm will be controlled through the Ground Data System (GDS). However, The arm behavior is packaged with its own gflags-based tool called arm_tool. This tool is essentially a convenience wrapper around an action client can be used to control the arm from the command-line.</p>
 <p>To get a list of supported commands, have a look at the help: </p><pre class="fragment">rosrun arm arm_tool -helpshort
-</pre><p>For example, lets assume that we have started the robot and the arm is stowed in its home position (tucked into the body). To deploy the arm, pan to 45 degrees then tilt to 30 degrees use the following sequence of commands: </p><pre class="fragment">rosrun arm arm_tool -deploy
+</pre><p> For example, lets assume that we have started the robot and the arm is stowed in its home position (tucked into the body). To deploy the arm, pan to 45 degrees then tilt to 30 degrees use the following sequence of commands: </p><pre class="fragment">rosrun arm arm_tool -deploy
 rosrun arm arm_tool -pan 45
 rosrun arm arm_tool -tilt 30
-</pre><p>Before using the gripper it must first be calibrated. <a class="el" href="structCalibration.html">Calibration</a> involves finding the number of motor ticks at the high-stop &ndash; when the gripper in the fully-open position. The low-stop is treated as a fixed number of ticks relative to the high-stop. Visually, calibration appears as if the gripper is opened once and then closed once.</p>
+</pre><p> Before using the gripper it must first be calibrated. <a class="el" href="structCalibration.html">Calibration</a> involves finding the number of motor ticks at the high-stop &ndash; when the gripper in the fully-open position. The low-stop is treated as a fixed number of ticks relative to the high-stop. Visually, calibration appears as if the gripper is opened once and then closed once.</p>
 <p>To calibrate the gripper, open it, close it and then set it to 50% open try the following sequence of commands: </p><pre class="fragment">rosrun arm arm_tool -cal
 rosrun arm arm_tool -open
 rosrun arm arm_tool -close
 rosrun arm arm_tool -set 50
-</pre><p>Finally, you can stow the arm. Note that the arm can be stowed from any position. To avoid self-collisions the gripper is first closed, then the arm is then first panned to zero and then tilted to its stow point. You can stow the arm using the following command: </p><pre class="fragment">rosrun arm arm_tool -stow
-</pre><p>While waiting for the instruction to complete, the arm_tool will print out periodic feedback, which takes the following form. Pan and tilt angles are expressed in degrees, while the gripper position is expressed in percentage. Once completed, a final response is printed. </p><pre class="fragment">PAN: X deg TILT: Y deg GRIPPER: Z %
+</pre><p> Finally, you can stow the arm. Note that the arm can be stowed from any position. To avoid self-collisions the gripper is first closed, then the arm is then first panned to zero and then tilted to its stow point. You can stow the arm using the following command: </p><pre class="fragment">rosrun arm arm_tool -stow
+</pre><p> While waiting for the instruction to complete, the arm_tool will print out periodic feedback, which takes the following form. Pan and tilt angles are expressed in degrees, while the gripper position is expressed in percentage. Once completed, a final response is printed. </p><pre class="fragment">PAN: X deg TILT: Y deg GRIPPER: Z %
 Response: Successfully completed
-</pre><p>At any point one can inspect the internal state of the arm behavior using the following command. The command will return a sequence of numbers, which represent a time ordered sequence of states. Please refer to <code>ff_msgs::ArmState</code> for a mapping from numbers to states. </p><pre class="fragment">rostopic echo /beh/arm/state
-</pre><p>If you ever need to manually set the arm state to a specific value, you can call the <code>set_state</code> service with the new state as the single argument. </p><pre class="fragment">rosservice call /beh/arm/set_state 1
+</pre><p> At any point one can inspect the internal state of the arm behavior using the following command. The command will return a sequence of numbers, which represent a time ordered sequence of states. Please refer to <code>ff_msgs::ArmState</code> for a mapping from numbers to states. </p><pre class="fragment">rostopic echo /beh/arm/state
+</pre><p> If you ever need to manually set the arm state to a specific value, you can call the <code>set_state</code> service with the new state as the single argument. </p><pre class="fragment">rosservice call /beh/arm/set_state 1
 </pre> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

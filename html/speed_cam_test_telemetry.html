@@ -96,9 +96,9 @@ $(document).ready(function(){initNavTree('speed_cam_test_telemetry.html',''); in
 <p>Assuming the robot is running with name space <code>/</code>, telemetry can be displayed using the following command: </p><pre class="fragment">rostopic echo /hw/speed_cam/optical_flow
 rostopic echo /hw/speed_cam/speed
 rostopic echo /hw/speed_cam/imu
-</pre><p>Images can be viewed using the rqt image viewer </p><pre class="fragment">rqt_image_view /hw/speed_cam/camera_image
-</pre><p>If the flight software stack is not running, the <code>speed_cam_tool</code> can be used as a debugging interface to configure and query the device. To do this, first run the tool in the following way: </p><pre class="fragment">rosrun speed_cam speed_cam_tool
-</pre><p>Follow the instructions to print out the data of your choice. Note that if a camera image is requested, the data will be written to a PGM file that can be opened in any modern image viewer. </p>
+</pre><p> Images can be viewed using the rqt image viewer </p><pre class="fragment">rqt_image_view /hw/speed_cam/camera_image
+</pre><p> If the flight software stack is not running, the <code>speed_cam_tool</code> can be used as a debugging interface to configure and query the device. To do this, first run the tool in the following way: </p><pre class="fragment">rosrun speed_cam speed_cam_tool
+</pre><p> Follow the instructions to print out the data of your choice. Note that if a camera image is requested, the data will be written to a PGM file that can be opened in any modern image viewer. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

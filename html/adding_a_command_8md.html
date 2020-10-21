@@ -109,20 +109,20 @@ Setup</h2>
 git clone https://github.com/xgds/xgds_planner2.git
 sudo apt-get install python-pip python-iso8601
 sudo pip install git+https://github.com/geocam/geocamUtilWeb
-</pre><p>In order to generate the Android files, the xpjson planner parser needs to be changed to keep the parent field for each command parameter. To do this, open the astrobee/commands/xgds_planner2/xgds_planner2/xpjson.py file in your preferred text editor. Find the KEEP_PARAM_PARENT parameter (around line 114) and set it to true. Then save and close the file.</p>
+</pre><p> In order to generate the Android files, the xpjson planner parser needs to be changed to keep the parent field for each command parameter. To do this, open the astrobee/commands/xgds_planner2/xgds_planner2/xpjson.py file in your preferred text editor. Find the KEEP_PARAM_PARENT parameter (around line 114) and set it to true. Then save and close the file.</p>
 <h2><a class="anchor" id="autotoc_md79"></a>
 Generate FSW files</h2>
 <p>To generate the fsw files and copy them to correct location, please run the following line from the top level directory of astrobee: </p><pre class="fragment">./scripts/build/processCommandSchema.sh
-</pre><p>After running this script, please make sure your changes compile. To do this, navigate to the folder you build the fsw in, rebuild the cache, and then compile the code. Don't forget to commit and push your changes. If you want your command incorporated into GDS, please let whoever is in charge of GDS know that the command constants idl has changed.</p>
+</pre><p> After running this script, please make sure your changes compile. To do this, navigate to the folder you build the fsw in, rebuild the cache, and then compile the code. Don't forget to commit and push your changes. If you want your command incorporated into GDS, please let whoever is in charge of GDS know that the command constants idl has changed.</p>
 <h2><a class="anchor" id="autotoc_md80"></a>
 Generate Android files</h2>
 <p>Make sure you have the Astrobee Android repo checked out. If you don't, please see the install instructions on how to do this. Navigate to the astrobee api scripts folder in the astrobee Android repo (astrobee_api/scripts). These scripts assume that the fsw is located in $HOME/astrobee. If the fsw is located somewhere else, please set the $SOURCE_PATH environment variable to the fsw location. Also if you added a new enum command type, you will need to add an include line to both the genBaseRobot and genBaseRobotImpl scripts. To generate the android files, please run the following in the scripts folder: </p><pre class="fragment">cd astrobee_api/scripts
 # if needed, set the source path
 export SOURCE_PATH=path/to/astrobee
 ./processCommandSchema.sh
-</pre><p>The script will copy the generated files to the correct locations. Please make sure that the astrobee_api builds with no errors. To do this, go to the top level astrobee api directory and build the code: </p><pre class="fragment">cd astrobee_api/
+</pre><p> The script will copy the generated files to the correct locations. Please make sure that the astrobee_api builds with no errors. To do this, go to the top level astrobee api directory and build the code: </p><pre class="fragment">cd astrobee_api/
 ./gradlew build
-</pre><p>Once everything compiles, make sure you commit and push your changes.</p>
+</pre><p> Once everything compiles, make sure you commit and push your changes.</p>
 <h1><a class="anchor" id="autotoc_md81"></a>
 Add to Executive</h1>
 <p>The last step is to add the command to the executive. Please make sure you have a full understanding of the executive and operating state classes before adding the command. If you have questions, please contact Katie Hamilton. </p>

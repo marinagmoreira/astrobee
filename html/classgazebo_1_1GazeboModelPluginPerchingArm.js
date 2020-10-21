@@ -1,0 +1,37 @@
+var classgazebo_1_1GazeboModelPluginPerchingArm =
+[
+    [ "Type", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a7b87e1f82247d05429a43c329e72eef1", [
+      [ "POSITION", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a7b87e1f82247d05429a43c329e72eef1a83b20de5acfa428ef1bcee2d32de019c", null ],
+      [ "VELOCITY", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a7b87e1f82247d05429a43c329e72eef1ac5196c5f663d3a201658b550c55ec6da", null ],
+      [ "EFFORT", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a7b87e1f82247d05429a43c329e72eef1a2098f5f707a27cc776a795c401e7f850", null ]
+    ] ],
+    [ "GazeboModelPluginPerchingArm", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a8c0fde3e0ff89a26354a06e246fa9202", null ],
+    [ "~GazeboModelPluginPerchingArm", "classgazebo_1_1GazeboModelPluginPerchingArm.html#aa2eceb8ab5406b94784f70ce878c6fcc", null ],
+    [ "CalibrateGripperCallback", "classgazebo_1_1GazeboModelPluginPerchingArm.html#abfeeff4774bc27b9265543feedeece80", null ],
+    [ "EnableDistalServoCallback", "classgazebo_1_1GazeboModelPluginPerchingArm.html#afa35d7e4d4d15aa13c68928ea2993ee1", null ],
+    [ "EnableGripperServoCallback", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a2f1dbb9c55ebefc6ed08755c320c441b", null ],
+    [ "EnableProximalServoCallback", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a42dca2133fa0cd7046d8ff2bd99840ea", null ],
+    [ "GetGripperJointState", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a22a873bb4b569231d18871bf6af95e95", null ],
+    [ "GoalCallback", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a4b9d9d24672199c178777ea7295518fe", null ],
+    [ "LoadCallback", "classgazebo_1_1GazeboModelPluginPerchingArm.html#afc6dfcd848ff3165c7cad5d6d84ca76d", null ],
+    [ "Reset", "classgazebo_1_1GazeboModelPluginPerchingArm.html#ad51c8c8dcdb14afb4e7f3230377e029e", null ],
+    [ "SetDistVelCallback", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a14fff63ae573695720f0e5beec21a78e", null ],
+    [ "SetGripperGoal", "classgazebo_1_1GazeboModelPluginPerchingArm.html#af081500a4d75527be21f3d84c3a8273b", null ],
+    [ "SetGripperJointGoal", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a36519113ef23a69f4ec220351d88f9e0", null ],
+    [ "SetGripperJointPosition", "classgazebo_1_1GazeboModelPluginPerchingArm.html#aa844c1a27c1f6c8f22402212a9ccf641", null ],
+    [ "SetGripperPosition", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a64e65634a08a743aff77d2b8a5ffcba6", null ],
+    [ "SetProxVelCallback", "classgazebo_1_1GazeboModelPluginPerchingArm.html#ab826ca222132595fb29d971e10c72412", null ],
+    [ "TimerCallback", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a16e6a3abbd18ede4b8ef4b175143e49b", null ],
+    [ "DISTAL_DEPLOYED", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a35bfaabc57883a006f9822107a6fa388", null ],
+    [ "DISTAL_MAX_PAN", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a0fc567c29642edc2877d79be96272076", null ],
+    [ "DISTAL_MIN_PAN", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a35a8b8532205c6ec1242f8c37b9c02f3", null ],
+    [ "DISTAL_STOWED", "classgazebo_1_1GazeboModelPluginPerchingArm.html#ab15c2b168b912402eb65c586b2dd081d", null ],
+    [ "GRIPPER_CLOSED", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a5cbb9b3e802a4c0dc6cd1ce5554c6d02", null ],
+    [ "GRIPPER_OFFSET", "classgazebo_1_1GazeboModelPluginPerchingArm.html#ae79682bfe0444dd8f4f220cfe61d7051", null ],
+    [ "GRIPPER_OPEN", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a9e05bb3753b368f65b55a3bcb1ea777c", null ],
+    [ "PROXIMAL_DEPLOYED", "classgazebo_1_1GazeboModelPluginPerchingArm.html#acb2420bff69f6f87a9207c88d706ee61", null ],
+    [ "PROXIMAL_MAX_TILT", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a6210b2da83bcc5dd3eaca0e59bb92a62", null ],
+    [ "PROXIMAL_MIN_TILT", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a74506e5cc9512a92ce080290f2d2581b", null ],
+    [ "PROXIMAL_STOWED", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a9f7467d85ec19a361f10c1826475c2fc", null ],
+    [ "RPM_TO_RADS_PER_S", "classgazebo_1_1GazeboModelPluginPerchingArm.html#a8096b8e359c30a6fefa51df08becc43f", null ]
+];

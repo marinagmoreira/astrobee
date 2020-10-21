@@ -194,7 +194,7 @@ Building a SURF map only</h3>
 <p>The above options can also be chained. For example, to run the pipeline to just create a SURF map one can do: </p><pre class="fragment">build_map &lt;image dir&gt;/*.jpg -feature_detection -feature_matching \
   -track_building -incremental_ba -bundle_adjustment             \
   -histogram_equalization -num_subsequent_images 100
-</pre><h3><a class="anchor" id="autotoc_md233"></a>
+</pre> <h3><a class="anchor" id="autotoc_md233"></a>
 Additional options</h3>
 <p>There are a few steps that can be used which are not included in the default map building process. These include:</p>
 <ul>
@@ -225,7 +225,7 @@ Map registration</h2>
 build_map -registration &lt;hugin files&gt; &lt;xyz files&gt; -num_ba_passes 0 \
  -registration_skip_bundle_adjustment -skip_filtering              \
  -output_map mapfile.registered.map
-</pre><p>There can be multiple such files passed as input. Control point files are expected to end in .pto, while xyz files in .txt.</p>
+</pre><p> There can be multiple such files passed as input. Control point files are expected to end in .pto, while xyz files in .txt.</p>
 <p>In practice, to not make mistakes, it is far easier to have both Hugin and the text file with the xyz points opened at the same time. Each time a point is added in Hugin and the project is saved, its xyz coordinates can be saved to the text file, and the above command can be run.</p>
 <p>After registration is done, it will print each transformed coordinate point from the map and its corresponding measured point, as well as the error among the two. That will look as follows:</p>
 <p>transformed computed xyz &ndash; measured xyz &ndash; error norm (meters) -0.0149 -0.0539 0.0120 &ndash; 0.0000 0.0000 0.0000 &ndash; 0.0472 img1.jpg img2.jpg 1.8587 0.9533 0.1531 &ndash; 1.8710 0.9330 0.1620 &ndash; 0.0254 img3.jpg img4.jpg</p>
@@ -263,7 +263,7 @@ Registration in the MGTF</h3>
 <h2><a class="anchor" id="autotoc_md237"></a>
 Map verification</h2>
 <p>A registered and bundle-adjusted map can be used to study how well it predicts the computed 3D locations for an independently acquired set of control points and 3D measurements. These are in the same format as for registration. The map is not modified in any way during this step. </p><pre class="fragment">build_map -verification &lt;hugin files&gt; &lt;xyz files&gt;
-</pre><h2><a class="anchor" id="autotoc_md238"></a>
+</pre> <h2><a class="anchor" id="autotoc_md238"></a>
 Sparse map performance and quality evaluation on the robot</h2>
 <p>(See below about how it can be done on a local machine.)</p>
 <p>To test how the map may perform on the robot, do the following:</p>
@@ -282,19 +282,19 @@ Stage the new map</h3>
 <h3><a class="anchor" id="autotoc_md240"></a>
 Stage the bag with images</h3>
 <pre class="fragment">rsync --archive --partial --progress directory_of_bags mlp:/data/bags
-</pre><h3><a class="anchor" id="autotoc_md241"></a>
+</pre> <h3><a class="anchor" id="autotoc_md241"></a>
 Stage the feature counter utility (should be added to the install at one point)</h3>
 <pre class="fragment">scp $SOURCE_PATH/localization/marker_tracking/ros/tools/features_counter.py mlp:
-</pre><h3><a class="anchor" id="autotoc_md242"></a>
+</pre> <h3><a class="anchor" id="autotoc_md242"></a>
 Launch the localization node on LLP</h3>
 <pre class="fragment">ssh llp
 roslaunch astrobee astrobee.launch llp:=disabled mlp:=mlp nodes:=framestore,dds_ros_bridge,localization_node
-</pre><p>(TODO(oalexan1): Not sure if to set the robot name above. We are using one robot to localize with the data and map for another one.)</p>
+</pre><p> (TODO(oalexan1): Not sure if to set the robot name above. We are using one robot to localize with the data and map for another one.)</p>
 <h3><a class="anchor" id="autotoc_md243"></a>
 Enable localization and the mapped landmark production (on MLP)</h3>
 <pre class="fragment">export ROS_MASTER_URI=http://llp:11311
 rosservice call /loc/ml/enable true
-</pre><p>If this command returns an error saying that the service is not available, wait a little and try again.</p>
+</pre><p> If this command returns an error saying that the service is not available, wait a little and try again.</p>
 <h3><a class="anchor" id="autotoc_md244"></a>
 Play the bags (on MLP)</h3>
 <pre class="fragment">cd /data/bags/directory_of_bags
@@ -303,7 +303,7 @@ rosbag play --loop *.bag                               \
   /mgt/img_sampler/nav_cam/image_record:=/hw/cam_nav   \
   /loc/ml/features:=/loc/ml/old_features               \
   /loc/ml/registration:=/loc/ml/old_registration
-</pre><p>It is important to check the topics that were recorded to the bag. If the nav camera was recorded on /mgt/img_sampler/nav_cam/image_record instead of /hw/cam_nav, as it happens when recording data on the ISS, it must be redirected to the proper topic, as we do above. If localization was running when the bag was recorded and hence the topics /loc/ml/features and /loc/ml/registration were recorded, they must be redirected to something else (above /tmp1 and /tmp2 was used) to not conflict with actual localization results that would be now created based on the images in the bag.</p>
+</pre><p> It is important to check the topics that were recorded to the bag. If the nav camera was recorded on /mgt/img_sampler/nav_cam/image_record instead of /hw/cam_nav, as it happens when recording data on the ISS, it must be redirected to the proper topic, as we do above. If localization was running when the bag was recorded and hence the topics /loc/ml/features and /loc/ml/registration were recorded, they must be redirected to something else (above /tmp1 and /tmp2 was used) to not conflict with actual localization results that would be now created based on the images in the bag.</p>
 <h3><a class="anchor" id="autotoc_md245"></a>
 Examine the performance and features on MLP</h3>
 <ol type="1">
@@ -323,13 +323,13 @@ export ASTROBEE_CONFIG_DIR=$SOURCE_PATH/astrobee/config
 export ASTROBEE_WORLD=iss
 export ASTROBEE_ROBOT=bumble # your robot's name may be different
 export ROS_MASTER_URI=http://127.0.0.1:11311/
-</pre><p>Examine the localization configuration file: </p><pre class="fragment">astrobee/config/localization.config
-</pre><p>Sym link the map to test: </p><pre class="fragment">rm -fv $SOURCE_PATH/astrobee/resources/maps/iss.map
+</pre><p> Examine the localization configuration file: </p><pre class="fragment">astrobee/config/localization.config
+</pre><p> Sym link the map to test: </p><pre class="fragment">rm -fv $SOURCE_PATH/astrobee/resources/maps/iss.map
 ln -s $(pwd)/mymap.map $SOURCE_PATH/astrobee/resources/maps/iss.map
-</pre><p>Start the localization node: </p><pre class="fragment">roslaunch astrobee astrobee.launch mlp:=local llp:=disabled \
+</pre><p> Start the localization node: </p><pre class="fragment">roslaunch astrobee astrobee.launch mlp:=local llp:=disabled \
   nodes:=framestore,localization_node
-</pre><p>Enable localization: </p><pre class="fragment">rosservice call /loc/ml/enable true
-</pre><p>Then, as above, one must play a bag while redirecting the existing /loc topics, and ensure that the images are published on /hw/cam_nav.</p>
+</pre><p> Enable localization: </p><pre class="fragment">rosservice call /loc/ml/enable true
+</pre><p> Then, as above, one must play a bag while redirecting the existing /loc topics, and ensure that the images are published on /hw/cam_nav.</p>
 <p>The poses of the newly localized camera images can be displayed as:</p>
 <p>rostopic echo /loc/ml/features | grep -A 17 header:</p>
 <p>and compared to the old ones via:</p>

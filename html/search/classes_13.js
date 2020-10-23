@@ -15,7 +15,7 @@ var searchData=
   ['timestamp_3c_20pcl_3a_3apointcloud_3c_20t_20_3e_20_3e_6138',['TimeStamp&lt; pcl::PointCloud&lt; T &gt; &gt;',['../structros_1_1message__traits_1_1TimeStamp_3_01pcl_1_1PointCloud_3_01T_01_4_01_4.html',1,'ros::message_traits']]],
   ['trackedoffeatures_6139',['TrackedOFFeatures',['../classekf__bag_1_1TrackedOFFeatures.html',1,'ekf_bag']]],
   ['trackedsmfeatures_6140',['TrackedSMFeatures',['../classekf__bag_1_1TrackedSMFeatures.html',1,'ekf_bag']]],
-  ['tracker_6141',['Tracker',['../structvive__localization_1_1Tracker.html',1,'vive_localization::Tracker'],['../structTracker.html',1,'Tracker']]],
+  ['tracker_6141',['Tracker',['../structTracker.html',1,'Tracker'],['../structvive__localization_1_1Tracker.html',1,'vive_localization::Tracker']]],
   ['trajdata_6142',['TrajData',['../structtraj__opt_1_1TrajData.html',1,'traj_opt']]],
   ['trajectory_6143',['Trajectory',['../classtraj__opt_1_1Trajectory.html',1,'traj_opt']]],
   ['trajectory3d_6144',['Trajectory3D',['../classpolynomials_1_1Trajectory3D.html',1,'polynomials']]],

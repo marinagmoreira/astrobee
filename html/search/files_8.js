@@ -12,6 +12,6 @@ var searchData=
   ['init_2ecc_6553',['init.cc',['../init_8cc.html',1,'']]],
   ['init_2eh_6554',['init.h',['../init_8h.html',1,'']]],
   ['insensitive_5fmap_2eh_6555',['insensitive_map.h',['../insensitive__map_8h.html',1,'']]],
-  ['install_2emd_6556',['INSTALL.md',['../repo_2INSTALL_8md.html',1,'(Global Namespace)'],['../repo_2doc_2general__documentation_2INSTALL_8md.html',1,'(Global Namespace)']]],
+  ['install_2emd_6556',['INSTALL.md',['../INSTALL_8md.html',1,'(Global Namespace)'],['../doc_2general__documentation_2INSTALL_8md.html',1,'(Global Namespace)']]],
   ['interest_5fpoints_5ftest_5fbag_2ecc_6557',['interest_points_test_bag.cc',['../interest__points__test__bag_8cc.html',1,'']]]
 ];

@@ -80,10 +80,9 @@ function getYPos(item)
           storing this instance.  Is needed to be able to set timeouts.
    resultPath - path to use for external files
 */
-function SearchBox(name, resultsPath, inFrame, label, extension)
+function SearchBox(name, resultsPath, inFrame, label)
 {
   if (!name || !resultsPath) {  alert("Missing parameters to SearchBox."); }
-  if (!extension || extension == "") { extension = ".html"; }
 
   // ---------- Instance variables
   this.name                  = name;
@@ -98,7 +97,6 @@ function SearchBox(name, resultsPath, inFrame, label, extension)
   this.searchActive          = false;
   this.insideFrame           = inFrame;
   this.searchLabel           = label;
-  this.extension             = extension;
 
   // ----------- DOM Elements
 
@@ -349,7 +347,7 @@ function SearchBox(name, resultsPath, inFrame, label, extension)
     if (idx!=-1)
     {
        var hexCode=idx.toString(16);
-       resultsPage = this.resultsPath + '/' + indexSectionNames[this.searchIndex] + '_' + hexCode + this.extension;
+       resultsPage = this.resultsPath + '/' + indexSectionNames[this.searchIndex] + '_' + hexCode + '.html';
        resultsPageWithSearch = resultsPage+'?'+escape(searchValue);
        hasResultsPage = true;
     }

@@ -27,7 +27,7 @@ var NAVTREE =
   [ "NASA Astrobee Robot Software", "index.html", [
     [ "Astrobee Robot Software", "index.html", null ],
     [ "Install", "md_INSTALL.html", "md_INSTALL" ],
-    [ "Astrobee Robot Software v1", "md_RELEASE.html", [
+    [ "Releases", "md_RELEASE.html", [
       [ "Release 0.12.0", "md_RELEASE.html#autotoc_md9", null ],
       [ "Release 0.11.1", "md_RELEASE.html#autotoc_md10", null ],
       [ "Release 0.11.0", "md_RELEASE.html#autotoc_md11", null ],
@@ -104,17 +104,6 @@ var NAVTREE =
           [ "Limitations", "md_RELEASE.html#autotoc_md73", null ]
         ] ]
       ] ]
-    ] ],
-    [ "Adding a ground command to the Astrobee FSW", "adding_a_command_8md.html", [
-      [ "Introduction", "adding_a_command_8md.html#autotoc_md74", null ],
-      [ "Update the Commands Spreadsheet", "adding_a_command_8md.html#autotoc_md75", null ],
-      [ "Add Command to the Plan Schema", "adding_a_command_8md.html#autotoc_md76", null ],
-      [ "File Generation", "adding_a_command_8md.html#autotoc_md77", [
-        [ "Setup", "adding_a_command_8md.html#autotoc_md78", null ],
-        [ "Generate FSW files", "adding_a_command_8md.html#autotoc_md79", null ],
-        [ "Generate Android files", "adding_a_command_8md.html#autotoc_md80", null ]
-      ] ],
-      [ "Add to Executive", "adding_a_command_8md.html#autotoc_md81", null ]
     ] ],
     [ "Astrobee Usage", "md_doc_general_documentation_astrobee_usage.html", "md_doc_general_documentation_astrobee_usage" ],
     [ "Subsystems", "subsystems.html", "subsystems" ],

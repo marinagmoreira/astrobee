@@ -74,5 +74,17 @@ var md_doc_general_documentation_astrobee_usage =
       ] ],
       [ "ROS Unit Tests", "doc.html#autotoc_md139", null ]
     ] ],
-    [ "Conventions", "conventions.html", null ]
+    [ "Conventions", "conventions.html", null ],
+    [ "Adding a ground command to the Astrobee FSW", "adding_a_command.html", [
+      [ "Introduction", "adding_a_command.html#autotoc_md74", null ],
+      [ "Update the Commands Spreadsheet", "adding_a_command.html#autotoc_md75", null ],
+      [ "Add Command to the Plan Schema", "adding_a_command.html#autotoc_md76", null ],
+      [ "File Generation", "adding_a_command.html#autotoc_md77", [
+        [ "Quaternions", "conventions.html#autotoc_md83", null ],
+        [ "Setup", "adding_a_command.html#autotoc_md78", null ],
+        [ "Generate FSW files", "adding_a_command.html#autotoc_md79", null ],
+        [ "Generate Android files", "adding_a_command.html#autotoc_md80", null ]
+      ] ],
+      [ "Add to Executive", "adding_a_command.html#autotoc_md81", null ]
+    ] ]
 ];

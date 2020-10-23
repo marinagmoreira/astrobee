@@ -1,7 +1,6 @@
 var shared =
 [
     [ "Freeflyer Subsystems organization and topic name hierarchy", "subsystems.html#autotoc_md140", [
-      [ "Quaternions", "conventions.html#autotoc_md83", null ],
       [ "Management", "subsystems.html#autotoc_md141", null ],
       [ "Localization", "subsystems.html#autotoc_md142", null ],
       [ "Mobility", "subsystems.html#autotoc_md143", null ],

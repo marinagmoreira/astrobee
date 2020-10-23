@@ -9,9 +9,9 @@ var md_INSTALL =
       [ "Guest Science", "index.html#autotoc_md5", null ],
       [ "License", "index.html#autotoc_md6", null ],
       [ "Non-NASA users", "md_INSTALL.html#autotoc_md10", null ],
-      [ "NASA users", "md_INSTALL.html#autotoc_md11", null ],
-      [ "Docker", "md_INSTALL.html#autotoc_md12", null ]
+      [ "NASA users", "md_INSTALL.html#autotoc_md11", null ]
     ] ],
+    [ "Using Docker", "md_INSTALL.html#autotoc_md12", null ],
     [ "Install for general users", "install-nonNASA.html", [
       [ "Usage instructions for non-NASA users", "install-nonNASA.html#autotoc_md95", [
         [ "Machine setup", "install-nonNASA.html#autotoc_md96", [

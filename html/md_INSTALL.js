@@ -1,6 +1,6 @@
 var md_INSTALL =
 [
-    [ "Quick Start", "md_INSTALL.html#autotoc_md8", null ],
+    [ "Quick Start using the Astrobee docker image", "md_INSTALL.html#autotoc_md8", null ],
     [ "Building the code natively", "md_INSTALL.html#autotoc_md9", [
       [ "About", "index.html#autotoc_md1", null ],
       [ "Usage instructions", "index.html#autotoc_md2", null ],

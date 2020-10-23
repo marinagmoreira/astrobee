@@ -92,9 +92,11 @@ $(document).ready(function(){initNavTree('md_INSTALL.html',''); initResizable();
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md8"></a>
-Quick Start</h1>
-<p>If you just want to try out the astrobee simulator, you can use one of the docker images in the <a href="https://hub.docker.com/r/astrobee/astrobee">Docker Hub</a>. Make sure you have docker installed in your ubuntu system flolowing the <a href="https://docs.docker.com/engine/install/ubuntu/">installation instructions</a> and <a href="https://docs.docker.com/engine/install/linux-postinstall/">post-installation steps for Linux</a>. Given that Docker is installed, just run: </p><pre class="fragment">./scripts/docker/run.sh
-</pre><p>Be aware that this only works on a native ubuntu install.</p>
+Quick Start using the Astrobee docker image</h1>
+<p>If you just want to try out the astrobee simulator, you can use one of the docker images in the <a href="https://hub.docker.com/r/astrobee/astrobee">Docker Hub</a>.</p>
+<p>Given that Docker (see note) is installed:</p>
+<p>git clone <a href="https://github.com/nasa/astrobee.git">https://github.com/nasa/astrobee.git</a> cd astrobee ./scripts/docker/run.sh</p>
+<p><em>Note: Be aware that this only works on a native ubuntu install.</em> <em>Note: Make sure you have docker installed in your ubuntu system following the <a href="https://docs.docker.com/engine/install/ubuntu/">installation instructions</a> and <a href="https://docs.docker.com/engine/install/linux-postinstall/">post-installation steps for Linux</a>.</em></p>
 <h1><a class="anchor" id="autotoc_md9"></a>
 Building the code natively</h1>
 <p>There are different ways to build and test the code.</p>

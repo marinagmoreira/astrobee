@@ -92,10 +92,10 @@ $(document).ready(function(){initNavTree('smart_dock.html',''); initResizable();
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The <a class="el" href="namespacesmart__dock.html">smart_dock</a> package provides a single non-ROS service that accepts a DDS command to wake up an Astrobee that is docked to berth 1 or 2. It is essentially a proxy that converts this command to a <a class="el" href="namespacei2c.html">i2c</a> transaction that is sent from the amrt dock running Linux to the slave dock controller. The dock controller then sets an internal register, which is then collected at some future point in time by the astrobee, which is an <a class="el" href="namespacei2c.html">i2c</a> master on a separate bus. </p><pre class="fragment">[smart dock] &lt;(m)-i2c-(s)&gt; [dock controller] &lt;-(s)-i2c-(m)-&gt; [astrobee]
-</pre><h1><a class="anchor" id="autotoc_md186"></a>
+</pre><h1><a class="anchor" id="autotoc_md191"></a>
 Implementation details</h1>
 <p>Like most of the hardware drivers, there is a proxy library (<a class="el" href="namespacesmart__dock.html">smart_dock</a>) that provides an abstraction away from the <a class="el" href="namespacei2c.html">i2c</a> bus transactions. The smart_dock_node is a free-standing DDS application that provides a bridge between the network and the proxy library. The smart_dock_tool is a simple command-line utility that allows one to manually probe the smart dock.</p>
-<h1><a class="anchor" id="autotoc_md187"></a>
+<h1><a class="anchor" id="autotoc_md192"></a>
 Functional test</h1>
 <p>Ultimately, smart dock will bem automatically launched as a systemd service. Take a look in the scripts/daemon/dock folder of the astrobee robot software for example service files for doing this. If you have not installed the service then you can run it manually:</p>
 <p>First, make sure nothing is docked to either of the berths. Then, make sure you are connected to the ISS network. You can not SSH into the dock using its ISS IP and run the smart_dock_service application: </p><pre class="fragment">ssh astrobee@$DOCK_IP
@@ -105,7 +105,7 @@ Functional test</h1>
 <p>Now, turn on the power switch to an astrobee but do not wake it up with the wake button. In stead, plug the astrobee into berth 1. In less than 10 seconds you should see berth 1 update to reflect the name of the astrobee and the fact that it's in hibernate mode. You might also notice that you can now wake the astrobee using the button underneath the status panes.</p>
 <p>Finally, press the "wake" button in the "Wake Commanding" pane. You should see the status change to "Awake" and, if your computer, the dock and the freeflyer are all connected to the ISS network, then after 30 seconds or so you should see the astrobee you woke up in the "Bee Status" pane.</p>
 <p>If any of the above fails, check that your network configuration is correct and try using the command-line tool to verify the dock functionality.</p>
-<h1><a class="anchor" id="autotoc_md188"></a>
+<h1><a class="anchor" id="autotoc_md193"></a>
 Command-line tool</h1>
 <p>The tool cannot be run if the the service is already running. Before running any of the commands below, make please use systemctl to make sure that the service is not running.</p>
 <p>You can retrieve help on using the tool in the following way: </p><pre class="fragment">smart_dock_tool -help

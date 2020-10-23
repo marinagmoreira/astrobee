@@ -92,51 +92,51 @@ $(document).ready(function(){initNavTree('sim_issues.html',''); initResizable();
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><b>This is a draft document</b></p>
-<h3><a class="anchor" id="autotoc_md361"></a>
+<h3><a class="anchor" id="autotoc_md366"></a>
 The program 'roslaunch/rosrun' is currently not installed</h3>
 <p>This usually happens when the environment has not been setup. Please see the <a href="#setting-up-your-environment">Setting up your Environment</a> section.</p>
-<h3><a class="anchor" id="autotoc_md362"></a>
+<h3><a class="anchor" id="autotoc_md367"></a>
 [Sim.launch] is neither a launch file in package [astrobee] ...</h3>
 <p>This usually happens when the environment has not been setup. Please see the <a href="#setting-up-your-environment">Setting up your Environmant</a> section.</p>
-<h3><a class="anchor" id="autotoc_md363"></a>
+<h3><a class="anchor" id="autotoc_md368"></a>
 Rospack Error Finding Package</h3>
 <p>This usually happens when the environment has not been setup. Please see the <a href="#setting-up-your-environment">Setting up your Environment</a> section.</p>
-<h3><a class="anchor" id="autotoc_md364"></a>
+<h3><a class="anchor" id="autotoc_md369"></a>
 Issues Starting up the Simulator</h3>
 <p>There is a small chance that you will have issues when starting up the simulator. This mainly happens in computers with less computing power. If you are experiencing issues, try launching the world and Astrobee seperately. To do this, you will need to open 2 terminals. Please make sure you setup your environment in both terminals (see <a href="#setting-up-your-environment">Setting up your environment</a>). In the first terminal, run: </p><pre class="fragment">roslaunch astrobee sim.launch default:=false rviz:=true
 </pre><p>After everything in the first terminal starts up, in the second terminal, run: </p><pre class="fragment">roslaunch astrobee spawn.launch dds:=false robot:=sim_pub
 </pre><p>If the robot body doesn't show up in RVIZ, please see the <a href="#robot-body-does-not-show-up-in-RVIZ">Robot Body Doesn't Show up in RVIZ</a> section on how to fix this.</p>
 <p>If this doesn't fix the problem, you may need to slow down the simulation to a speed that your computer can handle. Please see the <a href="#tolerance-violated-errors">Tolerance Violated Errors</a> section.</p>
-<h3><a class="anchor" id="autotoc_md365"></a>
+<h3><a class="anchor" id="autotoc_md370"></a>
 Robot Body Does Not Show up in RVIZ</h3>
 <p>If you end up having to launch the world and Astrobee separately, there is a chance that the robot body will not show up in RVIZ. To fix this, you can toggle the robot. To do this, please find the robot with the namespace you are using in the <code>Displays</code> section of RVIZ (bottom left corner) and click the checkbox located to the right twice (first to turn it off, then to turn it back on). If you didn't specify a namespace, the namespace is the forward slash character(/) and if can be found in the Debug section. It should have a red circle with a white rectangle in the circle in front of the forward slash and the forward slash should be red but this will go away after toggling it.</p>
-<h3><a class="anchor" id="autotoc_md366"></a>
+<h3><a class="anchor" id="autotoc_md371"></a>
 No Image message in RVIZ</h3>
 <p>This is not an error in our system. Please see the <a href="#images">Images</a> section for more information.</p>
-<h3><a class="anchor" id="autotoc_md367"></a>
+<h3><a class="anchor" id="autotoc_md372"></a>
 Heartbeat Fault Detected</h3>
-<h3><a class="anchor" id="autotoc_md368"></a>
+<h3><a class="anchor" id="autotoc_md373"></a>
 Command Fails due to Robot State</h3>
 <p>Cannot move when in ready and not stopped Command not accepted in op state teleop</p>
-<h3><a class="anchor" id="autotoc_md369"></a>
+<h3><a class="anchor" id="autotoc_md374"></a>
 Tolerance Violated Errors</h3>
 <p>use gz stats to make sure you are running at your speed up factor</p>
-<h3><a class="anchor" id="autotoc_md370"></a>
+<h3><a class="anchor" id="autotoc_md375"></a>
 Keep in Zone Violation</h3>
 <p>Make sure the position you are trying to get to is in the world</p>
-<h3><a class="anchor" id="autotoc_md371"></a>
+<h3><a class="anchor" id="autotoc_md376"></a>
 Unable to Plan a Segment</h3>
 <p>The only time we have seen this happen is when the op limits are not set correctly. make sure your limits are correct</p>
-<h3><a class="anchor" id="autotoc_md372"></a>
+<h3><a class="anchor" id="autotoc_md377"></a>
 Couldn't Configure the Mobility Node</h3>
 <p>Wait a little longer before trying to move robot</p>
-<h3><a class="anchor" id="autotoc_md373"></a>
+<h3><a class="anchor" id="autotoc_md378"></a>
 GDS Node - Process has Died</h3>
 <p>You don't have GDS as of yet, don't set the the gds flag to false</p>
-<h3><a class="anchor" id="autotoc_md374"></a>
+<h3><a class="anchor" id="autotoc_md379"></a>
 The robot is spinning, flying higher than the world, or jumping around erratically</h3>
 <p>need to reset ekf or initialize bias, see teleop section</p>
-<h3><a class="anchor" id="autotoc_md375"></a>
+<h3><a class="anchor" id="autotoc_md380"></a>
 Teleop Tool reports no publisher for acks topic</h3>
 <p>make sure the namespace matches the namespace you launched with </p>
 </div></div><!-- contents -->

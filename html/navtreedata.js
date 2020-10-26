@@ -106,7 +106,6 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Astrobee Usage", "md_doc_general_documentation_astrobee_usage.html", "md_doc_general_documentation_astrobee_usage" ],
-    [ "Command Dictionary", "command_dictionaty.html", null ],
     [ "Subsystems", "subsystems.html", "subsystems" ],
     [ "Simulation", "md_simulation_readme.html", "md_simulation_readme" ],
     [ "Tools", "tools.html", "tools" ],

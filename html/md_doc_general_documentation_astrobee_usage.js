@@ -86,5 +86,6 @@ var md_doc_general_documentation_astrobee_usage =
         [ "Generate Android files", "adding_a_command.html#autotoc_md85", null ]
       ] ],
       [ "Add to Executive", "adding_a_command.html#autotoc_md86", null ]
-    ] ]
+    ] ],
+    [ "Command Dictionary", "command_dictionary.html", null ]
 ];

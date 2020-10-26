@@ -6,10 +6,6 @@ var localization =
       [ "Inputs", "opticalflow.html#autotoc_md218", null ],
       [ "Outputs", "opticalflow.html#autotoc_md219", null ]
     ] ],
-    [ "Optical Flow", "opticalflow.html", [
-      [ "Inputs", "opticalflow.html#autotoc_md218", null ],
-      [ "Outputs", "opticalflow.html#autotoc_md219", null ]
-    ] ],
     [ "Camera Library", "camera.html", null ],
     [ "Handrail Detection", "handrail.html", [
       [ "Inputs", "handrail.html#autotoc_md216", null ],

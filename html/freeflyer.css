@@ -187,7 +187,7 @@ a {
 }
 
 .contents a:visited {
-	color: #1E90FF;
+	color: #1c1c1c;
 }
 
 a:hover {
@@ -210,7 +210,6 @@ a.qindexHL {
 }
 
 a.el {
-	color: #1E90FF;
 	font-weight: bold;
 }
 
@@ -275,10 +274,6 @@ ul {
 
 #nav-tree .selected a {
     color: #1c1c1c;
-}
-
-#nav-tree a {
-  color: #1c1c1c;
 }
 
 #nav-sync {

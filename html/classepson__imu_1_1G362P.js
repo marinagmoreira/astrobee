@@ -1,0 +1,27 @@
+var classepson__imu_1_1G362P =
+[
+    [ "G362P", "classepson__imu_1_1G362P.html#aede0389740c1c41893a7c950521f4087", null ],
+    [ "~G362P", "classepson__imu_1_1G362P.html#a35b34b4ee0a0671fcaee675c776e7dbd", null ],
+    [ "DumpRegisters", "classepson__imu_1_1G362P.html#ae4fd9d0cc2f972cbc30edb3a56396dd5", null ],
+    [ "EnableOutput", "classepson__imu_1_1G362P.html#a7f7dfb7886cc727059804b2a7dc430b7", null ],
+    [ "EnableUART", "classepson__imu_1_1G362P.html#acae7e1d5b9329940c7e67a7944164116", null ],
+    [ "GetMode", "classepson__imu_1_1G362P.html#a61dbc7953e6bc5093b1dcb9f5fc16966", null ],
+    [ "HardReset", "classepson__imu_1_1G362P.html#a090572858d041b7e38908450eb38b142", null ],
+    [ "HasHardError", "classepson__imu_1_1G362P.html#ad36fc2039ed05bdd41fe4ab48b146c35", null ],
+    [ "IsReady", "classepson__imu_1_1G362P.html#aa0a203c0538e6596e505eef4503e01b9", null ],
+    [ "PowerOn", "classepson__imu_1_1G362P.html#ab5f9dc8b201a7d44cf913b3184bd2a17", null ],
+    [ "PrintData", "classepson__imu_1_1G362P.html#a20db748e42394b5ba50a1610271f382c", null ],
+    [ "ReadData", "classepson__imu_1_1G362P.html#acba2642fcb750d5e2ac26041aadd4439", null ],
+    [ "ReadRegister", "classepson__imu_1_1G362P.html#af39d7c095e5acbed88665d9fe6907458", null ],
+    [ "SelfTest", "classepson__imu_1_1G362P.html#a4a785669778eee16d6c7d8004637aaef", null ],
+    [ "SetFilter", "classepson__imu_1_1G362P.html#a5712549213e973b505f8e674ae4ad982", null ],
+    [ "SetMode", "classepson__imu_1_1G362P.html#a66cae858e0e43af1d72c44fddf2d5ab6", null ],
+    [ "SetOutputBits", "classepson__imu_1_1G362P.html#abf4c310027246aab8e86ede339dcb381", null ],
+    [ "SetSamplingRate", "classepson__imu_1_1G362P.html#a8fa8f5c6370f19424655fa473140cc9e", null ],
+    [ "SetWindow", "classepson__imu_1_1G362P.html#a99b4f2ec4586209f8236b198c0fadd5e", null ],
+    [ "SoftReset", "classepson__imu_1_1G362P.html#a6791c56546ab8b7fa6ef03a0424ff948", null ],
+    [ "StartSampling", "classepson__imu_1_1G362P.html#aa50b2f039320bb017035bfd35358ce4d", null ],
+    [ "StopSampling", "classepson__imu_1_1G362P.html#a2869e9f68895867846cc1e7f9b1462f7", null ],
+    [ "TransferWord", "classepson__imu_1_1G362P.html#a7254e101fa0fa7dd493990b8687b65d4", null ],
+    [ "WriteRegister", "classepson__imu_1_1G362P.html#a2c66169e435484994d1206aaa3f88e2e", null ]
+];

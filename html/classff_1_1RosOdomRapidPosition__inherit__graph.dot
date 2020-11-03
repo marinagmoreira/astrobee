@@ -1,9 +1,0 @@
-digraph "ff::RosOdomRapidPosition"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{ff::RosOdomRapidPosition\n||+ RosOdomRapidPosition()\l+ CopyTransform3D()\l+ CopyVec3D()\l+ MsgCallback()\l+ PubEkf()\l+ PubPosition()\l+ SetEkfPublishRate()\l+ SetPositionPublishRate()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
-  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node2 [label="{ff::RosSubRapidPub\n|# nh_\l# sub_\l# subscribe_topic_\l# publish_topic_\l# queue_size_\l|# RosSubRapidPub()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classff_1_1RosSubRapidPub.html",tooltip=" "];
-}

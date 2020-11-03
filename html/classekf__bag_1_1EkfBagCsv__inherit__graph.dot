@@ -1,9 +1,0 @@
-digraph "ekf_bag::EkfBagCsv"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{ekf_bag::EkfBagCsv\n|# tracked_of_\l|+ EkfBagCsv()\l+ ~EkfBagCsv()\l# UpdateGroundTruth()\l# UpdateEKF()\l# UpdateOpticalFlow()\l# UpdateSparseMap()\l# UpdateOpticalFlowReg()\l# UpdateSparseMapReg()\l# ReadParams()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
-  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node2 [label="{ekf_bag::EkfBag\n|# bag_\l# map_\l# loc_\l# of_\l# ekf_\l# bag_start_time_\l# ground_truth_\l|+ EkfBag()\l+ ~EkfBag()\l+ Run()\l# ReadParams()\l# UpdateImu()\l# UpdateImage()\l# UpdateGroundTruth()\l# UpdateEKF()\l# UpdateOpticalFlow()\l# UpdateSparseMap()\l# UpdateOpticalFlowReg()\l# UpdateSparseMapReg()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classekf__bag_1_1EkfBag.html",tooltip=" "];
-}

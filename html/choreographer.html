@@ -143,6 +143,7 @@ Configurable parameters</h2>
 Under the hood</h2>
 <p>Internally, the choreographer is encoded as a finite state machine depicted below and implemented using the ff_util/FSM class. This class essentially captures a map of (state, event) -&gt; lambda function relationships. The state of the system is moved forward by setting the initial state and then pushing a sequence of events to the FSM.</p>
 <p><div class="dotgraph">
+<img src="dot_choreographer_fsm.png" alt="dot_choreographer_fsm.png" border="0" usemap="#dot_choreographer_fsm.map"/>
 <div class="caption">
 Choreographer finite state machine</div>
 </div>

@@ -114,6 +114,7 @@ Internal behavior</h1>
 </ul>
 <p>Internally, the arm behavior is encoded as the finite state machine depicted below and implemented using the ff_util/FSM class. This class essentially captures a map of (state, event) -&gt; lambda function relationships. The state of the system is moved forward by setting the initial state and then pushing a sequence of events to the FSM.</p>
 <p><div class="dotgraph">
+<img src="dot_arm_fsm.png" alt="dot_arm_fsm.png" border="0" usemap="#dot_arm_fsm.map"/>
 <div class="caption">
 Arm finite state machine</div>
 </div>

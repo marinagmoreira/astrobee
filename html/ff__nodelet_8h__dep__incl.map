@@ -45,7 +45,7 @@
 <area shape="rect" id="node67" href="$perch__nodelet_8cc.html" title=" " alt="" coords="7847,109,7983,151"/>
 <area shape="rect" id="node68" href="$states__nodelet_8cc.html" title=" " alt="" coords="8007,102,8158,158"/>
 <area shape="rect" id="node69" href="$astrobee__gazebo_8h.html" title=" " alt="" coords="8323,102,8501,158"/>
-<area shape="rect" id="node79" href="$gazebo__model__plugin__signal__lights_8cc.html" title=" " alt="" coords="9471,213,9660,284"/>
+<area shape="rect" id="node79" href="$gazebo__model__plugin__signal__lights_8cc.html" title=" " alt="" coords="9507,213,9696,284"/>
 <area shape="rect" id="node80" href="$eps__sim_8h.html" title=" " alt="" coords="8577,102,8725,158"/>
 <area shape="rect" id="node5" href="$epson__imu__nodelet_8cc.html" title=" " alt="" coords="357,228,536,269"/>
 <area shape="rect" id="node7" href="$flashlight__nodelet_8cc.html" title=" " alt="" coords="572,221,703,277"/>
@@ -77,6 +77,6 @@
 <area shape="rect" id="node74" href="$gazebo__model__plugin__flashlight__aft_8cc.html" title=" " alt="" coords="8425,213,8599,284"/>
 <area shape="rect" id="node75" href="$gazebo__model__plugin__flashlight__front_8cc.html" title=" " alt="" coords="8623,213,8807,284"/>
 <area shape="rect" id="node76" href="$gazebo__model__plugin__laser_8cc.html" title=" " alt="" coords="8831,221,9017,277"/>
-<area shape="rect" id="node77" href="$gazebo__model__plugin__llp__cpu__monitor_8cc.html" title=" " alt="" coords="9041,213,9220,284"/>
-<area shape="rect" id="node78" href="$gazebo__model__plugin__llp__disk__monitor_8cc.html" title=" " alt="" coords="9245,213,9446,284"/>
+<area shape="rect" id="node77" href="$gazebo__model__plugin__llp__cpu__mem__monitor_8cc.html" title=" " alt="" coords="9042,213,9257,284"/>
+<area shape="rect" id="node78" href="$gazebo__model__plugin__llp__disk__monitor_8cc.html" title=" " alt="" coords="9281,213,9482,284"/>
 </map>

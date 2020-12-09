@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quat_10327',['Quat',['../namespacetraj__opt.html#a312ec959c4ffffa1b78e005ae1cde86a',1,'traj_opt']]]
+  ['quat_10338',['Quat',['../namespacetraj__opt.html#a312ec959c4ffffa1b78e005ae1cde86a',1,'traj_opt']]]
 ];

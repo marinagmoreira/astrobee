@@ -1,5 +1,5 @@
 <map id="ff::RosSubRapidPub" name="ff::RosSubRapidPub">
-<area shape="rect" id="node1" title=" " alt="" coords="2653,5,2798,141"/>
+<area shape="rect" id="node1" title=" " alt="" coords="2754,5,2899,141"/>
 <area shape="rect" id="node2" href="$classff_1_1RosAccessControlStateToRapid.html" title=" " alt="" coords="5,255,237,362"/>
 <area shape="rect" id="node3" href="$classff_1_1RosAckToRapid.html" title=" " alt="" coords="261,263,400,355"/>
 <area shape="rect" id="node4" href="$classff_1_1RosAgentStateToRapid.html" title=" " alt="" coords="425,263,605,355"/>
@@ -21,8 +21,9 @@
 <area shape="rect" id="node20" href="$classff_1_1RosInertiaToRapid.html" title=" " alt="" coords="3947,263,4098,355"/>
 <area shape="rect" id="node21" href="$classff_1_1RosLogSampleToRapid.html" title=" " alt="" coords="4122,263,4302,355"/>
 <area shape="rect" id="node22" href="$classff_1_1RosOdomRapidPosition.html" title=" " alt="" coords="4326,219,4509,399"/>
-<area shape="rect" id="node23" href="$classff_1_1RosPlanStatusRapidPlanStatus.html" title=" " alt="" coords="4533,255,4761,362"/>
-<area shape="rect" id="node24" href="$classff_1_1RosPmcCmdStateToRapid.html" title=" " alt="" coords="4785,241,4986,377"/>
-<area shape="rect" id="node25" href="$classff_1_1RosStringRapidTextMessage.html" title=" " alt="" coords="5011,263,5224,355"/>
-<area shape="rect" id="node26" href="$classff_1_1RosTelemetryRapidTelemetry.html" title=" " alt="" coords="5248,189,5464,428"/>
+<area shape="rect" id="node23" href="$classff_1_1RosPayloadStateToRapid.html" title=" " alt="" coords="4533,263,4726,355"/>
+<area shape="rect" id="node24" href="$classff_1_1RosPlanStatusRapidPlanStatus.html" title=" " alt="" coords="4750,255,4978,362"/>
+<area shape="rect" id="node25" href="$classff_1_1RosPmcCmdStateToRapid.html" title=" " alt="" coords="5002,241,5203,377"/>
+<area shape="rect" id="node26" href="$classff_1_1RosStringRapidTextMessage.html" title=" " alt="" coords="5228,263,5441,355"/>
+<area shape="rect" id="node27" href="$classff_1_1RosTelemetryRapidTelemetry.html" title=" " alt="" coords="5465,189,5681,428"/>
 </map>

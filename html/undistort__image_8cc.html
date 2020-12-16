@@ -153,8 +153,10 @@ Functions</h2></td></tr>
 <tr class="separator:af194c2592b013704f855ddb469c9a2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab572f5128add3e53f49ea7749546fc92"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="undistort__image_8cc.html#ab572f5128add3e53f49ea7749546fc92">DEFINE_string</a> (output_directory, &quot;&quot;, &quot;If not specified, undistorted images will &quot; &quot;saved in the same directory as the inputs.&quot;)</td></tr>
 <tr class="separator:ab572f5128add3e53f49ea7749546fc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbc0f16a071de0ecdbe5296f97949d7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="undistort__image_8cc.html#afbc0f16a071de0ecdbe5296f97949d7e">DEFINE_string</a> (undistorted_crop_win, &quot;&quot;, &quot;After undistorting, crop this many pixels from all 4 sides. The adjusted &quot; &quot;dimensions and optical center will be displayed below. &quot; &quot;Specify as: 'crop_x crop_y'.&quot;)</td></tr>
-<tr class="separator:afbc0f16a071de0ecdbe5296f97949d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f84ba42a65db1cae57299ef802cba5c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="undistort__image_8cc.html#a4f84ba42a65db1cae57299ef802cba5c">DEFINE_double</a> (scale, 1.0, &quot;Undistort images at different resolution, with their width &quot; &quot;being a multiple of this scale compared to the camera model.&quot;)</td></tr>
+<tr class="separator:a4f84ba42a65db1cae57299ef802cba5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a9c856ed7a559be6c84e41f9ce91094"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="undistort__image_8cc.html#a1a9c856ed7a559be6c84e41f9ce91094">DEFINE_string</a> (undistorted_crop_win, &quot;&quot;, &quot;After undistorting, apply a crop window of these dimensions &quot; &quot;centered at the undistorted image center. The adjusted &quot; &quot;dimensions and optical center will be displayed below. &quot; &quot;Specify as: 'crop_x crop_y'.&quot;)</td></tr>
+<tr class="separator:a1a9c856ed7a559be6c84e41f9ce91094"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4d25577d3f4a0e48365827cb5295926"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="undistort__image_8cc.html#aa4d25577d3f4a0e48365827cb5295926">DEFINE_bool</a> (save_bgr, false, &quot;Save the undistorted images as BGR instead of grayscale. (Some tools expect BGR.)&quot;)</td></tr>
 <tr class="separator:aa4d25577d3f4a0e48365827cb5295926"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ddf5e8c900ecb606b055a6ff0b23521"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="undistort__image_8cc.html#a5ddf5e8c900ecb606b055a6ff0b23521">DEFINE_bool</a> (<a class="el" href="interest__points__test__bag_8cc.html#a48f829c48f848ca0e196d73da88d99c2">histogram_equalization</a>, false, &quot;If true, do histogram equalization.&quot;)</td></tr>
@@ -227,6 +229,46 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&quot;Save the undistorted images as BGR instead of grayscale. (Some tools expect BGR.)&quot;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f84ba42a65db1cae57299ef802cba5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f84ba42a65db1cae57299ef802cba5c">&#9670;&nbsp;</a></span>DEFINE_double()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DEFINE_double </td>
+          <td>(</td>
+          <td class="paramtype">scale&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;Undistort images at different&#160;</td>
+          <td class="paramname"><em>resolution</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">with their width &quot; &quot;being a multiple of this scale compared to the camera model.&quot;&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -359,8 +401,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afbc0f16a071de0ecdbe5296f97949d7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbc0f16a071de0ecdbe5296f97949d7e">&#9670;&nbsp;</a></span>DEFINE_string() <span class="overload">[4/4]</span></h2>
+<a id="a1a9c856ed7a559be6c84e41f9ce91094"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a9c856ed7a559be6c84e41f9ce91094">&#9670;&nbsp;</a></span>DEFINE_string() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -386,7 +428,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">crop this many pixels from all 4 sides. The adjusted &quot; &quot;dimensions and optical center will be displayed below. &quot; &quot;Specify as:'crop_x crop_y'.&quot;&#160;</td>
+          <td class="paramtype">apply a crop window of these dimensions &quot; &quot;centered at the undistorted image center. The adjusted &quot; &quot;dimensions and optical center will be displayed below. &quot; &quot;Specify as:'crop_x crop_y'.&quot;&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>

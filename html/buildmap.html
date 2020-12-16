@@ -319,14 +319,15 @@ Examine the performance and features on MLP</h3>
 <h2><a class="anchor" id="autotoc_md252"></a>
 Verify localization against a sparse map on a local machine</h2>
 <p>To test localization of data from a bag against a map, one need not run things on the robot, but use instead a local machine. This should result on similar results as on the robot, but the speed of computations may differ.</p>
-<p>Set up the environment in every terminal that is used. Ensure that you use the correct robot name below. </p><pre class="fragment">source ~/astrobee_build/native/devel/setup.bash
+<p>Set up the environment in every terminal that is used. Ensure that you use the correct robot name below. </p><pre class="fragment">source $BUILD_PATH/devel/setup.bash
 export ASTROBEE_RESOURCE_DIR=$SOURCE_PATH/astrobee/resources
 export ASTROBEE_CONFIG_DIR=$SOURCE_PATH/astrobee/config
 export ASTROBEE_WORLD=iss
 export ASTROBEE_ROBOT=bumble # your robot's name may be different
 export ROS_MASTER_URI=http://127.0.0.1:11311/
 </pre><p>Examine the localization configuration file: </p><pre class="fragment">astrobee/config/localization.config
-</pre><p>Sym link the map to test: </p><pre class="fragment">rm -fv $SOURCE_PATH/astrobee/resources/maps/iss.map
+</pre><p>Sym link the map to test: </p><pre class="fragment">mkdir -p $SOURCE_PATH/astrobee/resources/maps
+rm -fv $SOURCE_PATH/astrobee/resources/maps/iss.map
 ln -s $(pwd)/mymap.map $SOURCE_PATH/astrobee/resources/maps/iss.map
 </pre><p>Start the localization node: </p><pre class="fragment">roslaunch astrobee astrobee.launch mlp:=local llp:=disabled \
   nodes:=framestore,localization_node

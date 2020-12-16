@@ -109,8 +109,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad9d65b745608d9304a369dca57f6e225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94909fd5f9c983ccdb13fa56ecb13062"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcamera_1_1CameraParameters.html#a94909fd5f9c983ccdb13fa56ecb13062">CameraParameters</a> (Eigen::Vector2i const &amp;image_size, Eigen::Vector2d const &amp;focal_length, Eigen::Vector2d const &amp;optical_center, Eigen::VectorXd const &amp;distortion=Eigen::VectorXd())</td></tr>
 <tr class="separator:a94909fd5f9c983ccdb13fa56ecb13062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ee1604a36bfb8c39df23ee60a14658b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcamera_1_1CameraParameters.html#a9ee1604a36bfb8c39df23ee60a14658b">GenerateRemapMaps</a> (cv::Mat *remap_map)</td></tr>
-<tr class="separator:a9ee1604a36bfb8c39df23ee60a14658b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d6186770cd1e0b7b0e0db061ac4273c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcamera_1_1CameraParameters.html#a9d6186770cd1e0b7b0e0db061ac4273c">GenerateRemapMaps</a> (cv::Mat *remap_map, double scale=1.0)</td></tr>
+<tr class="separator:a9d6186770cd1e0b7b0e0db061ac4273c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeda55edbdb6940f4b9c06d532ef798c7"><td class="memTemplParams" colspan="2">template&lt;int SRC, int DEST&gt; </td></tr>
 <tr class="memitem:aeda55edbdb6940f4b9c06d532ef798c7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcamera_1_1CameraParameters.html#aeda55edbdb6940f4b9c06d532ef798c7">Convert</a> (Eigen::Vector2d const &amp;input, Eigen::Vector2d *output) const</td></tr>
 <tr class="separator:aeda55edbdb6940f4b9c06d532ef798c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -335,8 +335,8 @@ template&lt;int SRC, int DEST&gt; </div>
 
 </div>
 </div>
-<a id="a9ee1604a36bfb8c39df23ee60a14658b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ee1604a36bfb8c39df23ee60a14658b">&#9670;&nbsp;</a></span>GenerateRemapMaps()</h2>
+<a id="a9d6186770cd1e0b7b0e0db061ac4273c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d6186770cd1e0b7b0e0db061ac4273c">&#9670;&nbsp;</a></span>GenerateRemapMaps()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -345,8 +345,18 @@ template&lt;int SRC, int DEST&gt; </div>
           <td class="memname">void camera::CameraParameters::GenerateRemapMaps </td>
           <td>(</td>
           <td class="paramtype">cv::Mat *&#160;</td>
-          <td class="paramname"><em>remap_map</em></td><td>)</td>
+          <td class="paramname"><em>remap_map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>1.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

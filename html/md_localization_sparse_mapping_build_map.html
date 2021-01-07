@@ -68,7 +68,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('buildmap.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('md_localization_sparse_mapping_build_map.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -88,11 +88,11 @@ $(document).ready(function(){initNavTree('buildmap.html',''); initResizable(); }
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Summary </div>  </div>
+<div class="title">Map building </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Here we describe how to build a map.</p>
-<h1><a class="anchor" id="buildmap"></a>
+<h1><a class="anchor" id="autotoc_md234"></a>
 Summary</h1>
 <ol type="1">
 <li>Reduce the number of images.</li>
@@ -101,100 +101,83 @@ Summary</h1>
 <li>Find control points in Hugin, and create a list of their coordinates.</li>
 <li>Register the map.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md233"></a>
-Map building</h1>
-<p>We go through how a map is made.</p>
-<h2><a class="anchor" id="autotoc_md234"></a>
+<h1><a class="anchor" id="autotoc_md235"></a>
+Detailed explanation</h1>
+<h2><a class="anchor" id="autotoc_md236"></a>
 Reduce the number of images</h2>
-<p>Here, we delete the images that overlap highly. (This tool is, like all others, in astrobee_build/native.)</p>
-<p>select_images -density_factor 1.4 &lt;image dir&gt;/*.jpg</p>
-<p>This is a non-reversible operation, so it should be invoked on a copy of the images.</p>
-<p>The higher the value of the density factor, the more images will be kept. Some experimentation with this number is necessary. A value of 1.4 seems to work well. It may be needed to decrease this to 1.0 if images appear to be too dense. Ideally the images should have perhaps on the order of 2/3 to 3/4 of overlap. This tool is not perfect. One should inspect the images in the 'eog' viewer, and delete redundant ones from it manually, using the Delete key.</p>
+<p>Here, we delete the images that overlap highly. (This tool is, like all others, in astrobee_build/native.) </p><pre class="fragment">select_images -density_factor 1.4 &lt;image dir&gt;/*.jpg
+</pre><p>This is a non-reversible operation, so it should be invoked on a copy of the images.</p>
+<p>The higher the value of the density factor, the more images will be kept. Some experimentation with this number is necessary. A value of 1.4 seems to work well. It may be needed to decrease this to 1.0 if images appear to be too dense. Ideally the images should have perhaps on the order of 2/3 to 3/4 of overlap. This tool is not perfect. One should inspect the images in the <code>eog</code> viewer, and delete redundant ones from it manually, using the Delete key.</p>
 <p>The images can also be inspected and deleted with nvm_visualize, a tool included with this software. See readme.md for details. This tool, unlike eog, echoes each image name as it is displayed, which can be useful with image manipulation tasks.</p>
 <p>If the images do not have enough overlap, the selection tool needs to be run again with a different value of this factor, or otherwise images must be added back manually.</p>
-<p>Alternatively, one can simply first pick every 10th or 20th image, such as:</p>
-<p>ls &lt;image dir&gt;/*.jpg</p>
-<p>then copy these to a new directory.</p>
+<p>Alternatively, one can simply first pick every 10th or 20th image, such as: </p><pre class="fragment">ls &lt;image dir&gt;/*.jpg
+</pre><p>then copy these to a new directory.</p>
 <p>It is important to avoid rotating the bot in place when acquiring images, as then the map could be of poor quality. Hence, the robot should have some translation motion (in addition to any rotation) when the data is acquired.</p>
-<h2><a class="anchor" id="autotoc_md235"></a>
+<h2><a class="anchor" id="autotoc_md237"></a>
 Setup the environment</h2>
-<p>In the first step, one needs to set some environmental variables, as follows:</p>
-<p>export ASTROBEE_RESOURCE_DIR=$SOURCE_PATH/astrobee/resources export ASTROBEE_CONFIG_DIR=$SOURCE_PATH/astrobee/config export ASTROBEE_ROBOT=p4d export ASTROBEE_WORLD=granite</p>
-<p>Here, p4d is the robot being used to take pictures, and the world is the granite table. These may need to change, depending on your goals. Under the hood, the following configuration files will be read:</p>
-<p>$ASTROBEE_CONFIG_DIR/cameras.config</p>
-<p>which contains the image width and height (the camera we use is the nav cam) and</p>
-<p>$ASTROBEE_CONFIG_DIR/robots/$ASTROBEE_ROBOT.config</p>
-<p>having nav cam's intrinsics. If your camera is not the nav cam on p4d, and none of the other available config files apply, you can just temporarily modify the above files to reflect your camera's parameters (without checking in your changes).</p>
-<p>More details on these and other environmental variables can be found in</p>
-<p>astrobee/astrobee/readme.md</p>
-<h2><a class="anchor" id="autotoc_md236"></a>
+<p>In the first step, one needs to set some environmental variables, as follows: </p><pre class="fragment">export ASTROBEE_RESOURCE_DIR=$SOURCE_PATH/astrobee/resources
+export ASTROBEE_CONFIG_DIR=$SOURCE_PATH/astrobee/config
+export ASTROBEE_ROBOT=p4d
+export ASTROBEE_WORLD=granite
+</pre><p>Here, <code>p4d</code> is the robot being used to take pictures, and the world is the granite table. These may need to change, depending on your goals. Under the hood, the following configuration files will be read: </p><pre class="fragment">$ASTROBEE_CONFIG_DIR/cameras.config
+</pre><p>which contains the image width and height (the camera we use is the nav cam) and </p><pre class="fragment">$ASTROBEE_CONFIG_DIR/robots/$ASTROBEE_ROBOT.config
+</pre><p>having nav cam's intrinsics. If your camera is not the nav cam on p4d, and none of the other available config files apply, you can just temporarily modify the above files to reflect your camera's parameters (without checking in your changes).</p>
+<p>More details on these and other environmental variables can be found in </p><pre class="fragment">$SOURCE_PATH/astrobee/readme.md
+</pre><h2><a class="anchor" id="autotoc_md238"></a>
 Building a map</h2>
-<p>Execute this command to construct a complete map:</p>
-<p>build_map &lt;image dir&gt;/*.jpg [ -num_subsequent_images &lt;val&gt; ] \ -histogram_equalization -output_map &lt;output.map&gt;</p>
-<p>During map building, every image will be matched against every subsequent image in the sequence. To use only a limited number of subsequent images, set the value passed to the <code>-num_subsequent_images</code> flag. Later, we will also see how to match only similar images using a vocabulary tree.</p>
+<p>Execute this command to construct a complete map: </p><pre class="fragment">build_map &lt;image dir&gt;/*.jpg [ -num_subsequent_images &lt;val&gt; ] \
+  -histogram_equalization -output_map &lt;output.map&gt;
+</pre><p>During map building, every image will be matched against every subsequent image in the sequence. To use only a limited number of subsequent images, set the value passed to the <code>-num_subsequent_images</code> flag. Later, we will also see how to match only similar images using a vocabulary tree.</p>
 <p>The runtime of the algorithm is directly proportional to the number of input images times the number input to <code>-num_subsequent_images</code>. Making the latter small will result in more drift. If you know that a region will be revisited after say 100 images, use this number for this parameter. Making this too big will result in very slow map building.</p>
 <p>The flag -histogram_equalization equalizes the histogram of the images before doing feature detection. It was shown to create maps that are more robust to illumination changes.</p>
 <p>In practice, the map is build in pieces, and then merged. Then the above process needs to be modified. See readme.md in this directory for how this approach should go.</p>
-<h3><a class="anchor" id="autotoc_md237"></a>
+<h3><a class="anchor" id="autotoc_md239"></a>
 Map building pipeline</h3>
 <p>The <code>build_map</code> command runs a number of steps, which can also be invoked individually for further control.</p>
-<ol type="1">
-<li><p class="startli"><b>Detect interest points</b></p>
-<p class="startli">build_map &lt;image dir&gt;/*.jpg -feature_detection [ -sample_rate &lt;N&gt; ] -histogram_equalization [ -detector &lt;detector&gt; ] [ -descriptor &lt;descriptor&gt; ]</p>
-</li>
-</ol>
-<p>Detects features in all of the input images and save them to a map file. The <code>-sample_rate &lt;N&gt;</code> flag, if specified, builds the map from only one out of N input images. If desired, the feature detector and feature descriptor can be specified. The default is ORGBRISK.</p>
-<p>Here and below we omitted for brevity the -output_map option that is needed for the tool to run. The images need to be specified only at step 1 above, and not below, as by then they are rememberd by the map.</p>
-<ol type="1">
-<li><p class="startli"><b>Match images</b></p>
-<p class="startli">build_map -feature_matching -histogram_equalization [ -num_subsequent_images &lt;val&gt; ]</p>
-</li>
-</ol>
-<p>Match the detected features between images, detecting similar features that appear in multiple images. The number of subsequent images to match against can be specified, otherwise all pairwise matches are evaluated.</p>
-<ol type="1">
-<li><p class="startli"><b>Build tracks</b></p>
-<p class="startli">build_map -track_building -histogram_equalization</p>
-</li>
-</ol>
-<p>Take the feature matches and form "tracks" of features seen consistently across multiple frames.</p>
-<ol type="1">
-<li><p class="startli"><b>Incremental bundle adjustment</b></p>
-<p class="startli">build_map -incremental_ba -histogram_equalization</p>
-<p class="startli">Incremental bundle adjustment for transform initialization.</p>
-</li>
-<li><p class="startli"><b>Bundle adjustment</b></p>
-<p class="startli">build_map -bundle_adjustment -histogram_equalization</p>
-<p class="startli">Adjust the initial transformations to minimize error with bundle adjustment.</p>
-</li>
-</ol>
-<p>If the options</p>
-<p>-first_ba_index and -last_ba_index</p>
-<p>are specified, only cameras with indices between these (including both endpoints) will be optimized during bundle adjustment.</p>
-<ol type="1">
-<li><p class="startli"><b>Map rebuilding</b></p>
-<p class="startli">build_map -rebuild -histogram_equalization</p>
-</li>
-</ol>
-<p>Rebuilds the map with a different feature set (by default, BRISK features). The initial map can be built with high quality features, such as SURF, and then rebuilt with faster features for localization, such as BRISK. During rebuilding the cameras are kept fixed by default, since BRISK features, while faster, may be fewer and less accurate.</p>
+<h4><a class="anchor" id="autotoc_md240"></a>
+Detect interest points</h4>
+<pre class="fragment">build_map &lt;image dir&gt;/*.jpg -feature_detection [ -sample_rate &lt;N&gt; ]
+  -histogram_equalization [ -detector &lt;detector&gt; ] [ -descriptor &lt;descriptor&gt; ]
+</pre><p>Detects features in all of the input images and save them to a map file. The <code>-sample_rate &lt;N&gt;</code> flag, if specified, builds the map from only one out of N input images. If desired, the feature detector and feature descriptor can be specified. The default is ORGBRISK.</p>
+<p>Here and below we omitted for brevity the -output_map option that is needed for the tool to run. The images need to be specified only at step 1 above, and not below, as by then they are remembered by the map.</p>
+<h4><a class="anchor" id="autotoc_md241"></a>
+Match images</h4>
+<pre class="fragment">build_map -feature_matching -histogram_equalization [ -num_subsequent_images &lt;val&gt; ]
+</pre><p>Match the detected features between images, detecting similar features that appear in multiple images. The number of subsequent images to match against can be specified, otherwise all pairwise matches are evaluated.</p>
+<h4><a class="anchor" id="autotoc_md242"></a>
+Build tracks</h4>
+<pre class="fragment">build_map -track_building -histogram_equalization
+</pre><p>Take the feature matches and form "tracks" of features seen consistently across multiple frames.</p>
+<h4><a class="anchor" id="autotoc_md243"></a>
+Incremental bundle adjustment</h4>
+<pre class="fragment">build_map -incremental_ba -histogram_equalization
+</pre><h4><a class="anchor" id="autotoc_md244"></a>
+Bundle adjustment</h4>
+<pre class="fragment">build_map -bundle_adjustment -histogram_equalization
+</pre><p>Adjust the initial transformations to minimize error with bundle adjustment.</p>
+<p>If the options: </p><pre class="fragment">-first_ba_index and -last_ba_index 
+</pre><p>are specified, only cameras with indices between these (including both endpoints) will be optimized during bundle adjustment.</p>
+<h4><a class="anchor" id="autotoc_md245"></a>
+Map rebuilding</h4>
+<pre class="fragment">build_map -rebuild -histogram_equalization
+</pre><p>Rebuilds the map with a different feature set (by default, BRISK features). The initial map can be built with high quality features, such as SURF, and then rebuilt with faster features for localization, such as BRISK. During rebuilding the cameras are kept fixed by default, since BRISK features, while faster, may be fewer and less accurate.</p>
 <p>Rebuilding is much faster than building from scratch, since it borrows from the original map the information about which images can be matched to which, and also reuses the camera positions.</p>
 <p>To replace the camera intrinsics during rebuilding, one can use -rebuild_replace_camera, when the camera is set via ASTROBEE_ROBOT. Camera positions and orientations can be re-optimized with -rebuild_refloat_cameras. To rebuild with a desired feature detector, use the option -rebuild_detector.</p>
 <p>Note that rebuilding the map does not rebuild the vocabulary database which should be done as below.</p>
 <p>Rebuilding a map while floating the cameras is not recommended if the map had images taken out of it as is typically done to reduce its size in order to be deployed on the robot. Refloating the cameras may then result in the map breaking up into several connected components that would drift from each other.</p>
 <p>If it is desired to take out images from the map, it should happen at this stage, before the vocabulary database and pruning happens at the next step. See readme.md when it comes to such operations, where the script grow_map.py is used.</p>
-<ol type="1">
-<li><p class="startli"><b>Vocabulary database</b></p>
-<p class="startli">build_map -vocab_db</p>
-</li>
-</ol>
-<p>Builds a vocabulary database for fast lookup of matching image pairs. Without this, we have to compare to every image in the map for localization. The vocabulary database makes parts of the runtime logarithmic instead of linear.</p>
+<h4><a class="anchor" id="autotoc_md246"></a>
+Vocabulary database</h4>
+<pre class="fragment">build_map -vocab_db
+</pre><p>Builds a vocabulary database for fast lookup of matching image pairs. Without this, we have to compare to every image in the map for localization. The vocabulary database makes parts of the runtime logarithmic instead of linear.</p>
 <p>It is very important to note that when the vocabulary database is created the map is pruned from features that show up in just one image. This is an irreversible operation and after it no other operations can be performed on this map, such as extracting as submap, or even recreating the vocabulary database again without a large loss of quality. Hence this operation must be the very last to be applied to a map.</p>
 <p>At this stage the map is ready to be used on the robot.</p>
-<h3><a class="anchor" id="autotoc_md238"></a>
+<h3><a class="anchor" id="autotoc_md247"></a>
 Building a SURF map only</h3>
 <p>The above options can also be chained. For example, to run the pipeline to just create a SURF map one can do: </p><pre class="fragment">build_map &lt;image dir&gt;/*.jpg -feature_detection -feature_matching \
   -track_building -incremental_ba -bundle_adjustment             \
   -histogram_equalization -num_subsequent_images 100
-</pre><h3><a class="anchor" id="autotoc_md239"></a>
+</pre><h3><a class="anchor" id="autotoc_md248"></a>
 Additional options</h3>
 <p>There are a few steps that can be used which are not included in the default map building process. These include:</p>
 <ul>
@@ -204,98 +187,95 @@ Additional options</h3>
 <li><code>-verification</code>: Verify how an already registered map performs on an independently acquired set of control points and corresponding 3D measurements.</li>
 <li><code>-info</code>: Print some information about the map, including list of images, and if histogram equalization was used, and the latter can have the values: 0 (not used), 1 (was used), 2 (unknown).</li>
 </ul>
-<p>The following options can be used to create more interest point features:</p>
-<p>-min_surf_features, -max_surf_features, -min_surf_threshold, -default_surf_threshold, -max_surf_threshold, -min_brisk_features, -max_brisk_features, -min_brisk_threshold, -default_brisk_threshold, -max_brisk_threshold, -histogram_equalization</p>
-<p>The <code>build_map</code> command uses the file <code>output.map</code> as both input and output unless the flag <code>-output_map</code> is specified.</p>
-<h2><a class="anchor" id="autotoc_md240"></a>
+<p>The following options can be used to create more interest point features: </p><pre class="fragment">-min_surf_features, -max_surf_features, -min_surf_threshold,
+-default_surf_threshold, -max_surf_threshold, -min_brisk_features,
+-max_brisk_features, -min_brisk_threshold, -default_brisk_threshold,
+-max_brisk_threshold, -histogram_equalization
+</pre><p>The <code>build_map</code> command uses the file <code>output.map</code> as both input and output unless the flag <code>-output_map</code> is specified.</p>
+<h2><a class="anchor" id="autotoc_md249"></a>
 Map registration</h2>
 <p>Maps are built in an arbitrary coordinate system. They need to be transformed to a real-world coordinate system using manually defined control points.</p>
-<p>To accomplish this, first open a subset of the images used to build the map in Hugin, such as:</p>
-<p>hugin &lt;image dir&gt;/*.jpg</p>
-<p>It will ask to enter a value for the FoV (field of view). That value is not important since we won't use it. One can input 10 degrees, for example.</p>
+<p>To accomplish this, first open a subset of the images used to build the map in Hugin, such as: </p><pre class="fragment">hugin &lt;image dir&gt;/*.jpg
+</pre><p>It will ask to enter a value for the FoV (field of view). That value is not important since we won't use it. One can input 10 degrees, for example.</p>
 <p>Go to the "Expert" interface, then select matching control points across a pair of images (make sure the left and right image are not the same). Then repeat this process for several more pairs.</p>
 <p>Save the Hugin project to disk. Create a separate text file which contains the world coordinates of the control points picked earlier, with each line in the "x y z" format, and in the same order as the Hugin project file. That is to say, if a control point was picked in several image pairs in Hugin, it must show up also the same number of times in the text file. In the xyz text file all lines starting with the pound sign (#) are ignored, as well as all entries on any line beyond three numerical values.</p>
-<p>The xyz locations of the control points for the granite lab can be found in</p>
-<p>astrobee/localization/sparse_mapping/granite_xyz_controlPoints.txt</p>
-<p>and the control points for the AR tags on the dock station can be found in</p>
-<p>localization/marker_tracking/ros/launch/granite_lab_tags.xml</p>
-<p>If a new set of world coordinates needs to be acquired, one can use the Total Station, as described in <a class="el" href="total__station_8md.html">total_station.md</a>, which is in the same directory as this file.</p>
-<p>How to create xyz coordinates for the JPM module of ISS and information about control points in the MGTF is described later in this document.</p>
+<p>The xyz locations of the control points for the granite lab, the ISS and MGTF are mentioned below.</p>
+<p>If a set of world coordinates needs to be acquired, one can use the Total Station, as described in the <a class="el" href="md_localization_sparse_mapping_total_station.html">total station</a> documentation.</p>
 <p>Register the map with the command: </p><pre class="fragment">/bin/cp -fv mapfile.map mapfile.registered.map
 build_map -registration &lt;hugin files&gt; &lt;xyz files&gt; -num_ba_passes 0 \
  -registration_skip_bundle_adjustment -skip_filtering              \
  -output_map mapfile.registered.map
 </pre><p>There can be multiple such files passed as input. Control point files are expected to end in .pto, while xyz files in .txt.</p>
 <p>In practice, to not make mistakes, it is far easier to have both Hugin and the text file with the xyz points opened at the same time. Each time a point is added in Hugin and the project is saved, its xyz coordinates can be saved to the text file, and the above command can be run.</p>
-<p>After registration is done, it will print each transformed coordinate point from the map and its corresponding measured point, as well as the error among the two. That will look as follows:</p>
-<p>transformed computed xyz &ndash; measured xyz &ndash; error norm (meters) -0.0149 -0.0539 0.0120 &ndash; 0.0000 0.0000 0.0000 &ndash; 0.0472 img1.jpg img2.jpg 1.8587 0.9533 0.1531 &ndash; 1.8710 0.9330 0.1620 &ndash; 0.0254 img3.jpg img4.jpg</p>
-<p>The error norm should be no more than 3-5 cm. If for a point the error is too large, perhaps something went wrong in picking the points. That point can be deleted and reacquired, perhaps with a different image pair.</p>
-<p>If all errors are large, that may mean the camera calibration is wrong and needs to be redone, and the map rebuilt, using</p>
-<p>build_map -rebuild -rebuild_refloat_cameras -rebuild_replace_camera \ -histogram_equalization</p>
-<p>or one should create images that are closer to the points used in registration.</p>
+<p>After registration is done, it will print each transformed coordinate point from the map and its corresponding measured point, as well as the error among the two. That will look as follows: </p><pre class="fragment">transformed computed xyz -- measured xyz -- error norm (meters)
+-0.0149 -0.0539  0.0120 --  0.0000  0.0000  0.0000 --  0.0472 img1.jpg img2.jpg
+ 1.8587  0.9533  0.1531 --  1.8710  0.9330  0.1620 --  0.0254 img3.jpg img4.jpg
+</pre><p>The error norm should be no more than 3-5 cm. If for a point the error is too large, perhaps something went wrong in picking the points. That point can be deleted and reacquired, perhaps with a different image pair.</p>
+<p>If all errors are large, that may mean the camera calibration is wrong and needs to be redone, and the map rebuilt, using </p><pre class="fragment">build_map -rebuild -rebuild_refloat_cameras -rebuild_replace_camera \
+  -histogram_equalization
+</pre><p>or one should create images that are closer to the points used in registration.</p>
 <p>Note that we did registration without bundle adjustment, which would further refine the cameras using the xyz world coordinates as a constraint. The latter should not be necessary if the map is geometrically correct.</p>
 <p>If such bundle adjustment is desired, it will keep the xyz measurements fixed during this optimization (unlike the xyz points obtained purely through interest point matching and triangulation) because the measurements are assumed already accurate.</p>
 <p>When a registered SURF map is available with features already picked in Hugin as described earlier, and it is desired to register a map of the same region but with different images, instead of picking registration points in the new images it is simpler to merge that map to the registered map while doing bundle adjustment, re-register the merged map, and extract from it the submap corresponding to the new image set.</p>
-<h3><a class="anchor" id="autotoc_md241"></a>
+<h3><a class="anchor" id="autotoc_md250"></a>
+Registration in the granite lab</h3>
+<p>See the xyz coordinates of the control points used for registration in <a class="el" href="md_localization_sparse_mapping_granite_lab_registration.html">granite_lab_registration.md</a></p>
+<h3><a class="anchor" id="autotoc_md251"></a>
 Registration on the ISS</h3>
 <p>No xyz coordinate measurements exist for the ISS. Instead, 3D points were picked in simulation in the JPM module of ISS. They are available in the file iss_registration.txt in this directory. These points can be visualized in the ISS as follows:</p>
-<p>Open two terminals, and in each one type:</p>
-<p>export BUILD_PATH=$HOME/astrobee_build/native source $BUILD_PATH/devel/setup.bash</p>
-<p>In the first terminal start the simulator:</p>
-<p>roslaunch astrobee sim.launch speed:=0.75 rviz:=true <br  />
-</p>
-<p>In the second, run:</p>
-<p>python $SOURCE_PATH/localization/sparse_mapping/tools/view_control_points.py \ $SOURCE_PATH/localization/sparse_mapping/iss_registration.txt</p>
-<p>Go back to the simulated ISS and examine the registration points. If the Rviz display looks too cluttered, most topics can be turned off. The registration points will be shown in Rviz under</p>
-<p>Debug/Sensors/Localization/Registration</p>
-<p>If this topic is unchecked, it should be checked and one should run the Python script above again.</p>
+<p>Open two terminals, and in each one type: </p><pre class="fragment">export BUILD_PATH=$HOME/astrobee_build/native
+source $BUILD_PATH/devel/setup.bash
+</pre><p>In the first terminal start the simulator: </p><pre class="fragment">roslaunch astrobee sim.launch speed:=0.75 rviz:=true  
+</pre><p>In the second, run: </p><pre class="fragment">python $SOURCE_PATH/localization/sparse_mapping/tools/view_control_points.py \
+  $SOURCE_PATH/localization/sparse_mapping/iss_registration.txt
+</pre><p>Go back to the simulated ISS and examine the registration points. If the Rviz display looks too cluttered, most topics can be turned off. The registration points will be shown in Rviz under </p><pre class="fragment">Debug/Sensors/Localization/Registration
+</pre><p>If this topic is unchecked, it should be checked and one should run the Python script above again.</p>
 <p>Each point will be displayed as a red dot and a white text label, according to the fourth column in iss_registration.txt. Sometimes the ISS obscures the text labels, in that case it can be temporarily turned off in Rviz. It is suggested to use the points starting with letter "V", as those were carefully validated. Points starting with letter "P" were not validated. Points starting with letter "B" were shown to be not accurate and should not be used.</p>
-<p>To create new points in this file, one runs in a terminal (after setting up the environment as above):</p>
-<p>rostopic echo /clicked_point</p>
-<p>then goes to RViz, clicks on the toolbar on "Publish Point", and clicks on a point on the ISS body. Its coordinates will be echoed in the terminal. Note that these points will be in the "rviz" frame, while we need them in the "world" frame. To perform this conversion, flip the sign of the y and z coordinates.</p>
+<p>To create new points in this file, one runs in a terminal (after setting up the environment as above): </p><pre class="fragment">rostopic echo /clicked_point
+</pre><p>then goes to RViz, clicks on the toolbar on "Publish Point", and clicks on a point on the ISS body. Its coordinates will be echoed in the terminal. Note that these points will be in the "rviz" frame, while we need them in the "world" frame. To perform this conversion, flip the sign of the y and z coordinates.</p>
 <p>After the file with the datapoints is saved, re-running the earlier Python command will refresh them.</p>
-<h3><a class="anchor" id="autotoc_md242"></a>
+<h3><a class="anchor" id="autotoc_md252"></a>
 Registration in the MGTF</h3>
-<p>A set of 10 registration points were measured in the MGTF with the Total Station. They are in the file</p>
-<p>$SOURCE_PATH/localization/sparse_mapping/mgtf_registration.txt</p>
-<p>Two of these are on the back wall, and the rest are on the metal columns on the side walls, with four on each wall. Half of the points are at eye level, and half at about knee-level.</p>
-<p>Each such point is a corner of a portion of a checkerboard pattern, and it has a number written on the paper it is printed on, which is the id from the above file.</p>
-<h2><a class="anchor" id="autotoc_md243"></a>
+<p>A set of 10 registration points were measured in the MGTF with the Total Station. They are in the file </p><pre class="fragment">$SOURCE_PATH/localization/sparse_mapping/mgtf_registration.txt
+</pre><p>Two of these are on the back wall, and the rest are on the metal columns on the side walls, with four on each wall. Half of the points are at eye level, and half at about knee-level.</p>
+<p>Each such point is a corner of a portion of a checkerboard pattern, and it has a number written on the paper it is printed on, which is the id from the above file. A careful inspection of the MGTF may be needed to identify them.</p>
+<h2><a class="anchor" id="autotoc_md253"></a>
 Map verification</h2>
 <p>A registered and bundle-adjusted map can be used to study how well it predicts the computed 3D locations for an independently acquired set of control points and 3D measurements. These are in the same format as for registration. The map is not modified in any way during this step. </p><pre class="fragment">build_map -verification &lt;hugin files&gt; &lt;xyz files&gt;
-</pre><h2><a class="anchor" id="autotoc_md244"></a>
+</pre><h2><a class="anchor" id="autotoc_md254"></a>
 Sparse map performance and quality evaluation on the robot</h2>
 <p>(See below about how it can be done on a local machine.)</p>
 <p>To test how the map may perform on the robot, do the following:</p>
-<h3><a class="anchor" id="autotoc_md245"></a>
+<h3><a class="anchor" id="autotoc_md255"></a>
 Stage the new map</h3>
-<ol type="1">
-<li>Copy the new map on the robot MLP (preference in /data) <div class="fragment"><div class="line">scp &lt;map2test.map&gt; mlp:/data</div>
-</div><!-- fragment --></li>
-<li>On the MLP, move the current map aside <div class="fragment"><div class="line">ssh mlp</div>
-<div class="line">cd /res/maps</div>
-<div class="line">mv granite.map _granite.map</div>
-</div><!-- fragment --></li>
-<li>On the MLP, create a symlink to the new map <div class="fragment"><div class="line">ln -s /data/&lt;map2test.map /res/maps/granite.map</div>
-</div><!-- fragment --></li>
-</ol>
-<h3><a class="anchor" id="autotoc_md246"></a>
-Stage the bag with images</h3>
+<h4><a class="anchor" id="autotoc_md256"></a>
+Copy the new map on the robot MLP (preferably in /data):</h4>
+<pre class="fragment">scp &lt;map2test.map&gt; mlp:/data
+</pre><h4><a class="anchor" id="autotoc_md257"></a>
+On the MLP, move the current map aside:</h4>
+<pre class="fragment">ssh mlp
+cd /res/maps
+mv granite.map _granite.map
+</pre><p><a class="anchor" id="autotoc_md258"></a></p><h5>On the MLP, create a symlink to the new map:</h5>
+<pre class="fragment">ln -s /data/&lt;map2test.map /res/maps/granite.map
+</pre><h3><a class="anchor" id="autotoc_md259"></a>
+Stage the bag with images:</h3>
 <pre class="fragment">rsync --archive --partial --progress directory_of_bags mlp:/data/bags
-</pre><h3><a class="anchor" id="autotoc_md247"></a>
-Stage the feature counter utility (should be added to the install at one point)</h3>
+</pre><h3><a class="anchor" id="autotoc_md260"></a>
+Stage the feature counter utility (should be added to the install at one point):</h3>
 <pre class="fragment">scp $SOURCE_PATH/localization/marker_tracking/ros/tools/features_counter.py mlp:
-</pre><h3><a class="anchor" id="autotoc_md248"></a>
+</pre><h3><a class="anchor" id="autotoc_md261"></a>
 Launch the localization node on LLP</h3>
-<pre class="fragment">ssh llp
+<p>You will have to edit the file: </p><pre class="fragment">/etc/robotname
+</pre><p>on MLP and LLP to replace the robot name with the robot you want to test. Please don't forget to undo your changes at the end, as otherwise this robot will give wrong results for other users.</p>
+<p>Then launch localization: </p><pre class="fragment">ssh llp
 roslaunch astrobee astrobee.launch llp:=disabled mlp:=mlp nodes:=framestore,dds_ros_bridge,localization_node
-</pre><p>(TODO(oalexan1): Not sure if to set the robot name above. We are using one robot to localize with the data and map for another one.)</p>
-<h3><a class="anchor" id="autotoc_md249"></a>
+</pre><h3><a class="anchor" id="autotoc_md262"></a>
 Enable localization and the mapped landmark production (on MLP)</h3>
 <pre class="fragment">export ROS_MASTER_URI=http://llp:11311
 rosservice call /loc/ml/enable true
 </pre><p>If this command returns an error saying that the service is not available, wait a little and try again.</p>
-<h3><a class="anchor" id="autotoc_md250"></a>
+<h3><a class="anchor" id="autotoc_md263"></a>
 Play the bags (on MLP)</h3>
 <pre class="fragment">cd /data/bags/directory_of_bags
 export ROS_MASTER_URI=http://llp:11311
@@ -304,19 +284,18 @@ rosbag play --loop *.bag                               \
   /loc/ml/features:=/loc/ml/old_features               \
   /loc/ml/registration:=/loc/ml/old_registration
 </pre><p>It is important to check the topics that were recorded to the bag. If the nav camera was recorded on /mgt/img_sampler/nav_cam/image_record instead of /hw/cam_nav, as it happens when recording data on the ISS, it must be redirected to the proper topic, as we do above. If localization was running when the bag was recorded and hence the topics /loc/ml/features and /loc/ml/registration were recorded, they must be redirected to something else (above /tmp1 and /tmp2 was used) to not conflict with actual localization results that would be now created based on the images in the bag.</p>
-<h3><a class="anchor" id="autotoc_md251"></a>
+<h3><a class="anchor" id="autotoc_md264"></a>
 Examine the performance and features on MLP</h3>
-<ol type="1">
-<li>Look at the load with htop</li>
-<li>Watch the frequency of feature production <div class="fragment"><div class="line">rostopic hz -w 5 /loc/ml/features</div>
-</div><!-- fragment --></li>
-</ol>
-<p>and echo the pose being output with the features: </p><div class="fragment"><div class="line">rostopic echo /loc/ml/features | grep -A 17 header:</div>
-</div><!-- fragment --><ol type="1">
-<li>Watch the number of features being produced <div class="fragment"><div class="line">~/features_counter.py ml</div>
-</div><!-- fragment --></li>
-</ol>
-<h2><a class="anchor" id="autotoc_md252"></a>
+<h4><a class="anchor" id="autotoc_md265"></a>
+Look at the load with htop</h4>
+<h4><a class="anchor" id="autotoc_md266"></a>
+Watch the frequency of feature production</h4>
+<pre class="fragment">rostopic hz -w 5 /loc/ml/features
+</pre><p>and echo the pose being output with the features: </p><pre class="fragment">rostopic echo /loc/ml/features | grep -A 17 header:
+</pre><h4><a class="anchor" id="autotoc_md267"></a>
+Watch the number of features being produced:</h4>
+<p>~/features_counter.py ml</p>
+<h2><a class="anchor" id="autotoc_md268"></a>
 Verify localization against a sparse map on a local machine</h2>
 <p>To test localization of data from a bag against a map, one need not run things on the robot, but use instead a local machine. This should result on similar results as on the robot, but the speed of computations may differ.</p>
 <p>Set up the environment in every terminal that is used. Ensure that you use the correct robot name below. </p><pre class="fragment">source $BUILD_PATH/devel/setup.bash
@@ -330,19 +309,17 @@ export ROS_MASTER_URI=http://127.0.0.1:11311/
 rm -fv $SOURCE_PATH/astrobee/resources/maps/iss.map
 ln -s $(pwd)/mymap.map $SOURCE_PATH/astrobee/resources/maps/iss.map
 </pre><p>Start the localization node: </p><pre class="fragment">roslaunch astrobee astrobee.launch mlp:=local llp:=disabled \
-  nodes:=framestore,localization_node
-</pre><p>Enable localization: </p><pre class="fragment">rosservice call /loc/ml/enable true
+  nodes:=framestore,localization_node robot:=$ASTROBEE_ROBOT
+</pre><p>Note how we specify the robot name at the end.</p>
+<p>Enable localization: </p><pre class="fragment">rosservice call /loc/ml/enable true
 </pre><p>Then, as above, one must play a bag while redirecting the existing /loc topics, and ensure that the images are published on /hw/cam_nav.</p>
-<p>The poses of the newly localized camera images can be displayed as:</p>
-<p>rostopic echo /loc/ml/features | grep -A 17 header:</p>
-<p>and compared to the old ones via:</p>
-<p>rostopic echo /loc/ml/old_features | grep -A 17 header:</p>
-<h2><a class="anchor" id="autotoc_md253"></a>
+<p>The poses of the newly localized camera images can be displayed as: </p><pre class="fragment">rostopic echo /loc/ml/features | grep -A 17 header:
+</pre><p>and compared to the old ones via: </p><pre class="fragment">rostopic echo /loc/ml/old_features | grep -A 17 header:
+</pre><h2><a class="anchor" id="autotoc_md269"></a>
 Evaluating the map without running the localization node</h2>
 <p>See astrobee/tools/ekf_bag/readme.md for how to run the sparse_map_eval tool that takes as inputs a bag and a BRISK map and prints the number of detected features.</p>
-<p>Note that this approach may give slightly different results than using the localization node, and even with using this node, things can differ somewhat if running on a local machine vs running on the robot. Hence, the most faithful test is the one in which such experiments are performed on a robot, and ensuring that the software version on that robot is the same as for the real robot on the space station, if the goal is to prepare a map for an actual flight. The software version on the robot can be found using:</p>
-<p>cat /opt/astrobee/version.txt </p>
-</div></div><!-- contents -->
+<p>Note that this approach may give slightly different results than using the localization node, and even with using this node, things can differ somewhat if running on a local machine vs running on the robot. Hence, the most faithful test is the one in which such experiments are performed on a robot, and ensuring that the software version on that robot is the same as for the real robot on the space station, if the goal is to prepare a map for an actual flight. The software version on the robot can be found using: </p><pre class="fragment">cat /opt/astrobee/version.txt 
+</pre> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.0-->

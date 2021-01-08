@@ -242,7 +242,7 @@ var searchData=
   ['smoothcost_8517',['SmoothCost',['../structvive__localization_1_1SmoothCost.html#ad1120b29da75be90d17ac7a2094f1299',1,'vive_localization::SmoothCost']]],
   ['smoothedintensity_8518',['smoothedIntensity',['../classinterest__point_1_1BRISK__Impl.html#a89256d1ea83f9411271dbf897ae1a505',1,'interest_point::BRISK_Impl']]],
   ['softreset_8519',['SoftReset',['../classepson__imu_1_1G362P.html#a6791c56546ab8b7fa6ef03a0424ff948',1,'epson_imu::G362P::SoftReset()'],['../classperching__arm_1_1PerchingArm.html#a13f2c41cab74abb3c3397591c218fe19',1,'perching_arm::PerchingArm::SoftReset()']]],
-  ['solve_8520',['Solve',['../classvive__localization_1_1Solver.html#adad60ff52034b9bff8c3df7e9bf74c6a',1,'vive_localization::Solver::Solve()'],['../classtraj__opt_1_1NonlinearSolver.html#a3990d95c6789b09580b48b968fee6d16',1,'traj_opt::NonlinearSolver::solve()']]],
+  ['solve_8520',['solve',['../classtraj__opt_1_1NonlinearSolver.html#a3990d95c6789b09580b48b968fee6d16',1,'traj_opt::NonlinearSolver::solve()'],['../classvive__localization_1_1Solver.html#adad60ff52034b9bff8c3df7e9bf74c6a',1,'vive_localization::Solver::Solve()']]],
   ['solveconvexifyed_8521',['solveConvexifyed',['../classtraj__opt_1_1GurobiSolver.html#af228c237c9eecb980577217ba1480afb',1,'traj_opt::GurobiSolver']]],
   ['solvepnp_8522',['SolvePnP',['../namespacevive__localization.html#a62845fa9ea09b051d65c7ebe9f42fa38',1,'vive_localization']]],
   ['solver_8523',['Solver',['../classvive__localization_1_1Solver.html#a8b6b3c4607011c4a396855f1c44e7943',1,'vive_localization::Solver']]],

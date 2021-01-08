@@ -1,5 +1,5 @@
 <map id="simulation/src/gazebo_sensor_plugin_sci_cam/gazebo_sensor_plugin_sci_cam.cc" name="simulation/src/gazebo_sensor_plugin_sci_cam/gazebo_sensor_plugin_sci_cam.cc">
-<area shape="rect" id="node1" title=" " alt="" coords="4067,5,4297,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="4142,5,4371,61"/>
 <area shape="rect" id="node2" title=" " alt="" coords="2200,295,2273,322"/>
 <area shape="rect" id="node3" href="$config__reader_8h.html" title=" " alt="" coords="529,288,667,329"/>
 <area shape="rect" id="node15" title=" " alt="" coords="1312,467,1367,493"/>
@@ -12,10 +12,11 @@
 <area shape="rect" id="node51" title=" " alt="" coords="4393,117,4605,143"/>
 <area shape="rect" id="node52" title=" " alt="" coords="4629,117,4825,143"/>
 <area shape="rect" id="node53" title=" " alt="" coords="4849,117,5053,143"/>
-<area shape="rect" id="node54" title=" " alt="" coords="5078,117,5227,143"/>
-<area shape="rect" id="node55" title=" " alt="" coords="5251,117,5438,143"/>
-<area shape="rect" id="node56" title=" " alt="" coords="5462,117,5625,143"/>
-<area shape="rect" id="node57" title=" " alt="" coords="5649,117,5736,143"/>
+<area shape="rect" id="node54" title=" " alt="" coords="5077,117,5236,143"/>
+<area shape="rect" id="node55" title=" " alt="" coords="5261,117,5410,143"/>
+<area shape="rect" id="node56" title=" " alt="" coords="5434,117,5621,143"/>
+<area shape="rect" id="node57" title=" " alt="" coords="5645,117,5807,143"/>
+<area shape="rect" id="node58" title=" " alt="" coords="5832,117,5919,143"/>
 <area shape="rect" id="node4" title=" " alt="" coords="823,385,874,411"/>
 <area shape="rect" id="node5" title=" " alt="" coords="899,385,961,411"/>
 <area shape="rect" id="node6" title=" " alt="" coords="985,385,1056,411"/>

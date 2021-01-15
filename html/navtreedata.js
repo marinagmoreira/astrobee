@@ -108,79 +108,79 @@ var NAVTREE =
     [ "Astrobee Usage", "md_doc_general_documentation_astrobee_usage.html", "md_doc_general_documentation_astrobee_usage" ],
     [ "Subsystems", "subsystems.html", "subsystems" ],
     [ "Map building", "md_localization_sparse_mapping_build_map.html", [
-      [ "Summary", "md_localization_sparse_mapping_build_map.html#autotoc_md234", null ],
-      [ "Detailed explanation", "md_localization_sparse_mapping_build_map.html#autotoc_md235", [
-        [ "Reduce the number of images", "md_localization_sparse_mapping_build_map.html#autotoc_md236", null ],
-        [ "Setup the environment", "md_localization_sparse_mapping_build_map.html#autotoc_md237", null ],
-        [ "Building a map", "md_localization_sparse_mapping_build_map.html#autotoc_md238", [
-          [ "Map building pipeline", "md_localization_sparse_mapping_build_map.html#autotoc_md239", [
-            [ "Detect interest points", "md_localization_sparse_mapping_build_map.html#autotoc_md240", null ],
-            [ "Match images", "md_localization_sparse_mapping_build_map.html#autotoc_md241", null ],
-            [ "Build tracks", "md_localization_sparse_mapping_build_map.html#autotoc_md242", null ],
-            [ "Incremental bundle adjustment", "md_localization_sparse_mapping_build_map.html#autotoc_md243", null ],
-            [ "Bundle adjustment", "md_localization_sparse_mapping_build_map.html#autotoc_md244", null ],
-            [ "Map rebuilding", "md_localization_sparse_mapping_build_map.html#autotoc_md245", null ],
-            [ "Vocabulary database", "md_localization_sparse_mapping_build_map.html#autotoc_md246", null ]
+      [ "Summary", "md_localization_sparse_mapping_build_map.html#autotoc_md240", null ],
+      [ "Detailed explanation", "md_localization_sparse_mapping_build_map.html#autotoc_md241", [
+        [ "Reduce the number of images", "md_localization_sparse_mapping_build_map.html#autotoc_md242", null ],
+        [ "Setup the environment", "md_localization_sparse_mapping_build_map.html#autotoc_md243", null ],
+        [ "Building a map", "md_localization_sparse_mapping_build_map.html#autotoc_md244", [
+          [ "Map building pipeline", "md_localization_sparse_mapping_build_map.html#autotoc_md245", [
+            [ "Detect interest points", "md_localization_sparse_mapping_build_map.html#autotoc_md246", null ],
+            [ "Match images", "md_localization_sparse_mapping_build_map.html#autotoc_md247", null ],
+            [ "Build tracks", "md_localization_sparse_mapping_build_map.html#autotoc_md248", null ],
+            [ "Incremental bundle adjustment", "md_localization_sparse_mapping_build_map.html#autotoc_md249", null ],
+            [ "Bundle adjustment", "md_localization_sparse_mapping_build_map.html#autotoc_md250", null ],
+            [ "Map rebuilding", "md_localization_sparse_mapping_build_map.html#autotoc_md251", null ],
+            [ "Vocabulary database", "md_localization_sparse_mapping_build_map.html#autotoc_md252", null ]
           ] ],
-          [ "Building a SURF map only", "md_localization_sparse_mapping_build_map.html#autotoc_md247", null ],
-          [ "Additional options", "md_localization_sparse_mapping_build_map.html#autotoc_md248", null ]
+          [ "Building a SURF map only", "md_localization_sparse_mapping_build_map.html#autotoc_md253", null ],
+          [ "Additional options", "md_localization_sparse_mapping_build_map.html#autotoc_md254", null ]
         ] ],
-        [ "Map registration", "md_localization_sparse_mapping_build_map.html#autotoc_md249", [
-          [ "Registration in the granite lab", "md_localization_sparse_mapping_build_map.html#autotoc_md250", null ],
-          [ "Registration on the ISS", "md_localization_sparse_mapping_build_map.html#autotoc_md251", null ],
-          [ "Registration in the MGTF", "md_localization_sparse_mapping_build_map.html#autotoc_md252", null ]
+        [ "Map registration", "md_localization_sparse_mapping_build_map.html#autotoc_md255", [
+          [ "Registration in the granite lab", "md_localization_sparse_mapping_build_map.html#autotoc_md256", null ],
+          [ "Registration on the ISS", "md_localization_sparse_mapping_build_map.html#autotoc_md257", null ],
+          [ "Registration in the MGTF", "md_localization_sparse_mapping_build_map.html#autotoc_md258", null ]
         ] ],
-        [ "Map verification", "md_localization_sparse_mapping_build_map.html#autotoc_md253", null ],
-        [ "Sparse map performance and quality evaluation on the robot", "md_localization_sparse_mapping_build_map.html#autotoc_md254", [
-          [ "Stage the new map", "md_localization_sparse_mapping_build_map.html#autotoc_md255", [
-            [ "Copy the new map on the robot MLP (preferably in /data):", "md_localization_sparse_mapping_build_map.html#autotoc_md256", null ],
-            [ "On the MLP, move the current map aside:", "md_localization_sparse_mapping_build_map.html#autotoc_md257", null ]
+        [ "Map verification", "md_localization_sparse_mapping_build_map.html#autotoc_md259", null ],
+        [ "Sparse map performance and quality evaluation on the robot", "md_localization_sparse_mapping_build_map.html#autotoc_md260", [
+          [ "Stage the new map", "md_localization_sparse_mapping_build_map.html#autotoc_md261", [
+            [ "Copy the new map on the robot MLP (preferably in /data):", "md_localization_sparse_mapping_build_map.html#autotoc_md262", null ],
+            [ "On the MLP, move the current map aside:", "md_localization_sparse_mapping_build_map.html#autotoc_md263", null ]
           ] ],
-          [ "Stage the bag with images:", "md_localization_sparse_mapping_build_map.html#autotoc_md259", null ],
-          [ "Stage the feature counter utility (should be added to the install at one point):", "md_localization_sparse_mapping_build_map.html#autotoc_md260", null ],
-          [ "Launch the localization node on LLP", "md_localization_sparse_mapping_build_map.html#autotoc_md261", null ],
-          [ "Enable localization and the mapped landmark production (on MLP)", "md_localization_sparse_mapping_build_map.html#autotoc_md262", null ],
-          [ "Play the bags (on MLP)", "md_localization_sparse_mapping_build_map.html#autotoc_md263", null ],
-          [ "Examine the performance and features on MLP", "md_localization_sparse_mapping_build_map.html#autotoc_md264", [
-            [ "Look at the load with htop", "md_localization_sparse_mapping_build_map.html#autotoc_md265", null ],
-            [ "Watch the frequency of feature production", "md_localization_sparse_mapping_build_map.html#autotoc_md266", null ],
-            [ "Watch the number of features being produced:", "md_localization_sparse_mapping_build_map.html#autotoc_md267", null ]
+          [ "Stage the bag with images:", "md_localization_sparse_mapping_build_map.html#autotoc_md265", null ],
+          [ "Stage the feature counter utility (should be added to the install at one point):", "md_localization_sparse_mapping_build_map.html#autotoc_md266", null ],
+          [ "Launch the localization node on LLP", "md_localization_sparse_mapping_build_map.html#autotoc_md267", null ],
+          [ "Enable localization and the mapped landmark production (on MLP)", "md_localization_sparse_mapping_build_map.html#autotoc_md268", null ],
+          [ "Play the bags (on MLP)", "md_localization_sparse_mapping_build_map.html#autotoc_md269", null ],
+          [ "Examine the performance and features on MLP", "md_localization_sparse_mapping_build_map.html#autotoc_md270", [
+            [ "Look at the load with htop", "md_localization_sparse_mapping_build_map.html#autotoc_md271", null ],
+            [ "Watch the frequency of feature production", "md_localization_sparse_mapping_build_map.html#autotoc_md272", null ],
+            [ "Watch the number of features being produced:", "md_localization_sparse_mapping_build_map.html#autotoc_md273", null ]
           ] ]
         ] ],
-        [ "Verify localization against a sparse map on a local machine", "md_localization_sparse_mapping_build_map.html#autotoc_md268", null ],
-        [ "Evaluating the map without running the localization node", "md_localization_sparse_mapping_build_map.html#autotoc_md269", null ]
+        [ "Verify localization against a sparse map on a local machine", "md_localization_sparse_mapping_build_map.html#autotoc_md274", null ],
+        [ "Evaluating the map without running the localization node", "md_localization_sparse_mapping_build_map.html#autotoc_md275", null ]
       ] ]
     ] ],
     [ "Locations of the control points in the granite lab used for registration", "md_localization_sparse_mapping_granite_lab_registration.html", [
-      [ "Point 1", "md_localization_sparse_mapping_granite_lab_registration.html#autotoc_md271", null ],
-      [ "Point 2", "md_localization_sparse_mapping_granite_lab_registration.html#autotoc_md272", null ],
-      [ "Point 3", "md_localization_sparse_mapping_granite_lab_registration.html#autotoc_md273", null ],
-      [ "Point 4", "md_localization_sparse_mapping_granite_lab_registration.html#autotoc_md274", null ]
+      [ "Point 1", "md_localization_sparse_mapping_granite_lab_registration.html#autotoc_md277", null ],
+      [ "Point 2", "md_localization_sparse_mapping_granite_lab_registration.html#autotoc_md278", null ],
+      [ "Point 3", "md_localization_sparse_mapping_granite_lab_registration.html#autotoc_md279", null ],
+      [ "Point 4", "md_localization_sparse_mapping_granite_lab_registration.html#autotoc_md280", null ]
     ] ],
     [ "Creation of sparse maps for robot localization", "md_localization_sparse_mapping_readme.html", [
-      [ "What is a map", "md_localization_sparse_mapping_readme.html#autotoc_md276", null ],
-      [ "Map files", "md_localization_sparse_mapping_readme.html#autotoc_md277", null ],
-      [ "ROS node", "md_localization_sparse_mapping_readme.html#autotoc_md278", [
-        [ "Inputs", "md_localization_sparse_mapping_readme.html#autotoc_md279", null ],
-        [ "Outputs", "md_localization_sparse_mapping_readme.html#autotoc_md280", null ]
+      [ "What is a map", "md_localization_sparse_mapping_readme.html#autotoc_md282", null ],
+      [ "Map files", "md_localization_sparse_mapping_readme.html#autotoc_md283", null ],
+      [ "ROS node", "md_localization_sparse_mapping_readme.html#autotoc_md284", [
+        [ "Inputs", "md_localization_sparse_mapping_readme.html#autotoc_md285", null ],
+        [ "Outputs", "md_localization_sparse_mapping_readme.html#autotoc_md286", null ]
       ] ],
-      [ "Tools and procedures", "md_localization_sparse_mapping_readme.html#autotoc_md281", [
-        [ "Record a bag", "md_localization_sparse_mapping_readme.html#autotoc_md282", null ],
-        [ "Filter the bag", "md_localization_sparse_mapping_readme.html#autotoc_md283", null ],
-        [ "Copy the bag from the robot:", "md_localization_sparse_mapping_readme.html#autotoc_md284", null ],
-        [ "Merging bags", "md_localization_sparse_mapping_readme.html#autotoc_md285", null ],
-        [ "Extracting images", "md_localization_sparse_mapping_readme.html#autotoc_md286", null ],
-        [ "Building a map", "md_localization_sparse_mapping_readme.html#autotoc_md287", null ],
-        [ "Visualization", "md_localization_sparse_mapping_readme.html#autotoc_md288", null ],
-        [ "Localize a single frame", "md_localization_sparse_mapping_readme.html#autotoc_md289", null ],
-        [ "Testing localization using two maps", "md_localization_sparse_mapping_readme.html#autotoc_md290", null ],
-        [ "Testing localization using a bag", "md_localization_sparse_mapping_readme.html#autotoc_md291", null ],
-        [ "Extract sub-maps", "md_localization_sparse_mapping_readme.html#autotoc_md292", [
-          [ "Merge maps", "md_localization_sparse_mapping_readme.html#autotoc_md293", null ],
-          [ "How to build a map efficiently", "md_localization_sparse_mapping_readme.html#autotoc_md294", null ],
-          [ "Map strategy for the space station", "md_localization_sparse_mapping_readme.html#autotoc_md295", null ],
-          [ "Growing a map when more images are acquired", "md_localization_sparse_mapping_readme.html#autotoc_md296", null ],
-          [ "Reducing the number of images in a map", "md_localization_sparse_mapping_readme.html#autotoc_md297", null ]
+      [ "Tools and procedures", "md_localization_sparse_mapping_readme.html#autotoc_md287", [
+        [ "Record a bag", "md_localization_sparse_mapping_readme.html#autotoc_md288", null ],
+        [ "Filter the bag", "md_localization_sparse_mapping_readme.html#autotoc_md289", null ],
+        [ "Copy the bag from the robot:", "md_localization_sparse_mapping_readme.html#autotoc_md290", null ],
+        [ "Merging bags", "md_localization_sparse_mapping_readme.html#autotoc_md291", null ],
+        [ "Extracting images", "md_localization_sparse_mapping_readme.html#autotoc_md292", null ],
+        [ "Building a map", "md_localization_sparse_mapping_readme.html#autotoc_md293", null ],
+        [ "Visualization", "md_localization_sparse_mapping_readme.html#autotoc_md294", null ],
+        [ "Localize a single frame", "md_localization_sparse_mapping_readme.html#autotoc_md295", null ],
+        [ "Testing localization using two maps", "md_localization_sparse_mapping_readme.html#autotoc_md296", null ],
+        [ "Testing localization using a bag", "md_localization_sparse_mapping_readme.html#autotoc_md297", null ],
+        [ "Extract sub-maps", "md_localization_sparse_mapping_readme.html#autotoc_md298", [
+          [ "Merge maps", "md_localization_sparse_mapping_readme.html#autotoc_md299", null ],
+          [ "How to build a map efficiently", "md_localization_sparse_mapping_readme.html#autotoc_md300", null ],
+          [ "Map strategy for the space station", "md_localization_sparse_mapping_readme.html#autotoc_md301", null ],
+          [ "Growing a map when more images are acquired", "md_localization_sparse_mapping_readme.html#autotoc_md302", null ],
+          [ "Reducing the number of images in a map", "md_localization_sparse_mapping_readme.html#autotoc_md303", null ]
         ] ]
       ] ]
     ] ],
@@ -196,7 +196,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "access_control.html",
-"md_RELEASE.html#autotoc_md40"
+"md_RELEASE.html#autotoc_md42",
+"vive_localization.html#autotoc_md307"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

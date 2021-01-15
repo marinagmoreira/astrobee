@@ -5,43 +5,43 @@ var hw =
     [ "Laser", "laser.html", "laser" ],
     [ "Perching arm", "perching_arm.html", null ],
     [ "PicoFlexx ROS Driver", "picoflexx.html", [
-      [ "Experimental setup", "picoflexx.html#autotoc_md167", [
-        [ "Hardware", "picoflexx.html#autotoc_md168", null ],
-        [ "Software", "picoflexx.html#autotoc_md169", [
-          [ "USB patch for Inforce 3.10 kernel", "picoflexx.html#autotoc_md170", null ],
-          [ "Custom PicoFlexx SDK compilation", "picoflexx.html#autotoc_md171", null ]
+      [ "Experimental setup", "picoflexx.html#autotoc_md173", [
+        [ "Hardware", "picoflexx.html#autotoc_md174", null ],
+        [ "Software", "picoflexx.html#autotoc_md175", [
+          [ "USB patch for Inforce 3.10 kernel", "picoflexx.html#autotoc_md176", null ],
+          [ "Custom PicoFlexx SDK compilation", "picoflexx.html#autotoc_md177", null ]
         ] ]
       ] ],
-      [ "Install dependencies", "picoflexx.html#autotoc_md172", null ],
-      [ "Unzip code", "picoflexx.html#autotoc_md173", null ],
-      [ "Compile spectre", "picoflexx.html#autotoc_md174", null ],
-      [ "Compile royale", "picoflexx.html#autotoc_md175", null ],
-      [ "Experiments", "picoflexx.html#autotoc_md176", [
-        [ "Performance : stock versus custom SDK", "picoflexx.html#autotoc_md177", null ],
-        [ "Performance : pico_flexx_driver vs pico_driver", "picoflexx.html#autotoc_md178", null ],
-        [ "Performance : optimizing the pico_driver", "picoflexx.html#autotoc_md179", null ]
+      [ "Install dependencies", "picoflexx.html#autotoc_md178", null ],
+      [ "Unzip code", "picoflexx.html#autotoc_md179", null ],
+      [ "Compile spectre", "picoflexx.html#autotoc_md180", null ],
+      [ "Compile royale", "picoflexx.html#autotoc_md181", null ],
+      [ "Experiments", "picoflexx.html#autotoc_md182", [
+        [ "Performance : stock versus custom SDK", "picoflexx.html#autotoc_md183", null ],
+        [ "Performance : pico_flexx_driver vs pico_driver", "picoflexx.html#autotoc_md184", null ],
+        [ "Performance : optimizing the pico_driver", "picoflexx.html#autotoc_md185", null ]
       ] ],
-      [ "Setup on a laptop", "picoflexx.html#autotoc_md180", null ]
+      [ "Setup on a laptop", "picoflexx.html#autotoc_md186", null ]
     ] ],
     [ "PMC actuator", "pmc_actuator.html", [
-      [ "How to test the PMC - Using bare C++ program", "pmc_actuator.html#autotoc_md181", null ],
-      [ "How to test the PMC - Using ROS Nodes", "pmc_actuator.html#autotoc_md182", [
-        [ "Basic procedure", "pmc_actuator.html#autotoc_md183", null ],
-        [ "Control the type of nozzle motions", "pmc_actuator.html#autotoc_md184", null ],
-        [ "Disable the blowers", "pmc_actuator.html#autotoc_md185", null ],
-        [ "PWM values", "pmc_actuator.html#autotoc_md186", null ],
-        [ "Create arbitrary nozzle pattern and blower speeds", "pmc_actuator.html#autotoc_md188", null ],
-        [ "Check telemetry from the PMCs", "pmc_actuator.html#autotoc_md189", null ]
+      [ "How to test the PMC - Using bare C++ program", "pmc_actuator.html#autotoc_md187", null ],
+      [ "How to test the PMC - Using ROS Nodes", "pmc_actuator.html#autotoc_md188", [
+        [ "Basic procedure", "pmc_actuator.html#autotoc_md189", null ],
+        [ "Control the type of nozzle motions", "pmc_actuator.html#autotoc_md190", null ],
+        [ "Disable the blowers", "pmc_actuator.html#autotoc_md191", null ],
+        [ "PWM values", "pmc_actuator.html#autotoc_md192", null ],
+        [ "Create arbitrary nozzle pattern and blower speeds", "pmc_actuator.html#autotoc_md194", null ],
+        [ "Check telemetry from the PMCs", "pmc_actuator.html#autotoc_md195", null ]
       ] ]
     ] ],
     [ "Signal light driver", "signal_lights.html", [
-      [ "Using the commandline tool", "signal_lights.html#autotoc_md190", null ],
-      [ "Using the ROS interface", "signal_lights.html#autotoc_md191", null ]
+      [ "Using the commandline tool", "signal_lights.html#autotoc_md196", null ],
+      [ "Using the ROS interface", "signal_lights.html#autotoc_md197", null ]
     ] ],
     [ "Smart dock driver", "smart_dock.html", [
-      [ "Implementation details", "smart_dock.html#autotoc_md192", null ],
-      [ "Functional test", "smart_dock.html#autotoc_md193", null ],
-      [ "Command-line tool", "smart_dock.html#autotoc_md194", null ]
+      [ "Implementation details", "smart_dock.html#autotoc_md198", null ],
+      [ "Functional test", "smart_dock.html#autotoc_md199", null ],
+      [ "Command-line tool", "smart_dock.html#autotoc_md200", null ]
     ] ],
     [ "Speedcam driver", "speed_cam.html", "speed_cam" ],
     [ "Temperature monitor", "temp_monitor.html", "temp_monitor" ],

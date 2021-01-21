@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('install-docker.html',''); initResizabl
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md159"></a>
-Usage instructions for NASA users</h1>
+Usage instructions for Docker</h1>
 <p>Here there are instructions on how to build and run the FSW using Docker.</p>
 <p>The docker image for the astrobee FSW is divided throughout 2 docker files.</p>
 <p>Available docker files:</p>
@@ -102,9 +102,7 @@ Usage instructions for NASA users</h1>
 <h2><a class="anchor" id="autotoc_md160"></a>
 Building the docker images</h2>
 <p>To build the docker images, run: </p><pre class="fragment">./build.sh
-</pre><p> The option -a is used to select the location of the astrobee source code, otherwise it is assumed we are in the scripts/docker folder. The option -n is used for ubuntu 18 docker images</p>
-<p>To rebuild the docker image, use:</p>
-<p>./rebuild-and-test.sh The extra options are the same as the build command. The resulting image will overwrite the previous image and can be used for testing purposes. Do not upload this image to the docker hub, instead use the build.sh command for size purposes, no need to have an extra layer.</p>
+</pre><p> The option -n is used for ubuntu 18 docker images</p>
 <h2><a class="anchor" id="autotoc_md161"></a>
 Run the container</h2>
 <p>To run the docker container: </p><pre class="fragment">./run.sh
@@ -122,9 +120,15 @@ export ARMHF_TOOLCHAIN=$HOME/arm_cross/toolchain/gcc
 cd $HOME/arm_cross
 $SOURCE_PATH/submodules/platform/fetch_toolchain.sh
 $SOURCE_PATH/submodules/platform/rootfs/make_xenial.sh dev $ARMHF_CHROOT_DIR
-</pre><p>From the source of the repository, run:</p>
+</pre><p>From the root of the repository, run:</p>
 <p>./scripts/docker/cross_compile/cross_compile.sh</p>
-<p>The code will be cross-compiles inside the docker container in /opt/astrobee, and can be copied to the robot. </p>
+<p>The code will be cross-compiles inside the docker container in /opt/astrobee, and can be copied to the robot.</p>
+<p>After the debian files are generated inside the docker image, they are copied to in order of priority: 1) To the INSTALL_PATH, if defined 2) To ${DIR}/../../../../astrobee_install/armhf/, if the directoy already exists, where $DIR is the directory where the cross_compile.sh script is located. 3) To $HOME/astrobee_build/armhf otherwise</p>
+<h2><a class="anchor" id="autotoc_md163"></a>
+Building an Astrobee Debian (NASA users only)</h2>
+<p>This step assumes that the cross compile setup was successful and that ARMHF_CHROOT_DIR and ARMHF_TOOLCHAIN are defined. If not, please follow the cross-compile instructions.</p>
+<p>To generate the debians, from the root of the repository, run: </p><pre class="fragment">./scripts/docker/cross_compile/debian_compile.sh
+</pre><p>After the debian files are generated inside the docker image, they are copied to the folder before the root of the repository, ${DIR}/../../../../, where $DIR is the directory where the debian_compile.sh script is located. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

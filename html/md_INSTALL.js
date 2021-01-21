@@ -52,10 +52,11 @@ var md_INSTALL =
       [ "Further information", "install-NASA.html#autotoc_md142", null ]
     ] ],
     [ "Docker build", "install-docker.html", [
-      [ "Usage instructions for NASA users", "install-docker.html#autotoc_md159", [
+      [ "Usage instructions for Docker", "install-docker.html#autotoc_md159", [
         [ "Building the docker images", "install-docker.html#autotoc_md160", null ],
         [ "Run the container", "install-docker.html#autotoc_md161", null ],
-        [ "Cross-compile Astrobee (NASA users only)", "install-docker.html#autotoc_md162", null ]
+        [ "Cross-compile Astrobee (NASA users only)", "install-docker.html#autotoc_md162", null ],
+        [ "Building an Astrobee Debian (NASA users only)", "install-docker.html#autotoc_md163", null ]
       ] ]
     ] ]
 ];

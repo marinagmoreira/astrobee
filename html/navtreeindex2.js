@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
-"vive_localization.html#autotoc_md307":[4,2,7,1],
-"vive_localization.html#autotoc_md308":[4,2,7,2]
+"vive_localization.html#autotoc_md307":[4,2,7,0],
+"vive_localization.html#autotoc_md308":[4,2,7,1],
+"vive_localization.html#autotoc_md309":[4,2,7,2]
 };

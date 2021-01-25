@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.12.0</span>
+   &#160;<span id="projectnumber">0.13.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -91,11 +91,11 @@ $(document).ready(function(){initNavTree('arm.html',''); initResizable(); });
 <div class="title">Arm Behavior </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md367"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md368"></a>
 Overview</h1>
 <p>Astrobee is equipped with a 3DoF perching arm, which may be attached to either the top or the bottom payload bay. The perching arm enables Astrobee to grasp handrails on the International Space Station (ISS). Once grasped the remaining two degrees of freedom are used as a pan/tilt mechanism. This allows propulsion and localization to be turned off completely, thereby saving significant energy and computational resources.</p>
 <p>Control of the arm is achieved by a three-layer driver stack. The firmware (avionics) is at the lowest level, and executes on a dedicated microcontroller. It has direct control of the servos. The firmware communicates over serial with the mid-level driver (<a class="el" href="namespaceperching__arm.html">perching_arm</a>) which runs on the mid-level processor (MLP). The mid-level driver mostly acts as a bridge, converting serial commands to and from generic <code>sensor_msgs::JointState</code> messages. This abstraction integrates the perching arm into the ROS ecosystem, allowing us to use generic visualization tools, simulation software and controllers. At the highest level is the arm behavior (this node). This enforces high-level logic on arm usage and a convenient means of interacting with the arm.</p>
-<h1><a class="anchor" id="autotoc_md368"></a>
+<h1><a class="anchor" id="autotoc_md369"></a>
 Internal behavior</h1>
 <p>The arm behavior provides the callee with a single action-based entry point for controlling the arm, called <code>ff_msgs::ArmAction</code>. This "arm action" accepts a command, executes it in the background, and sends periodic feedback. When the task completes a result is returned to the callee. Unlike services, actions are non-blocking so exhibit superior performance in nodelet contexts.</p>
 <p>The action supports only one goal, which is fully-preemptible. This means that a new goal always preempts the current goal (the previous goal's callee will be notified of preemption). Consequently, you must be careful not to interact with the arm if another entity is using it, for example the perch behavior.</p>
@@ -120,7 +120,7 @@ Arm finite state machine</div>
 </div>
 </p>
 <p>The state machine is fairly intuitive. The only aspect that warrants further discussion is the mapping of commands to states. Under the hood, an ARM_PAN / ARM_TILT command is really the same as an ARM_MOVE command, except the respective tilt / pan values remain unchanged. Likewise, ARM_DEPLOY is mapped to an ARM_MOVE to pan and tilt values of zero, and GRIPPER_CLOSE / GRIPPER_OPEN are simply just GRIPPER_SET to 0 and 100 respectively.</p>
-<h1><a class="anchor" id="autotoc_md369"></a>
+<h1><a class="anchor" id="autotoc_md370"></a>
 Using the test tool</h1>
 <p>Typically, the arm will be controlled through the Ground Data System (GDS). However, The arm behavior is packaged with its own gflags-based tool called arm_tool. This tool is essentially a convenience wrapper around an action client can be used to control the arm from the command-line.</p>
 <p>To get a list of supported commands, have a look at the help: </p><pre class="fragment">rosrun arm arm_tool -helpshort

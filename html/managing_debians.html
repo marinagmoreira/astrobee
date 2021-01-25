@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.12.0</span>
+   &#160;<span id="projectnumber">0.13.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -101,55 +101,55 @@ $(document).ready(function(){initNavTree('managing_debians.html',''); initResiza
 <p>Setup: </p><pre class="fragment">export FF_SOURCE=&lt;path_to_your_freeflyer_repository&gt;
 export FF_AVIONICS=&lt;path_to_your_avionics_repository&gt;
 </pre><p>More information on how Astrobee is using <a href="https://www.aptly.info/doc/overview/">aptly</a> is described in: ../scripts/setup/Debians/mirror/README.md "Debians mirror documentation"</p>
-<h2><a class="anchor" id="autotoc_md112"></a>
+<h2><a class="anchor" id="autotoc_md113"></a>
 Build Freeflyer Debian</h2>
 <p>Your environment needs to be configured properly to cross-compile Astrobee Robot Software for the <code>armhf</code> architecture: <a class="el" href="NASA__INSTALL_8md.html">see NASA Install documentation</a></p>
-<h3><a class="anchor" id="autotoc_md113"></a>
+<h3><a class="anchor" id="autotoc_md114"></a>
 Creating a release</h3>
 <p>Please see the <a class="el" href="flight__release_8md.html">flight release documentation</a> for informationon how to create a release and update the release version.</p>
-<h3><a class="anchor" id="autotoc_md114"></a>
+<h3><a class="anchor" id="autotoc_md115"></a>
 Create the Debian package</h3>
 <pre class="fragment">./scripts/build/build_debian.sh
-</pre><h2><a class="anchor" id="autotoc_md115"></a>
+</pre><h2><a class="anchor" id="autotoc_md116"></a>
 Build Avionics Debian</h2>
 <p>The <code>avionics</code> Debian is build separatly from the <code>freeflyer</code> Debian because it does not rely on the same toolchain, follow a different release schedule and is not yet open source.</p>
-<h3><a class="anchor" id="autotoc_md116"></a>
+<h3><a class="anchor" id="autotoc_md117"></a>
 Update changelog</h3>
 <pre class="fragment">cd $FF_AVIONICS
 dch -v &lt;version.number&gt; -c debian/changelog
-</pre><h3><a class="anchor" id="autotoc_md117"></a>
+</pre><h3><a class="anchor" id="autotoc_md118"></a>
 Push the new changelog</h3>
 <pre class="fragment">git commit -m"meaningful message" debian/changelog
 git push
-</pre><h3><a class="anchor" id="autotoc_md118"></a>
+</pre><h3><a class="anchor" id="autotoc_md119"></a>
 Create the Debian package</h3>
 <pre class="fragment">./tools/build_debian.sh
 # answer y/n when the prompt ask about Harmony install
-</pre><h2><a class="anchor" id="autotoc_md119"></a>
+</pre><h2><a class="anchor" id="autotoc_md120"></a>
 Common steps: staging and snapshoting</h2>
-<h3><a class="anchor" id="autotoc_md120"></a>
+<h3><a class="anchor" id="autotoc_md121"></a>
 Stage the Debian on volar</h3>
 <pre class="fragment">cd ..
 export ASTROBEE_DEBIAN_DIR=/home/p-free-flyer/free-flyer/FSW/ars_debs/dists/xenial/main
 scp astrobee-avionics_&lt;version&gt;_*.deb \
   &lt;ndc_username&gt;@volar:$ASTROBEE_DEBIAN_DIR/binary-armhf
-</pre><h3><a class="anchor" id="autotoc_md121"></a>
+</pre><h3><a class="anchor" id="autotoc_md122"></a>
 Update the Debian mirror on volar</h3>
 <pre class="fragment">ssh volar
 cd /home/p-free-flyer/free-flyer/FSW/aptly/scripts
 ./update_astrobee_debians.sh
 </pre><p>Warnings [!] will be displayed for the existing packages, but the new generated debian should be listed with a [+].</p>
-<h3><a class="anchor" id="autotoc_md122"></a>
+<h3><a class="anchor" id="autotoc_md123"></a>
 Sign the Debian</h3>
 <p>This step is only required if you do not already have imported the key to sign the Debians. This step requires to have access to the private key maintained by Brian Coltin.</p>
 <p>Master key owner: </p><pre class="fragment">gpg --export-secret-key
 </pre><p>New user: </p><pre class="fragment">gpg --import ~bcoltin/secret.key
 </pre><p>Master key owner deletes <code>secret.key</code></p>
-<h3><a class="anchor" id="autotoc_md123"></a>
+<h3><a class="anchor" id="autotoc_md124"></a>
 Push Debian to the server</h3>
 <pre class="fragment">./publish_snapshot.sh &lt;snapshot_date_and_tag&gt;
 </pre><p>Convention for the argument: follow this example 20180702_pre-dock-flight-release. Input the Master Password when asked (twice).</p>
-<h2><a class="anchor" id="autotoc_md124"></a>
+<h2><a class="anchor" id="autotoc_md125"></a>
 Build FSW dependencies Debians packages</h2>
 <p>When a FSW dependecy is changed, it is necessary to rebuild the Debian packages: </p><pre class="fragment">./scripts/setup/debians/build_install_debians.sh
 </pre><p>Then, follow the common step above to stage the Debian packages on volar and create the snapshot on the server. </p>

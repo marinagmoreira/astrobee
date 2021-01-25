@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.12.0</span>
+   &#160;<span id="projectnumber">0.13.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -91,11 +91,11 @@ $(document).ready(function(){initNavTree('imagesampler.html',''); initResizable(
 <div class="title">Image Sampler </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2><a class="anchor" id="autotoc_md355"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md356"></a>
 Image Sampler Node</h2>
 <p>The image sampler subscribes to an image topic, then republishes the images at a different rate and resolution.</p>
 <p>Two steps are required to start using the image sampler:</p>
-<h3><a class="anchor" id="autotoc_md356"></a>
+<h3><a class="anchor" id="autotoc_md357"></a>
 Configure the image sampler for the desired camera</h3>
 <div class="fragment"><div class="line">rosservice call /mgt/img_sampler/{nav_cam,dock_cam}/configure \</div>
 <div class="line">                  &lt;mode&gt; &lt;framerate&gt; &lt;width&gt; &lt;height&gt; &lt;bitrate&gt;</div>
@@ -107,7 +107,7 @@ Configure the image sampler for the desired camera</h3>
 </ul>
 <p>Example to configure the nav_cam to publish half size images every 2 seconds (both for streaming and recording): </p><div class="fragment"><div class="line">rosservice call /mgt/img_sampler/nav_cam/configure 0 0.5 640 480 0</div>
 </div><!-- fragment --><p>See <a href="../communications/ff_msgs/srv/ConfigureCamera.srv">Configure Camera Service</a>.</p>
-<h3><a class="anchor" id="autotoc_md357"></a>
+<h3><a class="anchor" id="autotoc_md358"></a>
 Enable the image sampler for the desired camera</h3>
 <div class="fragment"><div class="line">rosservice call /mgt/img_sampler/{nav_cam.dock_cam}/enable &lt;mode&gt; &lt;flag&gt;</div>
 </div><!-- fragment --><ul>

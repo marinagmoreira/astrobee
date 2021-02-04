@@ -1,8 +1,8 @@
 <map id="gazebo::GazeboSensorPluginARTags" name="gazebo::GazeboSensorPluginARTags">
-<area shape="rect" id="node1" title=" " alt="" coords="59,1152,279,1347"/>
-<area shape="rect" id="node2" href="$classgazebo_1_1FreeFlyerSensorPlugin.html" title=" " alt="" coords="67,924,271,1104"/>
-<area shape="rect" id="node3" href="$classgazebo_1_1FreeFlyerPlugin.html" title=" " alt="" coords="5,520,176,876"/>
-<area shape="rect" id="node4" href="$classff__util_1_1FreeFlyerNodelet.html" title=" " alt="" coords="9,131,172,472"/>
-<area shape="rect" id="node5" title=" " alt="" coords="57,5,124,83"/>
-<area shape="rect" id="node6" title=" " alt="" coords="200,659,299,737"/>
+<area shape="rect" id="node1" title=" " alt="" coords="65,1152,303,1332"/>
+<area shape="rect" id="node2" href="$classgazebo_1_1FreeFlyerSensorPlugin.html" title=" " alt="" coords="74,924,294,1104"/>
+<area shape="rect" id="node3" href="$classgazebo_1_1FreeFlyerPlugin.html" title=" " alt="" coords="5,520,192,876"/>
+<area shape="rect" id="node4" href="$classff__util_1_1FreeFlyerNodelet.html" title=" " alt="" coords="10,131,187,472"/>
+<area shape="rect" id="node5" title=" " alt="" coords="62,5,135,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="216,659,323,737"/>
 </map>

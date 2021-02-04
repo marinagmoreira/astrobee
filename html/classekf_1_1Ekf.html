@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -152,6 +152,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abcd602097a19504e88badd9eda229e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4520f090b0b6aa21d51a89309fbb917"><td class="memItemLeft" align="right" valign="top">Eigen::Affine3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classekf_1_1Ekf.html#aa4520f090b0b6aa21d51a89309fbb917">GetNavCamToBody</a> (void) const</td></tr>
 <tr class="separator:aa4520f090b0b6aa21d51a89309fbb917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31349adf7dd8ffdfabcaa77dfb9c5efa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classekf_1_1Ekf.html#a31349adf7dd8ffdfabcaa77dfb9c5efa">HasPoseEstimate</a> () const</td></tr>
+<tr class="separator:a31349adf7dd8ffdfabcaa77dfb9c5efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -212,6 +214,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a5a429e6f02896d59d10bdcf943e400f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7b2e3beccd319efce90b1400b8d12e6"><td class="memItemLeft" align="right" valign="top">geometry_msgs::Pose&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classekf_1_1Ekf.html#ac7b2e3beccd319efce90b1400b8d12e6">last_estimate_pose_</a></td></tr>
 <tr class="separator:ac7b2e3beccd319efce90b1400b8d12e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a516bdb4a62eca7212f795dd14bb1cc3b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classekf_1_1Ekf.html#a516bdb4a62eca7212f795dd14bb1cc3b">has_pose_estimate_</a> = false</td></tr>
+<tr class="separator:a516bdb4a62eca7212f795dd14bb1cc3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a213e5f9c0244f4076ab0edbd9dbaefdd"><td class="memItemLeft" align="right" valign="top">Eigen::Affine3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classekf_1_1Ekf.html#a213e5f9c0244f4076ab0edbd9dbaefdd">camera_to_body_</a></td></tr>
 <tr class="separator:a213e5f9c0244f4076ab0edbd9dbaefdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b4cbb75bdc60d7f652baf1eeabe2b29"><td class="memItemLeft" align="right" valign="top">Eigen::Affine3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classekf_1_1Ekf.html#a0b4cbb75bdc60d7f652baf1eeabe2b29">nav_cam_to_body_</a></td></tr>
@@ -515,6 +519,31 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31349adf7dd8ffdfabcaa77dfb9c5efa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31349adf7dd8ffdfabcaa77dfb9c5efa">&#9670;&nbsp;</a></span>HasPoseEstimate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ekf::Ekf::HasPoseEstimate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1167,6 +1196,28 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">Eigen::Affine3d ekf::Ekf::handrail_to_world_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a516bdb4a62eca7212f795dd14bb1cc3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a516bdb4a62eca7212f795dd14bb1cc3b">&#9670;&nbsp;</a></span>has_pose_estimate_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ekf::Ekf::has_pose_estimate_ = false</td>
         </tr>
       </table>
   </td>

@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -146,7 +146,7 @@ $(document).ready(function(){initNavTree('sys__monitor_8h_source.html',''); init
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="classsys__monitor_1_1SysMonitor.html#abae6e12200eb8afe17cceffa71c18ee4">~SysMonitor</a>();</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsys__monitor_1_1SysMonitor.html#a6d2f6be0cf6f58ddf7e36fcc38535f97">AddFault</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> fault_id, std::string <span class="keyword">const</span>&amp; fault_msg = <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                ros::Time time_occurred = ros::Time::now());</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <a class="code" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">ros::Time</a> time_occurred = ros::Time::now());</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsys__monitor_1_1SysMonitor.html#a6d2f6be0cf6f58ddf7e36fcc38535f97">AddFault</a>(ff_msgs::Fault <span class="keyword">const</span>&amp; fault, <span class="keywordtype">bool</span> check_added = <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
@@ -217,7 +217,7 @@ $(document).ready(function(){initNavTree('sys__monitor_8h_source.html',''); init
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
 <div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classsys__monitor_1_1SysMonitor.html#a031fed173fa24a4ef139a2f8be010ae2">  142</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsys__monitor_1_1SysMonitor.html#a031fed173fa24a4ef139a2f8be010ae2">AssertFault</a>(<a class="code" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7">ff_util::FaultKeys</a> enum_key,</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                   std::string <span class="keyword">const</span>&amp; message,</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                   ros::Time time_fault_occurred = ros::Time::now());</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                   <a class="code" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">ros::Time</a> time_fault_occurred = ros::Time::now());</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
 <div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classsys__monitor_1_1SysMonitor.html#a45a8a1552fca3d3290709b012a43e7c8">  146</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsys__monitor_1_1SysMonitor.html#a45a8a1552fca3d3290709b012a43e7c8">ClearFault</a>(<a class="code" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7">ff_util::FaultKeys</a> enum_key);</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
@@ -364,6 +364,7 @@ $(document).ready(function(){initNavTree('sys__monitor_8h_source.html',''); init
 <div class="ttc" id="aclasssys__monitor_1_1SysMonitor_html_a031fed173fa24a4ef139a2f8be010ae2"><div class="ttname"><a href="classsys__monitor_1_1SysMonitor.html#a031fed173fa24a4ef139a2f8be010ae2">sys_monitor::SysMonitor::AssertFault</a></div><div class="ttdeci">void AssertFault(ff_util::FaultKeys enum_key, std::string const &amp;message, ros::Time time_fault_occurred=ros::Time::now())</div></div>
 <div class="ttc" id="astructsys__monitor_1_1SysMonitor_1_1Fault_html_ac7c0297bce4816acd7edcba8ec9e2bc2"><div class="ttname"><a href="structsys__monitor_1_1SysMonitor_1_1Fault.html#ac7c0297bce4816acd7edcba8ec9e2bc2">sys_monitor::SysMonitor::Fault::response</a></div><div class="ttdeci">ff_msgs::CommandStampedPtr response</div><div class="ttdef"><b>Definition:</b> sys_monitor.h:121</div></div>
 <div class="ttc" id="aclasssys__monitor_1_1SysMonitor_html_aadac91a0600e16182f9b889789eb7d01"><div class="ttname"><a href="classsys__monitor_1_1SysMonitor.html#aadac91a0600e16182f9b889789eb7d01">sys_monitor::SysMonitor::HeartbeatCallback</a></div><div class="ttdeci">void HeartbeatCallback(ff_msgs::HeartbeatConstPtr const &amp;heartbeat)</div><div class="ttdef"><b>Definition:</b> sys_monitor.cc:155</div></div>
+<div class="ttc" id="anamespacelocalization__common_html_ae558927c458010e767b03b93e4516e0c"><div class="ttname"><a href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a></div><div class="ttdeci">double Time</div><div class="ttdef"><b>Definition:</b> time.h:23</div></div>
 <div class="ttc" id="aclasssys__monitor_1_1SysMonitor_1_1Watchdog_html_ad089b8942e76677265fe8727390a55e3"><div class="ttname"><a href="classsys__monitor_1_1SysMonitor_1_1Watchdog.html#ad089b8942e76677265fe8727390a55e3">sys_monitor::SysMonitor::Watchdog::fault_id</a></div><div class="ttdeci">uint fault_id()</div><div class="ttdef"><b>Definition:</b> sys_monitor.cc:1011</div></div>
 <div class="ttc" id="aclasssys__monitor_1_1SysMonitor_html"><div class="ttname"><a href="classsys__monitor_1_1SysMonitor.html">sys_monitor::SysMonitor</a></div><div class="ttdef"><b>Definition:</b> sys_monitor.h:50</div></div>
 <div class="ttc" id="aclasssys__monitor_1_1SysMonitor_html_ac6390cef4bc897164e0d59b025ca462e"><div class="ttname"><a href="classsys__monitor_1_1SysMonitor.html#ac6390cef4bc897164e0d59b025ca462e">sys_monitor::SysMonitor::PublishTimeDiff</a></div><div class="ttdeci">void PublishTimeDiff(float time_diff_sec)</div><div class="ttdef"><b>Definition:</b> sys_monitor.cc:502</div></div>

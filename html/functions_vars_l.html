@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -99,8 +99,15 @@ $(document).ready(function(){initNavTree('functions_vars_l.html',''); initResiza
 <li>landmark
 : <a class="el" href="structGncFiles.html#a4db0de308097e8af21e8695d8c7e07fd">GncFiles</a>
 </li>
+<li>landmark_distance_threshold
+: <a class="el" href="structgraph__localizer_1_1ProjectionFactorAdderParams.html#a802b13b1fe61819fe1f7dea4be5a013e">graph_localizer::ProjectionFactorAdderParams</a>
+, <a class="el" href="structgraph__localizer_1_1SmartProjectionFactorAdderParams.html#a34a379b703492bb544e938d51f9bb4ec">graph_localizer::SmartProjectionFactorAdderParams</a>
+</li>
 <li>landmark_msg_
 : <a class="el" href="classgnc__autocode_1_1GncSimAutocode.html#a17730d739a19262c78c250fb04df3961">gnc_autocode::GncSimAutocode</a>
+</li>
+<li>landmark_point_
+: <a class="el" href="classgtsam_1_1LocProjectionFactor.html#a265dd1b2faa2b0646806976b4b631a48">gtsam::LocProjectionFactor&lt; POSE, LANDMARK, CALIBRATION &gt;</a>
 </li>
 <li>laser_enable_client_
 : <a class="el" href="classexecutive_1_1Executive.html#a5a12242cca17fc82f6532df73d3ca32a">executive::Executive</a>
@@ -146,6 +153,12 @@ $(document).ready(function(){initNavTree('functions_vars_l.html',''); initResiza
 </li>
 <li>lasttime
 : <a class="el" href="structOOTX.html#a8f4e83ec32582b4562b3dd744c647ee8">OOTX</a>
+</li>
+<li>latest_image_id
+: <a class="el" href="structgraph__localizer_1_1FeatureTrack.html#a934363d3c652e2e5cfa920762861616f">graph_localizer::FeatureTrack</a>
+</li>
+<li>latest_velocity_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#adb5c98e4e5df3b70e60002ee2e00b79d">localization_rviz_plugins::LocalizationGraphPanel</a>
 </li>
 <li>layers_
 : <a class="el" href="classinterest__point_1_1BriskScaleSpace.html#a59ca8b33b4e0c3d279e132fb260c71e0">interest_point::BriskScaleSpace</a>
@@ -211,6 +224,9 @@ $(document).ready(function(){initNavTree('functions_vars_l.html',''); initResiza
 <li>lights
 : <a class="el" href="classlight__flow_1_1Frame.html#a8fe4eabc7f436b5d7aaa18727ffad8c4">light_flow::Frame</a>
 </li>
+<li>limit_imu_factor_spacing
+: <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#ac7e0eee454a1071b4ec6d8ebd3642919">graph_localizer::GraphLocalizerParams</a>
+</li>
 <li>lin_acc_x
 : <a class="el" href="struct__Data.html#af981c81d19b6872813e5f7593fa54908">_Data</a>
 </li>
@@ -219,6 +235,9 @@ $(document).ready(function(){initNavTree('functions_vars_l.html',''); initResiza
 </li>
 <li>lin_acc_z
 : <a class="el" href="struct__Data.html#a5b942759884e3e2d25dc5116f85079ca">_Data</a>
+</li>
+<li>linear_velocity
+: <a class="el" href="structground__truth__localizer_1_1Twist.html#a11fc29fe40d53706b582d7414e913d40">ground_truth_localizer::Twist</a>
 </li>
 <li>listener_
 : <a class="el" href="classgazebo_1_1FreeFlyerPlugin.html#a73fe3a3a5747222184bdf2c441746cd2">gazebo::FreeFlyerPlugin</a>
@@ -236,6 +255,21 @@ $(document).ready(function(){initNavTree('functions_vars_l.html',''); initResiza
 <li>loc_
 : <a class="el" href="classekf__bag_1_1EkfBag.html#ad53b5b859cf590b4e641859542b6f62d">ekf_bag::EkfBag</a>
 </li>
+<li>loc_adder
+: <a class="el" href="structgraph__localizer_1_1FactorParams.html#a5bb782fa2f38af5a4e6287ee8a35f403">graph_localizer::FactorParams</a>
+</li>
+<li>loc_count_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#a744eee6fe861dcca3425dede16d50ed9">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
+<li>loc_error_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#a13e382644a9007837c9c6a49d26df61c">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
+<li>loc_pose_error_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#acb4f60c56673a811b11ca3a3a2d1aef0">graph_localizer::GraphStats</a>
+</li>
+<li>loc_proj_error_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#aafd302bc7e0e74d5f12bcb1a582d5adc">graph_localizer::GraphStats</a>
+</li>
 <li>localization_ac_
 : <a class="el" href="classexecutive_1_1Executive.html#abbbd6a8324d321e266d4de7c821e3b51">executive::Executive</a>
 </li>
@@ -244,6 +278,15 @@ $(document).ready(function(){initNavTree('functions_vars_l.html',''); initResiza
 </li>
 <li>localization_result_timeout_
 : <a class="el" href="classexecutive_1_1Executive.html#af817473b874097a3429fe6a41bdac07b">executive::Executive</a>
+</li>
+<li>log_error_timer_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#ac122675cb3c31447d42d7797581f72df">graph_localizer::GraphStats</a>
+</li>
+<li>log_rate
+: <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#acd06069156167bef46be4f56020170ab">graph_localizer::GraphLocalizerParams</a>
+</li>
+<li>log_stats_timer_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#af0a9ad8a226520d9592cfde9b8cf5f93">graph_localizer::GraphStats</a>
 </li>
 <li>longPairs_
 : <a class="el" href="classinterest__point_1_1BRISK__Impl.html#a0a7fff4ab44e0025c9352e6453aef419">interest_point::BRISK_Impl</a>

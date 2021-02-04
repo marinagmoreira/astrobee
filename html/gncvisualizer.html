@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -93,13 +93,13 @@ $(document).ready(function(){initNavTree('gncvisualizer.html',''); initResizable
 <div class="contents">
 <div class="textblock"><p>This tool visualizes the GNC status of the robot. For using the tool, see the menu bar when the tool is open. There are many useful hotkeys, indicated in the menu bar.</p>
 <p>You may use one of the following two communication methods:</p>
-<h2><a class="anchor" id="autotoc_md444"></a>
+<h2><a class="anchor" id="autotoc_md469"></a>
 ROS Mode</h2>
 <p>This is the default communication method. Use this if you are running on simulation or inside the robot local network. <b>It requires rospy dependencies</b>.</p>
 <p>You may use the <code>--comm</code> argument to set the <code>ros</code> value. Example:</p>
 <div class="fragment"><div class="line">python ./scripts/visualizer.py --comm ros</div>
 </div><!-- fragment --><p>You may also add <code>--gantry</code>, <code>--granite</code>, <code>--bag</code>, and <code>--sim</code> to start the appropriate roslaunch file as well. Another argument, <code>--plan</code>, lets you specify a plan file that can be started by pressing <code>p</code>. Please be advised, <b>these arguments only work in ROS mode</b>.</p>
-<h2><a class="anchor" id="autotoc_md445"></a>
+<h2><a class="anchor" id="autotoc_md470"></a>
 DDS Mode</h2>
 <p>This communication method allows you to read data from DDS topics. Use this option if you want to get telemetry from a DDS enabled network (e.g. Astrobee on orbit, space-like ground networks, <a class="el" href="namespacedds__ros__bridge.html">dds_ros_bridge</a> on simulation). Note that many menu options are disabled when using this communication method.</p>
 <p>You may use the <code>--comm</code> argument to set the <code>dds</code> value. Example:</p>
@@ -111,7 +111,7 @@ DDS Mode</h2>
 <div class="line">python visualizer.py --comm dds --use_ip 10.42.0.37 --robot_name Bumble</div>
 </div><!-- fragment --><p>Please be advised this tool will not read data from DDS topics until you manually set <code>ekf</code>, <code>gnc</code>, and <code>pmc</code> states to a value higher than 0 using the Ground Data System (Engineering Tab).</p>
 <p>Additionally, <b>make sure your firewall is not blocking DDS communications</b>.</p>
-<h3><a class="anchor" id="autotoc_md446"></a>
+<h3><a class="anchor" id="autotoc_md471"></a>
 On-orbit activities</h3>
 <p>For <b>on-orbit activities</b>, when running <b>inside of a TRek environment</b>, you may use the <code>--public_ip</code> argument to state the <code>ON_BOARD_PROXY_IP</code>, <code>--use_ip</code> for the <code>GROUND_PROXY_IP</code> and <code>--robot_name</code> to set the agent. Example:</p>
 <div class="fragment"><div class="line"># Override participant name, initial peers and public IP, but keep the</div>
@@ -124,17 +124,17 @@ On-orbit activities</h3>
 <div class="line"># public_ip (should be empty) from the configuration file</div>
 <div class="line">python visualizer.py --comm dds --robot_name Bumble --use_ip 0.0.0.0 \</div>
 <div class="line">  --domain 29</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md447"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md472"></a>
 Dependencies</h2>
 <p>This tool makes use of standard python modules present in most Linux and Windows implementations.</p>
-<h3><a class="anchor" id="autotoc_md448"></a>
+<h3><a class="anchor" id="autotoc_md473"></a>
 If used along with the Astrobee Robot Software</h3>
 <p>If you followed the installation instructions for this repository, you should already have all the needed dependencies to run this tool <b>in ROS mode</b>.</p>
 <p>In order to run this tool in <b>DDS mode</b> you need an additional dependency:</p>
 <ul>
 <li>rticonnextdds_connector</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md449"></a>
+<h3><a class="anchor" id="autotoc_md474"></a>
 If using as a standalone tool</h3>
 <p>You may use this program as a standalone tool <b>only in DDS mode</b>. You may copy the whole <code>gnc_visualizer</code> folder to the destination computer and install missing dependencies.</p>
 <p>Depending on your system, you may need to install the following packages:</p>
@@ -145,20 +145,20 @@ If using as a standalone tool</h3>
 <li>rticonnextdds_connector</li>
 </ul>
 <p>Any other usage is not recommended.</p>
-<h2><a class="anchor" id="autotoc_md450"></a>
+<h2><a class="anchor" id="autotoc_md475"></a>
 Installing dependencies</h2>
 <p>Here you will find suggestions on how to install some dependencies needed for this tool usage.</p>
-<h3><a class="anchor" id="autotoc_md451"></a>
+<h3><a class="anchor" id="autotoc_md476"></a>
 Installing Python</h3>
 <p>Make sure <b>Python 2.7.x</b> is installed on your computer. You may get it from your package manager or from <a href="https://www.python.org/downloads/">the official website</a></p>
 <p>If you followed the Astrobee install, Python should be already installed</p>
-<h3><a class="anchor" id="autotoc_md452"></a>
+<h3><a class="anchor" id="autotoc_md477"></a>
 Installing PIP</h3>
 <p>You may install pip using <code>apt</code> or <code>yum</code>. Otherwise, try the following:</p>
 <p>(Alternative) </p><div class="fragment"><div class="line">wget https://bootstrap.pypa.io/get-pip.py # Or download it from a browser</div>
 <div class="line">python get-pip.py</div>
 <div class="line">python -m pip install --upgrade pip setuptools wheel</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md453"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md478"></a>
 Installing the RTI connector (DDS Only)</h3>
 <ul>
 <li>Note: RTI Connext DDS Connector is under the RTI license.</li>
@@ -166,7 +166,7 @@ Installing the RTI connector (DDS Only)</h3>
 <p>Install the RTI software</p>
 <div class="fragment"><div class="line"># Use pip2 instead if needed</div>
 <div class="line">pip install rticonnextdds_connector</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md454"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md479"></a>
 Installing QT in standalone mode</h3>
 <ul>
 <li>Note: If you followed the Astrobee install (Ubuntu only), this should not be needed.</li>
@@ -193,7 +193,7 @@ Installing QT in standalone mode</h3>
 <div class="line">#</div>
 <div class="line"># Then install it (use pip2 if needed):</div>
 <div class="line">pip install PyQt4-[...].whl</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md455"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md480"></a>
 Platform support</h2>
 <p>This software has been tested on:</p>
 <ul>

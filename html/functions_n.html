@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -139,8 +139,18 @@ $(document).ready(function(){initNavTree('functions_n.html',''); initResizable()
 <li>nav_cam_focal_length_
 : <a class="el" href="classekf_1_1Ekf.html#a23ce9e62b75711a5357d14bb170e2986">ekf::Ekf</a>
 </li>
+<li>nav_cam_intrinsics
+: <a class="el" href="structgraph__localizer_1_1CalibrationParams.html#aceff2b44b84ccd62f63d466d85802e8f">graph_localizer::CalibrationParams</a>
+, <a class="el" href="structgraph__localizer_1_1RotationFactorAdderParams.html#ab62bd32b9be40a649373b6af4c8ae31d">graph_localizer::RotationFactorAdderParams</a>
+</li>
+<li>nav_cam_params
+: <a class="el" href="structgraph__bag_1_1GraphBagParams.html#a0aaa498edf45520756ac93d7489693a7">graph_bag::GraphBagParams</a>
+</li>
 <li>nav_cam_to_body_
 : <a class="el" href="classekf_1_1Ekf.html#a0b4cbb75bdc60d7f652baf1eeabe2b29">ekf::Ekf</a>
+</li>
+<li>nav_state()
+: <a class="el" href="classlocalization__common_1_1CombinedNavState.html#abba75bacf4c49a4f4e9114d02d3664df">localization_common::CombinedNavState</a>
 </li>
 <li>NavCamCallback()
 : <a class="el" href="classimage__sampler_1_1ImageSampler.html#a8f9c1d26a51d4c4678aa3eafc2b449ed">image_sampler::ImageSampler</a>
@@ -170,6 +180,7 @@ $(document).ready(function(){initNavTree('functions_n.html',''); initResizable()
 , <a class="el" href="classff_1_1RosSubRapidPub.html#a5e984efca688d7b209e35fa0f84851f8">ff::RosSubRapidPub</a>
 , <a class="el" href="classff__util_1_1FreeFlyerServiceClient.html#ad51d9a716bfc21e5d7bc655d5fcfb011">ff_util::FreeFlyerServiceClient&lt; ServiceSpec &gt;</a>
 , <a class="el" href="classgazebo_1_1FreeFlyerPlugin.html#aa852e761eb78e961d8f8481d1b10f3ef">gazebo::FreeFlyerPlugin</a>
+, <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#a7fccba27d10411a92f44063fa2255d6e">localization_rviz_plugins::LocalizationGraphPanel</a>
 , <a class="el" href="classsys__monitor_1_1SysMonitor.html#a24835aef84847de71939341a2ab4c843">sys_monitor::SysMonitor</a>
 </li>
 <li>nh_ff_
@@ -192,6 +203,15 @@ $(document).ready(function(){initNavTree('functions_n.html',''); initResizable()
 </li>
 <li>NodeletService()
 : <a class="el" href="classsys__monitor_1_1SysMonitor.html#a06aef1d33e262362058f3cb639dcdf76">sys_monitor::SysMonitor</a>
+</li>
+<li>noise
+: <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#a944cb985f5497c22f3b9328343a7980b">graph_localizer::GraphLocalizerParams</a>
+</li>
+<li>noise_inv_sigma()
+: <a class="el" href="classgtsam_1_1RobustSmartProjectionPoseFactor.html#a965cbd428a10504b254237afc7bb7bbd">gtsam::RobustSmartProjectionPoseFactor&lt; CALIBRATION &gt;</a>
+</li>
+<li>noise_scale
+: <a class="el" href="structgraph__localizer_1_1SmartProjectionFactorAdderParams.html#a0b30aaa0a8f08b2e6b99e0a5578473e0">graph_localizer::SmartProjectionFactorAdderParams</a>
 </li>
 <li>noLongPairs_
 : <a class="el" href="classinterest__point_1_1BRISK__Impl.html#a10a7b79cd8f38c98f23b58e6f1601d30">interest_point::BRISK_Impl</a>
@@ -243,6 +263,9 @@ $(document).ready(function(){initNavTree('functions_n.html',''); initResizable()
 <li>NUM_BERTHS
 : <a class="el" href="classsmart__dock_1_1SmartDock.html#a31e7582954a4978df6d062eb1ef7539ca982b821720db84c23b0b2f37bda04fa5">smart_dock::SmartDock</a>
 </li>
+<li>num_bias_estimation_measurements
+: <a class="el" href="structgraph__localizer_1_1GraphInitializerParams.html#adc930dc8ed9d91d41ad6f4a5f4dfe7bf">graph_localizer::GraphInitializerParams</a>
+</li>
 <li>num_channels
 : <a class="el" href="structCalibration.html#aa1edd3cecb23ee8b7100f951364e2c35">Calibration</a>
 </li>
@@ -259,11 +282,17 @@ $(document).ready(function(){initNavTree('functions_n.html',''); initResizable()
 <li>NUM_CONNECTION_STATES
 : <a class="el" href="classsmart__dock_1_1SmartDock.html#ae8251dfd952153dd80da366cd91f6e59a6d72b36e28d1d3e4d2c96baa415c1a0f">smart_dock::SmartDock</a>
 </li>
+<li>num_consecutive_pose_difference_failures_until_insane
+: <a class="el" href="structgraph__localizer_1_1SanityCheckerParams.html#ad1f412b6e1b22be6f6d1aa3241796f33">graph_localizer::SanityCheckerParams</a>
+</li>
 <li>num_current_blocking_fault_
 : <a class="el" href="classsys__monitor_1_1SysMonitor.html#a1435e3b2333111b277d8d3e317b92fa2">sys_monitor::SysMonitor</a>
 </li>
 <li>NUM_DOCK_STATES
 : <a class="el" href="classeps__driver_1_1EPS.html#ace3e01fc07a3c91da35ac1e3803fab1ba7786557f3a027b93dde4c7114973b19c">eps_driver::EPS</a>
+</li>
+<li>num_factors_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#a90f82773306c0e3f7f17dc14da6d69c4">graph_localizer::GraphStats</a>
 </li>
 <li>NUM_FAULTS
 : <a class="el" href="classeps__driver_1_1EPS.html#a7f803993a49397beb50a8cd346b6315aa445c7b579cb7d0ba3886873556bdd6a0">eps_driver::EPS</a>
@@ -272,12 +301,18 @@ $(document).ready(function(){initNavTree('functions_n.html',''); initResizable()
 <li>num_features
 : <a class="el" href="structsparse__mapping_1_1FilterStats.html#ad03a56f7ad074432b052aef2fc592cf8">sparse_mapping::FilterStats</a>
 </li>
+<li>num_features_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#ab97b002b884d4313711534d0de53202f">graph_localizer::GraphStats</a>
+</li>
 <li>num_frames
 : <a class="el" href="structMapViewerState.html#a1be0b49cce68725d5e4f290a3228cc61">MapViewerState</a>
 </li>
 <li>NUM_HOUSEKEEPING
 : <a class="el" href="classeps__driver_1_1EPS.html#a22b5a1f8ea85a84e1a30f7d684c89758adf41bd5f8bfe1cc5d3c9b13670692c00">eps_driver::EPS</a>
 , <a class="el" href="classsmart__dock_1_1SmartDock.html#ae6608e8877b70603eeac6dc2f05e513daf91b8866dc542f3ac7e4da4c527109e3">smart_dock::SmartDock</a>
+</li>
+<li>num_imu_factors_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#a9a671567595d57d388d67bf41e0b7971">graph_localizer::GraphStats</a>
 </li>
 <li>NUM_LED_MODES
 : <a class="el" href="classeps__driver_1_1EPS.html#afacd8ee2163a0533952287a83661db4ea66018e45ecc42ac7136e8a292ef80ac1">eps_driver::EPS</a>
@@ -287,8 +322,20 @@ $(document).ready(function(){initNavTree('functions_n.html',''); initResizable()
 : <a class="el" href="classeps__driver_1_1EPS.html#a7e0b4f3e4b23ce1ae425d054b31db8e5a3ae8cfaaf921f809e6096cd635dcf476">eps_driver::EPS</a>
 , <a class="el" href="classsmart__dock_1_1SmartDock.html#acc2b4d58f48d462b6a4511f934e6b087a0fe5e40b119777a9bd90870ed49ea7d0">smart_dock::SmartDock</a>
 </li>
+<li>num_loc_pose_factors_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#ad848404a14cd3e55e989506b04494c9f">graph_localizer::GraphStats</a>
+</li>
+<li>num_loc_proj_factors_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#af38b6fea8ff82c28a8b6f8afd0c16d23">graph_localizer::GraphStats</a>
+</li>
+<li>num_marginal_factors_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#aa96ee2347d878bdf4ab904334ddfed72">graph_localizer::GraphStats</a>
+</li>
 <li>NUM_NOZZLE
 : <a class="el" href="classpmc__actuator_1_1PmcActuatorNodelet.html#a0851ec011f04e409873ac796bc0eb41d">pmc_actuator::PmcActuatorNodelet</a>
+</li>
+<li>num_optical_flow_factors_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#a795d5e938157efa8d2a52cdff06bd07b">graph_localizer::GraphStats</a>
 </li>
 <li>NUM_PMC
 : <a class="el" href="classpmc__actuator_1_1PmcActuatorNodelet.html#ab884f45167ac007b4982d3c1156211e4a37f1087242c67baaed4e77657e6f4f27">pmc_actuator::PmcActuatorNodelet</a>
@@ -299,6 +346,9 @@ $(document).ready(function(){initNavTree('functions_n.html',''); initResizable()
 <li>num_ransac_iterations_
 : <a class="el" href="structsparse__mapping_1_1SparseMap.html#a7ad47f19aec65bc82e43bab9b72b180a">sparse_mapping::SparseMap</a>
 </li>
+<li>num_rotation_factors_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#a4ec6871e53fb99cfb1d259c2ceb24b30">graph_localizer::GraphStats</a>
+</li>
 <li>num_screenshots
 : <a class="el" href="structMapViewerState.html#ac11b937b38f6007ba345ac99e5496893">MapViewerState</a>
 </li>
@@ -308,8 +358,14 @@ $(document).ready(function(){initNavTree('functions_n.html',''); initResizable()
 <li>num_similar_
 : <a class="el" href="structsparse__mapping_1_1SparseMap.html#a7265eee358dad6034de0fb6efe0c164d">sparse_mapping::SparseMap</a>
 </li>
+<li>num_standstill_between_factors_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#a41527e3f7096344357650e4dee55debd">graph_localizer::GraphStats</a>
+</li>
 <li>NUM_STATES
 : <a class="el" href="classeps__driver_1_1EPS.html#a980258f0eb1f69a269050a97438f12e5a23cccf1b2274a62588f085ab40edddce">eps_driver::EPS</a>
+</li>
+<li>num_states_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#a77c9804fb99f2dc4c856be5f4e2dd962">graph_localizer::GraphStats</a>
 </li>
 <li>NUM_STRINGS
 : <a class="el" href="classeps__driver_1_1EPS.html#ae6106f7178d2d8a6ec9f0e5bc848f4b6ae1c37c2a26771624d37314b19563e2fb">eps_driver::EPS</a>
@@ -324,6 +380,9 @@ $(document).ready(function(){initNavTree('functions_n.html',''); initResizable()
 <li>NUM_TRIM
 : <a class="el" href="classpmc__actuator_1_1PmcActuatorNodelet.html#a0adfab1e193a98f38d21e4ad6a727875a4781e84e7742eab81d8515004227ba47">pmc_actuator::PmcActuatorNodelet</a>
 </li>
+<li>num_vel_prior_factors_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#ab5c0ae87d22f65aafa6381a03a2c9c8a">graph_localizer::GraphStats</a>
+</li>
 <li>num_watches
 : <a class="el" href="classconfig__reader_1_1WatchFiles.html#a10cc2db4090e9da8bf219fbb8a542de6">config_reader::WatchFiles</a>
 </li>
@@ -333,11 +392,30 @@ $(document).ready(function(){initNavTree('functions_n.html',''); initResizable()
 <li>NUMBER_OF_PMCS
 : <a class="el" href="classgazebo_1_1GazeboModelPluginPmc.html#a581415015a58be2178e8a88ba03adbf5">gazebo::GazeboModelPluginPmc</a>
 </li>
+<li>NumFactors()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a707367d1331fa2dd00d0720574a1d729">graph_localizer::GraphLocalizer</a>
+</li>
+<li>NumFeatures()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a3ed0c1525d3ff8d109e4d5951eb8bb10">graph_localizer::GraphLocalizer</a>
+, <a class="el" href="classgraph__localizer_1_1GraphValues.html#a1332c08389dd921ee671622816c4d4ff">graph_localizer::GraphValues</a>
+</li>
 <li>NumMarkers()
 : <a class="el" href="classmarker__tracking_1_1MarkerCornerDetector.html#ac01ca191689dbe55f0af607e59287df4">marker_tracking::MarkerCornerDetector</a>
 </li>
 <li>NumMilestones()
 : <a class="el" href="classjsonloader_1_1Plan.html#a293af3541d354ca56361b61d2f93992b">jsonloader::Plan</a>
+</li>
+<li>NumOFFactors()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#aa9dcef04a161f7e6f5c6b58f88b895ef">graph_localizer::GraphLocalizer</a>
+</li>
+<li>NumProjectionFactors()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a5ce4a32982513f3bbf40d3a4d64e7a72">graph_localizer::GraphLocalizer</a>
+</li>
+<li>NumSmartFactors()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a7f0f561924dbef94635bdf2c079f6be5">graph_localizer::GraphLocalizer</a>
+</li>
+<li>NumStates()
+: <a class="el" href="classgraph__localizer_1_1GraphValues.html#a82e13d4eaeed0412829c0209586dcbc7">graph_localizer::GraphValues</a>
 </li>
 </ul>
 </div><!-- contents -->

@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -110,6 +110,10 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 : <a class="el" href="classgazebo_1_1GazeboModelPluginPerchingArm.html#abfeeff4774bc27b9265543feedeece80">gazebo::GazeboModelPluginPerchingArm</a>
 , <a class="el" href="classperching__arm_1_1PerchingArmNode.html#a5a35a16a18d20611168ba7056fd2ce6c">perching_arm::PerchingArmNode</a>
 </li>
+<li>calibration
+: <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#ab0102e3ff1548639bdaa8de688017af5">graph_localizer::GraphLocalizerParams</a>
+, <a class="el" href="classgtsam_1_1LocProjectionFactor.html#af735f41bc521f97ff52152a6a61d996b">gtsam::LocProjectionFactor&lt; POSE, LANDMARK, CALIBRATION &gt;</a>
+</li>
 <li>Call()
 : <a class="el" href="classff__util_1_1FreeFlyerServiceClient.html#afd46e316af03197789dfbea5c60355d0">ff_util::FreeFlyerServiceClient&lt; ServiceSpec &gt;</a>
 </li>
@@ -150,6 +154,16 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>cam_frustum_
 : <a class="el" href="classoctoclass_1_1OctoClass.html#a0045e7e171a3d029db9709419a14c844">octoclass::OctoClass</a>
+</li>
+<li>cam_intrinsics
+: <a class="el" href="structgraph__localizer_1_1LocFactorAdderParams.html#a816b7cc4ca03cc24a2708a305292402a">graph_localizer::LocFactorAdderParams</a>
+, <a class="el" href="structgraph__localizer_1_1ProjectionFactorAdderParams.html#a910166b5c827397bdbcaa528e0f2868c">graph_localizer::ProjectionFactorAdderParams</a>
+, <a class="el" href="structgraph__localizer_1_1SmartProjectionFactorAdderParams.html#a667230db17d64b13259c070e0882e448">graph_localizer::SmartProjectionFactorAdderParams</a>
+</li>
+<li>cam_noise
+: <a class="el" href="structgraph__localizer_1_1LocFactorAdderParams.html#a43acd2c0d20742b8c24fb2b3cfac1289">graph_localizer::LocFactorAdderParams</a>
+, <a class="el" href="structgraph__localizer_1_1ProjectionFactorAdderParams.html#af84a1c19cae733a18462ebc61e1359d5">graph_localizer::ProjectionFactorAdderParams</a>
+, <a class="el" href="structgraph__localizer_1_1SmartProjectionFactorAdderParams.html#abb73c73356fe29fd552b74857c497f10">graph_localizer::SmartProjectionFactorAdderParams</a>
 </li>
 <li>cam_params_
 : <a class="el" href="classsim__wrapper_1_1Sim.html#a29f5e2a4848f41c0b26a98c83ff85b30">sim_wrapper::Sim</a>
@@ -502,6 +516,15 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 <li>check_max_violation()
 : <a class="el" href="classtraj__opt_1_1LegendreTrajectory.html#af6ba30c8c3428e016299c5f3a6a03202">traj_opt::LegendreTrajectory</a>
 </li>
+<li>check_orientation_covariance
+: <a class="el" href="structgraph__localizer_1_1SanityCheckerParams.html#ab63c4aa63254837af72e7e40f8ec4460">graph_localizer::SanityCheckerParams</a>
+</li>
+<li>check_pose_difference
+: <a class="el" href="structgraph__localizer_1_1SanityCheckerParams.html#ae581a1bb6f3ffc17db2eda91f68b4126">graph_localizer::SanityCheckerParams</a>
+</li>
+<li>check_position_covariance
+: <a class="el" href="structgraph__localizer_1_1SanityCheckerParams.html#a2d75a06d1c99256cc2f514fc159fe075">graph_localizer::SanityCheckerParams</a>
+</li>
 <li>CheckAndPublish()
 : <a class="el" href="classff_1_1RosCpuStateToRapid.html#a08b57a83e865e9c06c038bec348ad8b1">ff::RosCpuStateToRapid</a>
 , <a class="el" href="classff_1_1RosDiskStateToRapid.html#a783004bd69c9aaa159ace7cf75c455da">ff::RosDiskStateToRapid</a>
@@ -515,8 +538,14 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 <li>CheckCollision()
 : <a class="el" href="classoctoclass_1_1OctoClass.html#a46304bbceab4c075534883fc65b4307c">octoclass::OctoClass</a>
 </li>
+<li>CheckCovarianceSanity()
+: <a class="el" href="classgraph__localizer_1_1SanityChecker.html#af7e3e1979eaf0c71af63cbb9c1fbd949">graph_localizer::SanityChecker</a>
+</li>
 <li>CheckFilesUpdated()
 : <a class="el" href="classconfig__reader_1_1ConfigReader.html#ab3704740eecc129baa67d047c0ca4349">config_reader::ConfigReader</a>
+</li>
+<li>CheckForStandstill()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a602780299b287d2ab7effc7128015236">graph_localizer::GraphLocalizer</a>
 </li>
 <li>checkMax()
 : <a class="el" href="classtraj__opt_1_1GurobiSolver.html#a8285ca64afe3afc9f4e58f9159383d28">traj_opt::GurobiSolver</a>
@@ -530,6 +559,9 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>CheckOccupancy()
 : <a class="el" href="classoctoclass_1_1OctoClass.html#a46b4c420d54ad623afd246e7873ddd65">octoclass::OctoClass</a>
+</li>
+<li>CheckPoseSanity()
+: <a class="el" href="classgraph__localizer_1_1SanityChecker.html#a1dea0b062cb8019dbce234e087b82b14">graph_localizer::SanityChecker</a>
 </li>
 <li>CheckSegment()
 : <a class="el" href="classchoreographer_1_1Validator.html#a24da66cdd74e371dcd82136dd8884389">choreographer::Validator</a>
@@ -549,6 +581,9 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>checkZones()
 : <a class="el" href="classjsonloader_1_1SetCheckZonesCommand.html#a9687d13f32e7c57a61ec4d178741a4e4">jsonloader::SetCheckZonesCommand</a>
+</li>
+<li>cheiralityError()
+: <a class="el" href="classgtsam_1_1LocProjectionFactor.html#acc59a0cd1aeaf21630e1cf7fdc8ebb54">gtsam::LocProjectionFactor&lt; POSE, LANDMARK, CALIBRATION &gt;</a>
 </li>
 <li>chksm_
 : <a class="el" href="structepson__imu_1_1__Data.html#a43959ca7f8bd24db9b467d60abdc4df8">epson_imu::_Data</a>
@@ -638,6 +673,10 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 <li>client_u_
 : <a class="el" href="classdock_1_1DockNodelet.html#aa7d43e4912d284def478154ef52b4e12">dock::DockNodelet</a>
 </li>
+<li>clone()
+: <a class="el" href="classgtsam_1_1LocProjectionFactor.html#a8182af4a96e6ee8c8ba76c4029531081">gtsam::LocProjectionFactor&lt; POSE, LANDMARK, CALIBRATION &gt;</a>
+, <a class="el" href="classgtsam_1_1PoseRotationFactor.html#a91331eee243ed09e4c0f42e72928067b">gtsam::PoseRotationFactor</a>
+</li>
 <li>Close()
 : <a class="el" href="classconfig__reader_1_1ConfigReader.html#abb4f0e5d866c8549cca537d2c0222758">config_reader::ConfigReader</a>
 , <a class="el" href="classff__serial_1_1Serial.html#a842059dcc5093721ce0fe79c4a25c552">ff_serial::Serial</a>
@@ -651,6 +690,9 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>CloseLua()
 : <a class="el" href="classconfig__reader_1_1ConfigReader.html#a2eea95c3f6530111b31fdf9332f53957">config_reader::ConfigReader</a>
+</li>
+<li>ClosestPoseTimestamp()
+: <a class="el" href="classgraph__localizer_1_1GraphValues.html#a6c42589973c1dd98d7a13b046b7a3dbe">graph_localizer::GraphValues</a>
 </li>
 <li>cloud
 : <a class="el" href="structmapper_1_1StampedPcl.html#a8ce9dceb2e85f135685fdf537a3bba27">mapper::StampedPcl</a>
@@ -688,7 +730,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 : <a class="el" href="classexecutive_1_1Executive.html#a52fc2b4e902af828066b95f28a2f5e88">executive::Executive</a>
 </li>
 <li>cmd_id()
-: <a class="el" href="classexecutive_1_1ExecutiveActionClient.html#ac5377e016b70d0a30e44511ab30a96ab">executive::ExecutiveActionClient&lt; T &gt;</a>
+: <a class="el" href="classexecutive_1_1ExecutiveActionClient.html#a1c892cd3ad08064636aa42cd17e25f8b">executive::ExecutiveActionClient&lt; T &gt;</a>
 </li>
 <li>cmd_sub_
 : <a class="el" href="classexecutive_1_1Executive.html#ae2a20bbb6d4609974e8f6ef51518772d">executive::Executive</a>
@@ -728,6 +770,12 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>Color()
 : <a class="el" href="classvisualization__functions_1_1Color.html#a28a37b0bb9751d7bbc1080c087fb5b9f">visualization_functions::Color</a>
+</li>
+<li>CombinedNavState()
+: <a class="el" href="classlocalization__common_1_1CombinedNavState.html#afd27d9304034cf5390e017d118afe3f2">localization_common::CombinedNavState</a>
+</li>
+<li>CombinedNavStateCovariances()
+: <a class="el" href="classlocalization__common_1_1CombinedNavStateCovariances.html#afaa322e1006f26bb047b9db4cd5b6eb6">localization_common::CombinedNavStateCovariances</a>
 </li>
 <li>Command()
 : <a class="el" href="classjsonloader_1_1Command.html#aa0b5013734e70eb175b63136a7afdc3e">jsonloader::Command</a>
@@ -881,7 +929,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 : <a class="el" href="classff__util_1_1ConfigClient.html#aaad8c72d9d504e421dc3dfbc331b4aea">ff_util::ConfigClient</a>
 </li>
 <li>ConfigReader()
-: <a class="el" href="classconfig__reader_1_1ConfigReader.html#ace7ea89d6780f48a259087881e90638c">config_reader::ConfigReader</a>
+: <a class="el" href="classconfig__reader_1_1ConfigReader.html#a34f07362aa9062e8fc57232cd2280637">config_reader::ConfigReader</a>
 , <a class="el" href="classconfig__reader_1_1ConfigReader_1_1Table.html#ada75ae56b35b5bf88aca48da1012be67">config_reader::ConfigReader::Table</a>
 </li>
 <li>ConfigServer()
@@ -962,6 +1010,9 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 <li>constructPyramid()
 : <a class="el" href="classinterest__point_1_1BriskScaleSpace.html#a803429391016188091b5c04e3190a2ce">interest_point::BriskScaleSpace</a>
 </li>
+<li>ContainsCombinedNavStateKey()
+: <a class="el" href="classgraph__localizer_1_1GraphValues.html#a36bb6143aa19196eabe83a18ebf60b03">graph_localizer::GraphValues</a>
+</li>
 <li>Control()
 : <a class="el" href="classchoreographer_1_1ChoreographerNodelet.html#a03dace7d00096a1c391ffb787aa805d4">choreographer::ChoreographerNodelet</a>
 , <a class="el" href="classctl_1_1Ctl.html#a4c24ab1a1214e3b09fee629c33703e25">ctl::Ctl</a>
@@ -990,13 +1041,14 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>Convert()
 : <a class="el" href="classcamera_1_1CameraParameters.html#aeda55edbdb6940f4b9c06d532ef798c7">camera::CameraParameters</a>
-, <a class="el" href="classff__util_1_1Conversion.html#a29afbeba220d1928d390a0755f6843b4">ff_util::Conversion</a>
+, <a class="el" href="classff__util_1_1Conversion.html#acfc69d933c4d49773b316b84e167c581">ff_util::Conversion</a>
+, <a class="el" href="classgraph__bag_1_1BagImuFilterer.html#a5581497e6e5a69f5a79d09462956498d">graph_bag::BagImuFilterer</a>
 </li>
 <li>convert()
-: <a class="el" href="classTrajRosBridge.html#a441fd0cfadadecc3ec85598021ef08d7">TrajRosBridge</a>
+: <a class="el" href="classTrajRosBridge.html#abd05be043cbed61f2cc15e43e4e4c05d">TrajRosBridge</a>
 </li>
 <li>Convert()
-: <a class="el" href="classvive_1_1ViveNodelet.html#a5fbcab09baf3317e7dd0f23fbf77dcde">vive::ViveNodelet</a>
+: <a class="el" href="classvive_1_1ViveNodelet.html#a750170bb740681a1975cece902c5641d">vive::ViveNodelet</a>
 </li>
 <li>ConvertBatteryLoc()
 : <a class="el" href="classff_1_1RosBatteryStateToRapid.html#a5f7fe71f5c1d6885162fc81303c77fab">ff::RosBatteryStateToRapid</a>
@@ -1028,6 +1080,9 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 <li>cost_history
 : <a class="el" href="structtraj__opt_1_1SolverInfo.html#a0a72eabd0aa70bbc35b4e75a89b25740">traj_opt::SolverInfo</a>
 </li>
+<li>count()
+: <a class="el" href="classlocalization__common_1_1Averager.html#a6db60b2285d31683d2206c79669561cc">localization_common::Averager</a>
+</li>
 <li>count_
 : <a class="el" href="structepson__imu_1_1__Data.html#a0c5cc0dbbeae29fc09a224c5eb5e43e6">epson_imu::_Data</a>
 </li>
@@ -1055,6 +1110,12 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>CreateCallback()
 : <a class="el" href="classgazebo_1_1SystemPluginClient.html#a51f6fd5ea71a902c3d324d7c1d7314ca">gazebo::SystemPluginClient</a>
+</li>
+<li>createEditor()
+: <a class="el" href="classrviz_1_1SliderProperty.html#ac59fe04fb618a5ebb14132bc6754dabd">rviz::SliderProperty</a>
+</li>
+<li>CreateFeatureKey()
+: <a class="el" href="classgraph__localizer_1_1GraphValues.html#a380bc7ede70a4e0d4071eb79177c25c6">graph_localizer::GraphValues</a>
 </li>
 <li>CreateKdTree()
 : <a class="el" href="classsampled__traj_1_1SampledTrajectory3D.html#acbb7e9361cbe25709cf5b349b1495cd1">sampled_traj::SampledTrajectory3D</a>
@@ -1087,6 +1148,9 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 <li>CtlNodelet()
 : <a class="el" href="classctl_1_1CtlNodelet.html#aa381b2212d412ca1a350ae3c5ea1a431">ctl::CtlNodelet</a>
 </li>
+<li>CumulativeFactorAdder()
+: <a class="el" href="classgraph__localizer_1_1CumulativeFactorAdder.html#a0bed60856d35b635cd384ba4fd45fab0">graph_localizer::CumulativeFactorAdder&lt; PARAMS &gt;</a>
+</li>
 <li>cur_frame
 : <a class="el" href="structMapViewerState.html#a507e3a04b9ea51b09e94c0e6ed507f31">MapViewerState</a>
 </li>
@@ -1117,6 +1181,9 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>CurrentSegment()
 : <a class="el" href="classsequencer_1_1Sequencer.html#a2cf0dfd9283efe61ef5ee64e4fa54589">sequencer::Sequencer</a>
+</li>
+<li>CurrentTime()
+: <a class="el" href="classgraph__bag_1_1LiveMeasurementSimulator.html#a190bfc79fab580d5f9eb8445f8c61627">graph_bag::LiveMeasurementSimulator</a>
 </li>
 <li>CurrentType()
 : <a class="el" href="classsequencer_1_1Sequencer.html#a33fafb1f2c41840f9179ee35747534e1">sequencer::Sequencer</a>

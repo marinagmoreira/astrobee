@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -102,6 +102,9 @@ $(document).ready(function(){initNavTree('functions_vars_b.html',''); initResiza
 <li>bag_
 : <a class="el" href="classekf__bag_1_1EkfBag.html#a30f545280fde10023c7d929c702534c0">ekf_bag::EkfBag</a>
 </li>
+<li>bag_name
+: <a class="el" href="structgraph__bag_1_1LiveMeasurementSimulatorParams.html#a4c77d0fce636818e71febf6372295604">graph_bag::LiveMeasurementSimulatorParams</a>
+</li>
 <li>bag_start_time_
 : <a class="el" href="classekf__bag_1_1EkfBag.html#ae3f58d53029261e5470519b564ea1f0f">ekf_bag::EkfBag</a>
 </li>
@@ -139,8 +142,23 @@ $(document).ready(function(){initNavTree('functions_vars_b.html',''); initResiza
 <li>berths_
 : <a class="el" href="classdock_1_1DockNodelet.html#ae4150ed9746db32927744bad6cabefb7">dock::DockNodelet</a>
 </li>
+<li>bias_acc_omega_int
+: <a class="el" href="structimu__integration_1_1ImuIntegratorParams.html#a9d35c006f1c731fce9d593899323b5cb">imu_integration::ImuIntegratorParams</a>
+</li>
 <li>bias_file_
 : <a class="el" href="classekf_1_1EkfWrapper.html#a568d91e7e92149e29539fbcd7ac66ef4">ekf::EkfWrapper</a>
+</li>
+<li>bias_noise
+: <a class="el" href="structlocalization__common_1_1CombinedNavStateNoise.html#a353aa43d39b6d2ea8db0b644b7ef82de">localization_common::CombinedNavStateNoise</a>
+</li>
+<li>bias_prior_count_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#a1452785e9194028f4fc38811da8bb4e3">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
+<li>bias_prior_error_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#a69d439247cc1ce928599d3cf0c4f8125">graph_localizer::GraphStats</a>
+</li>
+<li>bias_prior_error_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#a42ad7c5002bf82b71fa9cfd836d073ac">localization_rviz_plugins::LocalizationGraphPanel</a>
 </li>
 <li>bias_required_observations_
 : <a class="el" href="classekf_1_1EkfWrapper.html#abba589314b0745d50d7582e61b015351">ekf::EkfWrapper</a>
@@ -181,6 +199,25 @@ $(document).ready(function(){initNavTree('functions_vars_b.html',''); initResiza
 </li>
 <li>board_temp
 : <a class="el" href="structperching__arm_1_1PerchingArmRaw.html#a050dcc464d8bf34fbba14ae7527c61b2">perching_arm::PerchingArmRaw</a>
+</li>
+<li>body_P_sensor_
+: <a class="el" href="classgtsam_1_1LocProjectionFactor.html#acbb56395cfe7aa4e3d8408204d0a15d9">gtsam::LocProjectionFactor&lt; POSE, LANDMARK, CALIBRATION &gt;</a>
+</li>
+<li>body_T_cam
+: <a class="el" href="structgraph__localizer_1_1LocFactorAdderParams.html#a20e8c26eb8b6529aed69c362cdefce8f">graph_localizer::LocFactorAdderParams</a>
+, <a class="el" href="structgraph__localizer_1_1ProjectionFactorAdderParams.html#a41de05eb71327dc81d895bda77a70542">graph_localizer::ProjectionFactorAdderParams</a>
+, <a class="el" href="structgraph__localizer_1_1SmartProjectionFactorAdderParams.html#ab30636f2f5f8f4837e06aec494bff75f">graph_localizer::SmartProjectionFactorAdderParams</a>
+</li>
+<li>body_T_dock_cam
+: <a class="el" href="structgraph__localizer_1_1CalibrationParams.html#a9bda91b5385fc0ba8162e30e9cc4d752">graph_localizer::CalibrationParams</a>
+</li>
+<li>body_T_imu
+: <a class="el" href="structimu__integration_1_1ImuIntegratorParams.html#aee69beace53b69e35c3d87c7dfdb1ee1">imu_integration::ImuIntegratorParams</a>
+</li>
+<li>body_T_nav_cam
+: <a class="el" href="structgraph__bag_1_1GraphBagParams.html#a506ce99f0bf73964a89af00bb170675e">graph_bag::GraphBagParams</a>
+, <a class="el" href="structgraph__localizer_1_1CalibrationParams.html#ac63ab0d7d155380b1dc71522bf55a092">graph_localizer::CalibrationParams</a>
+, <a class="el" href="structgraph__localizer_1_1RotationFactorAdderParams.html#ae7758adcdf828aa5b69b9de37a332eb2">graph_localizer::RotationFactorAdderParams</a>
 </li>
 <li>bpm_msg_
 : <a class="el" href="classgnc__autocode_1_1GncSimAutocode.html#ab334fcf2ddb7274938b7b36ec3c04bea">gnc_autocode::GncSimAutocode</a>

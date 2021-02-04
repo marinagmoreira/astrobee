@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -112,6 +112,15 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>accel
 : <a class="el" href="structLighthouse.html#a911e8653f2361b18759d7873a94bef75">Lighthouse</a>
 </li>
+<li>accel_bias_sigma
+: <a class="el" href="structimu__integration_1_1ImuIntegratorParams.html#a8143ea49075d021e2d1e37663279767d">imu_integration::ImuIntegratorParams</a>
+</li>
+<li>accel_sigma
+: <a class="el" href="structimu__integration_1_1ImuIntegratorParams.html#abf506cd7af8aa19cb7af8e31ebe67d00">imu_integration::ImuIntegratorParams</a>
+</li>
+<li>acceleration
+: <a class="el" href="structlocalization__measurements_1_1ImuMeasurement.html#a58df38d9a90e0e9362012b418ba92fa3">localization_measurements::ImuMeasurement</a>
+</li>
 <li>accl_
 : <a class="el" href="structepson__imu_1_1__Data.html#a4035e480b0552964fe3e8c3be62c09a8">epson_imu::_Data</a>
 </li>
@@ -144,6 +153,33 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 </li>
 <li>actuator_state
 : <a class="el" href="structsmart__dock_1_1SmartDock_1_1DockState.html#ade9aa927889536d68f3288fd8c155ae8">smart_dock::SmartDock::DockState</a>
+</li>
+<li>add_buffered_factors_timer_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#ab59e46b886ca32d6b4631a5e3d5299b8">graph_localizer::GraphStats</a>
+</li>
+<li>add_marginal_factors
+: <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#ac02d42590cea240a1fde37a22540d224">graph_localizer::GraphLocalizerParams</a>
+</li>
+<li>add_point_priors
+: <a class="el" href="structgraph__localizer_1_1ProjectionFactorAdderParams.html#a2ae931879a8f3176caaa2d77774d40f3">graph_localizer::ProjectionFactorAdderParams</a>
+</li>
+<li>add_pose_between_factor
+: <a class="el" href="structgraph__localizer_1_1StandstillFactorAdderParams.html#a3030f09010502c865df2b5d6c12aa6f6">graph_localizer::StandstillFactorAdderParams</a>
+</li>
+<li>add_pose_priors
+: <a class="el" href="structgraph__localizer_1_1LocFactorAdderParams.html#aa457ea0a9d9e186b5426841fbd5566fb">graph_localizer::LocFactorAdderParams</a>
+</li>
+<li>add_prior_if_projections_fail
+: <a class="el" href="structgraph__localizer_1_1LocFactorAdderParams.html#a3d553903903b98efed0565f8854ba928">graph_localizer::LocFactorAdderParams</a>
+</li>
+<li>add_priors
+: <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#a5db90b38f7772d2bee89e5c36be1fbb8">graph_localizer::GraphLocalizerParams</a>
+</li>
+<li>add_projections
+: <a class="el" href="structgraph__localizer_1_1LocFactorAdderParams.html#ad9e05901bb526ca585f6a9ecf6143cc5">graph_localizer::LocFactorAdderParams</a>
+</li>
+<li>add_velocity_prior
+: <a class="el" href="structgraph__localizer_1_1StandstillFactorAdderParams.html#abc2db70093012e7b427f70e98de8d663">graph_localizer::StandstillFactorAdderParams</a>
 </li>
 <li>addr
 : <a class="el" href="structeps__driver_1_1EPS_1_1TempInfo.html#a22e94eb9a5cef5598282c2250e23b950">eps_driver::EPS::TempInfo</a>
@@ -218,11 +254,18 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>ang_acc_z
 : <a class="el" href="struct__Data.html#a07e8684d039cf31d1c98fc4d7a98b5cf">_Data</a>
 </li>
+<li>angular_velocity
+: <a class="el" href="structground__truth__localizer_1_1Twist.html#ab9b89614b95d48416ce27b99ee16a8a6">ground_truth_localizer::Twist</a>
+, <a class="el" href="structlocalization__measurements_1_1ImuMeasurement.html#a4ed88f3f3bddc5652d7ba48d0913e283">localization_measurements::ImuMeasurement</a>
+</li>
 <li>approach_orientation_
 : <a class="el" href="classperch_1_1PerchNodelet.html#abd907ed01346326400f847d9674d2f75">perch::PerchNodelet</a>
 </li>
 <li>approach_position_
 : <a class="el" href="classperch_1_1PerchNodelet.html#a280f4d24ad0f33d09cfae235e9fd6f53">perch::PerchNodelet</a>
+</li>
+<li>ar
+: <a class="el" href="structgraph__bag_1_1LiveMeasurementSimulatorParams.html#a0c45a3c304860f11828ec93f7019b96a">graph_bag::LiveMeasurementSimulatorParams</a>
 </li>
 <li>ar_camera_count_
 : <a class="el" href="classsim__wrapper_1_1Sim.html#af713609305f6e3cc0a111b3f78d178ca">sim_wrapper::Sim</a>
@@ -230,11 +273,17 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>ar_max_features_
 : <a class="el" href="classsim__wrapper_1_1Sim.html#a29bf4530b73d9433b1de0db83da53846">sim_wrapper::Sim</a>
 </li>
+<li>ar_min_num_landmarks
+: <a class="el" href="structgraph__bag_1_1GraphBagParams.html#a207fdf120faebc9d701cb2a1d84b0668">graph_bag::GraphBagParams</a>
+</li>
 <li>ar_reg_sub_
 : <a class="el" href="classekf_1_1EkfWrapper.html#aa58b5d450a46820f23e7150d2ac134e8">ekf::EkfWrapper</a>
 </li>
 <li>ar_sub_
 : <a class="el" href="classekf_1_1EkfWrapper.html#ac35e71d1eb45ee32501b16194e6e10c5">ekf::EkfWrapper</a>
+</li>
+<li>ar_tag_loc_adder
+: <a class="el" href="structgraph__localizer_1_1FactorParams.html#a5a2927327556839434d3b444508b8c59">graph_localizer::FactorParams</a>
 </li>
 <li>ar_tag_msg_
 : <a class="el" href="classgnc__autocode_1_1GncSimAutocode.html#add5b4e4dacf06915b4a1b7ebfa55a870">gnc_autocode::GncSimAutocode</a>

@@ -1,5 +1,5 @@
 <map id="cpu_mem_monitor::CpuMemMonitor" name="cpu_mem_monitor::CpuMemMonitor">
-<area shape="rect" id="node1" title=" " alt="" coords="5,520,239,641"/>
-<area shape="rect" id="node2" href="$classff__util_1_1FreeFlyerNodelet.html" title=" " alt="" coords="41,131,203,472"/>
-<area shape="rect" id="node3" title=" " alt="" coords="89,5,155,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,520,264,641"/>
+<area shape="rect" id="node2" href="$classff__util_1_1FreeFlyerNodelet.html" title=" " alt="" coords="46,131,223,472"/>
+<area shape="rect" id="node3" title=" " alt="" coords="98,5,171,83"/>
 </map>

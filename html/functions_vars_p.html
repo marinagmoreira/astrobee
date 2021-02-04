@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -228,6 +228,13 @@ $(document).ready(function(){initNavTree('functions_vars_p.html',''); initResiza
 <li>point_cloud_traj_
 : <a class="el" href="classsampled__traj_1_1SampledTrajectory3D.html#a737cc7a2e67074c7ea320154388d8a03">sampled_traj::SampledTrajectory3D</a>
 </li>
+<li>point_prior_translation_stddev
+: <a class="el" href="structgraph__localizer_1_1NoiseParams.html#ab40a1147df10a85d33d3214337cac4c5">graph_localizer::NoiseParams</a>
+, <a class="el" href="structgraph__localizer_1_1ProjectionFactorAdderParams.html#a8d0d6ba20e276345003d3ecf2c633e90">graph_localizer::ProjectionFactorAdderParams</a>
+</li>
+<li>points
+: <a class="el" href="structgraph__localizer_1_1FeatureTrack.html#acb9a653089f4e0e5650a61639fa9ab67">graph_localizer::FeatureTrack</a>
+</li>
 <li>points_
 : <a class="el" href="classinterest__point_1_1BRISK__Impl.html#aa415f62d42b30238830234ccc364197c">interest_point::BRISK_Impl</a>
 </li>
@@ -260,6 +267,27 @@ $(document).ready(function(){initNavTree('functions_vars_p.html',''); initResiza
 <li>pos_
 : <a class="el" href="classsampled__traj_1_1SampledTrajectory3D.html#af7bf3152a3f22c2037c136aee558abdb">sampled_traj::SampledTrajectory3D</a>
 </li>
+<li>pose_between_factor_rotation_stddev
+: <a class="el" href="structgraph__localizer_1_1StandstillFactorAdderParams.html#aea78e7e77dfa7215f03aa178bd353788">graph_localizer::StandstillFactorAdderParams</a>
+</li>
+<li>pose_between_factor_translation_stddev
+: <a class="el" href="structgraph__localizer_1_1StandstillFactorAdderParams.html#acaa2b6c60bc20544abea5a704ab8250a">graph_localizer::StandstillFactorAdderParams</a>
+</li>
+<li>pose_noise
+: <a class="el" href="structlocalization__common_1_1CombinedNavStateNoise.html#a4ad02be09f6b6a5d39b6291dc7bc2a29">localization_common::CombinedNavStateNoise</a>
+</li>
+<li>pose_noise_scale
+: <a class="el" href="structgraph__localizer_1_1LocFactorAdderParams.html#a7032c34dc29bb3a6791092f744224d11">graph_localizer::LocFactorAdderParams</a>
+</li>
+<li>pose_prior_count_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#ad0680aa5e55a240eafb1184f9c604a23">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
+<li>pose_prior_error_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#ad072fb15e2f14ba03b53080937c41aee">graph_localizer::GraphStats</a>
+</li>
+<li>pose_prior_error_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#a6ec8d4a3149919eea3c5da10f434b59b">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
 <li>pose_pub_
 : <a class="el" href="classekf_1_1EkfWrapper.html#a951ab3c74f26502b0a9b9fe5c5a40183">ekf::EkfWrapper</a>
 </li>
@@ -267,6 +295,9 @@ $(document).ready(function(){initNavTree('functions_vars_p.html',''); initResiza
 : <a class="el" href="structperching__arm_1_1PerchingArm_1_1____attribute____.html#ae6bea47eb8a4e6e16edca0a31dfcf06c">perching_arm::PerchingArm::__attribute__</a>
 , <a class="el" href="structperching__arm_1_1PerchingArmRaw_1_1PerchingArmRawGripper.html#ab5c589aeb16162df74d84b9b6fb35cc4">perching_arm::PerchingArmRaw::PerchingArmRawGripper</a>
 , <a class="el" href="structperching__arm_1_1PerchingArmRaw_1_1PerchingArmRawJoint.html#ad6d3c55991e72c31160ebdf4e912eb20">perching_arm::PerchingArmRaw::PerchingArmRawJoint</a>
+</li>
+<li>position_covariance_threshold
+: <a class="el" href="structgraph__localizer_1_1SanityCheckerParams.html#a65b44dd391ebd537a3e780f5e4df3103">graph_localizer::SanityCheckerParams</a>
 </li>
 <li>position_goal
 : <a class="el" href="structperching__arm_1_1PerchingArm_1_1____attribute____.html#a66f10aa4ea814635b6802f099634b148">perching_arm::PerchingArm::__attribute__</a>
@@ -292,8 +323,26 @@ $(document).ready(function(){initNavTree('functions_vars_p.html',''); initResiza
 <li>primary_apk_running_
 : <a class="el" href="classexecutive_1_1Executive.html#ad284cf5000ecb81f54402ae8b706631c">executive::Executive</a>
 </li>
+<li>print_factor_info
+: <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#a2102511ad1d822181b7c9cb0594845a4">graph_localizer::GraphLocalizerParams</a>
+</li>
+<li>prior_quaternion_stddev
+: <a class="el" href="structgraph__localizer_1_1LocFactorAdderParams.html#a46654de49fdcabb516c653df305a78cd">graph_localizer::LocFactorAdderParams</a>
+</li>
+<li>prior_translation_stddev
+: <a class="el" href="structgraph__localizer_1_1LocFactorAdderParams.html#ac36a5471f6473ac50e34f5228eb6a8f6">graph_localizer::LocFactorAdderParams</a>
+</li>
+<li>prior_velocity_stddev
+: <a class="el" href="structgraph__localizer_1_1StandstillFactorAdderParams.html#a8034872ec149699e2618754a9db6d4a5">graph_localizer::StandstillFactorAdderParams</a>
+</li>
 <li>processing_of_reg_
 : <a class="el" href="classekf_1_1Ekf.html#a40ed5abc9cf987ffdc813f339565bc70">ekf::Ekf</a>
+</li>
+<li>projection_adder
+: <a class="el" href="structgraph__localizer_1_1FactorParams.html#a431a9a1e48ee20e8b67cf16907f1327e">graph_localizer::FactorParams</a>
+</li>
+<li>projection_noise_scale
+: <a class="el" href="structgraph__localizer_1_1LocFactorAdderParams.html#a2c9869d76ad52ea2248886491a7c9914">graph_localizer::LocFactorAdderParams</a>
 </li>
 <li>PROTOCOL_HEADER_1
 : <a class="el" href="classperching__arm_1_1PerchingArm.html#a23e665c8c5965e142dcb254a54427656">perching_arm::PerchingArm</a>

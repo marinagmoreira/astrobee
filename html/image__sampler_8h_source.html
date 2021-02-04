@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -155,8 +155,8 @@ $(document).ready(function(){initNavTree('image__sampler_8h_source.html',''); in
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">int</span> stream_output_width_[<a class="code" href="image__sampler_8h.html#a676fd455b512d2b69f626ea4bd738bce">NUM_CAMERAS</a>], stream_output_height_[<a class="code" href="image__sampler_8h.html#a676fd455b512d2b69f626ea4bd738bce">NUM_CAMERAS</a>];</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  ros::Duration record_publication_interval_[<a class="code" href="image__sampler_8h.html#a676fd455b512d2b69f626ea4bd738bce">NUM_CAMERAS</a>];</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  ros::Duration stream_publication_interval_[<a class="code" href="image__sampler_8h.html#a676fd455b512d2b69f626ea4bd738bce">NUM_CAMERAS</a>];</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  ros::Time record_last_publish_time_[<a class="code" href="image__sampler_8h.html#a676fd455b512d2b69f626ea4bd738bce">NUM_CAMERAS</a>];</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  ros::Time stream_last_publish_time_[<a class="code" href="image__sampler_8h.html#a676fd455b512d2b69f626ea4bd738bce">NUM_CAMERAS</a>];</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">ros::Time</a> record_last_publish_time_[<a class="code" href="image__sampler_8h.html#a676fd455b512d2b69f626ea4bd738bce">NUM_CAMERAS</a>];</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">ros::Time</a> stream_last_publish_time_[<a class="code" href="image__sampler_8h.html#a676fd455b512d2b69f626ea4bd738bce">NUM_CAMERAS</a>];</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  ff_msgs::CameraState camera_states_[2 * <a class="code" href="image__sampler_8h.html#a676fd455b512d2b69f626ea4bd738bce">NUM_CAMERAS</a>];</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
@@ -188,6 +188,7 @@ $(document).ready(function(){initNavTree('image__sampler_8h_source.html',''); in
 <div class="ttc" id="aimage__sampler_8h_html_a676fd455b512d2b69f626ea4bd738bce"><div class="ttname"><a href="image__sampler_8h.html#a676fd455b512d2b69f626ea4bd738bce">NUM_CAMERAS</a></div><div class="ttdeci">#define NUM_CAMERAS</div><div class="ttdef"><b>Definition:</b> image_sampler.h:19</div></div>
 <div class="ttc" id="anamespaceimage__sampler_html"><div class="ttname"><a href="namespaceimage__sampler.html">image_sampler</a></div><div class="ttdef"><b>Definition:</b> image_sampler.h:25</div></div>
 <div class="ttc" id="aclassimage__sampler_1_1ImageSampler_html_aa79ece58bf515554ef123dfed94f480c"><div class="ttname"><a href="classimage__sampler_1_1ImageSampler.html#aa79ece58bf515554ef123dfed94f480c">image_sampler::ImageSampler::UpdateState</a></div><div class="ttdeci">void UpdateState(int camera, bool streaming, int width, int height, float rate)</div><div class="ttdef"><b>Definition:</b> image_sampler.cc:96</div></div>
+<div class="ttc" id="anamespacelocalization__common_html_ae558927c458010e767b03b93e4516e0c"><div class="ttname"><a href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a></div><div class="ttdeci">double Time</div><div class="ttdef"><b>Definition:</b> time.h:23</div></div>
 <div class="ttc" id="aclassimage__sampler_1_1ImageSampler_html_ab735544971504f12cec36b974853a2c1"><div class="ttname"><a href="classimage__sampler_1_1ImageSampler.html#ab735544971504f12cec36b974853a2c1">image_sampler::ImageSampler::ConfigureServicePerchCam</a></div><div class="ttdeci">bool ConfigureServicePerchCam(ff_msgs::ConfigureCamera::Request &amp;req, ff_msgs::ConfigureCamera::Response &amp;res)</div><div class="ttdef"><b>Definition:</b> image_sampler.cc:128</div></div>
 <div class="ttc" id="aclassimage__sampler_1_1ImageSampler_html_af115769ade22332b7684fa80bebaf58e"><div class="ttname"><a href="classimage__sampler_1_1ImageSampler.html#af115769ade22332b7684fa80bebaf58e">image_sampler::ImageSampler::PerchCamCallback</a></div><div class="ttdeci">void PerchCamCallback(const sensor_msgs::ImageConstPtr &amp;msg)</div><div class="ttdef"><b>Definition:</b> image_sampler.cc:232</div></div>
 <div class="ttc" id="aclassimage__sampler_1_1ImageSampler_html_aaa03ff23bccbbc549b9180bed606354b"><div class="ttname"><a href="classimage__sampler_1_1ImageSampler.html#aaa03ff23bccbbc549b9180bed606354b">image_sampler::ImageSampler::EnableServiceDockCam</a></div><div class="ttdeci">bool EnableServiceDockCam(ff_msgs::EnableCamera::Request &amp;req, ff_msgs::EnableCamera::Response &amp;res)</div><div class="ttdef"><b>Definition:</b> image_sampler.cc:170</div></div>

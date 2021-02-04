@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -96,11 +96,23 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 <li>SamplesVisMarkers()
 : <a class="el" href="classsampled__traj_1_1SampledTrajectory3D.html#a493e53897afd6a3680337e230cacdb45">sampled_traj::SampledTrajectory3D</a>
 </li>
+<li>SanityChecker()
+: <a class="el" href="classgraph__localizer_1_1SanityChecker.html#a6f7658d46f95ad788bba716d555d11d3">graph_localizer::SanityChecker</a>
+</li>
 <li>Save()
 : <a class="el" href="structsparse__mapping_1_1SparseMap.html#a31c34ccbe58e039aaf9e71ac37256b42">sparse_mapping::SparseMap</a>
 </li>
+<li>save_localization_graph_dot_file()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#a1b1c84d3a5cf102be4d3e6af4bc93a51">graph_localizer::GraphLocalizerWrapper</a>
+</li>
 <li>SaveApproachPose()
 : <a class="el" href="classperch_1_1PerchNodelet.html#a4cc13935161b3593ddb10ad72093dc50">perch::PerchNodelet</a>
+</li>
+<li>SaveGraphDotFile()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a4d9c68d57359264faf91e504403b9766">graph_localizer::GraphLocalizer</a>
+</li>
+<li>SaveLocalizationGraphDotFile()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#a0b501d76239e277c4ea7790e9f125aca">graph_localizer::GraphLocalizerWrapper</a>
 </li>
 <li>SaveProtobuf()
 : <a class="el" href="classsparse__mapping_1_1ProtobufDatabase.html#aa935d61585abcaae9e6d5e11ec2707c2">sparse_mapping::ProtobufDatabase&lt; TDescriptor, F &gt;</a>
@@ -200,6 +212,12 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 , <a class="el" href="classtraj__opt_1_1NonlinearTrajectory.html#a1239838903685870ae01d97c096184f9">traj_opt::NonlinearTrajectory</a>
 , <a class="el" href="classtraj__opt_1_1Trajectory.html#a2a1eaa8f46a47a90c3dfdb21c8e58de3">traj_opt::Trajectory</a>
 </li>
+<li>serialized_error()
+: <a class="el" href="classgtsam_1_1RobustSmartProjectionPoseFactor.html#ae7b8cafa5b92a1e9f7576b9e29e653fb">gtsam::RobustSmartProjectionPoseFactor&lt; CALIBRATION &gt;</a>
+</li>
+<li>serialized_point()
+: <a class="el" href="classgtsam_1_1RobustSmartProjectionPoseFactor.html#aebf145e4452874c4db074dc114ce2d6e">gtsam::RobustSmartProjectionPoseFactor&lt; CALIBRATION &gt;</a>
+</li>
 <li>serializedLength()
 : <a class="el" href="structros_1_1serialization_1_1Serializer_3_01pcl_1_1PCLHeader_01_4.html#a61a5c20f03f23f90c3e8a09d7c0d9032">ros::serialization::Serializer&lt; pcl::PCLHeader &gt;</a>
 , <a class="el" href="structros_1_1serialization_1_1Serializer_3_01pcl_1_1PCLPointCloud2_01_4.html#a9e45d95d431cf46dabe5cd91cb8a4aae">ros::serialization::Serializer&lt; pcl::PCLPointCloud2 &gt;</a>
@@ -210,8 +228,8 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 : <a class="el" href="classeps__driver_1_1EPS.html#aa566e1c51aa44da60e0a5dc67330d829">eps_driver::EPS</a>
 </li>
 <li>Set()
-: <a class="el" href="classff__util_1_1ConfigClient.html#ac1cfd1104766bf3a85c24e58b34101df">ff_util::ConfigClient</a>
-, <a class="el" href="classff__util_1_1ConfigServer.html#af938266b415d8a2a28accc2bbf158ef7">ff_util::ConfigServer</a>
+: <a class="el" href="classff__util_1_1ConfigClient.html#a1f67e0357abdc9c1e3c58e740d262ec0">ff_util::ConfigClient</a>
+, <a class="el" href="classff__util_1_1ConfigServer.html#a4170b53066b675b81856ab61b11e8d4e">ff_util::ConfigServer</a>
 , <a class="el" href="classjsonloader_1_1Time.html#a333d308a02b6ee26114558cded372169">jsonloader::Time</a>
 , <a class="el" href="classsignal__lights_1_1SignalLights.html#a27f3a6d3e820589ceb0e83c02de7cc26">signal_lights::SignalLights</a>
 </li>
@@ -244,6 +262,9 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 </li>
 <li>SetBias()
 : <a class="el" href="classekf_1_1Ekf.html#a79536c9b7e456cfb533ab45fe1f433e2">ekf::Ekf</a>
+</li>
+<li>SetBiases()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerInitializer.html#a63955fccb78c530f60c21bbefb1abbf0">graph_localizer::GraphLocalizerInitializer</a>
 </li>
 <li>SetBrightness()
 : <a class="el" href="classflashlight_1_1Flashlight.html#a30c15f53b29ef19f2a3ad8c93ff694b9">flashlight::Flashlight</a>
@@ -503,6 +524,9 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 <li>SetMaxDev()
 : <a class="el" href="classsampled__traj_1_1SampledTrajectory3D.html#a037fc6eb268a82c96fd2dd640245f620">sampled_traj::SampledTrajectory3D</a>
 </li>
+<li>setMaximum()
+: <a class="el" href="classrviz_1_1SliderProperty.html#a70cfe13688d5b68629a5e1af0cbcf502">rviz::SliderProperty</a>
+</li>
 <li>SetMaxRange()
 : <a class="el" href="classoctoclass_1_1OctoClass.html#a3780aaa6d850a4904dd9aa3805846baa">octoclass::OctoClass</a>
 </li>
@@ -511,6 +535,9 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 </li>
 <li>setMessage()
 : <a class="el" href="classtraj__opt_1_1TrajectoryVisual.html#aa1fc4100873f4338ad6ddddd89c6fd8e">traj_opt::TrajectoryVisual</a>
+</li>
+<li>setMinimum()
+: <a class="el" href="classrviz_1_1SliderProperty.html#a31e23e2c2f74833ca5c59e9e6ce6a41f">rviz::SliderProperty</a>
 </li>
 <li>SetMinRange()
 : <a class="el" href="classoctoclass_1_1OctoClass.html#aaeca3d611e065cd81fd4337cbd8c073e">octoclass::OctoClass</a>
@@ -592,6 +619,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 </li>
 <li>SetPositionPublishRate()
 : <a class="el" href="classff_1_1RosOdomRapidPosition.html#ab96825ed14312974d916a8531124ce39">ff::RosOdomRapidPosition</a>
+, <a class="el" href="classff_1_1RosPoseRapidPosition.html#a36fe33d2ec6e1cb3a1594bfafbe0d0b4">ff::RosPoseRapidPosition</a>
 </li>
 <li>SetPositionRate()
 : <a class="el" href="classff_1_1RosTelemetryRapidTelemetry.html#a34edeafc785200cc9d5c929cc4b0a6f1">ff::RosTelemetryRapidTelemetry</a>
@@ -665,8 +693,15 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 <li>setSlackCost()
 : <a class="el" href="classtraj__opt_1_1LegendreTrajectory.html#a81f53af5361eb0ca49ff22c97de2e230">traj_opt::LegendreTrajectory</a>
 </li>
+<li>SetSparseMappingPoseRate()
+: <a class="el" href="classdds__ros__bridge_1_1DdsRosBridge.html#a2602057e4d2034ba6b608739fae6a334">dds_ros_bridge::DdsRosBridge</a>
+, <a class="el" href="classff_1_1RosTelemetryRapidTelemetry.html#a45f87ca5d4e1c59053521ac6241ee02b">ff::RosTelemetryRapidTelemetry</a>
+</li>
 <li>SetSpeedGain()
 : <a class="el" href="classekf_1_1Ekf.html#ab01f5bd42ca9b56eb85841d2494a4671">ekf::Ekf</a>
+</li>
+<li>SetStartPose()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerInitializer.html#a4034eef90f3188397eaf6ca1a2413b89">graph_localizer::GraphLocalizerInitializer</a>
 </li>
 <li>SetState()
 : <a class="el" href="classff__util_1_1FSM.html#aa3a3630af30b0052a29ddc49ecb5b868">ff_util::FSM</a>
@@ -705,6 +740,9 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 : <a class="el" href="classff__serial_1_1Serial.html#a20ae80d7d4e2ec0d8149f908b16e5611">ff_serial::Serial</a>
 , <a class="el" href="classff__util_1_1FreeFlyerServiceClient.html#a7e55a71a3754cbc81f7ad4d936af8439">ff_util::FreeFlyerServiceClient&lt; ServiceSpec &gt;</a>
 </li>
+<li>SetTimestamp()
+: <a class="el" href="classgraph__localizer_1_1FactorsToAdd.html#a66df2331b2ca084cbdd695f8d77990ab">graph_localizer::FactorsToAdd</a>
+</li>
 <li>SetTimeSync()
 : <a class="el" href="classexecutive_1_1Executive.html#afa24856ed00516e141c046724cc48290">executive::Executive</a>
 </li>
@@ -723,8 +761,14 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 <li>SetValue()
 : <a class="el" href="classgpio_1_1GPIO.html#af59fbbfb8ae70ecf54c062caaabf81be">gpio::GPIO</a>
 </li>
+<li>setValue()
+: <a class="el" href="classrviz_1_1SliderProperty.html#aef52d4b78f44c8945cf9e10f6c5f0e71">rviz::SliderProperty</a>
+</li>
 <li>SetWindow()
 : <a class="el" href="classepson__imu_1_1G362P.html#a99b4f2ec4586209f8236b198c0fadd5e">epson_imu::G362P</a>
+</li>
+<li>setWorldTCam()
+: <a class="el" href="classgtsam_1_1LocProjectionFactor.html#ab34adbe8f88f522af4cf90d51ff19bb8">gtsam::LocProjectionFactor&lt; POSE, LANDMARK, CALIBRATION &gt;</a>
 </li>
 <li>SetZones()
 : <a class="el" href="classexecutive_1_1Executive.html#aa2e98e2e0cb28a276964772c26bb930c">executive::Executive</a>
@@ -768,8 +812,12 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 <li>SimWrapperNodelet()
 : <a class="el" href="classsim__wrapper_1_1SimWrapperNodelet.html#a1376addbb74e840601322ff958148a9d">sim_wrapper::SimWrapperNodelet</a>
 </li>
+<li>size()
+: <a class="el" href="classgraph__localizer_1_1FactorsToAdd.html#a4219b85141555e848670189ba33b43a9">graph_localizer::FactorsToAdd</a>
+</li>
 <li>Size()
-: <a class="el" href="classoctoclass_1_1IndexedKeySet.html#a9356eeee565c9303a1b40581ff1f2f5e">octoclass::IndexedKeySet</a>
+: <a class="el" href="classimu__integration_1_1ImuIntegrator.html#ae618fa1bafc582101c6aceccaeecea2b">imu_integration::ImuIntegrator</a>
+, <a class="el" href="classoctoclass_1_1IndexedKeySet.html#a9356eeee565c9303a1b40581ff1f2f5e">octoclass::IndexedKeySet</a>
 </li>
 <li>SkipFirstLine()
 : <a class="el" href="classgnc__autocode_1_1GncEkfCSV.html#a7ce0db9deea5a4019d31d21f4cd33326">gnc_autocode::GncEkfCSV</a>
@@ -786,11 +834,20 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 <li>SleepCallback()
 : <a class="el" href="classperching__arm_1_1PerchingArmNode.html#a210982f12d7aaf89bac07fac078f8eda">perching_arm::PerchingArmNode</a>
 </li>
+<li>SliderProperty()
+: <a class="el" href="classrviz_1_1SliderProperty.html#a38b816247bd12c450210ff3179b60e7b">rviz::SliderProperty</a>
+</li>
+<li>SlideWindowNewOldestTime()
+: <a class="el" href="classgraph__localizer_1_1GraphValues.html#a424ce7e04d42c3a12887783dd312be96">graph_localizer::GraphValues</a>
+</li>
 <li>SmartDock()
 : <a class="el" href="classsmart__dock_1_1SmartDock.html#a3fce4739078cb69adfde810867e051b5">smart_dock::SmartDock</a>
 </li>
 <li>SmartDockNode()
 : <a class="el" href="classsmart__dock_1_1SmartDockNode.html#a8a178d97c1deb108c1025949a753bb52">smart_dock::SmartDockNode</a>
+</li>
+<li>SmartProjectionCumulativeFactorAdder()
+: <a class="el" href="classgraph__localizer_1_1SmartProjectionCumulativeFactorAdder.html#a96c98872cdee15e56e674c95178a0e8f">graph_localizer::SmartProjectionCumulativeFactorAdder</a>
 </li>
 <li>SmoothCost()
 : <a class="el" href="structvive__localization_1_1SmoothCost.html#ad1120b29da75be90d17ac7a2094f1299">vive_localization::SmoothCost</a>
@@ -828,7 +885,13 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 : <a class="el" href="structff__common_1_1sorter.html#ab53ceb2bdf96dddeb5c2bdce11094453">ff_common::sorter&lt; T &gt;</a>
 </li>
 <li>SparseMap()
-: <a class="el" href="structsparse__mapping_1_1SparseMap.html#a82d724638f8498219ff2551a70b02e7c">sparse_mapping::SparseMap</a>
+: <a class="el" href="structsparse__mapping_1_1SparseMap.html#a1eddcb87e21b90fb7fbd459c291d5243">sparse_mapping::SparseMap</a>
+</li>
+<li>SparseMappingDisplay()
+: <a class="el" href="classlocalization__rviz__plugins_1_1SparseMappingDisplay.html#a2e1d15afbb14479eca6856467af5f8eb">localization_rviz_plugins::SparseMappingDisplay</a>
+</li>
+<li>SparseMappingPoseAdder()
+: <a class="el" href="classgraph__bag_1_1SparseMappingPoseAdder.html#a619dfcec5bddb6c36f3a0307978d87d2">graph_bag::SparseMappingPoseAdder</a>
 </li>
 <li>SparseMapRegister()
 : <a class="el" href="classekf_1_1Ekf.html#a30e9b76e19ea48d4b04f6776fe24285c">ekf::Ekf</a>
@@ -849,7 +912,10 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 : <a class="el" href="classspeed__cam_1_1SpeedCamNode.html#a34d0745b69590dffdb8bbeb754636242">speed_cam::SpeedCamNode</a>
 </li>
 <li>SplineData()
-: <a class="el" href="structtraj__opt_1_1SplineData.html#a362400eb94aa6f84b71fad65c893d414">traj_opt::SplineData</a>
+: <a class="el" href="structtraj__opt_1_1SplineData.html#a4d5e4b17d6149b09389e47a717877fa0">traj_opt::SplineData</a>
+</li>
+<li>SplitSmartFactorsIfNeeded()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#aa8ca6d7c707373051ded7cea8c4023a7">graph_localizer::GraphLocalizer</a>
 </li>
 <li>square()
 : <a class="el" href="classtraj__opt_1_1SymbolicPoly.html#a93477cf36e13a7558ef9f9e687dfdb17">traj_opt::SymbolicPoly</a>
@@ -864,8 +930,21 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 <li>StandardBasis()
 : <a class="el" href="classtraj__opt_1_1StandardBasis.html#aa609bbfaf96e44cffb60ea2f4eaf613f">traj_opt::StandardBasis</a>
 </li>
+<li>standstill()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a0c8f386e8fff34f3bd9c4ea5a9c6896a">graph_localizer::GraphLocalizer</a>
+</li>
+<li>StandstillFactorAdder()
+: <a class="el" href="classgraph__localizer_1_1StandstillFactorAdder.html#ad6b1dbed76d7c16172363656c53d6293">graph_localizer::StandstillFactorAdder</a>
+</li>
+<li>Start()
+: <a class="el" href="classlocalization__common_1_1RosTimer.html#a7c3b0e526a72eefaafd0cbef4b4b8b0f">localization_common::RosTimer</a>
+, <a class="el" href="classlocalization__common_1_1Timer.html#a8b4c4073d111c9c892bf83db2e63492f">localization_common::Timer</a>
+</li>
 <li>StartAction()
 : <a class="el" href="classexecutive_1_1Executive.html#a1dc5496c6e35067d78650190d717d2d7">executive::Executive</a>
+</li>
+<li>StartBiasEstimation()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerInitializer.html#aef1ec431bc143a82e9f96df289d2d636">graph_localizer::GraphLocalizerInitializer</a>
 </li>
 <li>StartGuestScience()
 : <a class="el" href="classexecutive_1_1Executive.html#a6b263f0b60d527c9b5838f6122557062">executive::Executive</a>
@@ -900,7 +979,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 : <a class="el" href="classexecutive_1_1Executive.html#ad9cb6f8b86c42a4aaf1236b8999c7a23">executive::Executive</a>
 </li>
 <li>State()
-: <a class="el" href="classff__util_1_1State.html#a0bfc37680f940905a95a12f601bbbc1d">ff_util::State</a>
+: <a class="el" href="classff__util_1_1State.html#a033a9f87878058a5967bf869eb622bff">ff_util::State</a>
 </li>
 <li>StateCallback()
 : <a class="el" href="classff_1_1RosBatteryStateToRapid.html#af51934e6471eb05624bce2f1dfe7b917">ff::RosBatteryStateToRapid</a>
@@ -942,6 +1021,10 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 <li>stop()
 : <a class="el" href="classastrobee__rosbag_1_1Recorder.html#aaf0add09fa01f914a5a4e9e66b890b6b">astrobee_rosbag::Recorder</a>
 </li>
+<li>Stop()
+: <a class="el" href="classlocalization__common_1_1RosTimer.html#aa8ee3c00dcdbecb13c0ec2903f620f06">localization_common::RosTimer</a>
+, <a class="el" href="classlocalization__common_1_1Timer.html#a0d811aadc4358833a7a78fa159a76d0e">localization_common::Timer</a>
+</li>
 <li>stop_at_end()
 : <a class="el" href="classjsonloader_1_1Segment.html#aec850396c989530bd406b650584ef8c9">jsonloader::Segment</a>
 </li>
@@ -953,6 +1036,15 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 </li>
 <li>StopAllTimers()
 : <a class="el" href="classff__util_1_1FreeFlyerActionClient.html#afa09c633275907205cd3aad17ddb5233">ff_util::FreeFlyerActionClient&lt; ActionSpec &gt;</a>
+</li>
+<li>StopAndLog()
+: <a class="el" href="classlocalization__common_1_1Timer.html#ae8c810b01cbe29bdb45bdb5454b2c2df">localization_common::Timer</a>
+</li>
+<li>StopAndLogEveryN()
+: <a class="el" href="classlocalization__common_1_1Timer.html#a1cb007c3b1fa9f0704895cf844e86f95">localization_common::Timer</a>
+</li>
+<li>StopAndVlogEveryN()
+: <a class="el" href="classlocalization__common_1_1Timer.html#a8649264c567ee70205a8b188c87d4908">localization_common::Timer</a>
 </li>
 <li>StopArm()
 : <a class="el" href="classexecutive_1_1Executive.html#aebdc6c580c2053df8a48d4efaccadb0c">executive::Executive</a>
@@ -1026,7 +1118,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 : <a class="el" href="classjsonloader_1_1SwitchLocalizationCommand.html#a2c8760a1e3abc3f235afc67281c3b526">jsonloader::SwitchLocalizationCommand</a>
 </li>
 <li>SymbolicPoly()
-: <a class="el" href="classtraj__opt_1_1SymbolicPoly.html#aae9cc3f77605536dda1a07373f3778c5">traj_opt::SymbolicPoly</a>
+: <a class="el" href="classtraj__opt_1_1SymbolicPoly.html#a5d8f571b8ff04747df5de5b97a2c365f">traj_opt::SymbolicPoly</a>
 </li>
 <li>SysMonitor()
 : <a class="el" href="classsys__monitor_1_1SysMonitor.html#a103b78858c20223db12da93fa7a0745f">sys_monitor::SysMonitor</a>

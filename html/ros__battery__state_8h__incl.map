@@ -1,22 +1,22 @@
 <map id="communications/dds_ros_bridge/include/dds_ros_bridge/ros_battery_state.h" name="communications/dds_ros_bridge/include/dds_ros_bridge/ros_battery_state.h">
-<area shape="rect" id="node1" title=" " alt="" coords="621,5,803,76"/>
-<area shape="rect" id="node2" title=" " alt="" coords="254,213,309,240"/>
-<area shape="rect" id="node3" title=" " alt="" coords="31,131,92,158"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,213,75,240"/>
-<area shape="rect" id="node5" title=" " alt="" coords="273,131,455,158"/>
-<area shape="rect" id="node6" href="$ros__sub__rapid__pub_8h.html" title=" " alt="" coords="117,124,249,165"/>
-<area shape="rect" id="node8" href="$util_8h.html" title=" " alt="" coords="531,131,674,158"/>
-<area shape="rect" id="node12" title=" " alt="" coords="1041,213,1199,240"/>
-<area shape="rect" id="node15" title=" " alt="" coords="749,131,971,158"/>
-<area shape="rect" id="node16" title=" " alt="" coords="995,131,1183,158"/>
-<area shape="rect" id="node17" title=" " alt="" coords="1207,131,1395,158"/>
-<area shape="rect" id="node18" title=" " alt="" coords="1419,131,1565,158"/>
-<area shape="rect" id="node19" title=" " alt="" coords="1589,131,1721,158"/>
-<area shape="rect" id="node20" title=" " alt="" coords="1745,131,1884,158"/>
-<area shape="rect" id="node7" title=" " alt="" coords="146,213,219,240"/>
-<area shape="rect" id="node9" title=" " alt="" coords="423,213,503,240"/>
-<area shape="rect" id="node10" title=" " alt="" coords="527,213,657,240"/>
-<area shape="rect" id="node11" title=" " alt="" coords="681,213,857,240"/>
-<area shape="rect" id="node13" title=" " alt="" coords="881,213,1017,240"/>
-<area shape="rect" id="node14" title=" " alt="" coords="333,213,398,240"/>
+<area shape="rect" id="node1" title=" " alt="" coords="653,5,856,76"/>
+<area shape="rect" id="node2" title=" " alt="" coords="267,213,325,240"/>
+<area shape="rect" id="node3" title=" " alt="" coords="32,131,99,158"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,213,83,240"/>
+<area shape="rect" id="node5" title=" " alt="" coords="291,131,485,158"/>
+<area shape="rect" id="node6" href="$ros__sub__rapid__pub_8h.html" title=" " alt="" coords="123,124,267,165"/>
+<area shape="rect" id="node8" href="$util_8h.html" title=" " alt="" coords="560,131,717,158"/>
+<area shape="rect" id="node12" title=" " alt="" coords="1113,213,1287,240"/>
+<area shape="rect" id="node15" title=" " alt="" coords="793,131,1034,158"/>
+<area shape="rect" id="node16" title=" " alt="" coords="1059,131,1264,158"/>
+<area shape="rect" id="node17" title=" " alt="" coords="1288,131,1493,158"/>
+<area shape="rect" id="node18" title=" " alt="" coords="1517,131,1675,158"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1699,131,1840,158"/>
+<area shape="rect" id="node20" title=" " alt="" coords="1865,131,2013,158"/>
+<area shape="rect" id="node7" title=" " alt="" coords="155,213,234,240"/>
+<area shape="rect" id="node9" title=" " alt="" coords="445,213,533,240"/>
+<area shape="rect" id="node10" title=" " alt="" coords="558,213,701,240"/>
+<area shape="rect" id="node11" title=" " alt="" coords="725,213,918,240"/>
+<area shape="rect" id="node13" title=" " alt="" coords="943,213,1089,240"/>
+<area shape="rect" id="node14" title=" " alt="" coords="350,213,421,240"/>
 </map>

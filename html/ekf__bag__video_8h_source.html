@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -138,7 +138,7 @@ $(document).ready(function(){initNavTree('ekf__bag__video_8h_source.html',''); i
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classekf__video_1_1EkfBagVideo.html#a7909d589cb804dc06036e6928712eac5">~EkfBagVideo</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classekf__video_1_1EkfBagVideo.html#afad031ebe3c18d68f010e04b9a999d81">UpdateImage</a>(<span class="keyword">const</span> ros::Time&amp; time,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classekf__video_1_1EkfBagVideo.html#afad031ebe3c18d68f010e04b9a999d81">UpdateImage</a>(<span class="keyword">const</span> <a class="code" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">ros::Time</a>&amp; time,</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                           <span class="keyword">const</span> sensor_msgs::ImageConstPtr&amp; image);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classekf__video_1_1EkfBagVideo.html#afd1f85e2601f8a6f3cfd3f1bd359421d">UpdateEKF</a>(<span class="keyword">const</span> ff_msgs::EkfState&amp; <a class="code" href="signal__lights_8h.html#a0b57aa10271a66f3dc936bba1d2f3830">state</a>);</div>
@@ -184,9 +184,9 @@ $(document).ready(function(){initNavTree('ekf__bag__video_8h_source.html',''); i
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">bool</span> start_time_set_;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordtype">bool</span> use_jem_;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  ros::Time start_time_;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  ros::Time last_draw_time_;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  ros::Time last_image_time_;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">ros::Time</a> start_time_;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">ros::Time</a> last_draw_time_;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <a class="code" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">ros::Time</a> last_image_time_;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  ff_msgs::EkfState state_;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordtype">int</span> of_count_;</div>
@@ -217,6 +217,7 @@ $(document).ready(function(){initNavTree('ekf__bag__video_8h_source.html',''); i
 <div class="ttc" id="asignal__lights_8h_html_a0b57aa10271a66f3dc936bba1d2f3830"><div class="ttname"><a href="signal__lights_8h.html#a0b57aa10271a66f3dc936bba1d2f3830">state</a></div><div class="ttdeci">uint8_t state</div><div class="ttdef"><b>Definition:</b> signal_lights.h:3</div></div>
 <div class="ttc" id="anamespaceekf__video_html"><div class="ttname"><a href="namespaceekf__video.html">ekf_video</a></div><div class="ttdef"><b>Definition:</b> ekf_bag_video.h:38</div></div>
 <div class="ttc" id="aclassekf__video_1_1EkfBagVideo_html_a09c21eded01ccd73a42a94cd14b26eb7"><div class="ttname"><a href="classekf__video_1_1EkfBagVideo.html#a09c21eded01ccd73a42a94cd14b26eb7">ekf_video::EkfBagVideo::EkfBagVideo</a></div><div class="ttdeci">EkfBagVideo(const char *bagfile, const char *mapfile, const char *videofile, bool run_ekf, bool gen_features, bool use_jem, const char *biasfile, std::string image_topic)</div><div class="ttdef"><b>Definition:</b> ekf_bag_video.cc:33</div></div>
+<div class="ttc" id="anamespacelocalization__common_html_ae558927c458010e767b03b93e4516e0c"><div class="ttname"><a href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a></div><div class="ttdeci">double Time</div><div class="ttdef"><b>Definition:</b> time.h:23</div></div>
 <div class="ttc" id="aclassekf__video_1_1EkfBagVideo_html_a95a395ef6b983a2f792a1b1d98f6f4fb"><div class="ttname"><a href="classekf__video_1_1EkfBagVideo.html#a95a395ef6b983a2f792a1b1d98f6f4fb">ekf_video::EkfBagVideo::ReadParams</a></div><div class="ttdeci">virtual void ReadParams(config_reader::ConfigReader *config)</div><div class="ttdef"><b>Definition:</b> ekf_bag_video.cc:52</div></div>
 <div class="ttc" id="aclassekf__bag_1_1TrackedSMFeatures_html"><div class="ttname"><a href="classekf__bag_1_1TrackedSMFeatures.html">ekf_bag::TrackedSMFeatures</a></div><div class="ttdef"><b>Definition:</b> tracked_features.h:63</div></div>
 <!-- HTML footer for doxygen 1.9.0-->

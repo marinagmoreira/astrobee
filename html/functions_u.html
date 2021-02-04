@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -123,6 +123,9 @@ $(document).ready(function(){initNavTree('functions_u.html',''); initResizable()
 <li>Unexport()
 : <a class="el" href="classgpio_1_1GPIO.html#a3c62fed53ed8a8758b637ab834c8548c">gpio::GPIO</a>
 </li>
+<li>UninitializedKey()
+: <a class="el" href="classgraph__localizer_1_1KeyInfo.html#a09ae80dd560ee6d46ac8f90cc858c121">graph_localizer::KeyInfo</a>
+</li>
 <li>unit_
 : <a class="el" href="classDimU.html#a85d1eecdee29ebc78a3caf2b8b8f56ab">DimU</a>
 </li>
@@ -163,9 +166,21 @@ $(document).ready(function(){initNavTree('functions_u.html',''); initResizable()
 </li>
 <li>Update()
 : <a class="el" href="classff__util_1_1FSM.html#a8c56688d0e90a22379a69a367b7ac554">ff_util::FSM</a>
+, <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a2e8def41faa6bac36f80168905dc2229">graph_localizer::GraphLocalizer</a>
+, <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#aec0198861c27c7a46b93363058dd077c">graph_localizer::GraphLocalizerWrapper</a>
+, <a class="el" href="classlocalization__common_1_1Averager.html#aacd785a744ea8c88047758b88fb2631e">localization_common::Averager</a>
 </li>
 <li>update_slack()
 : <a class="el" href="classtraj__opt_1_1IneqConstraint.html#ab1451684c3626089aa2426256eb44d6c">traj_opt::IneqConstraint</a>
+</li>
+<li>update_timer_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#af31b73f212e19316cd873b7abd157bd5">graph_localizer::GraphStats</a>
+</li>
+<li>UpdateAndLog()
+: <a class="el" href="classlocalization__common_1_1Averager.html#aa5eca69145a275e6ea46f2aa0e6516ea">localization_common::Averager</a>
+</li>
+<li>UpdateAndLogEveryN()
+: <a class="el" href="classlocalization__common_1_1Averager.html#a761ccb9aff3c16ab148f0b2a73c07e5f">localization_common::Averager</a>
 </li>
 <li>UpdateCallback()
 : <a class="el" href="classarm_1_1ArmNodelet.html#ab84c3fa0279b3ae5b8c886da641a343a">arm::ArmNodelet</a>
@@ -187,9 +202,15 @@ $(document).ready(function(){initNavTree('functions_u.html',''); initResizable()
 <li>UpdateEndPoint()
 : <a class="el" href="classhandrail__detect_1_1HandrailDetect.html#ab658d235f7219e99b484dae1aebfab07">handrail_detect::HandrailDetect</a>
 </li>
+<li>UpdateErrors()
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#ae337011c214eb50109283734d47804a9">graph_localizer::GraphStats</a>
+</li>
 <li>UpdateFeatures()
 : <a class="el" href="classekf__bag_1_1TrackedOFFeatures.html#a97e3a46f0a298fb19f3c24366da7b8f1">ekf_bag::TrackedOFFeatures</a>
 , <a class="el" href="classekf__bag_1_1TrackedSMFeatures.html#ab244baf5116ee69db5335f0a7c7a57ac">ekf_bag::TrackedSMFeatures</a>
+</li>
+<li>UpdateFeatureTracks()
+: <a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a3da37db484a562db839e7897ef1044b9">graph_localizer::FeatureTracker</a>
 </li>
 <li>UpdateGroundTruth()
 : <a class="el" href="classekf__bag_1_1EkfBag.html#ad0a2639c7387ad0546ef343802e032ae">ekf_bag::EkfBag</a>
@@ -233,6 +254,12 @@ $(document).ready(function(){initNavTree('functions_u.html',''); initResizable()
 : <a class="el" href="classekf_1_1Ekf.html#aa73e6a210f5fb4afc0ee3e1dffd20df1">ekf::Ekf</a>
 , <a class="el" href="classimage__sampler_1_1ImageSampler.html#aa79ece58bf515554ef123dfed94f480c">image_sampler::ImageSampler</a>
 </li>
+<li>UpdateStats()
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#aeb735dc136f26d3a0213786835f757ee">graph_localizer::GraphStats</a>
+</li>
+<li>UpdateValues()
+: <a class="el" href="classgraph__localizer_1_1GraphValues.html#afc579fa3f0bb5fa60422a1bbb2903af2">graph_localizer::GraphValues</a>
+</li>
 <li>UR_
 : <a class="el" href="classalgebra__3d_1_1FrustumPlanes.html#a88441afa0381061b146a0699f2210efb">algebra_3d::FrustumPlanes</a>
 </li>
@@ -245,6 +272,12 @@ $(document).ready(function(){initNavTree('functions_u.html',''); initResizable()
 <li>use_acc
 : <a class="el" href="structtraj__opt_1_1Waypoint.html#a5198c5b8d9d231350e42cc71ed25b4dc">traj_opt::Waypoint</a>
 </li>
+<li>use_ceres_params
+: <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#a7b3c79c4da745fafffe8efe15a459073">graph_localizer::GraphLocalizerParams</a>
+</li>
+<li>use_image_features
+: <a class="el" href="structgraph__bag_1_1LiveMeasurementSimulatorParams.html#a48982d0e2871258e5c33fe9e7bef5075">graph_bag::LiveMeasurementSimulatorParams</a>
+</li>
 <li>use_jrk
 : <a class="el" href="structtraj__opt_1_1Waypoint.html#a256f3357c979e8f8023a21d8aa475393">traj_opt::Waypoint</a>
 </li>
@@ -256,6 +289,9 @@ $(document).ready(function(){initNavTree('functions_u.html',''); initResizable()
 </li>
 <li>use_vel
 : <a class="el" href="structtraj__opt_1_1Waypoint.html#acf688f847332f7ce62631e370e95c534">traj_opt::Waypoint</a>
+</li>
+<li>useForRotationOnly()
+: <a class="el" href="classgtsam_1_1RobustSmartProjectionPoseFactor.html#a7a644349740ec9c9e2bd5b8c4ff3b281">gtsam::RobustSmartProjectionPoseFactor&lt; CALIBRATION &gt;</a>
 </li>
 <li>user_cid_to_keypoint_map_
 : <a class="el" href="structsparse__mapping_1_1SparseMap.html#a209518d0797ebb0a42289e40fb42ae3d">sparse_mapping::SparseMap</a>

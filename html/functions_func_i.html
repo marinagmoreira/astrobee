@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -92,7 +92,11 @@ $(document).ready(function(){initNavTree('functions_func_i.html',''); initResiza
 <h3><a id="index_i"></a>- i -</h3><ul>
 <li>id()
 : <a class="el" href="classexecutive_1_1OpState.html#a472dce8fe9da6302952a4d4302f04e75">executive::OpState</a>
+, <a class="el" href="classgraph__localizer_1_1KeyInfo.html#a990015d2ef811b8870c61e5e39f00e3a">graph_localizer::KeyInfo</a>
 , <a class="el" href="classjsonloader_1_1PowerItemCommand.html#a3ea91ca094809c2956088ff4474e18c1">jsonloader::PowerItemCommand</a>
+</li>
+<li>IdentityFilter()
+: <a class="el" href="classimu__integration_1_1IdentityFilter.html#a73ef3905328cd5129351b765a68a6342">imu_integration::IdentityFilter</a>
 </li>
 <li>IdlePropulsion()
 : <a class="el" href="classexecutive_1_1Executive.html#a340967fa7519d3b51a3fef6a7fb0912f">executive::Executive</a>
@@ -115,12 +119,45 @@ $(document).ready(function(){initNavTree('functions_func_i.html',''); initResiza
 <li>img()
 : <a class="el" href="classinterest__point_1_1BriskLayer.html#a9376b68e4fb1d363a5280a0474361821">interest_point::BriskLayer</a>
 </li>
+<li>ImuAugmentor()
+: <a class="el" href="classimu__augmentor_1_1ImuAugmentor.html#a4570f8700563c82637497eec30109e82">imu_augmentor::ImuAugmentor</a>
+</li>
+<li>ImuAugmentorDisplay()
+: <a class="el" href="classlocalization__rviz__plugins_1_1ImuAugmentorDisplay.html#aec24bda9d566cbfc87cc9eaa5d4b558a">localization_rviz_plugins::ImuAugmentorDisplay</a>
+</li>
+<li>ImuAugmentorNodelet()
+: <a class="el" href="classimu__augmentor_1_1ImuAugmentorNodelet.html#a285d98f65f106998ff14c6594dc2d955">imu_augmentor::ImuAugmentorNodelet</a>
+</li>
+<li>ImuAugmentorWrapper()
+: <a class="el" href="classimu__augmentor_1_1ImuAugmentorWrapper.html#ae0cc0b73d1bdf1cbf3f6d1e456f5fcbf">imu_augmentor::ImuAugmentorWrapper</a>
+</li>
+<li>ImuBiasTester()
+: <a class="el" href="classimu__bias__tester_1_1ImuBiasTester.html#a1268b5c27ba4f02dd8f3ec6b0f60e6e6">imu_bias_tester::ImuBiasTester</a>
+</li>
+<li>ImuBiasTesterNodelet()
+: <a class="el" href="classimu__bias__tester_1_1ImuBiasTesterNodelet.html#aaa574fb38379551a383212cd5d40e208">imu_bias_tester::ImuBiasTesterNodelet</a>
+</li>
+<li>ImuBiasTesterWrapper()
+: <a class="el" href="classimu__bias__tester_1_1ImuBiasTesterWrapper.html#aa6373f22524bbea87849611c2bcdb878">imu_bias_tester::ImuBiasTesterWrapper</a>
+</li>
 <li>ImuCallBack()
 : <a class="el" href="classekf_1_1EkfWrapper.html#aa811c0e30ee545aa83a01abe3212a7ac">ekf::EkfWrapper</a>
 </li>
 <li>ImuCallback()
-: <a class="el" href="classspeed__cam_1_1SpeedCamNode.html#a5cfe25efc0251ac89cbe08d578e01435">speed_cam::SpeedCamNode</a>
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#a64b1386675fb5d020ca2633fe7f40c8b">graph_localizer::GraphLocalizerWrapper</a>
+, <a class="el" href="classimu__augmentor_1_1ImuAugmentorWrapper.html#a687a995637db49464b57ae97c75683c3">imu_augmentor::ImuAugmentorWrapper</a>
+, <a class="el" href="classimu__bias__tester_1_1ImuBiasTesterWrapper.html#a36af6116aaeab5d39588222c42ab939a">imu_bias_tester::ImuBiasTesterWrapper</a>
+, <a class="el" href="classspeed__cam_1_1SpeedCamNode.html#a5cfe25efc0251ac89cbe08d578e01435">speed_cam::SpeedCamNode</a>
 , <a class="el" href="classvive_1_1ViveNodelet.html#a2f61b2758aa5058c9c845c5f24f2341f">vive::ViveNodelet</a>
+</li>
+<li>ImuFilter()
+: <a class="el" href="classimu__integration_1_1ImuFilter.html#a9a5f359e8ada5fd8daa844f99aa80e86">imu_integration::ImuFilter</a>
+</li>
+<li>ImuIntegrator()
+: <a class="el" href="classimu__integration_1_1ImuIntegrator.html#a3583e2d411422ea841f5633639f4997f">imu_integration::ImuIntegrator</a>
+</li>
+<li>ImuMeasurement()
+: <a class="el" href="structlocalization__measurements_1_1ImuMeasurement.html#ac3c40768579eb082814684c97eff7523">localization_measurements::ImuMeasurement</a>
 </li>
 <li>IndexedOcTreeKey()
 : <a class="el" href="classoctoclass_1_1IndexedOcTreeKey.html#a6040ffdb6a3e65556157fcbc4c1169e2">octoclass::IndexedOcTreeKey</a>
@@ -229,6 +266,9 @@ $(document).ready(function(){initNavTree('functions_func_i.html',''); initResiza
 <li>InitializeCidFidToPid()
 : <a class="el" href="structsparse__mapping_1_1SparseMap.html#a863b34e7ae623bebc5e4156792ecb2f4">sparse_mapping::SparseMap</a>
 </li>
+<li>Initialized()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#a3c286befbe4b14a800eaef0cf6d2cdf8">graph_localizer::GraphLocalizerWrapper</a>
+</li>
 <li>InitializeEkf()
 : <a class="el" href="classekf_1_1EkfWrapper.html#a9b9f277aefc9e1dc032d67a0776813d4">ekf::EkfWrapper</a>
 </li>
@@ -268,11 +308,23 @@ $(document).ready(function(){initNavTree('functions_func_i.html',''); initResiza
 , <a class="el" href="classtraj__opt_1_1PolyCalculus.html#a755eb15f32b383e780cc91a05f81ab4f">traj_opt::PolyCalculus</a>
 , <a class="el" href="classtraj__opt_1_1StandardBasis.html#ab0fa651db5a6488dd1e3e4a6f02bb1ee">traj_opt::StandardBasis</a>
 </li>
+<li>IntegratedPim()
+: <a class="el" href="classimu__integration_1_1ImuIntegrator.html#a822af6daa823ed29be18e322112b7d86">imu_integration::ImuIntegrator</a>
+</li>
+<li>IntegrateImuMeasurements()
+: <a class="el" href="classimu__integration_1_1ImuIntegrator.html#a5c9617fc4db5257faeaea5aa69902be1">imu_integration::ImuIntegrator</a>
+</li>
+<li>IntegrateLatestImuMeasurements()
+: <a class="el" href="classimu__integration_1_1LatestImuIntegrator.html#aa5a1345e10628712934be46e916add57">imu_integration::LatestImuIntegrator</a>
+</li>
 <li>invalidate()
 : <a class="el" href="classconfig__reader_1_1ActiveFile.html#a2fb2f61edf71a5eb8d60c138c9c86fe8">config_reader::ActiveFile</a>
 </li>
 <li>IOManager()
 : <a class="el" href="classgpio_1_1IOManager.html#a9fcc4b8d4b640bf385a499653c4d4b72">gpio::IOManager</a>
+</li>
+<li>is_static()
+: <a class="el" href="classgraph__localizer_1_1KeyInfo.html#a64a0c78cfe23670ad434a2255c6d26ca">graph_localizer::KeyInfo</a>
 </li>
 <li>IsActionRunning()
 : <a class="el" href="classexecutive_1_1Executive.html#ac3a2ccd906ce93ed77dbe6c60c4206d2">executive::Executive</a>

@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -106,8 +106,21 @@ $(document).ready(function(){initNavTree('functions_vars_s.html',''); initResiza
 <li>sas_
 : <a class="el" href="classff__util_1_1FreeFlyerActionServer.html#a9c59c4f03d3ccb58d271c037e588e86c">ff_util::FreeFlyerActionServer&lt; ActionSpec &gt;</a>
 </li>
+<li>save_optical_flow_images
+: <a class="el" href="structgraph__bag_1_1GraphBagParams.html#afffaabb1dbcbcfee589481cc59754477">graph_bag::GraphBagParams</a>
+, <a class="el" href="structgraph__bag_1_1LiveMeasurementSimulatorParams.html#acd2282d8ac80fc7db2fe53e171cb18ed">graph_bag::LiveMeasurementSimulatorParams</a>
+</li>
 <li>scale
 : <a class="el" href="structarm_1_1JointInfo.html#ac48e1d480cf16a2b80ba6bb60a2e2600">arm::JointInfo</a>
+</li>
+<li>scale_noise_with_num_points
+: <a class="el" href="structgraph__localizer_1_1SmartProjectionFactorAdderParams.html#a9e53d2edfda0852f4edd7b9d2f9396b1">graph_localizer::SmartProjectionFactorAdderParams</a>
+</li>
+<li>scale_pose_noise_with_num_landmarks
+: <a class="el" href="structgraph__localizer_1_1LocFactorAdderParams.html#ae5417b8c815c9b3a9dcdf066426d100c">graph_localizer::LocFactorAdderParams</a>
+</li>
+<li>scale_projection_noise_with_num_landmarks
+: <a class="el" href="structgraph__localizer_1_1LocFactorAdderParams.html#a94b51e2c1f53edccd8ce5ab9e9a61adc">graph_localizer::LocFactorAdderParams</a>
 </li>
 <li>scaleList_
 : <a class="el" href="classinterest__point_1_1BRISK__Impl.html#ad054d4c90b0cd2c9a364078eed4aad58">interest_point::BRISK_Impl</a>
@@ -219,8 +232,20 @@ $(document).ready(function(){initNavTree('functions_vars_s.html',''); initResiza
 <li>slack
 : <a class="el" href="structtraj__opt_1_1SolverInfo.html#a86adbf4ebaf1ebc9ab486e02cf467fa4">traj_opt::SolverInfo</a>
 </li>
+<li>slide_window_timer_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#af238bd14a10ac066a50f2a0ad73bd884">graph_localizer::GraphStats</a>
+</li>
+<li>slider_
+: <a class="el" href="classrviz_1_1SliderProperty.html#a7ca1ca80dab29e75369508a260217f8f">rviz::SliderProperty</a>
+</li>
+<li>sliding_window_duration
+: <a class="el" href="structgraph__localizer_1_1FeatureTrackerParams.html#ab48f5b074b54eb7c0460782b788ab07b">graph_localizer::FeatureTrackerParams</a>
+</li>
 <li>small_angle
 : <a class="el" href="structsparse__mapping_1_1FilterStats.html#a05361a43513286dce4e47ffaf2ccb4a9">sparse_mapping::FilterStats</a>
+</li>
+<li>smart_projection_adder
+: <a class="el" href="structgraph__localizer_1_1FactorParams.html#a4326b182af38af05f401a50424e4979b">graph_localizer::FactorParams</a>
 </li>
 <li>solved_
 : <a class="el" href="classtraj__opt_1_1NonlinearTrajectory.html#ab9323e47e55ac5964f587382f09f089d">traj_opt::NonlinearTrajectory</a>
@@ -231,11 +256,17 @@ $(document).ready(function(){initNavTree('functions_vars_s.html',''); initResiza
 <li>solver_info
 : <a class="el" href="classtraj__opt_1_1NonlinearSolver.html#acf1a5548de69b6c2062ef11de86f1839">traj_opt::NonlinearSolver</a>
 </li>
+<li>sparse_mapping_min_num_landmarks
+: <a class="el" href="structgraph__bag_1_1GraphBagParams.html#a8e77e5b3c88a0c0d13f270aa895be825">graph_bag::GraphBagParams</a>
+</li>
 <li>speed_
 : <a class="el" href="classfam_1_1Fam.html#a173f79f70c9219c4ac13bb725de4bab1">fam::Fam</a>
 </li>
 <li>speedCamState
 : <a class="el" href="unionpmc__actuator_1_1Status2.html#a965425e705d7693ef1deb3065d716e37">pmc_actuator::Status2</a>
+</li>
+<li>splitting
+: <a class="el" href="structgraph__localizer_1_1SmartProjectionFactorAdderParams.html#af081f6bef91fcf8d9cfebd3f5ba0a904">graph_localizer::SmartProjectionFactorAdderParams</a>
 </li>
 <li>srv_ar_tags_enable_
 : <a class="el" href="classsim__wrapper_1_1Sim.html#a90b92f4d85219cb67351e9fa7c86528b">sim_wrapper::Sim</a>
@@ -252,11 +283,41 @@ $(document).ready(function(){initNavTree('functions_vars_s.html',''); initResiza
 <li>srv_set_state_
 : <a class="el" href="classarm_1_1ArmNodelet.html#a0d567806a7cb310bb4621564640f49f5">arm::ArmNodelet</a>
 </li>
+<li>standstill_adder
+: <a class="el" href="structgraph__localizer_1_1FactorParams.html#adc4c96ff6ea3b81788247a1acd051e01">graph_localizer::FactorParams</a>
+</li>
+<li>standstill_between_error_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#af36f93890cfbb72ffa67728b0b7584f3">graph_localizer::GraphStats</a>
+</li>
+<li>standstill_enabled
+: <a class="el" href="structimu__augmentor_1_1ImuAugmentorParams.html#a7f78aefa9935f871b581fa94f77fb10d">imu_augmentor::ImuAugmentorParams</a>
+</li>
+<li>standstill_min_num_points_per_track
+: <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#a7f743d727e2dd66a5cd4cbc755c90567">graph_localizer::GraphLocalizerParams</a>
+</li>
 <li>start
 : <a class="el" href="structis__camera_1_1buffer.html#a878db8fbef015b4d81180fb195e007a0">is_camera::buffer</a>
 </li>
 <li>start_orientation_
 : <a class="el" href="classplanner__qp_1_1Planner.html#abfda4cb8a2ca32bacded4d42b9055f3d">planner_qp::Planner</a>
+</li>
+<li>start_time
+: <a class="el" href="structimu__integration_1_1LatestImuIntegratorParams.html#abcfdca2248d9676e1db1797f8edeac7f">imu_integration::LatestImuIntegratorParams</a>
+</li>
+<li>starting_prior_accel_bias_stddev
+: <a class="el" href="structgraph__localizer_1_1NoiseParams.html#a87d76b1c60219447106952f2adb82f29">graph_localizer::NoiseParams</a>
+</li>
+<li>starting_prior_gyro_bias_stddev
+: <a class="el" href="structgraph__localizer_1_1NoiseParams.html#ab6c9fac9bc282f57715f62345ce3ca52">graph_localizer::NoiseParams</a>
+</li>
+<li>starting_prior_quaternion_stddev
+: <a class="el" href="structgraph__localizer_1_1NoiseParams.html#a67ec13fe80f24a87fb05362a60073603">graph_localizer::NoiseParams</a>
+</li>
+<li>starting_prior_translation_stddev
+: <a class="el" href="structgraph__localizer_1_1NoiseParams.html#a30fbedb23d00e8eab5c0238105ddd284">graph_localizer::NoiseParams</a>
+</li>
+<li>starting_prior_velocity_stddev
+: <a class="el" href="structgraph__localizer_1_1NoiseParams.html#a8f90924dbaf2aeed202d8fd303dc0941">graph_localizer::NoiseParams</a>
 </li>
 <li>startup_time_
 : <a class="el" href="classsys__monitor_1_1SysMonitor.html#a5ad533c314e32bceb4e1e9f43c0a2f18">sys_monitor::SysMonitor</a>
@@ -293,6 +354,9 @@ $(document).ready(function(){initNavTree('functions_vars_s.html',''); initResiza
 <li>static_value2
 : <a class="el" href="structros_1_1message__traits_1_1MD5Sum_3_01pcl_1_1PCLPointCloud2_01_4.html#a1cc338f92128462b846a259af57d129c">ros::message_traits::MD5Sum&lt; pcl::PCLPointCloud2 &gt;</a>
 , <a class="el" href="structros_1_1message__traits_1_1MD5Sum_3_01pcl_1_1PointCloud_3_01T_01_4_01_4.html#a100531e076bd155a67a5a9c8f7412299">ros::message_traits::MD5Sum&lt; pcl::PointCloud&lt; T &gt; &gt;</a>
+</li>
+<li>stats_averagers_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#a9c6cf5d0214c67303456e8a5780bc0f2">graph_localizer::GraphStats</a>
 </li>
 <li>status
 : <a class="el" href="structeps__driver_1_1EPS_1_1BatteryInfo.html#a996c39205e151ad7c72cbaaa72f47b48">eps_driver::EPS::BatteryInfo</a>

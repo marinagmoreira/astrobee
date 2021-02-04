@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -91,13 +91,13 @@ $(document).ready(function(){initNavTree('dock.html',''); initResizable(); });
 <div class="title">Dock Behavior </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md371"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md396"></a>
 Overview</h1>
 <p>Astrobee is upmassed to the ISS along with a smart docking station, which we refer to as "the dock". The astrobee robot attaches to the dock via one of two points (berth 1 and berth 2). Each berth provides a matrix of pogo pins, which mates with a matching pad on the aft-side of the robot to provide connectivity and charging. There is only one correct mating orientation. A pair of cones help guide the freeflyer into the correct docking position, and a mild magnetic force holds it in position until an undock command is issues.</p>
 <p>Docking is a precision operation that requires sub-centimeter localization accuracy. Standard mapped landmark localization &ndash; our default in-flight &ndash; cannot guarantee this performace. For this reason we use a different mechanism technique here we localize ourselves relative to a set of visual markers, which we refer to as the "AR Target". This target is positioned between the berths, and designed to be in view of the aft-facing docking camera as we approach or leave the berth. Incidentally, this camera is offset to one side, which means that the correct mating orientation is reversed on berth 2. This means that the robot must invert itself with respect to the dock (carry out a 180 degree roll) prior to engaging with berth 2.</p>
 <p>The docking behavior is fairly complex and requires the existence of several other nodes in the system to work correctly. Specifically, it uses the <code>ff_msgs::SwitchAction</code> action to switch between localization system, and the <code>ff_msgs::MotionAction</code> to move into and out from the dock, and to turn the propulsion system. It also uses messages and services offered by the <a class="el" href="namespaceeps__driver.html">eps_driver</a> to determine whether it has mated sucessfully with the dock, and to initiate the undock process (magnetic).</p>
 <p>Docking requires the dock location to be specified a priori. The dock origin is aligned with the midpoint of the AR target. The berth frame is fixed with respect the dock frame but may be on a 50 degree tilt. All of these values are configurable in the world config file. The framestore node assembles a static transform hierarchy in TF2, which the dock behavior uses to calculate two berth-specific positions &ndash; the "approach point" and the "complete point". The complete point is the desired pose of the freeflyer body in the world frame when on dock, while the approach point is a pose offset slightly from the complete point in such a way that the robot docks and undocks along a specific trajectory, thereby maximizing the change of success.</p>
-<h1><a class="anchor" id="autotoc_md372"></a>
+<h1><a class="anchor" id="autotoc_md397"></a>
 Internal behavior</h1>
 <p>The dock behavior provides the callee with a single action-based entry point for control, called <code>ff_msgs::DockAction</code>. This "dock action" accepts a command &ndash; ether DOCK or UNDOCK &ndash; and executes it in the background, sending periodic feedback to the callee. When the task completes a result is returned, along with a response code that captures any errors. Unlike services, actions are non-blocking so exhibit superior performance in nodelet contexts.</p>
 <p>The action supports only one goal, which is fully-preemptible. This means that a new goal always preempts the current goal (the previous goal's callee will be notified of preemption). Consequently, you must be careful not to interact with docking action, or any of its dependencies while active.</p>
@@ -139,7 +139,7 @@ Dock node finite state machine</div>
 <li>Localization is turned off using a special localization mode called "none". This effectively disables all cameras, and stops the EKF from running.</li>
 <li>The dock can only supply a limited amount of current to the robot, and it might be insufficent to support charging batteries and turning on the PMCs. For this reason one should initiate an undock only when the batteries are full.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md373"></a>
+<h1><a class="anchor" id="autotoc_md398"></a>
 Using the test tool</h1>
 <p>Typically, docking and undocking will be controlled through the Ground Data System (GDS). However, The dock behavior is packaged with its own gflags-based tool called dock_tool. This tool is essentially a convenience wrapper around an action client can be used to dock and undock from the command-line.</p>
 <p>To get a list of supported commands, have a look at the help: </p><pre class="fragment">rosrun dock dock_tool -helpshort

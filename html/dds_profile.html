@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -92,22 +92,22 @@ $(document).ready(function(){initNavTree('dds_profile.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This directory contains all xml files used to define the DDS entities needed for the visualizer DDS mode.</p>
-<h2><a class="anchor" id="autotoc_md456"></a>
+<h2><a class="anchor" id="autotoc_md481"></a>
 Files description</h2>
-<h3><a class="anchor" id="autotoc_md457"></a>
+<h3><a class="anchor" id="autotoc_md482"></a>
 BaseDDSProfile.xml</h3>
 <p>This xml defines the QoS Profiles as well as the DDS Entities and Types needed for the visualizer. From line 1 to 993, it is a copy from the file located in <em>astrobee/astrobee/config/communications/dds/RAPID_QOS_PROFILES</em>. From then on it defines all entities and types needed.</p>
-<h4><a class="anchor" id="autotoc_md458"></a>
+<h4><a class="anchor" id="autotoc_md483"></a>
 Future improvements</h4>
 <ul>
 <li>Get the RAPID_QOS_PROFILES dynamically.</li>
 <li>Get the correct partition name depending on the Astrobee name (Bumble, Honey, Queen).</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md459"></a>
+<h3><a class="anchor" id="autotoc_md484"></a>
 Free-flyer types</h3>
 <p>EkfState.xml, GncControlState.xml, GncFamCmdState.xml, LogSample.xml and PmcCmdState.xml are custom DDS type definitions for the freeflyer ROS messages.</p>
 <p>Once you build the astrobee project you should be able to find an update copy of this files in <em>astrobee_build/native/communications/dds_msgs/idl</em></p>
-<h3><a class="anchor" id="autotoc_md460"></a>
+<h3><a class="anchor" id="autotoc_md485"></a>
 Common types</h3>
 <p>BaseTypes.xml, Header.xml and Message.xml are common types for the free-flyer ones. This files have been taken from */usr/etc/rtiRoutingService* once the astrobee repo was cloned and installed. </p>
 </div></div><!-- contents -->

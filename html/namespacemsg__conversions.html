@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -156,6 +156,36 @@ Functions</h2></td></tr>
 <tr class="separator:ade56bd5226a69e3db5d199890385a431"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade811300da65a307107febd7267c2e73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#ade811300da65a307107febd7267c2e73">config_read_vector</a> (<a class="el" href="classconfig__reader_1_1ConfigReader_1_1Table.html">config_reader::ConfigReader::Table</a> *t, geometry_msgs::Point *point)</td></tr>
 <tr class="separator:ade811300da65a307107febd7267c2e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36f265d8d659536a11bfbc57db7df221"><td class="memItemLeft" align="right" valign="top">Eigen::Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#a36f265d8d659536a11bfbc57db7df221">LoadEigenTransform</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, const std::string &amp;transform_config_name)</td></tr>
+<tr class="separator:a36f265d8d659536a11bfbc57db7df221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af24417330a5242b86d55fa5e5f69fd97"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#af24417330a5242b86d55fa5e5f69fd97">LoadDouble</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, const std::string &amp;config_name)</td></tr>
+<tr class="separator:af24417330a5242b86d55fa5e5f69fd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a118e127095097801d1a10033507d329d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#a118e127095097801d1a10033507d329d">LoadInt</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, const std::string &amp;config_name)</td></tr>
+<tr class="separator:a118e127095097801d1a10033507d329d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e7ccc9cc2017f094ae478e85fb6e1fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#a7e7ccc9cc2017f094ae478e85fb6e1fa">LoadBool</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, const std::string &amp;config_name)</td></tr>
+<tr class="separator:a7e7ccc9cc2017f094ae478e85fb6e1fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc244a94b6fee3950eba44cc73c6c15d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#afc244a94b6fee3950eba44cc73c6c15d">LoadString</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, const std::string &amp;config_name)</td></tr>
+<tr class="separator:afc244a94b6fee3950eba44cc73c6c15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc1473c2a930b149d1fe8d2fc3c0c16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#aedc1473c2a930b149d1fe8d2fc3c0c16">EigenPoseToMsg</a> (const Eigen::Isometry3d &amp;pose, geometry_msgs::Pose &amp;msg_pose)</td></tr>
+<tr class="separator:aedc1473c2a930b149d1fe8d2fc3c0c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a387d6051f9c304d1c15158728cd210ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#a387d6051f9c304d1c15158728cd210ce">EigenPoseToMsg</a> (const Eigen::Isometry3d &amp;pose, geometry_msgs::Transform &amp;msg_transform)</td></tr>
+<tr class="separator:a387d6051f9c304d1c15158728cd210ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0fff4588ec79ebb89a8be1e94381d26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#ac0fff4588ec79ebb89a8be1e94381d26">VariancesToCovDiag</a> (const Eigen::Vector3d &amp;variances, float *const cov_diag)</td></tr>
+<tr class="separator:ac0fff4588ec79ebb89a8be1e94381d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb795fa1892793aa9054d2be50646793"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#afb795fa1892793aa9054d2be50646793">CovDiagToVariances</a> (const float *const cov_diag)</td></tr>
+<tr class="separator:afb795fa1892793aa9054d2be50646793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e6e5f341b980730635d1da4f4c6ff93"><td class="memTemplParams" colspan="2">template&lt;typename VectorType , typename MsgVectorType &gt; </td></tr>
+<tr class="memitem:a1e6e5f341b980730635d1da4f4c6ff93"><td class="memTemplItemLeft" align="right" valign="top">VectorType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#a1e6e5f341b980730635d1da4f4c6ff93">VectorFromMsg</a> (const MsgVectorType &amp;msg_vector)</td></tr>
+<tr class="separator:a1e6e5f341b980730635d1da4f4c6ff93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2cc454c43ca84555a4d08e70e5f748a"><td class="memTemplParams" colspan="2">template&lt;typename VectorType , typename MsgVectorType &gt; </td></tr>
+<tr class="memitem:ab2cc454c43ca84555a4d08e70e5f748a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#ab2cc454c43ca84555a4d08e70e5f748a">VectorToMsg</a> (const VectorType &amp;vector, MsgVectorType &amp;msg_vector)</td></tr>
+<tr class="separator:ab2cc454c43ca84555a4d08e70e5f748a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87a38da8a37b0683af271facfe14f4ff"><td class="memTemplParams" colspan="2">template&lt;typename RotationType , typename MsgRotationType &gt; </td></tr>
+<tr class="memitem:a87a38da8a37b0683af271facfe14f4ff"><td class="memTemplItemLeft" align="right" valign="top">RotationType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#a87a38da8a37b0683af271facfe14f4ff">RotationFromMsg</a> (const MsgRotationType &amp;msg_rotation)</td></tr>
+<tr class="separator:a87a38da8a37b0683af271facfe14f4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b603e63ff9a98a03b36aa92cd3087ba"><td class="memTemplParams" colspan="2">template&lt;typename RotationType , typename MsgRotationType &gt; </td></tr>
+<tr class="memitem:a5b603e63ff9a98a03b36aa92cd3087ba"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#a5b603e63ff9a98a03b36aa92cd3087ba">RotationToMsg</a> (const RotationType &amp;rotation, MsgRotationType &amp;msg_rotation)</td></tr>
+<tr class="separator:a5b603e63ff9a98a03b36aa92cd3087ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ad803c0e98244a7284eb2754508ca0d13"></a>
@@ -654,6 +684,24 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="afb795fa1892793aa9054d2be50646793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb795fa1892793aa9054d2be50646793">&#9670;&nbsp;</a></span>CovDiagToVariances()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector3d msg_conversions::CovDiagToVariances </td>
+          <td>(</td>
+          <td class="paramtype">const float *const&#160;</td>
+          <td class="paramname"><em>cov_diag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad075a92916be0aee0b51c71fb005eeb3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad075a92916be0aee0b51c71fb005eeb3">&#9670;&nbsp;</a></span>eigen_to_array_quat()</h2>
 
@@ -776,6 +824,202 @@ Functions</h2></td></tr>
           <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
           <td class="paramname"><em>v</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aedc1473c2a930b149d1fe8d2fc3c0c16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedc1473c2a930b149d1fe8d2fc3c0c16">&#9670;&nbsp;</a></span>EigenPoseToMsg() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void msg_conversions::EigenPoseToMsg </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Isometry3d &amp;&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::Pose &amp;&#160;</td>
+          <td class="paramname"><em>msg_pose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a387d6051f9c304d1c15158728cd210ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a387d6051f9c304d1c15158728cd210ce">&#9670;&nbsp;</a></span>EigenPoseToMsg() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void msg_conversions::EigenPoseToMsg </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Isometry3d &amp;&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::Transform &amp;&#160;</td>
+          <td class="paramname"><em>msg_transform</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e7ccc9cc2017f094ae478e85fb6e1fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e7ccc9cc2017f094ae478e85fb6e1fa">&#9670;&nbsp;</a></span>LoadBool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool msg_conversions::LoadBool </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>config_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af24417330a5242b86d55fa5e5f69fd97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af24417330a5242b86d55fa5e5f69fd97">&#9670;&nbsp;</a></span>LoadDouble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double msg_conversions::LoadDouble </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>config_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36f265d8d659536a11bfbc57db7df221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36f265d8d659536a11bfbc57db7df221">&#9670;&nbsp;</a></span>LoadEigenTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Isometry3d msg_conversions::LoadEigenTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>transform_config_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a118e127095097801d1a10033507d329d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a118e127095097801d1a10033507d329d">&#9670;&nbsp;</a></span>LoadInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int msg_conversions::LoadInt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>config_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc244a94b6fee3950eba44cc73c6c15d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc244a94b6fee3950eba44cc73c6c15d">&#9670;&nbsp;</a></span>LoadString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string msg_conversions::LoadString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>config_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -950,6 +1194,134 @@ Functions</h2></td></tr>
           <td class="paramtype">const geometry_msgs::Vector3 &amp;&#160;</td>
           <td class="paramname"><em>v</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87a38da8a37b0683af271facfe14f4ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87a38da8a37b0683af271facfe14f4ff">&#9670;&nbsp;</a></span>RotationFromMsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RotationType , typename MsgRotationType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">RotationType msg_conversions::RotationFromMsg </td>
+          <td>(</td>
+          <td class="paramtype">const MsgRotationType &amp;&#160;</td>
+          <td class="paramname"><em>msg_rotation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b603e63ff9a98a03b36aa92cd3087ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b603e63ff9a98a03b36aa92cd3087ba">&#9670;&nbsp;</a></span>RotationToMsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RotationType , typename MsgRotationType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void msg_conversions::RotationToMsg </td>
+          <td>(</td>
+          <td class="paramtype">const RotationType &amp;&#160;</td>
+          <td class="paramname"><em>rotation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MsgRotationType &amp;&#160;</td>
+          <td class="paramname"><em>msg_rotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0fff4588ec79ebb89a8be1e94381d26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0fff4588ec79ebb89a8be1e94381d26">&#9670;&nbsp;</a></span>VariancesToCovDiag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void msg_conversions::VariancesToCovDiag </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
+          <td class="paramname"><em>variances</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *const&#160;</td>
+          <td class="paramname"><em>cov_diag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e6e5f341b980730635d1da4f4c6ff93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e6e5f341b980730635d1da4f4c6ff93">&#9670;&nbsp;</a></span>VectorFromMsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorType , typename MsgVectorType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">VectorType msg_conversions::VectorFromMsg </td>
+          <td>(</td>
+          <td class="paramtype">const MsgVectorType &amp;&#160;</td>
+          <td class="paramname"><em>msg_vector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2cc454c43ca84555a4d08e70e5f748a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2cc454c43ca84555a4d08e70e5f748a">&#9670;&nbsp;</a></span>VectorToMsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorType , typename MsgVectorType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void msg_conversions::VectorToMsg </td>
+          <td>(</td>
+          <td class="paramtype">const VectorType &amp;&#160;</td>
+          <td class="paramname"><em>vector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MsgVectorType &amp;&#160;</td>
+          <td class="paramname"><em>msg_vector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

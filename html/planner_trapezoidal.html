@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('planner_trapezoidal.html',''); initRes
 <li>The robot's acceleration is fundamentally constrained by a hard limit on how much pressure the impellers can build in the plenum. During holomnic moves this energy mst be spread along six degrees of freedom. This lowers the angular and linear acceleration limits.</li>
 <li>It is easier for an astronaut or operator to determine the intent of the freeflyer when it nominally moves in the direction it faces.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md320"></a>
+<h1><a class="anchor" id="autotoc_md345"></a>
 Basic operation</h1>
 <p>Describing how the trapezoidal planner works requires the definition of several input parameters:</p>
 <ul>
@@ -109,19 +109,19 @@ Basic operation</h1>
 <p>The limit precedence is therefore the following:</p>
 <p>hard limits &gt; soft limits &gt; time limits</p>
 <p>The planner take in as an argument a time-indexed sequence of poses to move through. Using the limit hierarchiy above it outputs a fully-defined segment containing a sequence of setpoints, each specifying a postion, orientation, velocity, angular velocity, acceleration and angular acceleration.</p>
-<h2><a class="anchor" id="autotoc_md321"></a>
+<h2><a class="anchor" id="autotoc_md346"></a>
 Holonomic moves</h2>
 <p>We'll begin by considering a holonomic move, which is an a sense the generalization of a face-forward move. A face-forward move follows the same core construction logic except that it structures the move as a rotation-translation-rotation sequence, and in so doing yields a segment in which rotation and translation is never performed simultaneously.</p>
 <p>The first challenge with a holomic move is to determine whether of the linear or angular components <code>dominates</code>. That is, we need to know whether it will take longer to rotate or translate based on our set of hard/soft/time limits. Once the dominating axis and duration is known, we select a lower limit for the other axis so that its motion is "spread" to take the same time as the dominating axis. Not doing this leads to counter-intuitive moves, like rotation completing several seconds before the translation does.</p>
 <p>Once the dominating duration is known, the problem reduces to finding separate velocity profiles for the linear and angular components of the move. The sequence of setpoints is produced by sampling the profiles. For the less intuitive case of orientation, integrating the angular velocity profile yields the angle (magnitude) component of an angle-axis orientation representation, which we can then convert to a quaternion for use in a setpoint.</p>
 <p>The one subtle detail that one must be careful to account for is the fact that the velocity profile may in fact be a pyramid and not a trapezoid. This happens when the angle or distance moved is short and the acceleration limit is low. In this case the axis never ramps up to its velocity limit before needing to ramp down to stop at the correct point. Equivalently, it never reaches cruising speed and therefore it's cruise duration is zero.</p>
-<h2><a class="anchor" id="autotoc_md322"></a>
+<h2><a class="anchor" id="autotoc_md347"></a>
 Face-forward moves</h2>
 <p>The same planning algorithm is used for face-forward mode, except the motion is split into three distinct phases - (1) look, (2) translate, (3) rotate.</p>
 <p>(1) In the look-phase the freeflyer performs a rotation to align its forward direction (body-frame X) with the vector pointing in the direction it intends to translates. There is one remaining degree of freedom that remains unconstrained (roll, or rotation about body-frame x). We select this value in such a way that the body-frame y axis lies in the world X-Y plane. This nominally keeps the freeflyer oriented so that its body-frame Z never inverts with respect the world Z. This works for all motions except pure downward translations. In this case we align body-frame Y with the Y-Z plane.</p>
 <p>(2) In the translate phase the robot moves from its initial to final position without any orientation change. Since the final orientation of the look phase pointed in the direction of translation the robot always "looks forward".</p>
 <p>(2) In the rotate phase of a face-forward move the robot reorients itself to be pointed in the direction of the end pose.</p>
-<h1><a class="anchor" id="autotoc_md323"></a>
+<h1><a class="anchor" id="autotoc_md348"></a>
 Usage</h1>
 <p>Although one could theoretically interact with the trapezoidal planner, this is not advised. To generate and execute a trapezoidal plan one should use the move command in conjunction with the "trapezoidal" planner flag. Here is an example command that shows how to move to the origin of the world: </p><pre class="fragment">rosrun mobility teleop -move -pos "0 0 0" -att "0" -planner trapezoidal
 </pre><p>By default the teleop tool configures the platform to operate in holomonic mode. To enforce face-forward mode the "-ff" flag can be used. For example: </p><pre class="fragment">rosrun mobility teleop -move -pos "0 0 0" -att "0" -planner trapezoidal -ff

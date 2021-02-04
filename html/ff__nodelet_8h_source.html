@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -163,7 +163,7 @@ $(document).ready(function(){initNavTree('ff__nodelet_8h_source.html',''); initR
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classff__util_1_1FreeFlyerNodelet.html#ad5ac041c1bae01e612f4ff0f5512541c">AssertFault</a>(<a class="code" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7">FaultKeys</a> enum_key,</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                   std::string <span class="keyword">const</span>&amp; message,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                   ros::Time time_fault_occurred = ros::Time::now());</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                   <a class="code" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">ros::Time</a> time_fault_occurred = ros::Time::now());</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classff__util_1_1FreeFlyerNodelet.html#a627d95db6c693ece412888ac59c46afe">ClearAllFaults</a>();</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classff__util_1_1FreeFlyerNodelet.html#aa26489ca13b262b4a32a51cd49ba43e8">ClearFault</a>(<a class="code" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7">FaultKeys</a> enum_key);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classff__util_1_1FreeFlyerNodelet.html#a4587540a3e0c0ab730abcf2133769964">PrintFaults</a>();</div>
@@ -285,6 +285,7 @@ $(document).ready(function(){initNavTree('ff__nodelet_8h_source.html',''); initR
 <div class="ttc" id="aclassff__util_1_1FreeFlyerNodelet_html_a627d95db6c693ece412888ac59c46afe"><div class="ttname"><a href="classff__util_1_1FreeFlyerNodelet.html#a627d95db6c693ece412888ac59c46afe">ff_util::FreeFlyerNodelet::ClearAllFaults</a></div><div class="ttdeci">void ClearAllFaults()</div><div class="ttdef"><b>Definition:</b> ff_nodelet.cc:248</div></div>
 <div class="ttc" id="aclassff__util_1_1FreeFlyerNodelet_html_ad5ac041c1bae01e612f4ff0f5512541c"><div class="ttname"><a href="classff__util_1_1FreeFlyerNodelet.html#ad5ac041c1bae01e612f4ff0f5512541c">ff_util::FreeFlyerNodelet::AssertFault</a></div><div class="ttdeci">void AssertFault(FaultKeys enum_key, std::string const &amp;message, ros::Time time_fault_occurred=ros::Time::now())</div><div class="ttdef"><b>Definition:</b> ff_nodelet.cc:200</div></div>
 <div class="ttc" id="aclassff__util_1_1FreeFlyerNodelet_html_a113a0f8841f47d22b233a6c2feaa9f8a"><div class="ttname"><a href="classff__util_1_1FreeFlyerNodelet.html#a113a0f8841f47d22b233a6c2feaa9f8a">ff_util::FreeFlyerNodelet::Initialize</a></div><div class="ttdeci">virtual void Initialize(ros::NodeHandle *nh)</div><div class="ttdef"><b>Definition:</b> ff_nodelet.h:90</div></div>
+<div class="ttc" id="anamespacelocalization__common_html_ae558927c458010e767b03b93e4516e0c"><div class="ttname"><a href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a></div><div class="ttdeci">double Time</div><div class="ttdef"><b>Definition:</b> time.h:23</div></div>
 <div class="ttc" id="anamespaceff__util_html_a7d8d396931390f360e45aca02393b7f7"><div class="ttname"><a href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7">ff_util::FaultKeys</a></div><div class="ttdeci">FaultKeys</div><div class="ttdef"><b>Definition:</b> ff_faults.h:28</div></div>
 <div class="ttc" id="aclassff__util_1_1FreeFlyerNodelet_html_aaa7a7972cd2a9cf72c38f831fee9eb33"><div class="ttname"><a href="classff__util_1_1FreeFlyerNodelet.html#aaa7a7972cd2a9cf72c38f831fee9eb33">ff_util::FreeFlyerNodelet::ResolveType</a></div><div class="ttdeci">ResolveType</div><div class="ttdef"><b>Definition:</b> ff_nodelet.h:59</div></div>
 <!-- HTML footer for doxygen 1.9.0-->

@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -109,8 +109,18 @@ $(document).ready(function(){initNavTree('functions_l.html',''); initResizable()
 <li>landmark
 : <a class="el" href="structGncFiles.html#a4db0de308097e8af21e8695d8c7e07fd">GncFiles</a>
 </li>
+<li>landmark_distance_threshold
+: <a class="el" href="structgraph__localizer_1_1ProjectionFactorAdderParams.html#a802b13b1fe61819fe1f7dea4be5a013e">graph_localizer::ProjectionFactorAdderParams</a>
+, <a class="el" href="structgraph__localizer_1_1SmartProjectionFactorAdderParams.html#a34a379b703492bb544e938d51f9bb4ec">graph_localizer::SmartProjectionFactorAdderParams</a>
+</li>
 <li>landmark_msg_
 : <a class="el" href="classgnc__autocode_1_1GncSimAutocode.html#a17730d739a19262c78c250fb04df3961">gnc_autocode::GncSimAutocode</a>
+</li>
+<li>landmark_point()
+: <a class="el" href="classgtsam_1_1LocProjectionFactor.html#a48cf852c38d94e91a6ce66d90a4ebd10">gtsam::LocProjectionFactor&lt; POSE, LANDMARK, CALIBRATION &gt;</a>
+</li>
+<li>landmark_point_
+: <a class="el" href="classgtsam_1_1LocProjectionFactor.html#a265dd1b2faa2b0646806976b4b631a48">gtsam::LocProjectionFactor&lt; POSE, LANDMARK, CALIBRATION &gt;</a>
 </li>
 <li>LandmarkEnable()
 : <a class="el" href="classsim__wrapper_1_1Sim.html#a62d7f17583c241420f112d6eaaf6610b">sim_wrapper::Sim</a>
@@ -163,8 +173,71 @@ $(document).ready(function(){initNavTree('functions_l.html',''); initResizable()
 <li>last_tag_time_
 : <a class="el" href="classsim__wrapper_1_1Sim.html#abf2c8938accd14571eb984c6bef0a18e">sim_wrapper::Sim</a>
 </li>
+<li>last_value()
+: <a class="el" href="classlocalization__common_1_1Averager.html#a8c9b2ba70e9fefa90b3ad06666bf2b86">localization_common::Averager</a>
+, <a class="el" href="classlocalization__common_1_1Timer.html#a2bde6cc63b485f23964fbb0e4a73988f">localization_common::Timer</a>
+</li>
 <li>lasttime
 : <a class="el" href="structOOTX.html#a8f4e83ec32582b4562b3dd744c647ee8">OOTX</a>
+</li>
+<li>latest_image_id
+: <a class="el" href="structgraph__localizer_1_1FeatureTrack.html#a934363d3c652e2e5cfa920762861616f">graph_localizer::FeatureTrack</a>
+</li>
+<li>latest_timestamp()
+: <a class="el" href="classgraph__localizer_1_1FeatureTracker.html#ab1164f421a9f886bd328021e7673620f">graph_localizer::FeatureTracker</a>
+</li>
+<li>latest_velocity_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#adb5c98e4e5df3b70e60002ee2e00b79d">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
+<li>LatestARTagPoseMsg()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#a7a5055321c709ee01e9c5a133898daac">graph_localizer::GraphLocalizerWrapper</a>
+</li>
+<li>LatestBias()
+: <a class="el" href="classgraph__localizer_1_1GraphValues.html#a17904570e1e667735ccbfad6fd41a157">graph_localizer::GraphValues</a>
+</li>
+<li>LatestBiases()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a826d5f71250d2d25d6515f25d728b8c9">graph_localizer::GraphLocalizer</a>
+</li>
+<li>LatestCombinedNavState()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a739b720641d58dccffcd12b54a4dcd56">graph_localizer::GraphLocalizer</a>
+, <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#aa04615bf308debed100881959eb43984">graph_localizer::GraphLocalizerWrapper</a>
+, <a class="el" href="classgraph__localizer_1_1GraphValues.html#ab9bd71333184d323fb31541480b844f4">graph_localizer::GraphValues</a>
+</li>
+<li>LatestCombinedNavStateAndCovariances()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a13e41ef19015dc495f466df8642ddceb">graph_localizer::GraphLocalizer</a>
+</li>
+<li>LatestCombinedNavStateKeyIndex()
+: <a class="el" href="classgraph__localizer_1_1GraphValues.html#a38c31480f7c35cfb4b1537156221a5c2">graph_localizer::GraphValues</a>
+</li>
+<li>LatestExtrapolatedPoseTime()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a642fc7819f7bd1e5e780551195fa1ccf">graph_localizer::GraphLocalizer</a>
+</li>
+<li>LatestImuAugmentedCombinedNavStateAndCovariances()
+: <a class="el" href="classimu__augmentor_1_1ImuAugmentorWrapper.html#affeac3a5f2d943e2bcd328aa601c8ae0">imu_augmentor::ImuAugmentorWrapper</a>
+</li>
+<li>LatestImuAugmentedLocalizationMsg()
+: <a class="el" href="classimu__augmentor_1_1ImuAugmentorWrapper.html#acf25d5e9992db0f11cbc23ca758a9b3a">imu_augmentor::ImuAugmentorWrapper</a>
+</li>
+<li>LatestImuIntegrator()
+: <a class="el" href="classimu__integration_1_1LatestImuIntegrator.html#a0d358e9776d4fc6c628d06c80a5d5005">imu_integration::LatestImuIntegrator</a>
+</li>
+<li>LatestLocalizationGraphMsg()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#a8e4aed9ae8da98ac0dc7a71cbd1936f8">graph_localizer::GraphLocalizerWrapper</a>
+</li>
+<li>LatestLocalizationStateMsg()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#a5d12d0bf834a9179d6c3876c8fcaef9d">graph_localizer::GraphLocalizerWrapper</a>
+</li>
+<li>LatestMeasurement()
+: <a class="el" href="classimu__integration_1_1ImuIntegrator.html#a5e6ad266421935bc113f322c1f30c2b4">imu_integration::ImuIntegrator</a>
+</li>
+<li>LatestSparseMappingPoseMsg()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#a39e8b37d2980b19735823782c4d58a93">graph_localizer::GraphLocalizerWrapper</a>
+</li>
+<li>LatestTime()
+: <a class="el" href="classimu__integration_1_1ImuIntegrator.html#aeb201a2c56b8d9b5e5850ca4d9b9693f">imu_integration::ImuIntegrator</a>
+</li>
+<li>LatestTimestamp()
+: <a class="el" href="classgraph__localizer_1_1GraphValues.html#a9e89f3a88c09c25dec17b9bf3ea50cea">graph_localizer::GraphValues</a>
 </li>
 <li>layers_
 : <a class="el" href="classinterest__point_1_1BriskScaleSpace.html#a59ca8b33b4e0c3d279e132fb260c71e0">interest_point::BriskScaleSpace</a>
@@ -332,7 +405,10 @@ $(document).ready(function(){initNavTree('functions_l.html',''); initResizable()
 : <a class="el" href="classlight__flow_1_1Frame.html#a8fe4eabc7f436b5d7aaa18727ffad8c4">light_flow::Frame</a>
 </li>
 <li>Lim()
-: <a class="el" href="classff__util_1_1ConfigServer.html#ac45bfa8270df6660cf8bb7bda9113eab">ff_util::ConfigServer</a>
+: <a class="el" href="classff__util_1_1ConfigServer.html#afd183859fe746ebfa6b4e3f71259059b">ff_util::ConfigServer</a>
+</li>
+<li>limit_imu_factor_spacing
+: <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#ac7e0eee454a1071b4ec6d8ebd3642919">graph_localizer::GraphLocalizerParams</a>
 </li>
 <li>lin_acc_x
 : <a class="el" href="struct__Data.html#af981c81d19b6872813e5f7593fa54908">_Data</a>
@@ -349,8 +425,12 @@ $(document).ready(function(){initNavTree('functions_l.html',''); initResizable()
 <li>linear_accel()
 : <a class="el" href="classjsonloader_1_1OperatingLimits.html#ac5b9b4b43816c1fe61b9fc04de2f6329">jsonloader::OperatingLimits</a>
 </li>
-<li>linear_velocity()
-: <a class="el" href="classjsonloader_1_1OperatingLimits.html#a014f946746314b6bc28ce25f710750a4">jsonloader::OperatingLimits</a>
+<li>linear_velocity
+: <a class="el" href="structground__truth__localizer_1_1Twist.html#a11fc29fe40d53706b582d7414e913d40">ground_truth_localizer::Twist</a>
+, <a class="el" href="classjsonloader_1_1OperatingLimits.html#a014f946746314b6bc28ce25f710750a4">jsonloader::OperatingLimits</a>
+</li>
+<li>linearize()
+: <a class="el" href="classgtsam_1_1RobustSmartProjectionPoseFactor.html#aaa52cfcecd2704339d7b3771b54ec93b">gtsam::RobustSmartProjectionPoseFactor&lt; CALIBRATION &gt;</a>
 </li>
 <li>LineBW()
 : <a class="el" href="classLineBW.html#ae5705dda13f7d4fb31470391f18ac3fc">LineBW</a>
@@ -376,6 +456,9 @@ $(document).ready(function(){initNavTree('functions_l.html',''); initResizable()
 </li>
 <li>live_led_on_
 : <a class="el" href="classexecutive_1_1Executive.html#aafa13bee9a694cf40205acbad6a98d52">executive::Executive</a>
+</li>
+<li>LiveMeasurementSimulator()
+: <a class="el" href="classgraph__bag_1_1LiveMeasurementSimulator.html#abc7a593508bc39e5248ca7909fa01491">graph_bag::LiveMeasurementSimulator</a>
 </li>
 <li>LiveStreamingCallback()
 : <a class="el" href="classstates_1_1StatesNodelet.html#ad5b78eebf09464629a0fab28e2b5deca">states::StatesNodelet</a>
@@ -434,6 +517,9 @@ $(document).ready(function(){initNavTree('functions_l.html',''); initResizable()
 <li>LoadGncFiles()
 : <a class="el" href="classgnc__autocode_1_1GncSimCSV.html#afeb95a5c98cb464e81e4b5466d080602">gnc_autocode::GncSimCSV</a>
 </li>
+<li>LoadGraphLocalizerParams()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerInitializer.html#a41438770769f0ab6f11a456a125c8680">graph_localizer::GraphLocalizerInitializer</a>
+</li>
 <li>LoadNodelet()
 : <a class="el" href="classsys__monitor_1_1SysMonitor.html#a389fa67c905bccdcc62b8cd330081409">sys_monitor::SysMonitor</a>
 </li>
@@ -448,6 +534,21 @@ $(document).ready(function(){initNavTree('functions_l.html',''); initResizable()
 <li>loc_
 : <a class="el" href="classekf__bag_1_1EkfBag.html#ad53b5b859cf590b4e641859542b6f62d">ekf_bag::EkfBag</a>
 </li>
+<li>loc_adder
+: <a class="el" href="structgraph__localizer_1_1FactorParams.html#a5bb782fa2f38af5a4e6287ee8a35f403">graph_localizer::FactorParams</a>
+</li>
+<li>loc_count_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#a744eee6fe861dcca3425dede16d50ed9">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
+<li>loc_error_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#a13e382644a9007837c9c6a49d26df61c">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
+<li>loc_pose_error_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#acb4f60c56673a811b11ca3a3a2d1aef0">graph_localizer::GraphStats</a>
+</li>
+<li>loc_proj_error_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#aafd302bc7e0e74d5f12bcb1a582d5adc">graph_localizer::GraphStats</a>
+</li>
 <li>localization_ac_
 : <a class="el" href="classexecutive_1_1Executive.html#abbbd6a8324d321e266d4de7c821e3b51">executive::Executive</a>
 </li>
@@ -456,6 +557,15 @@ $(document).ready(function(){initNavTree('functions_l.html',''); initResizable()
 </li>
 <li>localization_result_timeout_
 : <a class="el" href="classexecutive_1_1Executive.html#af817473b874097a3429fe6a41bdac07b">executive::Executive</a>
+</li>
+<li>LocalizationGraphCallback()
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#adfde8a942fa6220df40dd1c4dfd06f98">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
+<li>LocalizationGraphDisplay()
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphDisplay.html#a4d69bb591fa941770862fe9ac232fa2f">localization_rviz_plugins::LocalizationGraphDisplay</a>
+</li>
+<li>LocalizationGraphPanel()
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#a88e10aa1999efd9b17ce820f6e2b2fdf">localization_rviz_plugins::LocalizationGraphPanel</a>
 </li>
 <li>LocalizationManagerNodelet()
 : <a class="el" href="classlocalization__manager_1_1LocalizationManagerNodelet.html#a371fdfe06dc4fd302328417902301e1b">localization_manager::LocalizationManagerNodelet</a>
@@ -466,15 +576,72 @@ $(document).ready(function(){initNavTree('functions_l.html',''); initResizable()
 <li>LocalizationResultCallback()
 : <a class="el" href="classexecutive_1_1Executive.html#a9f8a983f7f1de7e1d2175df9c4c9fb2a">executive::Executive</a>
 </li>
+<li>LocalizationStateCallback()
+: <a class="el" href="classimu__augmentor_1_1ImuAugmentorWrapper.html#ad279ca93184509ed0ad54bb402025a02">imu_augmentor::ImuAugmentorWrapper</a>
+, <a class="el" href="classimu__bias__tester_1_1ImuBiasTesterWrapper.html#a748cc291fddccd020d77611067d8c9b6">imu_bias_tester::ImuBiasTesterWrapper</a>
+</li>
 <li>Localize()
 : <a class="el" href="classlocalization__node_1_1Localizer.html#a9a30cad16ac1e6b8e6de5a37cda78471">localization_node::Localizer</a>
-, <a class="el" href="structsparse__mapping_1_1SparseMap.html#a20a1854fa7f28d5dd04ea6ac00eee992">sparse_mapping::SparseMap</a>
+, <a class="el" href="structsparse__mapping_1_1SparseMap.html#a9868bc9797ca50adf6d97823961e334d">sparse_mapping::SparseMap</a>
 </li>
 <li>Localizer()
 : <a class="el" href="classlocalization__node_1_1Localizer.html#a80be724d45326359f6f12e540d9bfad0">localization_node::Localizer</a>
 </li>
+<li>LocFactorAdder()
+: <a class="el" href="classgraph__localizer_1_1LocFactorAdder.html#a26bb66e6b66208d90f35492350559367">graph_localizer::LocFactorAdder</a>
+</li>
 <li>Lock()
 : <a class="el" href="classgazebo_1_1GazeboModelPluginEps.html#aebdb0bdb80eec38e114637b47461e17c">gazebo::GazeboModelPluginEps</a>
+</li>
+<li>LocPoseFactor()
+: <a class="el" href="classgtsam_1_1LocPoseFactor.html#ad76ccb53af0a4d6f8d640a887d5aa1ca">gtsam::LocPoseFactor</a>
+</li>
+<li>LocProjectionFactor()
+: <a class="el" href="classgtsam_1_1LocProjectionFactor.html#a9e07814c875683d2a9c10da34d1f4c21">gtsam::LocProjectionFactor&lt; POSE, LANDMARK, CALIBRATION &gt;</a>
+</li>
+<li>LocProjectionNoiseScaling()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a4560b2268929dec30b10c0f24b17888d">graph_localizer::GraphLocalizer</a>
+</li>
+<li>Log()
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#a55c2770ed70bbfecd4092313d8a07868">graph_localizer::GraphStats</a>
+, <a class="el" href="classlocalization__common_1_1Averager.html#a405d3d20be9ea7ef232b68b486295568">localization_common::Averager</a>
+, <a class="el" href="classlocalization__common_1_1RateTimer.html#a975b541ecb6080d74d99d07d81ad5208">localization_common::RateTimer</a>
+, <a class="el" href="classlocalization__common_1_1RosTimer.html#a6e8e7fd3ef7b0f139b797d4bc62e4663">localization_common::RosTimer</a>
+, <a class="el" href="classlocalization__common_1_1Timer.html#a4435f88939a4b49f0434168d666ebbff">localization_common::Timer</a>
+</li>
+<li>log_error_timer_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#ac122675cb3c31447d42d7797581f72df">graph_localizer::GraphStats</a>
+</li>
+<li>log_rate
+: <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#acd06069156167bef46be4f56020170ab">graph_localizer::GraphLocalizerParams</a>
+</li>
+<li>log_stats_timer_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#af0a9ad8a226520d9592cfde9b8cf5f93">graph_localizer::GraphStats</a>
+</li>
+<li>LogDeterminantOrientationCovariance()
+: <a class="el" href="classlocalization__common_1_1CombinedNavStateCovariances.html#a7d772d6e3f5da1631f55cc34e794d6e0">localization_common::CombinedNavStateCovariances</a>
+</li>
+<li>LogDeterminantPositionCovariance()
+: <a class="el" href="classlocalization__common_1_1CombinedNavStateCovariances.html#abf802d1d038562d94a6f1f6fce6cd18e">localization_common::CombinedNavStateCovariances</a>
+</li>
+<li>LogEveryN()
+: <a class="el" href="classlocalization__common_1_1Averager.html#a1e1983319504b31977316830ecd888ae">localization_common::Averager</a>
+, <a class="el" href="classlocalization__common_1_1RateTimer.html#a40cc75103748aa7bd707362b02783d56">localization_common::RateTimer</a>
+, <a class="el" href="classlocalization__common_1_1RosTimer.html#a181809aa7a9a7b8f177fa7ad58f7a124">localization_common::RosTimer</a>
+, <a class="el" href="classlocalization__common_1_1Timer.html#aba75176936d9dec509226f04fff4a31e">localization_common::Timer</a>
+</li>
+<li>LogOnDestruction()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a6e8ad4c3452695f92e7e466d2b0af6da">graph_localizer::GraphLocalizer</a>
+</li>
+<li>LogToCsv()
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#af7b8946bfafeeaba75577cba1c5b4209">graph_localizer::GraphStats</a>
+, <a class="el" href="classlocalization__common_1_1Averager.html#a5c794927fbb19900683656ea976e8909">localization_common::Averager</a>
+, <a class="el" href="classlocalization__common_1_1Timer.html#a0ab6221256f730649f410b68a8ca23f0">localization_common::Timer</a>
+</li>
+<li>LogToFile()
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#af07862ff32fdddb9797c082cec202f42">graph_localizer::GraphStats</a>
+, <a class="el" href="classlocalization__common_1_1Averager.html#a20d56120eed69ee0490f198551332ded">localization_common::Averager</a>
+, <a class="el" href="classlocalization__common_1_1Timer.html#afd09837a6de359b8485876d820dfe8ed">localization_common::Timer</a>
 </li>
 <li>longPairs_
 : <a class="el" href="classinterest__point_1_1BRISK__Impl.html#a0a7fff4ab44e0025c9352e6453aef419">interest_point::BRISK_Impl</a>
@@ -484,6 +651,12 @@ $(document).ready(function(){initNavTree('functions_l.html',''); initResizable()
 </li>
 <li>loop_time
 : <a class="el" href="structperching__arm_1_1PerchingArmRaw.html#ade73c65837a8520be4984e4c5b6ec830">perching_arm::PerchingArmRaw</a>
+</li>
+<li>LowerAndUpperBoundTimestamp()
+: <a class="el" href="classgraph__localizer_1_1GraphValues.html#a84be1a908b556d1fdd0200ed949c540d">graph_localizer::GraphValues</a>
+</li>
+<li>LowerBoundOrEqualCombinedNavState()
+: <a class="el" href="classgraph__localizer_1_1GraphValues.html#afed7b29b999b2e10f2385999833f0d73">graph_localizer::GraphValues</a>
 </li>
 <li>LXN
 : <a class="el" href="classpmc__actuator_1_1PmcActuatorNodelet.html#ac6527cfb108fa40f4c1698dfbeb4aae6ab20133fc912606d3c6e8a40bd5b6bfc5">pmc_actuator::PmcActuatorNodelet</a>

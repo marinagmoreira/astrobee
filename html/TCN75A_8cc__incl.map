@@ -1,13 +1,13 @@
 <map id="hardware/temp_monitor/src/TCN75A.cc" name="hardware/temp_monitor/src/TCN75A.cc">
-<area shape="rect" id="node1" title=" " alt="" coords="271,5,430,47"/>
-<area shape="rect" id="node2" href="$TCN75A_8h.html" title=" " alt="" coords="309,95,393,121"/>
-<area shape="rect" id="node3" href="$temp__monitor_8h.html" title=" " alt="" coords="253,169,448,196"/>
-<area shape="rect" id="node4" href="$i2c__new_8h.html" title=" " alt="" coords="159,244,262,271"/>
-<area shape="rect" id="node7" title=" " alt="" coords="264,319,333,345"/>
-<area shape="rect" id="node9" title=" " alt="" coords="358,319,413,345"/>
-<area shape="rect" id="node10" title=" " alt="" coords="389,244,435,271"/>
-<area shape="rect" id="node11" title=" " alt="" coords="460,244,519,271"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,319,67,345"/>
-<area shape="rect" id="node6" title=" " alt="" coords="91,319,157,345"/>
-<area shape="rect" id="node8" title=" " alt="" coords="181,319,240,345"/>
+<area shape="rect" id="node1" title=" " alt="" coords="280,5,459,47"/>
+<area shape="rect" id="node2" href="$TCN75A_8h.html" title=" " alt="" coords="327,95,412,121"/>
+<area shape="rect" id="node3" href="$temp__monitor_8h.html" title=" " alt="" coords="259,169,480,196"/>
+<area shape="rect" id="node4" href="$i2c__new_8h.html" title=" " alt="" coords="171,244,280,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="280,319,357,345"/>
+<area shape="rect" id="node9" title=" " alt="" coords="381,319,440,345"/>
+<area shape="rect" id="node10" title=" " alt="" coords="407,244,457,271"/>
+<area shape="rect" id="node11" title=" " alt="" coords="482,244,545,271"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,319,72,345"/>
+<area shape="rect" id="node6" title=" " alt="" coords="97,319,167,345"/>
+<area shape="rect" id="node8" title=" " alt="" coords="192,319,256,345"/>
 </map>

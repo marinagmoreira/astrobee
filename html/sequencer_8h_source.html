@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -186,7 +186,7 @@ $(document).ready(function(){initNavTree('sequencer_8h_source.html',''); initRes
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  ff_msgs::PlanStatusStamped status_;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="comment">// when we started the current item</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  ros::Time start_;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <a class="code" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">ros::Time</a> start_;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="comment">// milestone is a station or segment within a plan</span></div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordtype">int</span> current_milestone_;</div>
@@ -236,6 +236,7 @@ $(document).ready(function(){initNavTree('sequencer_8h_source.html',''); initRes
 <div class="ttc" id="aclasssequencer_1_1Sequencer_html_ae53153b2cd14b43f5d9dd91d73895dec"><div class="ttname"><a href="classsequencer_1_1Sequencer.html#ae53153b2cd14b43f5d9dd91d73895dec">sequencer::Sequencer::Feedback</a></div><div class="ttdeci">bool Feedback(ff_msgs::AckCompletedStatus const &amp;ack) noexcept</div><div class="ttdef"><b>Definition:</b> sequencer.cc:289</div></div>
 <div class="ttc" id="aclasssequencer_1_1Sequencer_html_aa8ef953a2100fb64f6c3d23439888598"><div class="ttname"><a href="classsequencer_1_1Sequencer.html#aa8ef953a2100fb64f6c3d23439888598">sequencer::Sequencer::Sequencer</a></div><div class="ttdeci">Sequencer()</div><div class="ttdef"><b>Definition:</b> sequencer.cc:124</div></div>
 <div class="ttc" id="anamespacesequencer_html_acc420d41cbae96e6c3c9acd627f9283dab50339a10e1de285ac99d4c3990b8693"><div class="ttname"><a href="namespacesequencer.html#acc420d41cbae96e6c3c9acd627f9283dab50339a10e1de285ac99d4c3990b8693">sequencer::ItemType::NONE</a></div><div class="ttdeci">@ NONE</div></div>
+<div class="ttc" id="anamespacelocalization__common_html_ae558927c458010e767b03b93e4516e0c"><div class="ttname"><a href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a></div><div class="ttdeci">double Time</div><div class="ttdef"><b>Definition:</b> time.h:23</div></div>
 <div class="ttc" id="aclasssequencer_1_1Sequencer_html_a1535324f98457cffe50f5e6ef0799683"><div class="ttname"><a href="classsequencer_1_1Sequencer.html#a1535324f98457cffe50f5e6ef0799683">sequencer::Sequencer::plan</a></div><div class="ttdeci">jsonloader::Plan const  &amp; plan() const noexcept</div><div class="ttdef"><b>Definition:</b> sequencer.cc:139</div></div>
 <div class="ttc" id="anamespacesequencer_html"><div class="ttname"><a href="namespacesequencer.html">sequencer</a></div><div class="ttdef"><b>Definition:</b> command_conversion.h:41</div></div>
 <div class="ttc" id="aclasssequencer_1_1Sequencer_html_adf421a173044851b91ba8f670ece3211"><div class="ttname"><a href="classsequencer_1_1Sequencer.html#adf421a173044851b91ba8f670ece3211">sequencer::Sequencer::LoadPlan</a></div><div class="ttdeci">friend bool LoadPlan(ff_msgs::CompressedFile::ConstPtr const &amp;cf, Sequencer *seq)</div><div class="ttdef"><b>Definition:</b> sequencer.cc:85</div></div>

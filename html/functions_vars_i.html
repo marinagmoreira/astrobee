@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -224,6 +224,7 @@ $(document).ready(function(){initNavTree('functions_vars_i.html',''); initResiza
 </li>
 <li>id
 : <a class="el" href="structekf__bag_1_1OFFeature.html#afd6d3ae93a72e4250f7585bfd092b057">ekf_bag::OFFeature</a>
+, <a class="el" href="structgraph__localizer_1_1FeatureTrack.html#ae88ccf58c2d74681a7a12b3202f23c48">graph_localizer::FeatureTrack</a>
 , <a class="el" href="structLighthouse.html#a077336f2eb9bc8fdd6af4199260dae8d">Lighthouse</a>
 , <a class="el" href="structTag.html#a066012500dd81552ebd7b7be6acf3b09">Tag</a>
 , <a class="el" href="classtraj__opt_1_1IneqConstraint.html#ac2c1b06c0f622689906db6be58cc57e6">traj_opt::IneqConstraint</a>
@@ -231,8 +232,24 @@ $(document).ready(function(){initNavTree('functions_vars_i.html',''); initResiza
 <li>id_
 : <a class="el" href="classexecutive_1_1OpState.html#addc6992adcc593ed4e83b06f57a19842">executive::OpState</a>
 </li>
+<li>ideal_duration
+: <a class="el" href="structgraph__localizer_1_1GraphValuesParams.html#a42977afd09ad2fa9bd8b74c837d56f4a">graph_localizer::GraphValuesParams</a>
+</li>
 <li>ignore
 : <a class="el" href="unionsignal__lights_1_1LEDC__COMMAND__COLOR.html#a90ade0ca5f99c54acc7a5221f6f7eaa3">signal_lights::LEDC_COMMAND_COLOR</a>
+</li>
+<li>image_id
+: <a class="el" href="structlocalization__measurements_1_1FeaturePoint.html#a9776f648628e3214b5e719a35eac621a">localization_measurements::FeaturePoint</a>
+</li>
+<li>image_point
+: <a class="el" href="structlocalization__measurements_1_1FeaturePoint.html#adc241c914d7c3485edaeec9a583173aa">localization_measurements::FeaturePoint</a>
+, <a class="el" href="structlocalization__measurements_1_1MatchedProjection.html#afe5609971d96157c4b56da6bc5c2e1ae">localization_measurements::MatchedProjection</a>
+</li>
+<li>image_topic
+: <a class="el" href="structgraph__bag_1_1LiveMeasurementSimulatorParams.html#a86048d3a0a0d2a8de7a720c23be80a29">graph_bag::LiveMeasurementSimulatorParams</a>
+</li>
+<li>img
+: <a class="el" href="structgraph__bag_1_1LiveMeasurementSimulatorParams.html#a8c5293b501685af8af7a6626aa89ea71">graph_bag::LiveMeasurementSimulatorParams</a>
 </li>
 <li>impeller_cmd
 : <a class="el" href="structgnc__autocode_1_1GncBlowerState.html#ab790f748772fbf9ebcebccccfd4cc47a">gnc_autocode::GncBlowerState</a>
@@ -242,14 +259,36 @@ $(document).ready(function(){initNavTree('functions_vars_i.html',''); initResiza
 </li>
 <li>imu
 : <a class="el" href="structGncFiles.html#a5c5cca5107561b0b8cf5dd6c934ec9c0">GncFiles</a>
+, <a class="el" href="structgraph__bag_1_1LiveMeasurementSimulatorParams.html#af59d0461fa3115ba54ead3027ff4ed9c">graph_bag::LiveMeasurementSimulatorParams</a>
 </li>
 <li>imu_
 : <a class="el" href="classekf_1_1Ekf.html#a0461b7359124be0e0aa8e98528e11099">ekf::Ekf</a>
 , <a class="el" href="classekf_1_1EkfWrapper.html#ad4db38b23155bdd11ded46186de75faf">ekf::EkfWrapper</a>
 , <a class="el" href="classgnc__autocode_1_1GncEkfAutocode.html#a6f33d4eb7e1f3e2aedaa90526439e6b5">gnc_autocode::GncEkfAutocode</a>
 </li>
+<li>imu_avg_dp_dt_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#a01547167ef002e64116e98e607ba3a21">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
+<li>imu_avg_dt_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#a8f3ec5eb615566a1fde0aa434511fd7c">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
+<li>imu_avg_dv_dt_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#aef9f64db5797e484e35178e5752706d9">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
+<li>imu_bias_filename
+: <a class="el" href="structgraph__localizer_1_1GraphInitializerParams.html#a590d85548469a0520dab6f6c929ff94f">graph_localizer::GraphInitializerParams</a>
+</li>
 <li>imu_cb
 : <a class="el" href="structDriver.html#ad32e73ac49f9d8ae2e375bb4b9a4bf42">Driver</a>
+</li>
+<li>imu_count_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#a8aca47b33e532fc6bf5687850afff38a">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
+<li>imu_error_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#a3207c9b21b4dde15e92d5f29f765ffba">graph_localizer::GraphStats</a>
+</li>
+<li>imu_error_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#af402809a1805dde9b19975c73334d3af">localization_rviz_plugins::LocalizationGraphPanel</a>
 </li>
 <li>imu_msg_
 : <a class="el" href="classgnc__autocode_1_1GncSimAutocode.html#a44adf67c9d575b2bc774b8d3d47ec922">gnc_autocode::GncSimAutocode</a>
@@ -283,6 +322,9 @@ $(document).ready(function(){initNavTree('functions_vars_i.html',''); initResiza
 : <a class="el" href="classexecutive_1_1Executive.html#a2d2baa6b89edce2df7b43352f288be4a">executive::Executive</a>
 , <a class="el" href="classfam_1_1Fam.html#a7c2237a71e4b73cffb0b6790ac306ed9">fam::Fam</a>
 </li>
+<li>initial_imu_bias
+: <a class="el" href="structimu__integration_1_1LatestImuIntegratorParams.html#a35bf5de521acd5122852b596d08c890c">imu_integration::LatestImuIntegratorParams</a>
+</li>
 <li>inotify_fd
 : <a class="el" href="classconfig__reader_1_1WatchFiles.html#a3a6dca8758ca30b60db90cbc5f1b1dd4">config_reader::WatchFiles</a>
 </li>
@@ -298,6 +340,9 @@ $(document).ready(function(){initNavTree('functions_vars_i.html',''); initResiza
 <li>integrals
 : <a class="el" href="classtraj__opt_1_1BasisBundle.html#a912d1960da5405294e5ecea315eb197c">traj_opt::BasisBundle</a>
 </li>
+<li>integration_variance
+: <a class="el" href="structimu__integration_1_1ImuIntegratorParams.html#aecb997d101580da2e7879169e2552445">imu_integration::ImuIntegratorParams</a>
+</li>
 <li>invalid_reproj
 : <a class="el" href="structsparse__mapping_1_1FilterStats.html#ae6130fdf74ce6f93394b45ca45da03c5">sparse_mapping::FilterStats</a>
 </li>
@@ -312,6 +357,9 @@ $(document).ready(function(){initNavTree('functions_vars_i.html',''); initResiza
 </li>
 <li>iterations
 : <a class="el" href="structtraj__opt_1_1SolverInfo.html#a585eb896a13e75e03cfb0fbbad7a4fd1">traj_opt::SolverInfo</a>
+</li>
+<li>iterations_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#a7ef3811b4e7e90d50a6713ec9c31cc0f">graph_localizer::GraphStats</a>
 </li>
 </ul>
 </div><!-- contents -->

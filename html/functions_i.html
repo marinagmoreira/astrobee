@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -225,6 +225,8 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 <li>id
 : <a class="el" href="structekf__bag_1_1OFFeature.html#afd6d3ae93a72e4250f7585bfd092b057">ekf_bag::OFFeature</a>
 , <a class="el" href="classexecutive_1_1OpState.html#a472dce8fe9da6302952a4d4302f04e75">executive::OpState</a>
+, <a class="el" href="structgraph__localizer_1_1FeatureTrack.html#ae88ccf58c2d74681a7a12b3202f23c48">graph_localizer::FeatureTrack</a>
+, <a class="el" href="classgraph__localizer_1_1KeyInfo.html#a990015d2ef811b8870c61e5e39f00e3a">graph_localizer::KeyInfo</a>
 , <a class="el" href="classjsonloader_1_1PowerItemCommand.html#a3ea91ca094809c2956088ff4474e18c1">jsonloader::PowerItemCommand</a>
 , <a class="el" href="structLighthouse.html#a077336f2eb9bc8fdd6af4199260dae8d">Lighthouse</a>
 , <a class="el" href="structTag.html#a066012500dd81552ebd7b7be6acf3b09">Tag</a>
@@ -232,6 +234,12 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 </li>
 <li>id_
 : <a class="el" href="classexecutive_1_1OpState.html#addc6992adcc593ed4e83b06f57a19842">executive::OpState</a>
+</li>
+<li>ideal_duration
+: <a class="el" href="structgraph__localizer_1_1GraphValuesParams.html#a42977afd09ad2fa9bd8b74c837d56f4a">graph_localizer::GraphValuesParams</a>
+</li>
+<li>IdentityFilter()
+: <a class="el" href="classimu__integration_1_1IdentityFilter.html#a73ef3905328cd5129351b765a68a6342">imu_integration::IdentityFilter</a>
 </li>
 <li>IDLE
 : <a class="el" href="classchoreographer_1_1ChoreographerNodelet.html#aa6a6e0644a3d0db2fc8170d706ad8804ac56df9c4bc085102dfb08a60fce426da">choreographer::ChoreographerNodelet</a>
@@ -245,6 +253,16 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 <li>ignore
 : <a class="el" href="unionsignal__lights_1_1LEDC__COMMAND__COLOR.html#a90ade0ca5f99c54acc7a5221f6f7eaa3">signal_lights::LEDC_COMMAND_COLOR</a>
 </li>
+<li>image_id
+: <a class="el" href="structlocalization__measurements_1_1FeaturePoint.html#a9776f648628e3214b5e719a35eac621a">localization_measurements::FeaturePoint</a>
+</li>
+<li>image_point
+: <a class="el" href="structlocalization__measurements_1_1FeaturePoint.html#adc241c914d7c3485edaeec9a583173aa">localization_measurements::FeaturePoint</a>
+, <a class="el" href="structlocalization__measurements_1_1MatchedProjection.html#afe5609971d96157c4b56da6bc5c2e1ae">localization_measurements::MatchedProjection</a>
+</li>
+<li>image_topic
+: <a class="el" href="structgraph__bag_1_1LiveMeasurementSimulatorParams.html#a86048d3a0a0d2a8de7a720c23be80a29">graph_bag::LiveMeasurementSimulatorParams</a>
+</li>
 <li>ImageCallback()
 : <a class="el" href="classgazebo_1_1GazeboSensorPluginHazCam.html#ab5764ca91f3c8be11d38b209bdc6c922">gazebo::GazeboSensorPluginHazCam</a>
 , <a class="el" href="classgazebo_1_1GazeboSensorPluginNavCam.html#ac50bf18c235eadbeaafccf1dbe29a71e">gazebo::GazeboSensorPluginNavCam</a>
@@ -257,8 +275,9 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 <li>ImageSampler()
 : <a class="el" href="classimage__sampler_1_1ImageSampler.html#ad7b058ee205107f05056a6db59bdefd1">image_sampler::ImageSampler</a>
 </li>
-<li>img()
-: <a class="el" href="classinterest__point_1_1BriskLayer.html#a9376b68e4fb1d363a5280a0474361821">interest_point::BriskLayer</a>
+<li>img
+: <a class="el" href="structgraph__bag_1_1LiveMeasurementSimulatorParams.html#a8c5293b501685af8af7a6626aa89ea71">graph_bag::LiveMeasurementSimulatorParams</a>
+, <a class="el" href="classinterest__point_1_1BriskLayer.html#a9376b68e4fb1d363a5280a0474361821">interest_point::BriskLayer</a>
 </li>
 <li>impeller_cmd
 : <a class="el" href="structgnc__autocode_1_1GncBlowerState.html#ab790f748772fbf9ebcebccccfd4cc47a">gnc_autocode::GncBlowerState</a>
@@ -268,14 +287,36 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 </li>
 <li>imu
 : <a class="el" href="structGncFiles.html#a5c5cca5107561b0b8cf5dd6c934ec9c0">GncFiles</a>
+, <a class="el" href="structgraph__bag_1_1LiveMeasurementSimulatorParams.html#af59d0461fa3115ba54ead3027ff4ed9c">graph_bag::LiveMeasurementSimulatorParams</a>
 </li>
 <li>imu_
 : <a class="el" href="classekf_1_1Ekf.html#a0461b7359124be0e0aa8e98528e11099">ekf::Ekf</a>
 , <a class="el" href="classekf_1_1EkfWrapper.html#ad4db38b23155bdd11ded46186de75faf">ekf::EkfWrapper</a>
 , <a class="el" href="classgnc__autocode_1_1GncEkfAutocode.html#a6f33d4eb7e1f3e2aedaa90526439e6b5">gnc_autocode::GncEkfAutocode</a>
 </li>
+<li>imu_avg_dp_dt_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#a01547167ef002e64116e98e607ba3a21">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
+<li>imu_avg_dt_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#a8f3ec5eb615566a1fde0aa434511fd7c">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
+<li>imu_avg_dv_dt_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#aef9f64db5797e484e35178e5752706d9">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
+<li>imu_bias_filename
+: <a class="el" href="structgraph__localizer_1_1GraphInitializerParams.html#a590d85548469a0520dab6f6c929ff94f">graph_localizer::GraphInitializerParams</a>
+</li>
 <li>imu_cb
 : <a class="el" href="structDriver.html#ad32e73ac49f9d8ae2e375bb4b9a4bf42">Driver</a>
+</li>
+<li>imu_count_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#a8aca47b33e532fc6bf5687850afff38a">localization_rviz_plugins::LocalizationGraphPanel</a>
+</li>
+<li>imu_error_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#a3207c9b21b4dde15e92d5f29f765ffba">graph_localizer::GraphStats</a>
+</li>
+<li>imu_error_label_
+: <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#af402809a1805dde9b19975c73334d3af">localization_rviz_plugins::LocalizationGraphPanel</a>
 </li>
 <li>imu_msg_
 : <a class="el" href="classgnc__autocode_1_1GncSimAutocode.html#a44adf67c9d575b2bc774b8d3d47ec922">gnc_autocode::GncSimAutocode</a>
@@ -289,12 +330,45 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 <li>imu_transform
 : <a class="el" href="structCalibration.html#a158605c37bb66f45de15349fcf285966">Calibration</a>
 </li>
+<li>ImuAugmentor()
+: <a class="el" href="classimu__augmentor_1_1ImuAugmentor.html#a4570f8700563c82637497eec30109e82">imu_augmentor::ImuAugmentor</a>
+</li>
+<li>ImuAugmentorDisplay()
+: <a class="el" href="classlocalization__rviz__plugins_1_1ImuAugmentorDisplay.html#aec24bda9d566cbfc87cc9eaa5d4b558a">localization_rviz_plugins::ImuAugmentorDisplay</a>
+</li>
+<li>ImuAugmentorNodelet()
+: <a class="el" href="classimu__augmentor_1_1ImuAugmentorNodelet.html#a285d98f65f106998ff14c6594dc2d955">imu_augmentor::ImuAugmentorNodelet</a>
+</li>
+<li>ImuAugmentorWrapper()
+: <a class="el" href="classimu__augmentor_1_1ImuAugmentorWrapper.html#ae0cc0b73d1bdf1cbf3f6d1e456f5fcbf">imu_augmentor::ImuAugmentorWrapper</a>
+</li>
+<li>ImuBiasTester()
+: <a class="el" href="classimu__bias__tester_1_1ImuBiasTester.html#a1268b5c27ba4f02dd8f3ec6b0f60e6e6">imu_bias_tester::ImuBiasTester</a>
+</li>
+<li>ImuBiasTesterNodelet()
+: <a class="el" href="classimu__bias__tester_1_1ImuBiasTesterNodelet.html#aaa574fb38379551a383212cd5d40e208">imu_bias_tester::ImuBiasTesterNodelet</a>
+</li>
+<li>ImuBiasTesterWrapper()
+: <a class="el" href="classimu__bias__tester_1_1ImuBiasTesterWrapper.html#aa6373f22524bbea87849611c2bcdb878">imu_bias_tester::ImuBiasTesterWrapper</a>
+</li>
 <li>ImuCallBack()
 : <a class="el" href="classekf_1_1EkfWrapper.html#aa811c0e30ee545aa83a01abe3212a7ac">ekf::EkfWrapper</a>
 </li>
 <li>ImuCallback()
-: <a class="el" href="classspeed__cam_1_1SpeedCamNode.html#a5cfe25efc0251ac89cbe08d578e01435">speed_cam::SpeedCamNode</a>
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#a64b1386675fb5d020ca2633fe7f40c8b">graph_localizer::GraphLocalizerWrapper</a>
+, <a class="el" href="classimu__augmentor_1_1ImuAugmentorWrapper.html#a687a995637db49464b57ae97c75683c3">imu_augmentor::ImuAugmentorWrapper</a>
+, <a class="el" href="classimu__bias__tester_1_1ImuBiasTesterWrapper.html#a36af6116aaeab5d39588222c42ab939a">imu_bias_tester::ImuBiasTesterWrapper</a>
+, <a class="el" href="classspeed__cam_1_1SpeedCamNode.html#a5cfe25efc0251ac89cbe08d578e01435">speed_cam::SpeedCamNode</a>
 , <a class="el" href="classvive_1_1ViveNodelet.html#a2f61b2758aa5058c9c845c5f24f2341f">vive::ViveNodelet</a>
+</li>
+<li>ImuFilter()
+: <a class="el" href="classimu__integration_1_1ImuFilter.html#a9a5f359e8ada5fd8daa844f99aa80e86">imu_integration::ImuFilter</a>
+</li>
+<li>ImuIntegrator()
+: <a class="el" href="classimu__integration_1_1ImuIntegrator.html#a3583e2d411422ea841f5633639f4997f">imu_integration::ImuIntegrator</a>
+</li>
+<li>ImuMeasurement()
+: <a class="el" href="structlocalization__measurements_1_1ImuMeasurement.html#ac3c40768579eb082814684c97eff7523">localization_measurements::ImuMeasurement</a>
 </li>
 <li>imus_dropped_
 : <a class="el" href="classekf_1_1EkfWrapper.html#a0a0fdd8c5fe1c820dda5a80c3fa33f73">ekf::EkfWrapper</a>
@@ -362,6 +436,9 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 , <a class="el" href="classpico__driver_1_1PicoDriverNodelet.html#add6cb3dcd4bb7d74106b1394695b6c89">pico_driver::PicoDriverNodelet</a>
 , <a class="el" href="classspeed__cam_1_1SpeedCamNode.html#a4838b6cc126e8b16543a3d40e1e3a026">speed_cam::SpeedCamNode</a>
 </li>
+<li>initial_imu_bias
+: <a class="el" href="structimu__integration_1_1LatestImuIntegratorParams.html#a35bf5de521acd5122852b596d08c890c">imu_integration::LatestImuIntegratorParams</a>
+</li>
 <li>Initialize()
 : <a class="el" href="classaccess__control_1_1AccessControl.html#acc6c7d7ad11446f814a7277ebbf58bf6">access_control::AccessControl</a>
 , <a class="el" href="classarm_1_1ArmNodelet.html#a07cede429a8b41f4215bbf4e74903374">arm::ArmNodelet</a>
@@ -426,6 +503,9 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 <li>InitializeCidFidToPid()
 : <a class="el" href="structsparse__mapping_1_1SparseMap.html#a863b34e7ae623bebc5e4156792ecb2f4">sparse_mapping::SparseMap</a>
 </li>
+<li>Initialized()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#a3c286befbe4b14a800eaef0cf6d2cdf8">graph_localizer::GraphLocalizerWrapper</a>
+</li>
 <li>InitializeEkf()
 : <a class="el" href="classekf_1_1EkfWrapper.html#a9b9f277aefc9e1dc032d67a0776813d4">ekf::EkfWrapper</a>
 </li>
@@ -480,6 +560,18 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 , <a class="el" href="classtraj__opt_1_1PolyCalculus.html#a755eb15f32b383e780cc91a05f81ab4f">traj_opt::PolyCalculus</a>
 , <a class="el" href="classtraj__opt_1_1StandardBasis.html#ab0fa651db5a6488dd1e3e4a6f02bb1ee">traj_opt::StandardBasis</a>
 </li>
+<li>IntegratedPim()
+: <a class="el" href="classimu__integration_1_1ImuIntegrator.html#a822af6daa823ed29be18e322112b7d86">imu_integration::ImuIntegrator</a>
+</li>
+<li>IntegrateImuMeasurements()
+: <a class="el" href="classimu__integration_1_1ImuIntegrator.html#a5c9617fc4db5257faeaea5aa69902be1">imu_integration::ImuIntegrator</a>
+</li>
+<li>IntegrateLatestImuMeasurements()
+: <a class="el" href="classimu__integration_1_1LatestImuIntegrator.html#aa5a1345e10628712934be46e916add57">imu_integration::LatestImuIntegrator</a>
+</li>
+<li>integration_variance
+: <a class="el" href="structimu__integration_1_1ImuIntegratorParams.html#aecb997d101580da2e7879169e2552445">imu_integration::ImuIntegratorParams</a>
+</li>
 <li>invalid_reproj
 : <a class="el" href="structsparse__mapping_1_1FilterStats.html#ae6130fdf74ce6f93394b45ca45da03c5">sparse_mapping::FilterStats</a>
 </li>
@@ -488,6 +580,9 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 </li>
 <li>IOManager()
 : <a class="el" href="classgpio_1_1IOManager.html#a9fcc4b8d4b640bf385a499653c4d4b72">gpio::IOManager</a>
+</li>
+<li>is_static()
+: <a class="el" href="classgraph__localizer_1_1KeyInfo.html#a64a0c78cfe23670ad434a2255c6d26ca">graph_localizer::KeyInfo</a>
 </li>
 <li>IsActionRunning()
 : <a class="el" href="classexecutive_1_1Executive.html#ac3a2ccd906ce93ed77dbe6c60c4206d2">executive::Executive</a>
@@ -573,6 +668,9 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 </li>
 <li>iterations
 : <a class="el" href="structtraj__opt_1_1SolverInfo.html#a585eb896a13e75e03cfb0fbbad7a4fd1">traj_opt::SolverInfo</a>
+</li>
+<li>iterations_averager_
+: <a class="el" href="classgraph__localizer_1_1GraphStats.html#a7ef3811b4e7e90d50a6713ec9c31cc0f">graph_localizer::GraphStats</a>
 </li>
 </ul>
 </div><!-- contents -->

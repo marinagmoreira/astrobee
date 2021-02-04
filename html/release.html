@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -91,30 +91,30 @@ $(document).ready(function(){initNavTree('release.html',''); initResizable(); })
 <div class="title">Creating a Flight Release </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md95"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md96"></a>
 Creating a Flight Release</h1>
 <p>This page describes the steps required to complete a flight release. It assumes that your environment is configured to cross-compile the fsw for the <code>armhf</code> architecture.</p>
-<h2><a class="anchor" id="autotoc_md96"></a>
+<h2><a class="anchor" id="autotoc_md97"></a>
 Create a Release Branch</h2>
 <p>Release branches will be created on a user's fork. To make a release branch, checkout and update develop. Then make a release branch off of develop. Please name the branch release-0.x.x.</p>
 <p>Please note that creating a release branch and specifying a version number indicates that the code on the branch is frozen with respect to further feature changes. However, as you identify bugs during lab testing before deployment to the ISS, you can still apply bug fixes on that release branch without incrementing the version number. Of course, that means that as you iterate, you might end up generating multiple debs with the same version number. For configuration management purposes, when checking whether two deployments used identical debs, you should always compare their git commit hashes rather than their version numbers.</p>
-<h2><a class="anchor" id="autotoc_md97"></a>
+<h2><a class="anchor" id="autotoc_md98"></a>
 Update the Release Version</h2>
 <p>The release version must be updated before creating the Debian. Please use the update release script to do this. Before running the script, get a list of features that have been added since the last release. This list will need to be added to the change log that gets edited when the script is run. Also, in the change log, change UNRELEASED to testing and change the email address to the astrobee fsw email address as in previous log entries. </p><pre class="fragment">./scripts/setup/debians/update_release.sh 0.x.x
 </pre><p><em>Note: Make sure that your EDITOR variable is set to your preferred editor before invoking this script. Using vim seems to generate an unimportant error.</em></p>
-<h2><a class="anchor" id="autotoc_md98"></a>
+<h2><a class="anchor" id="autotoc_md99"></a>
 Commit and Push Version Change</h2>
 <p>Please make sure to commit and push all the files that were changed.</p>
-<h2><a class="anchor" id="autotoc_md99"></a>
+<h2><a class="anchor" id="autotoc_md100"></a>
 Create the Debians</h2>
 <p>Your environment needs to be configured properly to cross-compile Astrobee Robot Software for the <code>armf</code> architecture. See <a class="el" href="NASA__INSTALL_8md.html">NASA Install documentation</a>. </p><pre class="fragment">./scripts/build/build_debian.sh
-</pre><h2><a class="anchor" id="autotoc_md100"></a>
+</pre><h2><a class="anchor" id="autotoc_md101"></a>
 Testing the Release</h2>
 <p>On confluence, there is a <a href="https://babelfish.arc.nasa.gov/confluence/display/FFFSW/IRG-FFTEST302+-+Astrobee+Release+Testing">release testing procedure</a>. This procedure will walk you through all the testing that needs to be done to make sure the debian is flight ready. Please create a copy of the procedure by clicking on the ellipsis at the top right corner of the page and selecting copy. In the popup, in the 'Parent page' text box, please enter 'Executed Procedures' and click 'Copy'. Remove 'Copy of' from the title and add the version and date after the test number such that it looks like 'IRG-FFTEST302 - 0.x.x -YYYY-MM-DD - Astrobee Release Testing'. Be sure to fill out the 'As-Ran Summary' table and the 'Result' and 'Notes' column for every step. After running through the procedure, please provide a brief summary of your results in the <a href="https://babelfish.arc.nasa.gov/confluence/display/FFFSW/Release+Testing+Results">release testing results table</a>.</p>
-<h2><a class="anchor" id="autotoc_md101"></a>
+<h2><a class="anchor" id="autotoc_md102"></a>
 Fix Bugs</h2>
 <p>If there are bugs that arise during testing, please fix the bugs, push the fixes, recreate the debians, and repeat the release testing procedure.</p>
-<h2><a class="anchor" id="autotoc_md102"></a>
+<h2><a class="anchor" id="autotoc_md103"></a>
 Finish Release</h2>
 <p>Once the debians pass all the required testing, it is ready to become an official flight release. Please make two pull requests; one on astrobee develop and one on astrobee master. Set Brian, Katie, or Marina as the reviewer. They will review the request and do the merging into develop and master. You will also need to copy the debians to a temporary location on volar. </p><pre class="fragment">scp astrobee0_0.x.x_armhf.deb \
   &lt;ndc_username&gt;@volar:/home/p-free-flyer/free-flyer/FSW/ars_debs/release_candidate/
@@ -123,7 +123,7 @@ scp astrobee-config_0.x.x_all.deb \
 scp astrobee-dev_0.x.x_armhf.deb \
   &lt;ndc_username&gt;@volar:/home/p-free-flyer/free-flyer/FSW/ars_debs/release_candidate/
 </pre><p>After the debians have been copied to volar, make sure the group permissions are set to read and right. Finally, please email Ruben Garcia Ruiz so that he can sign it and stage it.</p>
-<h3><a class="anchor" id="autotoc_md103"></a>
+<h3><a class="anchor" id="autotoc_md104"></a>
 Merging into Develop and Master</h3>
 <p>This section is for reviewers only! After reviewing the pull request and verifying that the release passed all sections of the release testing procedure, please merge the pull request into develop. You will then need to merge the release branch into master as well. After this merge, please create a github release. </p>
 </div></div><!-- contents -->

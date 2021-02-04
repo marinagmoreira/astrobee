@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -123,7 +123,7 @@ $(document).ready(function(){initNavTree('planner__trapezoidal_8h_source.html','
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespaceplanner__trapezoidal.html">   34</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceplanner__trapezoidal.html">planner_trapezoidal</a> {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="comment">// Insert a trapezoid between two poses</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="namespaceplanner__trapezoidal.html#a1de1b202ed7ed192bbfacb2e1d04728d">InsertTrapezoid</a>(<a class="code" href="namespaceff__util.html#a4e8ec1092a102aa441412e2859a2bdbd">ff_util::Segment</a> &amp;segment, ros::Time &amp; offset, <span class="keywordtype">double</span> dt,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="namespaceplanner__trapezoidal.html#a1de1b202ed7ed192bbfacb2e1d04728d">InsertTrapezoid</a>(<a class="code" href="namespaceff__util.html#a4e8ec1092a102aa441412e2859a2bdbd">ff_util::Segment</a> &amp;segment, <a class="code" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">ros::Time</a> &amp; offset, <span class="keywordtype">double</span> dt,</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                       <span class="keyword">const</span> Eigen::Affine3d &amp; p0, <span class="keyword">const</span> Eigen::Affine3d &amp; p1,</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                       <span class="keywordtype">double</span> lin_v, <span class="keywordtype">double</span> rot_v, <span class="keywordtype">double</span> lin_a, <span class="keywordtype">double</span> rot_a,</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                       <span class="keywordtype">double</span> min_control_period, <span class="keywordtype">double</span> epsilon);</div>
@@ -139,6 +139,7 @@ $(document).ready(function(){initNavTree('planner__trapezoidal_8h_source.html','
 <div class="ttc" id="anamespaceff__util_html_a4e8ec1092a102aa441412e2859a2bdbd"><div class="ttname"><a href="namespaceff__util.html#a4e8ec1092a102aa441412e2859a2bdbd">ff_util::Segment</a></div><div class="ttdeci">std::vector&lt; Setpoint &gt; Segment</div><div class="ttdef"><b>Definition:</b> ff_flight.h:47</div></div>
 <div class="ttc" id="aff__names_8h_html"><div class="ttname"><a href="ff__names_8h.html">ff_names.h</a></div></div>
 <div class="ttc" id="amsg__conversions_8h_html"><div class="ttname"><a href="msg__conversions_8h.html">msg_conversions.h</a></div></div>
+<div class="ttc" id="anamespacelocalization__common_html_ae558927c458010e767b03b93e4516e0c"><div class="ttname"><a href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a></div><div class="ttdeci">double Time</div><div class="ttdef"><b>Definition:</b> time.h:23</div></div>
 <!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
 </body>

@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -244,8 +244,8 @@ Functions</h2></td></tr>
 <tr class="separator:ab40767feb07de5ded867e9ef18acab83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6203c8b2b84c1224c7b107d73621acb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#a6203c8b2b84c1224c7b107d73621acb1">ExtractSubmap</a> (std::vector&lt; std::string &gt; *keep_ptr, <a class="el" href="structsparse__mapping_1_1SparseMap.html">sparse_mapping::SparseMap</a> *map_ptr)</td></tr>
 <tr class="separator:a6203c8b2b84c1224c7b107d73621acb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa24d0fa77f5d044cfd50d30ec077981c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#aa24d0fa77f5d044cfd50d30ec077981c">RegistrationOrVerification</a> (std::vector&lt; std::string &gt; const &amp;data_files, bool verification, <a class="el" href="structsparse__mapping_1_1SparseMap.html">sparse_mapping::SparseMap</a> *s)</td></tr>
-<tr class="separator:aa24d0fa77f5d044cfd50d30ec077981c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281aca88532d49ae464015d72a62ab75"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#a281aca88532d49ae464015d72a62ab75">RegistrationOrVerification</a> (std::vector&lt; std::string &gt; const &amp;data_files, bool verification, <a class="el" href="structsparse__mapping_1_1SparseMap.html">sparse_mapping::SparseMap</a> *s)</td></tr>
+<tr class="separator:a281aca88532d49ae464015d72a62ab75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7da838b78010eac697e083ea25878a21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#a7da838b78010eac697e083ea25878a21">WriteAffineCSV</a> (<a class="el" href="namespacesparse__mapping.html#adee3df72fd40fc552b6750a6a6d44565">CIDPairAffineMap</a> const &amp;relative_affines, std::string const &amp;output_filename)</td></tr>
 <tr class="separator:a7da838b78010eac697e083ea25878a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee71ba33090fe4461d32af435b530803"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#aee71ba33090fe4461d32af435b530803">WriteAffineCSV</a> (<a class="el" href="namespacesparse__mapping.html#aa29905ce33f41a2dcaa65fcd7e57b73a">CIDAffineTupleVec</a> const &amp;relative_affines, std::string const &amp;output_filename)</td></tr>
@@ -3116,14 +3116,14 @@ template&lt;class IterT &gt; </div>
 
 </div>
 </div>
-<a id="aa24d0fa77f5d044cfd50d30ec077981c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa24d0fa77f5d044cfd50d30ec077981c">&#9670;&nbsp;</a></span>RegistrationOrVerification()</h2>
+<a id="a281aca88532d49ae464015d72a62ab75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a281aca88532d49ae464015d72a62ab75">&#9670;&nbsp;</a></span>RegistrationOrVerification()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sparse_mapping::RegistrationOrVerification </td>
+          <td class="memname">double sparse_mapping::RegistrationOrVerification </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; std::string &gt; const &amp;&#160;</td>
           <td class="paramname"><em>data_files</em>, </td>

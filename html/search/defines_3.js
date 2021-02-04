@@ -1,23 +1,11 @@
 var searchData=
 [
-  ['debug_11158',['DEBUG',['../planner__qp_8cc.html#ad72dbcf6d0153db1b8d8a58001feed83',1,'planner_qp.cc']]],
-  ['debug_5fprintf_11159',['DEBUG_PRINTF',['../hardware_2vive_2include_2vive_2vive_8h.html#adb8aa2d19e681a09ce9bfe341fd5eea3',1,'vive.h']]],
-  ['declare_5fconversion_11160',['DECLARE_CONVERSION',['../camera__params_8h.html#a1a59e33d4955c9a62e9ba9ee8e3a574c',1,'camera_params.h']]],
-  ['declare_5fintrinsic_11161',['DECLARE_INTRINSIC',['../camera__params_8h.html#a8527c1fb46d324bfb4645abb41d933a6',1,'camera_params.h']]],
-  ['default_5facc_5fscale_11162',['DEFAULT_ACC_SCALE',['../hardware_2vive_2include_2vive_2vive_8h.html#a4e802c4230e164f4ef7866e437a6abe6',1,'vive.h']]],
-  ['default_5faction_5fwait_5ftime_11163',['DEFAULT_ACTION_WAIT_TIME',['../ff__nodelet_8h.html#a3dea957bac1eff827afd85e4330a4b42',1,'ff_nodelet.h']]],
-  ['default_5fcontrol_5frate_5fhz_11164',['DEFAULT_CONTROL_RATE_HZ',['../pmc__actuator__tool_8cc.html#a33fc18dda9ce02d06616d4580c14cc7a',1,'pmc_actuator_tool.cc']]],
-  ['default_5fcsv_5ffile_11165',['DEFAULT_CSV_FILE',['../pmc__actuator__tool_8cc.html#a9d802f0945a23945a2cc2b0aad398711',1,'pmc_actuator_tool.cc']]],
-  ['default_5fdiagnostics_5frate_11166',['DEFAULT_DIAGNOSTICS_RATE',['../ff__nodelet_8h.html#aca7d0e043c542c57e49ce44bf4f7e76b',1,'ff_nodelet.h']]],
-  ['default_5fgyr_5fscale_11167',['DEFAULT_GYR_SCALE',['../hardware_2vive_2include_2vive_2vive_8h.html#a3c0c64b1e5892b5660c5d219ddd907f2',1,'vive.h']]],
-  ['default_5fi2c_5faddresses_11168',['DEFAULT_I2C_ADDRESSES',['../pmc__actuator__tool_8cc.html#a029ed3a9ac12db91c905fc0d187c0f07',1,'pmc_actuator_tool.cc']]],
-  ['default_5fi2c_5fdev_11169',['DEFAULT_I2C_DEV',['../pmc__actuator__tool_8cc.html#abee8872f4883c53f6b552dcb7a96e9f9',1,'pmc_actuator_tool.cc']]],
-  ['default_5fi2c_5fretries_11170',['DEFAULT_I2C_RETRIES',['../pmc__actuator__tool_8cc.html#a41845cc3371f6d2990d9b4f3adac6021',1,'pmc_actuator_tool.cc']]],
-  ['default_5fserial_5fbaud_11171',['DEFAULT_SERIAL_BAUD',['../speed__cam__tool_8cc.html#affcf2e02a44b0d07afa8f3e9524867d9',1,'speed_cam_tool.cc']]],
-  ['default_5fserial_5fport_11172',['DEFAULT_SERIAL_PORT',['../speed__cam__tool_8cc.html#a6293683ab23e499395ab35ed7ffe8d26',1,'speed_cam_tool.cc']]],
-  ['default_5fservice_5fwait_5ftime_11173',['DEFAULT_SERVICE_WAIT_TIME',['../ff__nodelet_8h.html#a6af4c54f22750a6ba7943749a09733e3',1,'ff_nodelet.h']]],
-  ['define_5fconversion_11174',['DEFINE_CONVERSION',['../camera__params_8cc.html#a432057cd4326714dca3a4d8ec4f295ee',1,'camera_params.cc']]],
-  ['define_5fintrinsic_11175',['DEFINE_INTRINSIC',['../camera__params_8cc.html#a593d3f7987ce150e198df8a8ce7cd248',1,'camera_params.cc']]],
-  ['delay_5fretransmit_5fus_11176',['DELAY_RETRANSMIT_US',['../i2c_2src_2i2c_8cc.html#ae416afab3bdd378dd7dd06332425cecf',1,'i2c.cc']]],
-  ['dock_5fcam_5fid_11177',['DOCK_CAM_ID',['../image__sampler_8h.html#a3e9c8cb4a5792165d3f871c9cb2e67b6',1,'image_sampler.h']]]
+  ['calibration_5fxrads_5fper_5fsec_12817',['CALIBRATION_XRADS_PER_SEC',['../visualeyez_8h.html#af1a8904f4e91cb577993223cbe00d984',1,'visualeyez.h']]],
+  ['calibration_5fyrads_5fper_5fsec_12818',['CALIBRATION_YRADS_PER_SEC',['../visualeyez_8h.html#a972c8139d0061ddd26cff1ecf8038dd9',1,'visualeyez.h']]],
+  ['calibration_5fzrads_5fper_5fsec_12819',['CALIBRATION_ZRADS_PER_SEC',['../visualeyez_8h.html#a76f125db9697a2416a72b56cb14b51f8',1,'visualeyez.h']]],
+  ['check_5freg_5fvalue_12820',['CHECK_REG_VALUE',['../G362P_8h.html#a04e3ec953f90ba014522a2c8fe76a536',1,'G362P.h']]],
+  ['compare_5ffloat_12821',['COMPARE_FLOAT',['../test__sim_8cc.html#ab2258c23d81ccfaa6ee037811d84f633',1,'test_sim.cc']]],
+  ['compare_5ffloat_5fvector_12822',['COMPARE_FLOAT_VECTOR',['../test__sim_8cc.html#a572c82acef2d4b08fa056e0edcb2ab7b',1,'test_sim.cc']]],
+  ['compare_5fint_12823',['COMPARE_INT',['../test__sim_8cc.html#a7659861c9134e5f1226402341f7e7454',1,'test_sim.cc']]],
+  ['compare_5fint_5fvector_12824',['COMPARE_INT_VECTOR',['../test__sim_8cc.html#af1a39d7d2774578b217163553b603d42',1,'test_sim.cc']]]
 ];

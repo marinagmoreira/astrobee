@@ -1,7 +1,7 @@
 <map id="tools/ekf_video/include/ekf_video/video_writer.h" name="tools/ekf_video/include/ekf_video/video_writer.h">
-<area shape="rect" id="node1" title=" " alt="" coords="159,5,325,47"/>
-<area shape="rect" id="node2" href="$ekf__bag__video_8h.html" title=" " alt="" coords="61,95,242,136"/>
-<area shape="rect" id="node5" href="$video__writer_8cc.html" title=" " alt="" coords="267,95,399,136"/>
-<area shape="rect" id="node3" href="$ekf__bag__video_8cc.html" title=" " alt="" coords="5,184,137,225"/>
-<area shape="rect" id="node4" href="$ekf__to__video_8cc.html" title=" " alt="" coords="161,184,304,225"/>
+<area shape="rect" id="node1" title=" " alt="" coords="171,5,358,47"/>
+<area shape="rect" id="node2" href="$ekf__bag__video_8h.html" title=" " alt="" coords="65,95,267,136"/>
+<area shape="rect" id="node5" href="$video__writer_8cc.html" title=" " alt="" coords="291,95,436,136"/>
+<area shape="rect" id="node3" href="$ekf__bag__video_8cc.html" title=" " alt="" coords="5,184,151,225"/>
+<area shape="rect" id="node4" href="$ekf__to__video_8cc.html" title=" " alt="" coords="175,184,333,225"/>
 </map>

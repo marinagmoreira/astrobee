@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -141,50 +141,48 @@ $(document).ready(function(){initNavTree('ff__faults_8h_source.html',''); initRe
 <div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7aed4c46cecd4fe4bdc296d484051bf987">   48</a></span>&#160;  <a class="code" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7aed4c46cecd4fe4bdc296d484051bf987">DISK_USAGE_HIGH</a>,</div>
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a20bf5fc9140264d05d1146fbf832768f">   49</a></span>&#160;  <a class="code" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a20bf5fc9140264d05d1146fbf832768f">HARDWARE_ERROR_FAULT_CODE</a>,</div>
 <div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a79f8c6a7bac9ab10ab563e6e94886651">   50</a></span>&#160;  <a class="code" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a79f8c6a7bac9ab10ab563e6e94886651">BAD_GYRO_DATA</a>,</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a040b7a4c0aecdf819e7f6d626f927845">   51</a></span>&#160;  <a class="code" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a040b7a4c0aecdf819e7f6d626f927845">CONTROL_CYCLE_OVERRUN</a>,</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab7ef22ecbbd08a4b6e48a8a61044979b">   52</a></span>&#160;  <a class="code" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab7ef22ecbbd08a4b6e48a8a61044979b">IMU_OVERTEMP</a>,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab7b75e8388c45eb144f363585bae234c">IMU_ACCEL_ABOVE_LIMITS</a></div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab7b75e8388c45eb144f363585bae234c">   54</a></span>&#160;};</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="namespaceff__util.html#a80f1649a22fd08e2e72cc3bd18a833fd">   56</a></span>&#160;constexpr <span class="keywordtype">int</span> <a class="code" href="namespaceff__util.html#a80f1649a22fd08e2e72cc3bd18a833fd">kFaultKeysSize</a> = 25;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="namespaceff__util.html#aaabec414d287faf835f240abf077eb2a">   58</a></span>&#160;<span class="keyword">static</span> std::string <a class="code" href="namespaceff__util.html#aaabec414d287faf835f240abf077eb2a">fault_keys</a>[] = {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="stringliteral">&quot;UNKNOWN_FAULT_KEY&quot;</span>,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="stringliteral">&quot;LOAD_TOO_HIGH&quot;</span>,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="stringliteral">&quot;NO_COMMUNICATION_SPEEDCAM&quot;</span>,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="stringliteral">&quot;INITIALIZATION_FAILED&quot;</span>,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="stringliteral">&quot;MEMORY_USAGE_TOO_HIGH&quot;</span>,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="stringliteral">&quot;BAD_ACCEL_DATA&quot;</span>,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="stringliteral">&quot;NO_IMU_DATA_PACKETS&quot;</span>,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="stringliteral">&quot;TEMPERATURE_TOO_HIGH&quot;</span>,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="stringliteral">&quot;HEARTBEAT_MISSING&quot;</span>,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="stringliteral">&quot;VELOCITY_TOO_HIGH&quot;</span>,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="stringliteral">&quot;TIME_DIFF_TOO_HIGH&quot;</span>,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="stringliteral">&quot;LOCALIZATION_PIPELINE_UNSTABLE&quot;</span>,</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="stringliteral">&quot;ESTIMATE_CONFIDENCE_TOO_LOW&quot;</span>,</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="stringliteral">&quot;DISK_USAGE_TOO_HIGH&quot;</span>,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="stringliteral">&quot;NO_COMMUNICATION_HAZCAM&quot;</span>,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="stringliteral">&quot;KINETIC_ENERGY_INCREASING&quot;</span>,</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="stringliteral">&quot;SELF_TEST_FAULT_CODE&quot;</span>,</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="stringliteral">&quot;DISK_CONFIG_INVALID&quot;</span>,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="stringliteral">&quot;POSE_ESTIMATE_NON_PHYSICAL&quot;</span>,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="stringliteral">&quot;DISK_USAGE_HIGH&quot;</span>,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="stringliteral">&quot;HARDWARE_ERROR_FAULT_CODE&quot;</span>,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="stringliteral">&quot;BAD_GYRO_DATA&quot;</span>,</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="stringliteral">&quot;CONTROL_CYCLE_OVERRUN&quot;</span>,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="stringliteral">&quot;IMU_OVERTEMP&quot;</span>,</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="stringliteral">&quot;IMU_ACCEL_ABOVE_LIMITS&quot;</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab7ef22ecbbd08a4b6e48a8a61044979b">   51</a></span>&#160;  <a class="code" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab7ef22ecbbd08a4b6e48a8a61044979b">IMU_OVERTEMP</a>,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab7b75e8388c45eb144f363585bae234c">IMU_ACCEL_ABOVE_LIMITS</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab7b75e8388c45eb144f363585bae234c">   53</a></span>&#160;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="namespaceff__util.html#a80f1649a22fd08e2e72cc3bd18a833fd">   55</a></span>&#160;constexpr <span class="keywordtype">int</span> <a class="code" href="namespaceff__util.html#a80f1649a22fd08e2e72cc3bd18a833fd">kFaultKeysSize</a> = 24;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="namespaceff__util.html#aaabec414d287faf835f240abf077eb2a">   57</a></span>&#160;<span class="keyword">static</span> std::string <a class="code" href="namespaceff__util.html#aaabec414d287faf835f240abf077eb2a">fault_keys</a>[] = {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="stringliteral">&quot;UNKNOWN_FAULT_KEY&quot;</span>,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="stringliteral">&quot;LOAD_TOO_HIGH&quot;</span>,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="stringliteral">&quot;NO_COMMUNICATION_SPEEDCAM&quot;</span>,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="stringliteral">&quot;INITIALIZATION_FAILED&quot;</span>,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="stringliteral">&quot;MEMORY_USAGE_TOO_HIGH&quot;</span>,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="stringliteral">&quot;BAD_ACCEL_DATA&quot;</span>,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="stringliteral">&quot;NO_IMU_DATA_PACKETS&quot;</span>,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="stringliteral">&quot;TEMPERATURE_TOO_HIGH&quot;</span>,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="stringliteral">&quot;HEARTBEAT_MISSING&quot;</span>,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="stringliteral">&quot;VELOCITY_TOO_HIGH&quot;</span>,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="stringliteral">&quot;TIME_DIFF_TOO_HIGH&quot;</span>,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="stringliteral">&quot;LOCALIZATION_PIPELINE_UNSTABLE&quot;</span>,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="stringliteral">&quot;ESTIMATE_CONFIDENCE_TOO_LOW&quot;</span>,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="stringliteral">&quot;DISK_USAGE_TOO_HIGH&quot;</span>,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="stringliteral">&quot;NO_COMMUNICATION_HAZCAM&quot;</span>,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="stringliteral">&quot;KINETIC_ENERGY_INCREASING&quot;</span>,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="stringliteral">&quot;SELF_TEST_FAULT_CODE&quot;</span>,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="stringliteral">&quot;DISK_CONFIG_INVALID&quot;</span>,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="stringliteral">&quot;POSE_ESTIMATE_NON_PHYSICAL&quot;</span>,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="stringliteral">&quot;DISK_USAGE_HIGH&quot;</span>,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="stringliteral">&quot;HARDWARE_ERROR_FAULT_CODE&quot;</span>,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="stringliteral">&quot;BAD_GYRO_DATA&quot;</span>,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="stringliteral">&quot;IMU_OVERTEMP&quot;</span>,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="stringliteral">&quot;IMU_ACCEL_ABOVE_LIMITS&quot;</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}  <span class="comment">// namespace ff_util</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}  <span class="comment">// namespace ff_util</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif  // FF_UTIL_FF_FAULTS_H_</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif  // FF_UTIL_FF_FAULTS_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespaceff__util_html_aaabec414d287faf835f240abf077eb2a"><div class="ttname"><a href="namespaceff__util.html#aaabec414d287faf835f240abf077eb2a">ff_util::fault_keys</a></div><div class="ttdeci">static std::string fault_keys[]</div><div class="ttdef"><b>Definition:</b> ff_faults.h:58</div></div>
-<div class="ttc" id="anamespaceff__util_html_a7d8d396931390f360e45aca02393b7f7ab7b75e8388c45eb144f363585bae234c"><div class="ttname"><a href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab7b75e8388c45eb144f363585bae234c">ff_util::IMU_ACCEL_ABOVE_LIMITS</a></div><div class="ttdeci">@ IMU_ACCEL_ABOVE_LIMITS</div><div class="ttdef"><b>Definition:</b> ff_faults.h:53</div></div>
+<div class="ttc" id="anamespaceff__util_html_aaabec414d287faf835f240abf077eb2a"><div class="ttname"><a href="namespaceff__util.html#aaabec414d287faf835f240abf077eb2a">ff_util::fault_keys</a></div><div class="ttdeci">static std::string fault_keys[]</div><div class="ttdef"><b>Definition:</b> ff_faults.h:57</div></div>
+<div class="ttc" id="anamespaceff__util_html_a7d8d396931390f360e45aca02393b7f7ab7b75e8388c45eb144f363585bae234c"><div class="ttname"><a href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab7b75e8388c45eb144f363585bae234c">ff_util::IMU_ACCEL_ABOVE_LIMITS</a></div><div class="ttdeci">@ IMU_ACCEL_ABOVE_LIMITS</div><div class="ttdef"><b>Definition:</b> ff_faults.h:52</div></div>
 <div class="ttc" id="anamespaceff__util_html_a7d8d396931390f360e45aca02393b7f7add1f93ad5b66b343f8137810b05120a1"><div class="ttname"><a href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7add1f93ad5b66b343f8137810b05120a1">ff_util::NO_IMU_DATA_PACKETS</a></div><div class="ttdeci">@ NO_IMU_DATA_PACKETS</div><div class="ttdef"><b>Definition:</b> ff_faults.h:35</div></div>
-<div class="ttc" id="anamespaceff__util_html_a7d8d396931390f360e45aca02393b7f7ab7ef22ecbbd08a4b6e48a8a61044979b"><div class="ttname"><a href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab7ef22ecbbd08a4b6e48a8a61044979b">ff_util::IMU_OVERTEMP</a></div><div class="ttdeci">@ IMU_OVERTEMP</div><div class="ttdef"><b>Definition:</b> ff_faults.h:52</div></div>
+<div class="ttc" id="anamespaceff__util_html_a7d8d396931390f360e45aca02393b7f7ab7ef22ecbbd08a4b6e48a8a61044979b"><div class="ttname"><a href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab7ef22ecbbd08a4b6e48a8a61044979b">ff_util::IMU_OVERTEMP</a></div><div class="ttdeci">@ IMU_OVERTEMP</div><div class="ttdef"><b>Definition:</b> ff_faults.h:51</div></div>
 <div class="ttc" id="anamespaceff__util_html_a7d8d396931390f360e45aca02393b7f7ab97b1c10bd095a209642dfd7d9864479"><div class="ttname"><a href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab97b1c10bd095a209642dfd7d9864479">ff_util::KINETIC_ENERGY_INCREASING</a></div><div class="ttdeci">@ KINETIC_ENERGY_INCREASING</div><div class="ttdef"><b>Definition:</b> ff_faults.h:44</div></div>
 <div class="ttc" id="anamespaceff__util_html_a7d8d396931390f360e45aca02393b7f7aa5d78eea473b5c272523f417ff80bbba"><div class="ttname"><a href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7aa5d78eea473b5c272523f417ff80bbba">ff_util::ESTIMATE_CONFIDENCE_TOO_LOW</a></div><div class="ttdeci">@ ESTIMATE_CONFIDENCE_TOO_LOW</div><div class="ttdef"><b>Definition:</b> ff_faults.h:41</div></div>
 <div class="ttc" id="anamespaceff__util_html_a7d8d396931390f360e45aca02393b7f7ab7404e44cee43f2b7c82ce5cedaad75a"><div class="ttname"><a href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab7404e44cee43f2b7c82ce5cedaad75a">ff_util::LOAD_TOO_HIGH</a></div><div class="ttdeci">@ LOAD_TOO_HIGH</div><div class="ttdef"><b>Definition:</b> ff_faults.h:30</div></div>
@@ -198,8 +196,7 @@ $(document).ready(function(){initNavTree('ff__faults_8h_source.html',''); initRe
 <div class="ttc" id="anamespaceff__util_html_a7d8d396931390f360e45aca02393b7f7a6b0292a25a7b12c450e2b9e3d040b237"><div class="ttname"><a href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a6b0292a25a7b12c450e2b9e3d040b237">ff_util::SELF_TEST_FAULT_CODE</a></div><div class="ttdeci">@ SELF_TEST_FAULT_CODE</div><div class="ttdef"><b>Definition:</b> ff_faults.h:45</div></div>
 <div class="ttc" id="anamespaceff__util_html_a7d8d396931390f360e45aca02393b7f7a8e4ecaf20371508e6a2a7a62313f128e"><div class="ttname"><a href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a8e4ecaf20371508e6a2a7a62313f128e">ff_util::LOCALIZATION_PIPELINE_UNSTABLE</a></div><div class="ttdeci">@ LOCALIZATION_PIPELINE_UNSTABLE</div><div class="ttdef"><b>Definition:</b> ff_faults.h:40</div></div>
 <div class="ttc" id="anamespaceff__util_html_a7d8d396931390f360e45aca02393b7f7a062929236e68ec8a5a472cd5406609a4"><div class="ttname"><a href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a062929236e68ec8a5a472cd5406609a4">ff_util::HEARTBEAT_MISSING</a></div><div class="ttdeci">@ HEARTBEAT_MISSING</div><div class="ttdef"><b>Definition:</b> ff_faults.h:37</div></div>
-<div class="ttc" id="anamespaceff__util_html_a80f1649a22fd08e2e72cc3bd18a833fd"><div class="ttname"><a href="namespaceff__util.html#a80f1649a22fd08e2e72cc3bd18a833fd">ff_util::kFaultKeysSize</a></div><div class="ttdeci">constexpr int kFaultKeysSize</div><div class="ttdef"><b>Definition:</b> ff_faults.h:56</div></div>
-<div class="ttc" id="anamespaceff__util_html_a7d8d396931390f360e45aca02393b7f7a040b7a4c0aecdf819e7f6d626f927845"><div class="ttname"><a href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a040b7a4c0aecdf819e7f6d626f927845">ff_util::CONTROL_CYCLE_OVERRUN</a></div><div class="ttdeci">@ CONTROL_CYCLE_OVERRUN</div><div class="ttdef"><b>Definition:</b> ff_faults.h:51</div></div>
+<div class="ttc" id="anamespaceff__util_html_a80f1649a22fd08e2e72cc3bd18a833fd"><div class="ttname"><a href="namespaceff__util.html#a80f1649a22fd08e2e72cc3bd18a833fd">ff_util::kFaultKeysSize</a></div><div class="ttdeci">constexpr int kFaultKeysSize</div><div class="ttdef"><b>Definition:</b> ff_faults.h:55</div></div>
 <div class="ttc" id="anamespaceff__util_html_a7d8d396931390f360e45aca02393b7f7a6561e6ac4bc5886e0aa33465072dd65b"><div class="ttname"><a href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a6561e6ac4bc5886e0aa33465072dd65b">ff_util::UNKNOWN_FAULT_KEY</a></div><div class="ttdeci">@ UNKNOWN_FAULT_KEY</div><div class="ttdef"><b>Definition:</b> ff_faults.h:29</div></div>
 <div class="ttc" id="anamespaceff__util_html_a7d8d396931390f360e45aca02393b7f7a4176d7bc62dfb31ba466f6df8d331177"><div class="ttname"><a href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a4176d7bc62dfb31ba466f6df8d331177">ff_util::POSE_ESTIMATE_NON_PHYSICAL</a></div><div class="ttdeci">@ POSE_ESTIMATE_NON_PHYSICAL</div><div class="ttdef"><b>Definition:</b> ff_faults.h:47</div></div>
 <div class="ttc" id="anamespaceff__util_html_a7d8d396931390f360e45aca02393b7f7a9911866a591ec7e257c5cc463a461416"><div class="ttname"><a href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a9911866a591ec7e257c5cc463a461416">ff_util::VELOCITY_TOO_HIGH</a></div><div class="ttdeci">@ VELOCITY_TOO_HIGH</div><div class="ttdef"><b>Definition:</b> ff_faults.h:38</div></div>

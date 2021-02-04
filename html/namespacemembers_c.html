@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -92,6 +92,14 @@ $(document).ready(function(){initNavTree('namespacemembers_c.html',''); initResi
 <h3><a id="index_c"></a>- c -</h3><ul>
 <li>CALIBRATING
 : <a class="el" href="namespacevisualeyez.html#a9b713342969d8c93210d38fe62d0257babf6d58be89560f8b272cd039c9c4e493">visualeyez</a>
+</li>
+<li>Calibration
+: <a class="el" href="namespacegraph__localizer.html#aea0e0328bad03b459ffa1eea178ff9be">graph_localizer</a>
+, <a class="el" href="namespacelocalization__rviz__plugins.html#a72e0a42f5d29417da61d3b4097959605">localization_rviz_plugins</a>
+</li>
+<li>Camera
+: <a class="el" href="namespacegraph__localizer.html#a4f0fab51afa6ce97bb8de34fde5aebfc">graph_localizer</a>
+, <a class="el" href="namespacelocalization__rviz__plugins.html#a20b2e53af43a50ad4812e4fa96fca195">localization_rviz_plugins</a>
 </li>
 <li>CameraImageCallback()
 : <a class="el" href="namespacespeed__cam.html#a01bf95c343f01d1615e95c0389ad89ad">speed_cam</a>
@@ -170,6 +178,18 @@ $(document).ready(function(){initNavTree('namespacemembers_c.html',''); initResi
 </li>
 <li>CmdMode
 : <a class="el" href="namespacepmc__actuator.html#a67f273d9ac3ec07f17fccb0b7d3bb5d6">pmc_actuator</a>
+</li>
+<li>CombinedNavStateCovariancesFromMsg()
+: <a class="el" href="namespacelocalization__common.html#a19c5f3da0900a17038365d41f1911e6a">localization_common</a>
+</li>
+<li>CombinedNavStateCovariancesToMsg()
+: <a class="el" href="namespacelocalization__common.html#aae35cf5184b0b8a6fd3c885f2f4fe254">localization_common</a>
+</li>
+<li>CombinedNavStateFromMsg()
+: <a class="el" href="namespacelocalization__common.html#aee5ee80d096804420dd0d9538ff9313c">localization_common</a>
+</li>
+<li>CombinedNavStateToMsg()
+: <a class="el" href="namespacelocalization__common.html#affe58db768aab7040b2b86d21f697d3f">localization_common</a>
 </li>
 <li>CombineTransforms()
 : <a class="el" href="namespacevive__localization.html#a73a0c154de9fe54ca41bb88c80d8afc6">vive_localization</a>
@@ -258,6 +278,9 @@ $(document).ready(function(){initNavTree('namespacemembers_c.html',''); initResi
 <li>ComputeRaysAngle()
 : <a class="el" href="namespacesparse__mapping.html#afaa745b1d9ffe7172b50c897e8f97bea">sparse_mapping</a>
 </li>
+<li>Confidence
+: <a class="el" href="namespacelocalization__common.html#a6743d6492e99254d9270ef19b8362a7a">localization_common</a>
+</li>
 <li>config_read_array()
 : <a class="el" href="namespacemsg__conversions.html#a021c393aae95a26899393e8402d1b093">msg_conversions</a>
 </li>
@@ -271,7 +294,7 @@ $(document).ready(function(){initNavTree('namespacemembers_c.html',''); initResi
 : <a class="el" href="namespacemsg__conversions.html#aec9ccfaf6d08631e38f8c9eaee8cf870">msg_conversions</a>
 </li>
 <li>config_read_vector()
-: <a class="el" href="namespacemsg__conversions.html#ac0d1de67266a57e9b3d52f100dd6a5c6">msg_conversions</a>
+: <a class="el" href="namespacemsg__conversions.html#af8fef5cfe923f76dfa60c08bac123942">msg_conversions</a>
 </li>
 <li>ConfigCallback
 : <a class="el" href="namespaceff__util.html#ac369055b14ff3c086cfcb1e6d6c9d03c">ff_util</a>
@@ -303,9 +326,6 @@ $(document).ready(function(){initNavTree('namespacemembers_c.html',''); initResi
 <li>CONTROL
 : <a class="el" href="namespacetraj__opt.html#ae3921040b88d50c3fc45afb162c01b86a012a55a236935298717a926240dbeb37">traj_opt</a>
 </li>
-<li>CONTROL_CYCLE_OVERRUN
-: <a class="el" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a040b7a4c0aecdf819e7f6d626f927845">ff_util</a>
-</li>
 <li>ConvertAckCompletedStatus()
 : <a class="el" href="namespaceutil.html#a99c696313dac8c0b16ffd68716a8a99e">util</a>
 </li>
@@ -327,17 +347,26 @@ $(document).ready(function(){initNavTree('namespacemembers_c.html',''); initResi
 <li>CountInliers()
 : <a class="el" href="namespacesparse__mapping.html#a227d08cd7a309cf2ea5063f1b6583b5b">sparse_mapping</a>
 </li>
+<li>CovDiagToVariances()
+: <a class="el" href="namespacemsg__conversions.html#afb795fa1892793aa9054d2be50646793">msg_conversions</a>
+</li>
 <li>CPU_STATE
 : <a class="el" href="namespacedds__ros__bridge.html#ac70cef4d0a831977b9e1a9038ca3f056afa9c4ba3a53657b9c2e1d9621d604534">dds_ros_bridge</a>
 </li>
 <li>CreateCommand()
 : <a class="el" href="namespacejsonloader.html#acc8422339ec5c2a9dbcbecb44df98c3b">jsonloader</a>
 </li>
+<li>CreateFeatureTrackImage()
+: <a class="el" href="namespacegraph__bag.html#a3ed5e853d73483cd7ef52bae0d750676">graph_bag</a>
+</li>
 <li>createLED()
 : <a class="el" href="namespacelight__flow.html#a270517b484e03ab2b8cac0025081d801">light_flow</a>
 </li>
 <li>createMapping()
 : <a class="el" href="namespacepcl.html#a8fbd939d65fd0e3ee3b0519f00d21eca">pcl</a>
+</li>
+<li>currentFrameTFrame()
+: <a class="el" href="namespacelocalization__rviz__plugins.html#a16040cad3c1a5291876cc8098af258b9">localization_rviz_plugins</a>
 </li>
 <li>cv_
 : <a class="el" href="namespaceperching__arm.html#abf4ffb7f9b10a24a10806a893fd3d019">perching_arm</a>

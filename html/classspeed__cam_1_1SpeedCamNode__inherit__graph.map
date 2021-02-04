@@ -1,5 +1,5 @@
 <map id="speed_cam::SpeedCamNode" name="speed_cam::SpeedCamNode">
-<area shape="rect" id="node1" title=" " alt="" coords="5,520,199,744"/>
-<area shape="rect" id="node2" href="$classff__util_1_1FreeFlyerNodelet.html" title=" " alt="" coords="21,131,183,472"/>
-<area shape="rect" id="node3" title=" " alt="" coords="69,5,135,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,520,213,744"/>
+<area shape="rect" id="node2" href="$classff__util_1_1FreeFlyerNodelet.html" title=" " alt="" coords="21,131,198,472"/>
+<area shape="rect" id="node3" title=" " alt="" coords="73,5,146,83"/>
 </map>

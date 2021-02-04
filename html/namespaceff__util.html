@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -169,10 +169,8 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a20bf5fc9140264d05d1146fbf832768f">HARDWARE_ERROR_FAULT_CODE</a>, 
 <a class="el" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a79f8c6a7bac9ab10ab563e6e94886651">BAD_GYRO_DATA</a>, 
-<a class="el" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7a040b7a4c0aecdf819e7f6d626f927845">CONTROL_CYCLE_OVERRUN</a>, 
 <a class="el" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab7ef22ecbbd08a4b6e48a8a61044979b">IMU_OVERTEMP</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab7b75e8388c45eb144f363585bae234c">IMU_ACCEL_ABOVE_LIMITS</a>
+<a class="el" href="namespaceff__util.html#a7d8d396931390f360e45aca02393b7f7ab7b75e8388c45eb144f363585bae234c">IMU_ACCEL_ABOVE_LIMITS</a>
 <br />
  }</td></tr>
 <tr class="separator:a7d8d396931390f360e45aca02393b7f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -232,7 +230,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a80f1649a22fd08e2e72cc3bd18a833fd"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceff__util.html#a80f1649a22fd08e2e72cc3bd18a833fd">kFaultKeysSize</a> = 25</td></tr>
+<tr class="memitem:a80f1649a22fd08e2e72cc3bd18a833fd"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceff__util.html#a80f1649a22fd08e2e72cc3bd18a833fd">kFaultKeysSize</a> = 24</td></tr>
 <tr class="separator:a80f1649a22fd08e2e72cc3bd18a833fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaabec414d287faf835f240abf077eb2a"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceff__util.html#aaabec414d287faf835f240abf077eb2a">fault_keys</a> []</td></tr>
 <tr class="separator:aaabec414d287faf835f240abf077eb2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -329,7 +327,6 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a7d8d396931390f360e45aca02393b7f7aed4c46cecd4fe4bdc296d484051bf987"></a>DISK_USAGE_HIGH&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a7d8d396931390f360e45aca02393b7f7a20bf5fc9140264d05d1146fbf832768f"></a>HARDWARE_ERROR_FAULT_CODE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a7d8d396931390f360e45aca02393b7f7a79f8c6a7bac9ab10ab563e6e94886651"></a>BAD_GYRO_DATA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a7d8d396931390f360e45aca02393b7f7a040b7a4c0aecdf819e7f6d626f927845"></a>CONTROL_CYCLE_OVERRUN&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a7d8d396931390f360e45aca02393b7f7ab7ef22ecbbd08a4b6e48a8a61044979b"></a>IMU_OVERTEMP&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a7d8d396931390f360e45aca02393b7f7ab7b75e8388c45eb144f363585bae234c"></a>IMU_ACCEL_ABOVE_LIMITS&#160;</td><td class="fielddoc"></td></tr>
 </table>
@@ -584,7 +581,6 @@ template&lt;&gt; </div>
 <div class="line">    <span class="stringliteral">&quot;DISK_USAGE_HIGH&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;HARDWARE_ERROR_FAULT_CODE&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;BAD_GYRO_DATA&quot;</span>,</div>
-<div class="line">    <span class="stringliteral">&quot;CONTROL_CYCLE_OVERRUN&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;IMU_OVERTEMP&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;IMU_ACCEL_ABOVE_LIMITS&quot;</span></div>
 <div class="line">}</div>
@@ -601,7 +597,7 @@ template&lt;&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int ff_util::kFaultKeysSize = 25</td>
+          <td class="memname">constexpr int ff_util::kFaultKeysSize = 24</td>
         </tr>
       </table>
   </td>

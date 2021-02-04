@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('perch.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Astrobee may be optionally equipped with a <b>perching arm</b> payload, which provides the robot with a three degrees of freedom arm. This enables Astrobee to perch and unperch from handrails on the ISS, alowing it to turn off localization and propulsion thereby saving considerable energy. When perched the arm provides two degrees of freedom, allowing the operator to pan and tilt the robot as required.</p>
-<h1><a class="anchor" id="autotoc_md375"></a>
+<h1><a class="anchor" id="autotoc_md400"></a>
 Internal behavior</h1>
 <p>The perch behavior provides the callee with a single action-based entry point for control, called <code>ff_msgs::PerchAction</code>. This "perch action" accepts a command &ndash; ether PERCH or NPERCH &ndash; and executes it in the background, sending periodic feedback to the callee. When the task completes a result is returned, along with a response code that captures any errors. Unlike services, actions are non-blocking so exhibit superior performance in nodelet contexts.</p>
 <p>The action supports only one goal, which is fully-preemptible. This means that a new goal always preempts the current goal (the previous goal's callee will be notified of preemption). Consequently, you must be careful not to interact with docking action, or any of its dependencies while active.</p>
@@ -103,7 +103,7 @@ Internal behavior</h1>
 Perch behavior finite state machine</div>
 </div>
 </p>
-<h1><a class="anchor" id="autotoc_md376"></a>
+<h1><a class="anchor" id="autotoc_md401"></a>
 Using the test tool</h1>
 <p>Typically, perching and unpeching are initiated through the Ground Data System (GDS). However, The perch behavior is packaged with its own gflags-based tool called perch_tool. This tool is essentially a convenience wrapper around an action client can be used to manually perch and unperch.</p>
 <p>To get a list of supported commands, have a look at the help: </p><pre class="fragment">rosrun perch perch_tool -helpshort

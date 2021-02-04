@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -128,9 +128,9 @@ $(document).ready(function(){initNavTree('util_8h_source.html',''); initResizabl
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceutil.html">util</a> {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="comment">// Time-related helpers</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  ::ros::Time <a class="code" href="namespaceutil.html#aebfa8a4c3aef47444958fa652167008c">RapidTime2RosTime</a>(<span class="keyword">const</span> int64_t dds_time);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">::ros::Time</a> <a class="code" href="namespaceutil.html#aebfa8a4c3aef47444958fa652167008c">RapidTime2RosTime</a>(<span class="keyword">const</span> int64_t dds_time);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespaceutil.html#a2834559e96342e1e1e051f692c3924eb">   40</a></span>&#160;  int64_t <a class="code" href="namespaceutil.html#a2834559e96342e1e1e051f692c3924eb">RosTime2RapidTime</a>(::ros::Time <span class="keyword">const</span>&amp; ros_time);</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespaceutil.html#a2834559e96342e1e1e051f692c3924eb">   40</a></span>&#160;  int64_t <a class="code" href="namespaceutil.html#a2834559e96342e1e1e051f692c3924eb">RosTime2RapidTime</a>(::<a class="code" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">ros::Time</a> <span class="keyword">const</span>&amp; ros_time);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="comment">// Header-related helpers</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="namespaceutil.html#a85d841ad6ebc0f7a7d0a07baa9b4ea8a">   43</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="namespaceutil.html#a85d841ad6ebc0f7a7d0a07baa9b4ea8a">RosHeader2Rapid</a>(::std_msgs::Header <span class="keyword">const</span>&amp; ros_hdr,</div>
@@ -151,6 +151,7 @@ $(document).ready(function(){initNavTree('util_8h_source.html',''); initResizabl
 <div class="ttc" id="anamespaceutil_html_a85d841ad6ebc0f7a7d0a07baa9b4ea8a"><div class="ttname"><a href="namespaceutil.html#a85d841ad6ebc0f7a7d0a07baa9b4ea8a">util::RosHeader2Rapid</a></div><div class="ttdeci">void RosHeader2Rapid(::std_msgs::Header const &amp;ros_hdr, ::rapid::Header *rapid_hdr, int status=0, int serial=-1)</div></div>
 <div class="ttc" id="anamespaceutil_html_a2834559e96342e1e1e051f692c3924eb"><div class="ttname"><a href="namespaceutil.html#a2834559e96342e1e1e051f692c3924eb">util::RosTime2RapidTime</a></div><div class="ttdeci">int64_t RosTime2RapidTime(::ros::Time const &amp;ros_time)</div></div>
 <div class="ttc" id="anamespaceutil_html_a42594cd9aacd9dc4c63593e9a88b1a70"><div class="ttname"><a href="namespaceutil.html#a42594cd9aacd9dc4c63593e9a88b1a70">util::RapidHeader2Ros</a></div><div class="ttdeci">void RapidHeader2Ros(::rapid::Header const &amp;rapid_hdr, ::std_msgs::Header *ros_hdr, std::string const &amp;frame_id=&quot;world&quot;)</div></div>
+<div class="ttc" id="anamespacelocalization__common_html_ae558927c458010e767b03b93e4516e0c"><div class="ttname"><a href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a></div><div class="ttdeci">double Time</div><div class="ttdef"><b>Definition:</b> time.h:23</div></div>
 <div class="ttc" id="anamespaceutil_html"><div class="ttname"><a href="namespaceutil.html">util</a></div><div class="ttdef"><b>Definition:</b> enum_helper.h:29</div></div>
 <!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->

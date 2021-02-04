@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -101,40 +101,43 @@ $(document).ready(function(){initNavTree('msg__conversions_8h.html',''); initRes
 <code>#include &lt;geometry_msgs/Point.h&gt;</code><br />
 <code>#include &lt;geometry_msgs/Quaternion.h&gt;</code><br />
 <code>#include &lt;geometry_msgs/Transform.h&gt;</code><br />
+<code>#include &lt;geometry_msgs/TransformStamped.h&gt;</code><br />
 <code>#include &lt;geometry_msgs/Vector3.h&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for msg_conversions.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="msg__conversions_8h__incl.png" border="0" usemap="#ashared_2msg__conversions_2include_2msg__conversions_2msg__conversions_8h" alt=""/></div>
 <map name="shared_2msg__conversions_2include_2msg__conversions_2msg__conversions_8h" id="ashared_2msg__conversions_2include_2msg__conversions_2msg__conversions_8h">
-<area shape="rect" title=" " alt="" coords="985,5,1159,61"/>
-<area shape="rect" href="config__reader_8h.html" title=" " alt="" coords="485,109,624,151"/>
-<area shape="rect" title=" " alt="" coords="649,117,735,143"/>
-<area shape="rect" title=" " alt="" coords="759,117,875,143"/>
-<area shape="rect" title=" " alt="" coords="900,117,1060,143"/>
-<area shape="rect" title=" " alt="" coords="1084,117,1244,143"/>
-<area shape="rect" title=" " alt="" coords="1269,117,1462,143"/>
-<area shape="rect" title=" " alt="" coords="1487,117,1676,143"/>
-<area shape="rect" title=" " alt="" coords="1701,117,1875,143"/>
-<area shape="rect" title=" " alt="" coords="5,206,56,233"/>
-<area shape="rect" title=" " alt="" coords="81,206,143,233"/>
-<area shape="rect" title=" " alt="" coords="167,206,238,233"/>
-<area shape="rect" title=" " alt="" coords="262,206,365,233"/>
-<area shape="rect" title=" " alt="" coords="181,288,243,315"/>
-<area shape="rect" title=" " alt="" coords="1000,206,1064,233"/>
-<area shape="rect" title=" " alt="" coords="267,288,347,315"/>
-<area shape="rect" title=" " alt="" coords="371,288,461,315"/>
-<area shape="rect" title=" " alt="" coords="486,288,554,315"/>
-<area shape="rect" title=" " alt="" coords="1088,206,1147,233"/>
-<area shape="rect" title=" " alt="" coords="1171,206,1250,233"/>
-<area shape="rect" title=" " alt="" coords="957,288,1011,315"/>
-<area shape="rect" title=" " alt="" coords="1036,288,1095,315"/>
-<area shape="rect" href="init_8h.html" title=" " alt="" coords="806,206,925,233"/>
-<area shape="rect" href="watch__files_8h.html" title=" " alt="" coords="592,199,731,240"/>
-<area shape="rect" title=" " alt="" coords="578,288,641,315"/>
-<area shape="rect" title=" " alt="" coords="665,288,724,315"/>
-<area shape="rect" title=" " alt="" coords="748,288,841,315"/>
-<area shape="rect" title=" " alt="" coords="865,288,932,315"/>
+<area shape="rect" title=" " alt="" coords="1765,5,1955,61"/>
+<area shape="rect" href="config__reader_8h.html" title=" " alt="" coords="569,109,722,151"/>
+<area shape="rect" title=" " alt="" coords="1060,288,1119,315"/>
+<area shape="rect" title=" " alt="" coords="1406,117,1498,143"/>
+<area shape="rect" title=" " alt="" coords="1522,117,1649,143"/>
+<area shape="rect" title=" " alt="" coords="1673,117,1847,143"/>
+<area shape="rect" title=" " alt="" coords="1872,117,2048,143"/>
+<area shape="rect" title=" " alt="" coords="2073,117,2287,143"/>
+<area shape="rect" title=" " alt="" coords="2312,117,2520,143"/>
+<area shape="rect" title=" " alt="" coords="2544,117,2811,143"/>
+<area shape="rect" title=" " alt="" coords="2835,117,3027,143"/>
+<area shape="rect" title=" " alt="" coords="1026,206,1081,233"/>
+<area shape="rect" title=" " alt="" coords="1157,206,1227,233"/>
+<area shape="rect" title=" " alt="" coords="1251,206,1330,233"/>
+<area shape="rect" title=" " alt="" coords="5,206,120,233"/>
+<area shape="rect" title=" " alt="" coords="124,288,191,315"/>
+<area shape="rect" title=" " alt="" coords="195,206,266,233"/>
+<area shape="rect" title=" " alt="" coords="215,288,300,315"/>
+<area shape="rect" title=" " alt="" coords="324,288,420,315"/>
+<area shape="rect" title=" " alt="" coords="444,288,519,315"/>
+<area shape="rect" title=" " alt="" coords="443,206,506,233"/>
+<area shape="rect" title=" " alt="" coords="530,206,617,233"/>
+<area shape="rect" title=" " alt="" coords="943,288,1006,315"/>
+<area shape="rect" href="init_8h.html" title=" " alt="" coords="870,206,1002,233"/>
+<area shape="rect" href="watch__files_8h.html" title=" " alt="" coords="641,199,794,240"/>
+<area shape="rect" title=" " alt="" coords="543,288,611,315"/>
+<area shape="rect" title=" " alt="" coords="635,288,698,315"/>
+<area shape="rect" title=" " alt="" coords="722,288,822,315"/>
+<area shape="rect" title=" " alt="" coords="846,288,919,315"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -142,48 +145,86 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="msg__conversions_8h__dep__incl.png" border="0" usemap="#ashared_2msg__conversions_2include_2msg__conversions_2msg__conversions_8hdep" alt=""/></div>
 <map name="shared_2msg__conversions_2include_2msg__conversions_2msg__conversions_8hdep" id="ashared_2msg__conversions_2include_2msg__conversions_2msg__conversions_8hdep">
-<area shape="rect" title=" " alt="" coords="2011,5,2185,61"/>
-<area shape="rect" href="ff__flight_8cc.html" title=" " alt="" coords="5,117,140,158"/>
-<area shape="rect" href="msg__conversions_8cc.html" title=" " alt="" coords="165,117,333,158"/>
-<area shape="rect" href="ctl_2src_2ctl_8cc.html" title=" " alt="" coords="357,124,476,151"/>
-<area shape="rect" href="ekf_2src_2ekf_8cc.html" title=" " alt="" coords="500,124,627,151"/>
-<area shape="rect" href="ekf__wrapper_8cc.html" title=" " alt="" coords="651,124,831,151"/>
-<area shape="rect" href="fam_2src_2fam_8cc.html" title=" " alt="" coords="855,124,989,151"/>
-<area shape="rect" href="sim__wrapper_2src_2sim_8cc.html" title=" " alt="" coords="1013,117,1156,158"/>
-<area shape="rect" href="handrail__detect_8cc.html" title=" " alt="" coords="1181,109,1317,165"/>
-<area shape="rect" href="localization_8cc.html" title=" " alt="" coords="1341,117,1508,158"/>
-<area shape="rect" href="localization__nodelet_8cc.html" title=" " alt="" coords="1532,109,1688,165"/>
-<area shape="rect" href="marker__tracker_8cc.html" title=" " alt="" coords="1713,109,1875,165"/>
-<area shape="rect" href="overhead__tracking__node_8cc.html" title=" " alt="" coords="1900,109,2085,165"/>
-<area shape="rect" href="localization_2vive__localization_2src_2vive_8h.html" title=" " alt="" coords="2110,117,2297,158"/>
-<area shape="rect" href="framestore_8cc.html" title=" " alt="" coords="2321,117,2454,158"/>
-<area shape="rect" href="global__transforms_8cc.html" title=" " alt="" coords="2478,117,2657,158"/>
-<area shape="rect" href="linear__algebra_8h.html" title=" " alt="" coords="2507,221,2671,262"/>
-<area shape="rect" href="visualization__functions_8h.html" title=" " alt="" coords="2732,109,2891,165"/>
-<area shape="rect" href="planner__trapezoidal_8h.html" title=" " alt="" coords="2915,109,3097,165"/>
-<area shape="rect" href="planner__trapezoidal__nodelet_8cc.html" title=" " alt="" coords="3376,213,3559,269"/>
-<area shape="rect" href="sequencer_8cc.html" title=" " alt="" coords="3173,109,3330,165"/>
-<area shape="rect" href="dock__nodelet_8cc.html" title=" " alt="" coords="3355,117,3487,158"/>
-<area shape="rect" href="perch__nodelet_8cc.html" title=" " alt="" coords="3511,117,3647,158"/>
-<area shape="rect" href="ekf__bag__video_8cc.html" title=" " alt="" coords="3672,117,3804,158"/>
-<area shape="rect" href="visualization__node_8cc.html" title=" " alt="" coords="3828,109,3965,165"/>
-<area shape="rect" href="vive_8cc.html" title=" " alt="" coords="1899,221,2086,262"/>
-<area shape="rect" href="vive__solver_8h.html" title=" " alt="" coords="2110,221,2297,262"/>
-<area shape="rect" href="vive__offline_8cc.html" title=" " alt="" coords="1899,317,2086,359"/>
-<area shape="rect" href="vive__solver_8cc.html" title=" " alt="" coords="2110,317,2297,359"/>
-<area shape="rect" href="octoclass_8h.html" title=" " alt="" coords="2321,317,2480,359"/>
-<area shape="rect" href="sampled__trajectory_8h.html" title=" " alt="" coords="2505,317,2699,359"/>
-<area shape="rect" href="mapper__nodelet_8h.html" title=" " alt="" coords="2383,496,2559,537"/>
-<area shape="rect" href="structs_8h.html" title=" " alt="" coords="2333,407,2492,448"/>
-<area shape="rect" href="octoclass_8cc.html" title=" " alt="" coords="2173,407,2309,448"/>
-<area shape="rect" href="callbacks_8cc.html" title=" " alt="" coords="2163,585,2299,627"/>
-<area shape="rect" href="mapper__nodelet_8cc.html" title=" " alt="" coords="2323,585,2459,627"/>
-<area shape="rect" href="services_8cc.html" title=" " alt="" coords="2483,585,2619,627"/>
-<area shape="rect" href="threads_8cc.html" title=" " alt="" coords="2643,585,2779,627"/>
-<area shape="rect" href="sampled__trajectory_8cc.html" title=" " alt="" coords="2567,407,2722,448"/>
-<area shape="rect" href="visualization__functions_8cc.html" title=" " alt="" coords="2797,221,2973,262"/>
-<area shape="rect" href="plangen_8cc.html" title=" " alt="" coords="2997,221,3145,262"/>
-<area shape="rect" href="planner__trapezoidal_8cc.html" title=" " alt="" coords="3169,221,3352,262"/>
+<area shape="rect" title=" " alt="" coords="3850,5,4041,61"/>
+<area shape="rect" href="ff__flight_8cc.html" title=" " alt="" coords="5,124,152,165"/>
+<area shape="rect" href="msg__conversions_8cc.html" title=" " alt="" coords="177,124,359,165"/>
+<area shape="rect" href="ctl_2src_2ctl_8cc.html" title=" " alt="" coords="383,131,510,158"/>
+<area shape="rect" href="ekf_2src_2ekf_8cc.html" title=" " alt="" coords="534,131,669,158"/>
+<area shape="rect" href="ekf__wrapper_8cc.html" title=" " alt="" coords="693,131,888,158"/>
+<area shape="rect" href="fam_2src_2fam_8cc.html" title=" " alt="" coords="912,131,1059,158"/>
+<area shape="rect" href="sim__wrapper_2src_2sim_8cc.html" title=" " alt="" coords="1083,124,1239,165"/>
+<area shape="rect" href="graph__localizer__initializer_8h.html" title=" " alt="" coords="1365,109,1552,180"/>
+<area shape="rect" href="graph__localizer__nodelet_8cc.html" title=" " alt="" coords="1113,465,1271,521"/>
+<area shape="rect" href="graph__localizer__wrapper_8cc.html" title=" " alt="" coords="661,354,822,410"/>
+<area shape="rect" href="localization_2graph__localizer_2src_2parameter__reader_8cc.html" title=" " alt="" coords="2067,354,2245,410"/>
+<area shape="rect" href="localization_2graph__localizer_2src_2utilities_8cc.html" title=" " alt="" coords="2269,361,2448,403"/>
+<area shape="rect" href="graph__bag_8cc.html" title=" " alt="" coords="2472,361,2621,403"/>
+<area shape="rect" href="localization_2ground__truth__localizer_2src_2utilities_8cc.html" title=" " alt="" coords="1627,235,1773,291"/>
+<area shape="rect" href="handrail__detect_8cc.html" title=" " alt="" coords="4033,117,4188,173"/>
+<area shape="rect" href="imu__augmentor__wrapper_8cc.html" title=" " alt="" coords="1797,243,2027,284"/>
+<area shape="rect" href="localization_2imu__integration_2src_2utilities_8cc.html" title=" " alt="" coords="2051,243,2255,284"/>
+<area shape="rect" href="localization_2localization__common_2include_2localization__common_2utilities_8h.html" title=" " alt="" coords="3591,117,3807,173"/>
+<area shape="rect" href="localization_2localization__common_2src_2utilities_8cc.html" title=" " alt="" coords="5951,243,6131,284"/>
+<area shape="rect" href="bag__imu__filterer_8cc.html" title=" " alt="" coords="6156,243,6305,284"/>
+<area shape="rect" href="tools_2graph__bag_2src_2parameter__reader_8cc.html" title=" " alt="" coords="6329,243,6489,284"/>
+<area shape="rect" href="imu__augmentor__display_8cc.html" title=" " alt="" coords="6513,235,6684,291"/>
+<area shape="rect" href="localization_8cc.html" title=" " alt="" coords="4212,124,4393,165"/>
+<area shape="rect" href="localization__nodelet_8cc.html" title=" " alt="" coords="4417,117,4593,173"/>
+<area shape="rect" href="marker__tracker_8cc.html" title=" " alt="" coords="4618,117,4798,173"/>
+<area shape="rect" href="overhead__tracking__node_8cc.html" title=" " alt="" coords="4822,117,5026,173"/>
+<area shape="rect" href="localization_2vive__localization_2src_2vive_8h.html" title=" " alt="" coords="5051,124,5261,165"/>
+<area shape="rect" href="framestore_8cc.html" title=" " alt="" coords="5285,124,5437,165"/>
+<area shape="rect" href="global__transforms_8cc.html" title=" " alt="" coords="5462,124,5661,165"/>
+<area shape="rect" href="linear__algebra_8h.html" title=" " alt="" coords="7498,243,7683,284"/>
+<area shape="rect" href="visualization__functions_8h.html" title=" " alt="" coords="5685,117,5867,173"/>
+<area shape="rect" href="planner__trapezoidal_8h.html" title=" " alt="" coords="5942,117,6151,173"/>
+<area shape="rect" href="planner__trapezoidal__nodelet_8cc.html" title=" " alt="" coords="8137,235,8346,291"/>
+<area shape="rect" href="sequencer_8cc.html" title=" " alt="" coords="6227,117,6405,173"/>
+<area shape="rect" href="dock__nodelet_8cc.html" title=" " alt="" coords="6429,124,6573,165"/>
+<area shape="rect" href="perch__nodelet_8cc.html" title=" " alt="" coords="6597,124,6747,165"/>
+<area shape="rect" href="gazebo__sensor__plugin__ar__tags_8cc.html" title=" " alt="" coords="6771,109,6962,180"/>
+<area shape="rect" href="ekf__bag__video_8cc.html" title=" " alt="" coords="6986,124,7131,165"/>
+<area shape="rect" href="visualization__node_8cc.html" title=" " alt="" coords="7156,117,7308,173"/>
+<area shape="rect" href="graph__localizer__wrapper_8h.html" title=" " alt="" coords="548,228,735,299"/>
+<area shape="rect" href="localization_2graph__localizer_2include_2graph__localizer_2utilities_8h.html" title=" " alt="" coords="1325,235,1501,291"/>
+<area shape="rect" href="graph__localizer__intializer_8cc.html" title=" " alt="" coords="1877,354,2043,410"/>
+<area shape="rect" href="graph__localizer__nodelet_8h.html" title=" " alt="" coords="449,347,636,417"/>
+<area shape="rect" href="graph__localizer__simulator_8h.html" title=" " alt="" coords="228,354,425,410"/>
+<area shape="rect" href="graph__localizer_8cc.html" title=" " alt="" coords="2646,354,2794,410"/>
+<area shape="rect" href="loc__factor__adder_8cc.html" title=" " alt="" coords="1241,354,1415,410"/>
+<area shape="rect" href="projection__factor__adder_8cc.html" title=" " alt="" coords="1440,354,1616,410"/>
+<area shape="rect" href="rotation__factor__adder_8cc.html" title=" " alt="" coords="1640,354,1803,410"/>
+<area shape="rect" href="smart__projection__cumulative__factor__adder_8cc.html" title=" " alt="" coords="846,347,1021,417"/>
+<area shape="rect" href="standstill__factor__adder_8cc.html" title=" " alt="" coords="1045,354,1216,410"/>
+<area shape="rect" href="sparse__mapping__pose__adder_8cc.html" title=" " alt="" coords="2819,354,2989,410"/>
+<area shape="rect" href="ground__truth__localizer__nodelet_8cc.html" title=" " alt="" coords="2685,228,2856,299"/>
+<area shape="rect" href="imu__augmentor__nodelet_8cc.html" title=" " alt="" coords="2880,243,3107,284"/>
+<area shape="rect" href="imu__integrator_8cc.html" title=" " alt="" coords="3131,243,3335,284"/>
+<area shape="rect" href="ros__timer_8cc.html" title=" " alt="" coords="3360,243,3552,284"/>
+<area shape="rect" href="measurement__conversions_8cc.html" title=" " alt="" coords="3576,235,3821,291"/>
+<area shape="rect" href="message__buffer_8h.html" title=" " alt="" coords="5713,243,5927,284"/>
+<area shape="rect" href="tools_2graph__bag_2src_2utilities_8cc.html" title=" " alt="" coords="3896,243,4045,284"/>
+<area shape="rect" href="run__bag__imu__filterer_8cc.html" title=" " alt="" coords="4070,243,4247,284"/>
+<area shape="rect" href="run__graph__bag_8cc.html" title=" " alt="" coords="4272,243,4435,284"/>
+<area shape="rect" href="run__sparse__mapping__pose__adder_8cc.html" title=" " alt="" coords="4459,235,4658,291"/>
+<area shape="rect" href="imu__bias__tester__nodelet_8cc.html" title=" " alt="" coords="4683,235,4845,291"/>
+<area shape="rect" href="imu__bias__tester__wrapper_8cc.html" title=" " alt="" coords="4869,235,5032,291"/>
+<area shape="rect" href="localization__graph__display_8cc.html" title=" " alt="" coords="5057,235,5266,291"/>
+<area shape="rect" href="localization__graph__panel_8cc.html" title=" " alt="" coords="5290,235,5499,291"/>
+<area shape="rect" href="pose__display_8cc.html" title=" " alt="" coords="5524,235,5689,291"/>
+<area shape="rect" href="live__measurement__simulator_8h.html" title=" " alt="" coords="5710,354,5930,410"/>
+<area shape="rect" href="vive_8cc.html" title=" " alt="" coords="6943,243,7153,284"/>
+<area shape="rect" href="vive__solver_8h.html" title=" " alt="" coords="6708,243,6919,284"/>
+<area shape="rect" href="vive__offline_8cc.html" title=" " alt="" coords="6825,361,7036,403"/>
+<area shape="rect" href="vive__solver_8cc.html" title=" " alt="" coords="6591,361,6801,403"/>
+<area shape="rect" href="octoclass_8h.html" title=" " alt="" coords="7532,361,7713,403"/>
+<area shape="rect" href="sampled__trajectory_8h.html" title=" " alt="" coords="7292,361,7508,403"/>
+<area shape="rect" href="mapper__nodelet_8h.html" title=" " alt="" coords="7251,569,7450,611"/>
+<area shape="rect" href="structs_8h.html" title=" " alt="" coords="7324,473,7505,514"/>
+<area shape="rect" href="octoclass_8cc.html" title=" " alt="" coords="7530,473,7683,514"/>
+<area shape="rect" href="visualization__functions_8cc.html" title=" " alt="" coords="7228,243,7423,284"/>
+<area shape="rect" href="plangen_8cc.html" title=" " alt="" coords="7941,243,8112,284"/>
+<area shape="rect" href="planner__trapezoidal_8cc.html" title=" " alt="" coords="7707,243,7917,284"/>
 </map>
 </div>
 </div>
@@ -256,6 +297,36 @@ Functions</h2></td></tr>
 <tr class="separator:ade56bd5226a69e3db5d199890385a431"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade811300da65a307107febd7267c2e73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#ade811300da65a307107febd7267c2e73">msg_conversions::config_read_vector</a> (<a class="el" href="classconfig__reader_1_1ConfigReader_1_1Table.html">config_reader::ConfigReader::Table</a> *t, geometry_msgs::Point *point)</td></tr>
 <tr class="separator:ade811300da65a307107febd7267c2e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36f265d8d659536a11bfbc57db7df221"><td class="memItemLeft" align="right" valign="top">Eigen::Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#a36f265d8d659536a11bfbc57db7df221">msg_conversions::LoadEigenTransform</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, const std::string &amp;transform_config_name)</td></tr>
+<tr class="separator:a36f265d8d659536a11bfbc57db7df221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af24417330a5242b86d55fa5e5f69fd97"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#af24417330a5242b86d55fa5e5f69fd97">msg_conversions::LoadDouble</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, const std::string &amp;config_name)</td></tr>
+<tr class="separator:af24417330a5242b86d55fa5e5f69fd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a118e127095097801d1a10033507d329d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#a118e127095097801d1a10033507d329d">msg_conversions::LoadInt</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, const std::string &amp;config_name)</td></tr>
+<tr class="separator:a118e127095097801d1a10033507d329d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e7ccc9cc2017f094ae478e85fb6e1fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#a7e7ccc9cc2017f094ae478e85fb6e1fa">msg_conversions::LoadBool</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, const std::string &amp;config_name)</td></tr>
+<tr class="separator:a7e7ccc9cc2017f094ae478e85fb6e1fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc244a94b6fee3950eba44cc73c6c15d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#afc244a94b6fee3950eba44cc73c6c15d">msg_conversions::LoadString</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, const std::string &amp;config_name)</td></tr>
+<tr class="separator:afc244a94b6fee3950eba44cc73c6c15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc1473c2a930b149d1fe8d2fc3c0c16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#aedc1473c2a930b149d1fe8d2fc3c0c16">msg_conversions::EigenPoseToMsg</a> (const Eigen::Isometry3d &amp;pose, geometry_msgs::Pose &amp;msg_pose)</td></tr>
+<tr class="separator:aedc1473c2a930b149d1fe8d2fc3c0c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a387d6051f9c304d1c15158728cd210ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#a387d6051f9c304d1c15158728cd210ce">msg_conversions::EigenPoseToMsg</a> (const Eigen::Isometry3d &amp;pose, geometry_msgs::Transform &amp;msg_transform)</td></tr>
+<tr class="separator:a387d6051f9c304d1c15158728cd210ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0fff4588ec79ebb89a8be1e94381d26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#ac0fff4588ec79ebb89a8be1e94381d26">msg_conversions::VariancesToCovDiag</a> (const Eigen::Vector3d &amp;variances, float *const cov_diag)</td></tr>
+<tr class="separator:ac0fff4588ec79ebb89a8be1e94381d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb795fa1892793aa9054d2be50646793"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#afb795fa1892793aa9054d2be50646793">msg_conversions::CovDiagToVariances</a> (const float *const cov_diag)</td></tr>
+<tr class="separator:afb795fa1892793aa9054d2be50646793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e6e5f341b980730635d1da4f4c6ff93"><td class="memTemplParams" colspan="2">template&lt;typename VectorType , typename MsgVectorType &gt; </td></tr>
+<tr class="memitem:a1e6e5f341b980730635d1da4f4c6ff93"><td class="memTemplItemLeft" align="right" valign="top">VectorType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#a1e6e5f341b980730635d1da4f4c6ff93">msg_conversions::VectorFromMsg</a> (const MsgVectorType &amp;msg_vector)</td></tr>
+<tr class="separator:a1e6e5f341b980730635d1da4f4c6ff93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2cc454c43ca84555a4d08e70e5f748a"><td class="memTemplParams" colspan="2">template&lt;typename VectorType , typename MsgVectorType &gt; </td></tr>
+<tr class="memitem:ab2cc454c43ca84555a4d08e70e5f748a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#ab2cc454c43ca84555a4d08e70e5f748a">msg_conversions::VectorToMsg</a> (const VectorType &amp;vector, MsgVectorType &amp;msg_vector)</td></tr>
+<tr class="separator:ab2cc454c43ca84555a4d08e70e5f748a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87a38da8a37b0683af271facfe14f4ff"><td class="memTemplParams" colspan="2">template&lt;typename RotationType , typename MsgRotationType &gt; </td></tr>
+<tr class="memitem:a87a38da8a37b0683af271facfe14f4ff"><td class="memTemplItemLeft" align="right" valign="top">RotationType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#a87a38da8a37b0683af271facfe14f4ff">msg_conversions::RotationFromMsg</a> (const MsgRotationType &amp;msg_rotation)</td></tr>
+<tr class="separator:a87a38da8a37b0683af271facfe14f4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b603e63ff9a98a03b36aa92cd3087ba"><td class="memTemplParams" colspan="2">template&lt;typename RotationType , typename MsgRotationType &gt; </td></tr>
+<tr class="memitem:a5b603e63ff9a98a03b36aa92cd3087ba"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemsg__conversions.html#a5b603e63ff9a98a03b36aa92cd3087ba">msg_conversions::RotationToMsg</a> (const RotationType &amp;rotation, MsgRotationType &amp;msg_rotation)</td></tr>
+<tr class="separator:a5b603e63ff9a98a03b36aa92cd3087ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

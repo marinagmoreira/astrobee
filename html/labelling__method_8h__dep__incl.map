@@ -1,11 +1,11 @@
 <map id="localization/marker_tracking/include/marker_tracking/labelling_method.h" name="localization/marker_tracking/include/marker_tracking/labelling_method.h">
-<area shape="rect" id="node1" title=" " alt="" coords="344,5,531,61"/>
-<area shape="rect" id="node2" href="$marker__detector_8h.html" title=" " alt="" coords="251,109,435,165"/>
-<area shape="rect" id="node9" href="$labelling__method_8cc.html" title=" " alt="" coords="459,109,607,165"/>
-<area shape="rect" id="node3" href="$marker__tracker_8h.html" title=" " alt="" coords="97,213,252,284"/>
-<area shape="rect" id="node6" href="$marker__tracker_8cc.html" title=" " alt="" coords="208,339,371,395"/>
-<area shape="rect" id="node7" href="$marker__detector_8cc.html" title=" " alt="" coords="327,221,468,277"/>
-<area shape="rect" id="node8" href="$identify__marker__in__image_8cc.html" title=" " alt="" coords="493,221,646,277"/>
-<area shape="rect" id="node4" href="$marker__tracking__nodelet_8h.html" title=" " alt="" coords="5,332,184,403"/>
-<area shape="rect" id="node5" href="$marker__tracking__nodelet_8cc.html" title=" " alt="" coords="13,451,176,507"/>
+<area shape="rect" id="node1" title=" " alt="" coords="377,5,587,61"/>
+<area shape="rect" id="node2" href="$marker__detector_8h.html" title=" " alt="" coords="275,109,481,165"/>
+<area shape="rect" id="node9" href="$labelling__method_8cc.html" title=" " alt="" coords="505,109,670,165"/>
+<area shape="rect" id="node3" href="$marker__tracker_8h.html" title=" " alt="" coords="111,213,283,284"/>
+<area shape="rect" id="node6" href="$marker__tracker_8cc.html" title=" " alt="" coords="231,339,411,395"/>
+<area shape="rect" id="node7" href="$marker__detector_8cc.html" title=" " alt="" coords="359,221,515,277"/>
+<area shape="rect" id="node8" href="$identify__marker__in__image_8cc.html" title=" " alt="" coords="539,221,711,277"/>
+<area shape="rect" id="node4" href="$marker__tracking__nodelet_8h.html" title=" " alt="" coords="5,332,207,403"/>
+<area shape="rect" id="node5" href="$marker__tracking__nodelet_8cc.html" title=" " alt="" coords="16,451,196,507"/>
 </map>

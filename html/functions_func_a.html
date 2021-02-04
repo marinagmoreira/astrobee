@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.13.0</span>
+   &#160;<span id="projectnumber">0.14.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -90,6 +90,9 @@ $(document).ready(function(){initNavTree('functions_func_a.html',''); initResiza
 &#160;
 
 <h3><a id="index_a"></a>- a -</h3><ul>
+<li>accel_bias_variances()
+: <a class="el" href="classlocalization__common_1_1CombinedNavStateCovariances.html#a8e625bb4d41dbd52dafe66efc487d223">localization_common::CombinedNavStateCovariances</a>
+</li>
 <li>AccessControl()
 : <a class="el" href="classaccess__control_1_1AccessControl.html#a0f90f4da4383e00ef90f762ab15b814f">access_control::AccessControl</a>
 </li>
@@ -126,7 +129,7 @@ $(document).ready(function(){initNavTree('functions_func_a.html',''); initResiza
 : <a class="el" href="classff__util_1_1FreeFlyerActionClient.html#afd30d8dcf065d2da276f0b203af6a7ae">ff_util::FreeFlyerActionClient&lt; ActionSpec &gt;</a>
 </li>
 <li>Add()
-: <a class="el" href="classff__util_1_1FSM.html#a229cf262fc7a6534c4451e0bc45e76af">ff_util::FSM</a>
+: <a class="el" href="classff__util_1_1FSM.html#a17d0e2f666eb04c8c489ed7b65ff6abf">ff_util::FSM</a>
 , <a class="el" href="classjsonloader_1_1Time.html#ae9c19e37c1d4a973b2f60c98edccd7f1">jsonloader::Time</a>
 </li>
 <li>add()
@@ -141,6 +144,9 @@ $(document).ready(function(){initNavTree('functions_func_a.html',''); initResiza
 <li>add_boundary()
 : <a class="el" href="classtraj__opt_1_1NonlinearTrajectory.html#a5ad49c2ca8e34a9b3431f816967d3bff">traj_opt::NonlinearTrajectory</a>
 </li>
+<li>AddARTagMeasurement()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a60af908ca21db31b641660ac0728a95d">graph_localizer::GraphLocalizer</a>
+</li>
 <li>addAxbConstraints()
 : <a class="el" href="classtraj__opt_1_1LegendreTrajectory.html#a29aba08862e7494adf9ab622d72c684b">traj_opt::LegendreTrajectory</a>
 </li>
@@ -150,8 +156,11 @@ $(document).ready(function(){initNavTree('functions_func_a.html',''); initResiza
 <li>addCloudConstraint()
 : <a class="el" href="classtraj__opt_1_1NonlinearTrajectory.html#ae6c3d3d7740867711e15918ab7b2b418">traj_opt::NonlinearTrajectory</a>
 </li>
+<li>AddCombinedNavState()
+: <a class="el" href="classgraph__localizer_1_1GraphValues.html#add52176e08b0e0e896db1269e99999b8">graph_localizer::GraphValues</a>
+</li>
 <li>addConstraint()
-: <a class="el" href="classtraj__opt_1_1NonlinearSolver.html#a6e3f07ff20fc0682d87be8e73d547157">traj_opt::NonlinearSolver</a>
+: <a class="el" href="classtraj__opt_1_1NonlinearSolver.html#ac506d94ea8863e601ac8acccc51d37a7">traj_opt::NonlinearSolver</a>
 </li>
 <li>addConvexificationConstraints()
 : <a class="el" href="classtraj__opt_1_1LegendreTrajectory.html#a3aa2bc8063d798bd65e7d61a633d9d3d">traj_opt::LegendreTrajectory</a>
@@ -159,8 +168,20 @@ $(document).ready(function(){initNavTree('functions_func_a.html',''); initResiza
 <li>AddDevice()
 : <a class="el" href="classsmart__dock_1_1SmartDockNode.html#ad35e1c8ef8d42fb442519d82402a3c88">smart_dock::SmartDockNode</a>
 </li>
+<li>AddFactors()
+: <a class="el" href="classgraph__localizer_1_1CumulativeFactorAdder.html#a82ed0714b7299f0014bdd713937d57fd">graph_localizer::CumulativeFactorAdder&lt; PARAMS &gt;</a>
+, <a class="el" href="classgraph__localizer_1_1FactorAdder.html#aacab9d79ee12f2c07c660d7529dcdfb0">graph_localizer::FactorAdder&lt; MEASUREMENT, PARAMS &gt;</a>
+, <a class="el" href="classgraph__localizer_1_1LocFactorAdder.html#a6c17e6e2292cc69181b7b41512092518">graph_localizer::LocFactorAdder</a>
+, <a class="el" href="classgraph__localizer_1_1ProjectionFactorAdder.html#aa8b2316fdb58be072c3a7c49d1830b8f">graph_localizer::ProjectionFactorAdder</a>
+, <a class="el" href="classgraph__localizer_1_1RotationFactorAdder.html#ae8651c5842fd3d3ecc830b231adc7e3d">graph_localizer::RotationFactorAdder</a>
+, <a class="el" href="classgraph__localizer_1_1SmartProjectionCumulativeFactorAdder.html#a232292d64004a58543f889a7aad5de23">graph_localizer::SmartProjectionCumulativeFactorAdder</a>
+, <a class="el" href="classgraph__localizer_1_1StandstillFactorAdder.html#a17e06d30f2412c36e3c3bff302b4a7c5">graph_localizer::StandstillFactorAdder</a>
+</li>
 <li>AddFault()
 : <a class="el" href="classsys__monitor_1_1SysMonitor.html#a6d2f6be0cf6f58ddf7e36fcc38535f97">sys_monitor::SysMonitor</a>
+</li>
+<li>AddFeature()
+: <a class="el" href="classgraph__localizer_1_1GraphValues.html#a8d26205977e53fbdab5e1b4309ca26c1">graph_localizer::GraphValues</a>
 </li>
 <li>AddFile()
 : <a class="el" href="classconfig__reader_1_1ConfigReader.html#accc096be3201034f646027b9b07e0e32">config_reader::ConfigReader</a>
@@ -172,21 +193,39 @@ $(document).ready(function(){initNavTree('functions_func_a.html',''); initResiza
 <li>AddImports()
 : <a class="el" href="classconfig__reader_1_1ConfigReader.html#a86252194e339c0f5e42153a05df4b748">config_reader::ConfigReader</a>
 </li>
+<li>AddImuMeasurement()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a8cadc5d96c9309978431f65985d47127">graph_localizer::GraphLocalizer</a>
+</li>
 <li>addLineCost()
 : <a class="el" href="classtraj__opt_1_1TrajSection4D.html#a8f98f3af46447d431f1e9f5e90a490f6">traj_opt::TrajSection4D</a>
 </li>
 <li>addMaximumBound()
 : <a class="el" href="classtraj__opt_1_1LegendreTrajectory.html#a44ba2886f05d766afeaefdb0880fb151">traj_opt::LegendreTrajectory</a>
 </li>
+<li>AddMeasurement()
+: <a class="el" href="classimu__integration_1_1ImuFilter.html#a12fa882014eb4cc4c03c98e373035530">imu_integration::ImuFilter</a>
+</li>
+<li>AddMeasurementsAndUpdateIfReady()
+: <a class="el" href="classgraph__bag_1_1GraphLocalizerSimulator.html#a3064dc887f479f433623ebf1d7e5622a">graph_bag::GraphLocalizerSimulator</a>
+</li>
+<li>AddOpticalFlowMeasurement()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#aee056faf581b20772d6867ca76aa10b5">graph_localizer::GraphLocalizer</a>
+</li>
 <li>addPathCost()
 : <a class="el" href="classtraj__opt_1_1GurobiSolver.html#a704f9837f97d1af8aeb1b059f8c81c22">traj_opt::GurobiSolver</a>
 , <a class="el" href="classtraj__opt_1_1TrajSection4D.html#afe4064f96d8f08cd58eac24495b90011">traj_opt::TrajSection4D</a>
+</li>
+<li>AddPoses()
+: <a class="el" href="classgraph__bag_1_1SparseMappingPoseAdder.html#a292c0551941cf9c1333d1ccafb34c74a">graph_bag::SparseMappingPoseAdder</a>
 </li>
 <li>addPosTime()
 : <a class="el" href="classtraj__opt_1_1NonlinearTrajectory.html#ad2b4b7180181d956bf354a06ec91cd75">traj_opt::NonlinearTrajectory</a>
 </li>
 <li>addr()
 : <a class="el" href="classi2c_1_1Device.html#a5f8aac66840470debbfb081994bdbb08">i2c::Device</a>
+</li>
+<li>AddSparseMappingMeasurement()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a82407758ff94a7cc4b8265a566f43c17">graph_localizer::GraphLocalizer</a>
 </li>
 <li>AddStandard()
 : <a class="el" href="classconfig__reader_1_1ConfigReader.html#a8e99f6f4eb2f58fb18c5e027d9eb9910">config_reader::ConfigReader</a>
@@ -199,6 +238,15 @@ $(document).ready(function(){initNavTree('functions_func_a.html',''); initResiza
 </li>
 <li>addTimeBound()
 : <a class="el" href="classtraj__opt_1_1NonlinearTrajectory.html#a4f528a3e8040b32b45f7aec0575af3bb">traj_opt::NonlinearTrajectory</a>
+</li>
+<li>AddValue()
+: <a class="el" href="classimu__integration_1_1ButterworthLowpassFilter3rdOrder.html#a571d72217b31be38ff121ef84f1ccda7">imu_integration::ButterworthLowpassFilter3rdOrder</a>
+, <a class="el" href="classimu__integration_1_1ButterworthLowpassFilter5thOrder05.html#aad5931e01b95f2118a8a433d8dcef422">imu_integration::ButterworthLowpassFilter5thOrder05</a>
+, <a class="el" href="classimu__integration_1_1ButterworthLowpassFilter5thOrder1.html#a460b7dc1e1fe14b5c6829335dd051db7">imu_integration::ButterworthLowpassFilter5thOrder1</a>
+, <a class="el" href="classimu__integration_1_1ButterworthLowpassFilter5thOrder.html#a8632f328ded134798c3d989f95c0707e">imu_integration::ButterworthLowpassFilter5thOrder</a>
+, <a class="el" href="classimu__integration_1_1ButterworthLowpassFilter.html#ac6648ea535d164002483f6e49b001882">imu_integration::ButterworthLowpassFilter</a>
+, <a class="el" href="classimu__integration_1_1Filter.html#a2c7990a1c18391a5a4b38687486997da">imu_integration::Filter</a>
+, <a class="el" href="classimu__integration_1_1IdentityFilter.html#ab6c52d1d978a7be0abaef1a94d7f2063">imu_integration::IdentityFilter</a>
 </li>
 <li>addVar()
 : <a class="el" href="classtraj__opt_1_1NonlinearSolver.html#a5508d7a2ac4dd41fa7ee66211b935cb3">traj_opt::NonlinearSolver</a>
@@ -296,6 +344,9 @@ $(document).ready(function(){initNavTree('functions_func_a.html',''); initResiza
 <li>ArmStateStampedCallback()
 : <a class="el" href="classperch_1_1PerchNodelet.html#a4d2b4c81238f0fdef59097f89d4380a2">perch::PerchNodelet</a>
 </li>
+<li>ARProjectionNoiseScaling()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#aa439f4afc604c3e3be686d5ca496f347">graph_localizer::GraphLocalizer</a>
+</li>
 <li>ARRegisterCamera()
 : <a class="el" href="classekf_1_1EkfWrapper.html#a8e7c1b5c7c399fe951fe10247b30a3a6">ekf::EkfWrapper</a>
 </li>
@@ -308,6 +359,9 @@ $(document).ready(function(){initNavTree('functions_func_a.html',''); initResiza
 <li>ARVisualLandmarksCallBack()
 : <a class="el" href="classekf_1_1EkfWrapper.html#a036c5ebe2b577a93e60a41704b6173af">ekf::EkfWrapper</a>
 </li>
+<li>ARVisualLandmarksCallback()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#a94967b5247fd32c6c363f1650c218ce2">graph_localizer::GraphLocalizerWrapper</a>
+</li>
 <li>AssembleConfig()
 : <a class="el" href="classff_1_1RosCommandConfigRapidCommandConfig.html#a645b099dcad11fb3a31bb10a989e4e46">ff::RosCommandConfigRapidCommandConfig</a>
 , <a class="el" href="classff_1_1RosTelemetryRapidTelemetry.html#aa03b0832aaa913fe90dcbd73d4847017">ff::RosTelemetryRapidTelemetry</a>
@@ -315,6 +369,9 @@ $(document).ready(function(){initNavTree('functions_func_a.html',''); initResiza
 <li>AssertFault()
 : <a class="el" href="classff__util_1_1FreeFlyerNodelet.html#ad5ac041c1bae01e612f4ff0f5512541c">ff_util::FreeFlyerNodelet</a>
 , <a class="el" href="classsys__monitor_1_1SysMonitor.html#a031fed173fa24a4ef139a2f8be010ae2">sys_monitor::SysMonitor</a>
+</li>
+<li>at()
+: <a class="el" href="classgraph__localizer_1_1GraphValues.html#a18b24e155fee43e5a3e8f1d5df07d472">graph_localizer::GraphValues</a>
 </li>
 <li>attempt_ransac()
 : <a class="el" href="classsparse__mapping_1_1RandomSampleConsensus.html#a35edf04e6f040f361da5abc42e0c304d">sparse_mapping::RandomSampleConsensus&lt; FittingFuncT, ErrorFuncT &gt;</a>
@@ -324,6 +381,12 @@ $(document).ready(function(){initNavTree('functions_func_a.html',''); initResiza
 </li>
 <li>AutoReturn()
 : <a class="el" href="classexecutive_1_1Executive.html#a49184a20834a1b42bdf2726a1aaa54f6">executive::Executive</a>
+</li>
+<li>average()
+: <a class="el" href="classlocalization__common_1_1Averager.html#a5237d0e9db70c36ebf26e94dfab0eeef">localization_common::Averager</a>
+</li>
+<li>Averager()
+: <a class="el" href="classlocalization__common_1_1Averager.html#a207ae83a2ac87d73caf88b1aa1a55b64">localization_common::Averager</a>
 </li>
 <li>AxbConstraint()
 : <a class="el" href="classtraj__opt_1_1AxbConstraint.html#ae7d68696f3e7f36001931c087362c1cd">traj_opt::AxbConstraint</a>

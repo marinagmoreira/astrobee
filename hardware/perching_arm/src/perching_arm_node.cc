@@ -99,6 +99,8 @@ class PerchingArmNode : public ff_util::FreeFlyerNodelet {
           NODELET_WARN("Could not initialize the arm. It is attached?");
           return;
         }
+        // Wait until initialization is complete
+        ros::Duration(3).sleep();  // sleep for half a second
 
         // Grab config parameters for the matched device
         config_reader::ConfigReader::Table config_list;

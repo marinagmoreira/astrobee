@@ -44,7 +44,7 @@ var searchData=
   ['ekf_20video_1269',['EKF Video',['../ekfvideo.html',1,'tools']]],
   ['ekfwrapper_1270',['EkfWrapper',['../classekf_1_1EkfWrapper.html',1,'ekf::EkfWrapper'],['../classekf_1_1EkfWrapper.html#a3d5f989e12b76aad682a51576bb6b90b',1,'ekf::EkfWrapper::EkfWrapper()']]],
   ['ellipse_1271',['ELLIPSE',['../namespacetraj__opt.html#ae3921040b88d50c3fc45afb162c01b86a131d6207d894bc0791f230684db2fc79',1,'traj_opt']]],
-  ['empty_1272',['Empty',['../classimu__integration_1_1ImuIntegrator.html#ab7448f971dc8b186d7a36256326c5e76',1,'imu_integration::ImuIntegrator::Empty()'],['../classgraph__localizer_1_1FactorsToAdd.html#abffc0d22cddd331a4296807326acdaf0',1,'graph_localizer::FactorsToAdd::empty()']]],
+  ['empty_1272',['empty',['../classgraph__localizer_1_1FactorsToAdd.html#abffc0d22cddd331a4296807326acdaf0',1,'graph_localizer::FactorsToAdd::empty()'],['../classimu__integration_1_1ImuIntegrator.html#ab7448f971dc8b186d7a36256326c5e76',1,'imu_integration::ImuIntegrator::Empty()']]],
   ['en_5fdepth_5f_1273',['en_depth_',['../classsim__wrapper_1_1Sim.html#af57c50380fd3ba3164df99f6a2b9dbee',1,'sim_wrapper::Sim']]],
   ['en_5fdist_5f_1274',['en_dist_',['../namespaceperching__arm.html#a1ceaab74cc139e818690b3051da995de',1,'perching_arm']]],
   ['en_5flandmark_5f_1275',['en_landmark_',['../classsim__wrapper_1_1Sim.html#a62bd7e2450ad9e96142fa5c7996cdb41',1,'sim_wrapper::Sim']]],

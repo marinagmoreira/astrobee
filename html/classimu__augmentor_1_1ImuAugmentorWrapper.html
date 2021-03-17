@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.14.0</span>
+   &#160;<span id="projectnumber">0.14.1</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -105,6 +105,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad279ca93184509ed0ad54bb402025a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a687a995637db49464b57ae97c75683c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimu__augmentor_1_1ImuAugmentorWrapper.html#a687a995637db49464b57ae97c75683c3">ImuCallback</a> (const sensor_msgs::Imu &amp;imu_msg)</td></tr>
 <tr class="separator:a687a995637db49464b57ae97c75683c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e743a10019e58764ef903be2f85522c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimu__augmentor_1_1ImuAugmentorWrapper.html#a3e743a10019e58764ef903be2f85522c">FlightModeCallback</a> (const ff_msgs::FlightMode &amp;flight_mode)</td></tr>
+<tr class="separator:a3e743a10019e58764ef903be2f85522c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affeac3a5f2d943e2bcd328aa601c8ae0"><td class="memItemLeft" align="right" valign="top">boost::optional&lt; std::pair&lt; <a class="el" href="classlocalization__common_1_1CombinedNavState.html">localization_common::CombinedNavState</a>, <a class="el" href="classlocalization__common_1_1CombinedNavStateCovariances.html">localization_common::CombinedNavStateCovariances</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimu__augmentor_1_1ImuAugmentorWrapper.html#affeac3a5f2d943e2bcd328aa601c8ae0">LatestImuAugmentedCombinedNavStateAndCovariances</a> ()</td></tr>
 <tr class="separator:affeac3a5f2d943e2bcd328aa601c8ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf25d5e9992db0f11cbc23ca758a9b3a"><td class="memItemLeft" align="right" valign="top">boost::optional&lt; ff_msgs::EkfState &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimu__augmentor_1_1ImuAugmentorWrapper.html#acf25d5e9992db0f11cbc23ca758a9b3a">LatestImuAugmentedLocalizationMsg</a> ()</td></tr>
@@ -138,6 +140,24 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3e743a10019e58764ef903be2f85522c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e743a10019e58764ef903be2f85522c">&#9670;&nbsp;</a></span>FlightModeCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void imu_augmentor::ImuAugmentorWrapper::FlightModeCallback </td>
+          <td>(</td>
+          <td class="paramtype">const ff_msgs::FlightMode &amp;&#160;</td>
+          <td class="paramname"><em>flight_mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a687a995637db49464b57ae97c75683c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a687a995637db49464b57ae97c75683c3">&#9670;&nbsp;</a></span>ImuCallback()</h2>
 

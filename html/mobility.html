@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.14.0</span>
+   &#160;<span id="projectnumber">0.14.1</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -91,13 +91,13 @@ $(document).ready(function(){initNavTree('mobility.html',''); initResizable(); }
 <div class="title">Mobility </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2><a class="anchor" id="autotoc_md349"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md350"></a>
 Overview</h2>
 <p>The overarching objective of the mobility subsystem is to provide a clean interface for moving the Astrobee in such a way that avoids obstacles, adheres to kinematic constraints, and keeps within specified flight zones.</p>
 <p>It is necessary to first define a few terms that will be used throughout the rest of this document. A FreeFlyer <b>plan</b> comprises of a number of stations (static poses) connected by <b>segments</b> (motion). The executive subsystem splits a plan and feeds the resulting segments one by one to mobility.</p>
 <p>A segment is a time-ordered sequence of <b>setpoints</b> and a corresponding <b>flight mode</b>. Each setpoint is a vector containing a pose and its first and second time derivatives, or equivalently a second order curve in 6DoF that describes motion. The flight mode is a string ("nominal", "docking", etc.) that is used to reconfigure the system (set impeller speed, controller gains, planning limits, tolerance values, etc.) so that consistency is enforced. When integrated forward in time by the controller, the setpoint carves out a continous curve in 3D space, defined over the time interval that runs from the current setpoint to the next setpoint, which we call a <b>trajectory</b>.</p>
 <p><img src="../images/mobility/definitions.png" alt="alt text" title="Core nomenclature" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md350"></a>
+<h2><a class="anchor" id="autotoc_md351"></a>
 Basic operation</h2>
 <p>The mobility subsystem provides the callee with a single action-based entry point for control, called <code>ff_msgs::MotionAction</code>. This "motion action" accepts one of the following five commands:</p>
 <ol type="1">
@@ -117,7 +117,7 @@ Basic operation</h2>
 </ul>
 <p>The diagram below illustrates how the various ndoes in the system interact with each other. ROS ctions are drawn in red, while ROS services are drawn in blue. Nodes that are part of the mobility subsystem are drawn as black boxes, while external nodes are drawn as white boxes.</p>
 <p><img src="../images/mobility/mob_overview.png" alt="alt text" title="Interaction between mobility modules" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md351"></a>
+<h2><a class="anchor" id="autotoc_md352"></a>
 Using the mobility subsystem</h2>
 <p>Typically, mobility will be controlled through the Ground Data System (GDS). However, The arm behavior is packaged with its own gflags-based tool called teleop. This tool is essentially a convenience wrapper around an action client can be used to control the arm from the command-line. </p><pre class="fragment">rosrun mobility teleop -helpshort
 </pre><p>Here are some examples of how to use the tool. You will need an active simulator to run these examples.</p>
@@ -128,20 +128,20 @@ Using the mobility subsystem</h2>
 </pre><p>To use the QP planner to move to X=0.6 Y=0.6: </p><pre class="fragment">rosrun mobility teleop -move -pos "0.6 0.6" -planner qp
 </pre><p>At any point one can inspect the internal state of the mobility subsystem using the following command. The command will return a sequence of numbers, which represent a time ordered sequence of states. Please refer to <code>ff_msgs::MotionState</code> for a mapping from numbers to states. </p><pre class="fragment">rostopic echo /mob/motion/state
 </pre><p>If you ever need to manually set the motion state to a specific value, you can call the <code>set_state</code> service with the new state as the single argument. </p><pre class="fragment">rosservice call /mob/motion/set_state 1
-</pre><h2><a class="anchor" id="autotoc_md352"></a>
+</pre><h2><a class="anchor" id="autotoc_md353"></a>
 Generating a plan from a sequence of poses.</h2>
 <p>Given a list of poses (positions in meters, and angles in degrees) the plangen tool can use the trapezoidal planner to create planned trajectory that goes between these poses.</p>
 <p>This tool does not enforce the robot following this plan to always face forward. If that is desired, the input poses should be created accordingly.</p>
 <p>Since the planner will take the shortest path among two poses, to avoid ambiguity it is suggested that the angles do not change by more than 90 degrees between poses.</p>
 <p>Here is an example list of poses in the Kibo module, written as a file named input.txt.</p>
-<h1><a class="anchor" id="autotoc_md353"></a>
+<h1><a class="anchor" id="autotoc_md354"></a>
 x    y      z  roll pitch yaw (degrees)</h1>
 <p>10.93 -9.2 4.85 0 0 90 10.93 -6.2 4.85 0 0 0</p>
 <p>Here the robot will start looking down the length of the module (the largest dimension, which is the Y axis), and move by 3 meters. During that time, the robot's orientation will change from forward to sideways.</p>
 <p>Here is another example:</p>
-<h3><a class="anchor" id="autotoc_md354"></a>
-360 degree yaw rotation at a 45 degree pitch.</h3>
 <h3><a class="anchor" id="autotoc_md355"></a>
+360 degree yaw rotation at a 45 degree pitch.</h3>
+<h3><a class="anchor" id="autotoc_md356"></a>
 x    y      z  roll pitch   yaw (degrees)</h3>
 <p>10.93 -9.2 4.85 0 0 90 # face forward 10.93 -9.2 4.85 0 45 90 # pitch up at 45 degrees 10.93 -9.2 4.85 0 45 180 # yaw rotation 10.93 -9.2 4.85 0 45 270 # more yaw rotation 10.93 -9.2 4.85 0 45 360 # more yaw rotation 10.93 -9.2 4.85 0 45 90 # back to the original yaw</p>
 <p>The planner tool can be invoked as follows:</p>
@@ -157,7 +157,7 @@ x    y      z  roll pitch   yaw (degrees)</h3>
 <p>rotation(yaw) * rotation(pitch) * rotation(roll)</p>
 <p>As such, the roll rotation happens first, followed by the pitch rotation, and followed by the yaw rotation. This option also supports the value 'roll-pitch-yaw' when the order above is reversed. In total, there are six ways of multiplying these rotation matrices.</p>
 <p>Other options can be seen by invoking the -help option.</p>
-<h2><a class="anchor" id="autotoc_md356"></a>
+<h2><a class="anchor" id="autotoc_md357"></a>
 Creating acceleration profiles.</h2>
 <p>If plangen is invoked with &ndash;output-type csv, it will create acceleration profiles that could be used to control the gantry in MGTF.</p>
 <p><a class="el" href="choreographer.html">Choreographer</a> <a class="el" href="framestore.html">Framestore</a> <a class="el" href="mapper.html">Mapper</a> <a class="el" href="planner_qp.html">Quadratic Program (QP) planner</a> <a class="el" href="planner_trapezoidal.html">Trapezoidal planner</a> </p>

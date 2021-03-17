@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.14.0</span>
+   &#160;<span id="projectnumber">0.14.1</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -312,7 +312,8 @@ $(document).ready(function(){initNavTree('functions_a.html',''); initResizable()
 : <a class="el" href="classtraj__opt_1_1LegendreTrajectory.html#a44ba2886f05d766afeaefdb0880fb151">traj_opt::LegendreTrajectory</a>
 </li>
 <li>AddMeasurement()
-: <a class="el" href="classimu__integration_1_1ImuFilter.html#a12fa882014eb4cc4c03c98e373035530">imu_integration::ImuFilter</a>
+: <a class="el" href="classimu__integration_1_1DynamicImuFilter.html#a29e267103f6c5bfb62fd89242bfaaea6">imu_integration::DynamicImuFilter</a>
+, <a class="el" href="classimu__integration_1_1ImuFilter.html#a12fa882014eb4cc4c03c98e373035530">imu_integration::ImuFilter</a>
 </li>
 <li>AddMeasurementsAndUpdateIfReady()
 : <a class="el" href="classgraph__bag_1_1GraphLocalizerSimulator.html#a3064dc887f479f433623ebf1d7e5622a">graph_bag::GraphLocalizerSimulator</a>
@@ -393,11 +394,11 @@ $(document).ready(function(){initNavTree('functions_a.html',''); initResizable()
 : <a class="el" href="classtraj__opt_1_1NonlinearTrajectory.html#a4f528a3e8040b32b45f7aec0575af3bb">traj_opt::NonlinearTrajectory</a>
 </li>
 <li>AddValue()
-: <a class="el" href="classimu__integration_1_1ButterworthLowpassFilter3rdOrder.html#a571d72217b31be38ff121ef84f1ccda7">imu_integration::ButterworthLowpassFilter3rdOrder</a>
-, <a class="el" href="classimu__integration_1_1ButterworthLowpassFilter5thOrder05.html#aad5931e01b95f2118a8a433d8dcef422">imu_integration::ButterworthLowpassFilter5thOrder05</a>
-, <a class="el" href="classimu__integration_1_1ButterworthLowpassFilter5thOrder1.html#a460b7dc1e1fe14b5c6829335dd051db7">imu_integration::ButterworthLowpassFilter5thOrder1</a>
-, <a class="el" href="classimu__integration_1_1ButterworthLowpassFilter5thOrder.html#a8632f328ded134798c3d989f95c0707e">imu_integration::ButterworthLowpassFilter5thOrder</a>
-, <a class="el" href="classimu__integration_1_1ButterworthLowpassFilter.html#ac6648ea535d164002483f6e49b001882">imu_integration::ButterworthLowpassFilter</a>
+: <a class="el" href="classimu__integration_1_1ButterO10.html#a427209811f73aae3a848b0c06204774a">imu_integration::ButterO10&lt; Params &gt;</a>
+, <a class="el" href="classimu__integration_1_1ButterO1.html#aa8f0f1e81f4b180732b2ce759cc99388">imu_integration::ButterO1&lt; Params &gt;</a>
+, <a class="el" href="classimu__integration_1_1ButterO3.html#a2efb09221c928e126f235d5efcd2adde">imu_integration::ButterO3&lt; Params &gt;</a>
+, <a class="el" href="classimu__integration_1_1ButterO5.html#a9b283bedd9c1bef74b68052fbe5dcc43">imu_integration::ButterO5&lt; Params &gt;</a>
+, <a class="el" href="classimu__integration_1_1ButterO7.html#a1ae109d1e7521764189b4c45cd169ded">imu_integration::ButterO7&lt; Params &gt;</a>
 , <a class="el" href="classimu__integration_1_1Filter.html#a2c7990a1c18391a5a4b38687486997da">imu_integration::Filter</a>
 , <a class="el" href="classimu__integration_1_1IdentityFilter.html#ab6c52d1d978a7be0abaef1a94d7f2063">imu_integration::IdentityFilter</a>
 </li>
@@ -443,6 +444,12 @@ $(document).ready(function(){initNavTree('functions_a.html',''); initResizable()
 </li>
 <li>AgentProviderRosHelper()
 : <a class="el" href="classrapid_1_1AgentProviderRosHelper.html#a6b555597b4856f93d1c52bc8b96b65b7">rapid::AgentProviderRosHelper</a>
+</li>
+<li>aggressive_accel
+: <a class="el" href="structimu__integration_1_1ImuFilterParams.html#adab16891b24f69a75e6bd07c669ec21b">imu_integration::ImuFilterParams</a>
+</li>
+<li>aggressive_ang_vel
+: <a class="el" href="structimu__integration_1_1ImuFilterParams.html#ad55fb75f9c0a50e623d4dabe3021d5a0">imu_integration::ImuFilterParams</a>
 </li>
 <li>alive_
 : <a class="el" href="classff_1_1RapidSubRosPub.html#aa433eea02e829f5262143cda085c401a">ff::RapidSubRosPub</a>
@@ -507,6 +514,7 @@ $(document).ready(function(){initNavTree('functions_a.html',''); initResizable()
 </li>
 <li>ar
 : <a class="el" href="structgraph__bag_1_1LiveMeasurementSimulatorParams.html#a0c45a3c304860f11828ec93f7019b96a">graph_bag::LiveMeasurementSimulatorParams</a>
+, <a class="el" href="structgraph__localizer_1_1FeatureCounts.html#a8c8dd478915fa4c1b795ce748700d4f5">graph_localizer::FeatureCounts</a>
 </li>
 <li>ar_camera_count_
 : <a class="el" href="classsim__wrapper_1_1Sim.html#af713609305f6e3cc0a111b3f78d178ca">sim_wrapper::Sim</a>
@@ -525,6 +533,9 @@ $(document).ready(function(){initNavTree('functions_a.html',''); initResizable()
 </li>
 <li>ar_tag_loc_adder
 : <a class="el" href="structgraph__localizer_1_1FactorParams.html#a5a2927327556839434d3b444508b8c59">graph_localizer::FactorParams</a>
+</li>
+<li>ar_tag_loc_adder_min_num_matches
+: <a class="el" href="structgraph__localizer_1_1GraphLocalizerNodeletParams.html#a1d5aedf948e2795b7504181a70747eb4">graph_localizer::GraphLocalizerNodeletParams</a>
 </li>
 <li>ar_tag_msg_
 : <a class="el" href="classgnc__autocode_1_1GncSimAutocode.html#add5b4e4dacf06915b4a1b7ebfa55a870">gnc_autocode::GncSimAutocode</a>

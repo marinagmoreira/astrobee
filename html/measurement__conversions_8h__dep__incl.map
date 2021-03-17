@@ -1,6 +1,7 @@
 <map id="localization/localization_measurements/include/localization_measurements/measurement_conversions.h" name="localization/localization_measurements/include/localization_measurements/measurement_conversions.h">
-<area shape="rect" id="node1" title=" " alt="" coords="99,5,417,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="208,5,527,61"/>
 <area shape="rect" id="node2" href="$graph__localizer_8cc.html" title=" " alt="" coords="5,109,153,165"/>
 <area shape="rect" id="node3" href="$graph__localizer__wrapper_8cc.html" title=" " alt="" coords="177,109,339,165"/>
-<area shape="rect" id="node4" href="$measurement__conversions_8cc.html" title=" " alt="" coords="363,109,609,165"/>
+<area shape="rect" id="node4" href="$imu__augmentor__wrapper_8cc.html" title=" " alt="" coords="363,117,593,158"/>
+<area shape="rect" id="node5" href="$measurement__conversions_8cc.html" title=" " alt="" coords="617,109,862,165"/>
 </map>

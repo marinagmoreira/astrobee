@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.14.0</span>
+   &#160;<span id="projectnumber">0.14.1</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -101,10 +101,10 @@ Inheritance diagram for imu_integration::ImuIntegrator:</div>
 <div class="dyncontent">
 <div class="center"><img src="classimu__integration_1_1ImuIntegrator__inherit__graph.png" border="0" usemap="#aimu__integration_1_1ImuIntegrator_inherit__map" alt="Inheritance graph"/></div>
 <map name="imu__integration_1_1ImuIntegrator_inherit__map" id="aimu__integration_1_1ImuIntegrator_inherit__map">
-<area shape="rect" title=" " alt="" coords="241,5,467,259"/>
-<area shape="rect" href="classimu__augmentor_1_1ImuAugmentor.html" title=" " alt="" coords="5,329,236,421"/>
-<area shape="rect" href="classimu__bias__tester_1_1ImuBiasTester.html" title=" " alt="" coords="261,321,447,428"/>
-<area shape="rect" href="classimu__integration_1_1LatestImuIntegrator.html" title=" " alt="" coords="471,307,738,443"/>
+<area shape="rect" title=" " alt="" coords="241,5,467,288"/>
+<area shape="rect" href="classimu__augmentor_1_1ImuAugmentor.html" title=" " alt="" coords="5,358,236,450"/>
+<area shape="rect" href="classimu__bias__tester_1_1ImuBiasTester.html" title=" " alt="" coords="261,351,447,457"/>
+<area shape="rect" href="classimu__integration_1_1LatestImuIntegrator.html" title=" " alt="" coords="471,336,738,472"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -130,6 +130,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab7448f971dc8b186d7a36256326c5e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae618fa1bafc582101c6aceccaeecea2b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimu__integration_1_1ImuIntegrator.html#ae618fa1bafc582101c6aceccaeecea2b">Size</a> () const</td></tr>
 <tr class="separator:ae618fa1bafc582101c6aceccaeecea2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f4020a82b33b21e591324e6c1643af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimu__integration_1_1ImuIntegrator.html#a89f4020a82b33b21e591324e6c1643af">SetFanSpeedMode</a> (const <a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6b">localization_measurements::FanSpeedMode</a> <a class="el" href="classimu__integration_1_1ImuIntegrator.html#a1d1f45067e072e7a689fadca01edbc5e">fan_speed_mode</a>)</td></tr>
+<tr class="separator:a89f4020a82b33b21e591324e6c1643af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d1f45067e072e7a689fadca01edbc5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6b">localization_measurements::FanSpeedMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimu__integration_1_1ImuIntegrator.html#a1d1f45067e072e7a689fadca01edbc5e">fan_speed_mode</a> () const</td></tr>
+<tr class="separator:a1d1f45067e072e7a689fadca01edbc5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e7d277de4eda1bc41ac9618c5d23de0"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; gtsam::PreintegratedCombinedMeasurements::Params &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimu__integration_1_1ImuIntegrator.html#a1e7d277de4eda1bc41ac9618c5d23de0">pim_params</a> () const</td></tr>
 <tr class="separator:a1e7d277de4eda1bc41ac9618c5d23de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fa77a515ee60ce12f322edb0baf033e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimu__integration_1_1ImuIntegrator.html#a6fa77a515ee60ce12f322edb0baf033e">WithinBounds</a> (const <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> timestamp)</td></tr>
@@ -191,6 +195,23 @@ Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">bool imu_integration::ImuIntegrator::Empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d1f45067e072e7a689fadca01edbc5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d1f45067e072e7a689fadca01edbc5e">&#9670;&nbsp;</a></span>fan_speed_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6b">lm::FanSpeedMode</a> imu_integration::ImuIntegrator::fan_speed_mode </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -370,6 +391,24 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a>&#160;</td>
           <td class="paramname"><em>new_start_time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89f4020a82b33b21e591324e6c1643af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f4020a82b33b21e591324e6c1643af">&#9670;&nbsp;</a></span>SetFanSpeedMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void imu_integration::ImuIntegrator::SetFanSpeedMode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6b">localization_measurements::FanSpeedMode</a>&#160;</td>
+          <td class="paramname"><em>fan_speed_mode</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

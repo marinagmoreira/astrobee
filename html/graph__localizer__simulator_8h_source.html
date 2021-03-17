@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.14.0</span>
+   &#160;<span id="projectnumber">0.14.1</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -113,50 +113,55 @@ $(document).ready(function(){initNavTree('graph__localizer__simulator_8h_source.
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define GRAPH_BAG_GRAPH_LOCALIZER_SIMULATOR_H_</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;ff_msgs/Feature2dArray.h&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;ff_msgs/VisualLandmarks.h&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="graph__localizer__simulator__params_8h.html">graph_bag/graph_localizer_simulator_params.h</a>&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="graph__localizer__wrapper_8h.html">graph_localizer/graph_localizer_wrapper.h</a>&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="time_8h.html">localization_common/time.h</a>&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;sensor_msgs/Imu.h&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegraph__bag.html">graph_bag</a> {</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classgraph__bag_1_1GraphLocalizerSimulator.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classgraph__bag_1_1GraphLocalizerSimulator.html">GraphLocalizerSimulator</a> : <span class="keyword">public</span> <a class="code" href="classgraph__localizer_1_1GraphLocalizerWrapper.html">graph_localizer::GraphLocalizerWrapper</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classgraph__bag_1_1GraphLocalizerSimulator.html#a929966c32c6d29453f0d6e45a2c65dc3">GraphLocalizerSimulator</a>(<span class="keyword">const</span> <a class="code" href="structgraph__bag_1_1GraphLocalizerSimulatorParams.html">GraphLocalizerSimulatorParams</a>&amp; params, <span class="keyword">const</span> std::string&amp; graph_config_path_prefix);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classgraph__bag_1_1GraphLocalizerSimulator.html#a61ed7e3ddeb8a7cabf6b33c1d794f48b">BufferOpticalFlowMsg</a>(<span class="keyword">const</span> ff_msgs::Feature2dArray&amp; feature_array_msg);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classgraph__bag_1_1GraphLocalizerSimulator.html#a0d52c8b756a4868f6e7a77481caa1e09">BufferVLVisualLandmarksMsg</a>(<span class="keyword">const</span> ff_msgs::VisualLandmarks&amp; visual_landmarks_msg);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classgraph__bag_1_1GraphLocalizerSimulator.html#a88ec9da0fca5a0ef90bde88f4519d93b">BufferARVisualLandmarksMsg</a>(<span class="keyword">const</span> ff_msgs::VisualLandmarks&amp; visual_landmarks_msg);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classgraph__bag_1_1GraphLocalizerSimulator.html#ab2313f9aeb4125e0629bf424180977c1">BufferImuMsg</a>(<span class="keyword">const</span> sensor_msgs::Imu&amp; imu_msg);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classgraph__bag_1_1GraphLocalizerSimulator.html#a3064dc887f479f433623ebf1d7e5622a">AddMeasurementsAndUpdateIfReady</a>(<span class="keyword">const</span> <a class="code" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a>&amp; current_time);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  std::vector&lt;ff_msgs::Feature2dArray&gt; of_msg_buffer_;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  std::vector&lt;ff_msgs::VisualLandmarks&gt; vl_msg_buffer_;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  std::vector&lt;ff_msgs::VisualLandmarks&gt; ar_msg_buffer_;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  std::vector&lt;sensor_msgs::Imu&gt; imu_msg_buffer_;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  boost::optional&lt;localization_common::Time&gt; last_update_time_;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="structgraph__bag_1_1GraphLocalizerSimulatorParams.html">GraphLocalizerSimulatorParams</a> params_;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}  <span class="comment">// namespace graph_bag</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif  // GRAPH_BAG_GRAPH_LOCALIZER_SIMULATOR_H_</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;ff_msgs/FlightMode.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;ff_msgs/VisualLandmarks.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="graph__localizer__simulator__params_8h.html">graph_bag/graph_localizer_simulator_params.h</a>&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="graph__localizer__wrapper_8h.html">graph_localizer/graph_localizer_wrapper.h</a>&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="time_8h.html">localization_common/time.h</a>&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;sensor_msgs/Imu.h&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegraph__bag.html">graph_bag</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classgraph__bag_1_1GraphLocalizerSimulator.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classgraph__bag_1_1GraphLocalizerSimulator.html">GraphLocalizerSimulator</a> : <span class="keyword">public</span> <a class="code" href="classgraph__localizer_1_1GraphLocalizerWrapper.html">graph_localizer::GraphLocalizerWrapper</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="classgraph__bag_1_1GraphLocalizerSimulator.html#a929966c32c6d29453f0d6e45a2c65dc3">GraphLocalizerSimulator</a>(<span class="keyword">const</span> <a class="code" href="structgraph__bag_1_1GraphLocalizerSimulatorParams.html">GraphLocalizerSimulatorParams</a>&amp; params, <span class="keyword">const</span> std::string&amp; graph_config_path_prefix);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classgraph__bag_1_1GraphLocalizerSimulator.html#a61ed7e3ddeb8a7cabf6b33c1d794f48b">BufferOpticalFlowMsg</a>(<span class="keyword">const</span> ff_msgs::Feature2dArray&amp; feature_array_msg);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classgraph__bag_1_1GraphLocalizerSimulator.html#a0d52c8b756a4868f6e7a77481caa1e09">BufferVLVisualLandmarksMsg</a>(<span class="keyword">const</span> ff_msgs::VisualLandmarks&amp; visual_landmarks_msg);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classgraph__bag_1_1GraphLocalizerSimulator.html#a88ec9da0fca5a0ef90bde88f4519d93b">BufferARVisualLandmarksMsg</a>(<span class="keyword">const</span> ff_msgs::VisualLandmarks&amp; visual_landmarks_msg);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classgraph__bag_1_1GraphLocalizerSimulator.html#ab2313f9aeb4125e0629bf424180977c1">BufferImuMsg</a>(<span class="keyword">const</span> sensor_msgs::Imu&amp; imu_msg);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classgraph__bag_1_1GraphLocalizerSimulator.html#a55a3dd2984ac7142fa5306977d5b0a52">BufferFlightModeMsg</a>(<span class="keyword">const</span> ff_msgs::FlightMode&amp; flight_mode_msg);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classgraph__bag_1_1GraphLocalizerSimulator.html#a3064dc887f479f433623ebf1d7e5622a">AddMeasurementsAndUpdateIfReady</a>(<span class="keyword">const</span> <a class="code" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a>&amp; current_time);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  std::vector&lt;ff_msgs::Feature2dArray&gt; of_msg_buffer_;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  std::vector&lt;ff_msgs::VisualLandmarks&gt; vl_msg_buffer_;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  std::vector&lt;ff_msgs::VisualLandmarks&gt; ar_msg_buffer_;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  std::vector&lt;sensor_msgs::Imu&gt; imu_msg_buffer_;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  std::vector&lt;ff_msgs::FlightMode&gt; flight_mode_msg_buffer_;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  boost::optional&lt;localization_common::Time&gt; last_update_time_;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="structgraph__bag_1_1GraphLocalizerSimulatorParams.html">GraphLocalizerSimulatorParams</a> params_;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}  <span class="comment">// namespace graph_bag</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif  // GRAPH_BAG_GRAPH_LOCALIZER_SIMULATOR_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="agraph__localizer__simulator__params_8h_html"><div class="ttname"><a href="graph__localizer__simulator__params_8h.html">graph_localizer_simulator_params.h</a></div></div>
 <div class="ttc" id="aclassgraph__bag_1_1GraphLocalizerSimulator_html_a61ed7e3ddeb8a7cabf6b33c1d794f48b"><div class="ttname"><a href="classgraph__bag_1_1GraphLocalizerSimulator.html#a61ed7e3ddeb8a7cabf6b33c1d794f48b">graph_bag::GraphLocalizerSimulator::BufferOpticalFlowMsg</a></div><div class="ttdeci">void BufferOpticalFlowMsg(const ff_msgs::Feature2dArray &amp;feature_array_msg)</div><div class="ttdef"><b>Definition:</b> graph_localizer_simulator.cc:27</div></div>
-<div class="ttc" id="aclassgraph__localizer_1_1GraphLocalizerWrapper_html"><div class="ttname"><a href="classgraph__localizer_1_1GraphLocalizerWrapper.html">graph_localizer::GraphLocalizerWrapper</a></div><div class="ttdef"><b>Definition:</b> graph_localizer_wrapper.h:45</div></div>
+<div class="ttc" id="aclassgraph__localizer_1_1GraphLocalizerWrapper_html"><div class="ttname"><a href="classgraph__localizer_1_1GraphLocalizerWrapper.html">graph_localizer::GraphLocalizerWrapper</a></div><div class="ttdef"><b>Definition:</b> graph_localizer_wrapper.h:47</div></div>
+<div class="ttc" id="aclassgraph__bag_1_1GraphLocalizerSimulator_html_a55a3dd2984ac7142fa5306977d5b0a52"><div class="ttname"><a href="classgraph__bag_1_1GraphLocalizerSimulator.html#a55a3dd2984ac7142fa5306977d5b0a52">graph_bag::GraphLocalizerSimulator::BufferFlightModeMsg</a></div><div class="ttdeci">void BufferFlightModeMsg(const ff_msgs::FlightMode &amp;flight_mode_msg)</div><div class="ttdef"><b>Definition:</b> graph_localizer_simulator.cc:41</div></div>
 <div class="ttc" id="astructgraph__bag_1_1GraphLocalizerSimulatorParams_html"><div class="ttname"><a href="structgraph__bag_1_1GraphLocalizerSimulatorParams.html">graph_bag::GraphLocalizerSimulatorParams</a></div><div class="ttdef"><b>Definition:</b> graph_localizer_simulator_params.h:22</div></div>
-<div class="ttc" id="aclassgraph__bag_1_1GraphLocalizerSimulator_html"><div class="ttname"><a href="classgraph__bag_1_1GraphLocalizerSimulator.html">graph_bag::GraphLocalizerSimulator</a></div><div class="ttdef"><b>Definition:</b> graph_localizer_simulator.h:34</div></div>
-<div class="ttc" id="aclassgraph__bag_1_1GraphLocalizerSimulator_html_a3064dc887f479f433623ebf1d7e5622a"><div class="ttname"><a href="classgraph__bag_1_1GraphLocalizerSimulator.html#a3064dc887f479f433623ebf1d7e5622a">graph_bag::GraphLocalizerSimulator::AddMeasurementsAndUpdateIfReady</a></div><div class="ttdeci">bool AddMeasurementsAndUpdateIfReady(const localization_common::Time &amp;current_time)</div><div class="ttdef"><b>Definition:</b> graph_localizer_simulator.cc:41</div></div>
+<div class="ttc" id="aclassgraph__bag_1_1GraphLocalizerSimulator_html"><div class="ttname"><a href="classgraph__bag_1_1GraphLocalizerSimulator.html">graph_bag::GraphLocalizerSimulator</a></div><div class="ttdef"><b>Definition:</b> graph_localizer_simulator.h:35</div></div>
+<div class="ttc" id="aclassgraph__bag_1_1GraphLocalizerSimulator_html_a3064dc887f479f433623ebf1d7e5622a"><div class="ttname"><a href="classgraph__bag_1_1GraphLocalizerSimulator.html#a3064dc887f479f433623ebf1d7e5622a">graph_bag::GraphLocalizerSimulator::AddMeasurementsAndUpdateIfReady</a></div><div class="ttdeci">bool AddMeasurementsAndUpdateIfReady(const localization_common::Time &amp;current_time)</div><div class="ttdef"><b>Definition:</b> graph_localizer_simulator.cc:45</div></div>
 <div class="ttc" id="atime_8h_html"><div class="ttname"><a href="time_8h.html">time.h</a></div></div>
 <div class="ttc" id="aclassgraph__bag_1_1GraphLocalizerSimulator_html_a929966c32c6d29453f0d6e45a2c65dc3"><div class="ttname"><a href="classgraph__bag_1_1GraphLocalizerSimulator.html#a929966c32c6d29453f0d6e45a2c65dc3">graph_bag::GraphLocalizerSimulator::GraphLocalizerSimulator</a></div><div class="ttdeci">GraphLocalizerSimulator(const GraphLocalizerSimulatorParams &amp;params, const std::string &amp;graph_config_path_prefix)</div><div class="ttdef"><b>Definition:</b> graph_localizer_simulator.cc:23</div></div>
 <div class="ttc" id="agraph__localizer__wrapper_8h_html"><div class="ttname"><a href="graph__localizer__wrapper_8h.html">graph_localizer_wrapper.h</a></div></div>

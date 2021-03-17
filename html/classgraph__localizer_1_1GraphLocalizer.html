@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.14.0</span>
+   &#160;<span id="projectnumber">0.14.1</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -124,8 +124,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa439f4afc604c3e3be686d5ca496f347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6880cc3ad60b444785a989181f3f8f3b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a6880cc3ad60b444785a989181f3f8f3b">MapProjectionNoiseScaling</a> (const <a class="el" href="structgraph__localizer_1_1LocFactorAdderParams.html">LocFactorAdderParams</a> &amp;<a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#ad16143f89b5d2ac23579c89f22f903b4">params</a>, <a class="el" href="classgraph__localizer_1_1FactorsToAdd.html">FactorsToAdd</a> &amp;factors_to_add)</td></tr>
 <tr class="separator:a6880cc3ad60b444785a989181f3f8f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a602780299b287d2ab7effc7128015236"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a602780299b287d2ab7effc7128015236">CheckForStandstill</a> ()</td></tr>
-<tr class="separator:a602780299b287d2ab7effc7128015236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b1df15c63991268194d310099adbf3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a9b1df15c63991268194d310099adbf3e">CheckForStandstill</a> (const <a class="el" href="structlocalization__measurements_1_1FeaturePointsMeasurement.html">localization_measurements::FeaturePointsMeasurement</a> &amp;optical_flow_feature_points_measurement)</td></tr>
+<tr class="separator:a9b1df15c63991268194d310099adbf3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60af908ca21db31b641660ac0728a95d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a60af908ca21db31b641660ac0728a95d">AddARTagMeasurement</a> (const <a class="el" href="structlocalization__measurements_1_1MatchedProjectionsMeasurement.html">localization_measurements::MatchedProjectionsMeasurement</a> &amp;matched_projections_measurement)</td></tr>
 <tr class="separator:a60af908ca21db31b641660ac0728a95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82407758ff94a7cc4b8265a566f43c17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a82407758ff94a7cc4b8265a566f43c17">AddSparseMappingMeasurement</a> (const <a class="el" href="structlocalization__measurements_1_1MatchedProjectionsMeasurement.html">localization_measurements::MatchedProjectionsMeasurement</a> &amp;matched_projections_measurement)</td></tr>
@@ -165,6 +165,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6e8ad4c3452695f92e7e466d2b0af6da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb5fb3413275ab923b49714bf4447318"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgraph__localizer_1_1GraphStats.html">GraphStats</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#acb5fb3413275ab923b49714bf4447318">graph_stats</a> () const</td></tr>
 <tr class="separator:acb5fb3413275ab923b49714bf4447318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accfe1058efd0e3df7ed1c724129bb231"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#accfe1058efd0e3df7ed1c724129bb231">SetFanSpeedMode</a> (const <a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6b">localization_measurements::FanSpeedMode</a> <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a2245d1fbffc3c9765d4dd8f435004d71">fan_speed_mode</a>)</td></tr>
+<tr class="separator:accfe1058efd0e3df7ed1c724129bb231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2245d1fbffc3c9765d4dd8f435004d71"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6b">localization_measurements::FanSpeedMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a2245d1fbffc3c9765d4dd8f435004d71">fan_speed_mode</a> () const</td></tr>
+<tr class="separator:a2245d1fbffc3c9765d4dd8f435004d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -331,8 +335,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a602780299b287d2ab7effc7128015236"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a602780299b287d2ab7effc7128015236">&#9670;&nbsp;</a></span>CheckForStandstill()</h2>
+<a id="a9b1df15c63991268194d310099adbf3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b1df15c63991268194d310099adbf3e">&#9670;&nbsp;</a></span>CheckForStandstill()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -340,7 +344,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void graph_localizer::GraphLocalizer::CheckForStandstill </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structlocalization__measurements_1_1FeaturePointsMeasurement.html">localization_measurements::FeaturePointsMeasurement</a> &amp;&#160;</td>
+          <td class="paramname"><em>optical_flow_feature_points_measurement</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -356,6 +361,23 @@ Friends</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">const gtsam::NonlinearFactorGraph &amp; graph_localizer::GraphLocalizer::factor_graph </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2245d1fbffc3c9765d4dd8f435004d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2245d1fbffc3c9765d4dd8f435004d71">&#9670;&nbsp;</a></span>fan_speed_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6b">lm::FanSpeedMode</a> graph_localizer::GraphLocalizer::fan_speed_mode </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -701,6 +723,24 @@ template&lt;typename FactorType &gt; </div>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>output_path</em> = <code>&quot;graph.dot&quot;</code></td><td>)</td>
           <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="accfe1058efd0e3df7ed1c724129bb231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accfe1058efd0e3df7ed1c724129bb231">&#9670;&nbsp;</a></span>SetFanSpeedMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void graph_localizer::GraphLocalizer::SetFanSpeedMode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6b">localization_measurements::FanSpeedMode</a>&#160;</td>
+          <td class="paramname"><em>fan_speed_mode</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

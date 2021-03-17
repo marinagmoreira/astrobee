@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.14.0</span>
+   &#160;<span id="projectnumber">0.14.1</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -115,17 +115,28 @@ $(document).ready(function(){initNavTree('imu__filter__params_8h_source.html',''
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceimu__integration.html">imu_integration</a> {</div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structimu__integration_1_1ImuFilterParams.html">   24</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structimu__integration_1_1ImuFilterParams.html">ImuFilterParams</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="comment">// none, butter, butter3, butter5, butter5_1, butter5_05</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structimu__integration_1_1ImuFilterParams.html#a63cceb3898256ab95280ff78eb7172c4">   26</a></span>&#160;  std::string <a class="code" href="structimu__integration_1_1ImuFilterParams.html#a63cceb3898256ab95280ff78eb7172c4">type</a> = <span class="stringliteral">&quot;none&quot;</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}  <span class="comment">// namespace imu_integration</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif  // IMU_INTEGRATION_IMU_FILTER_PARAMS_H_</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="comment">// Filter for fan speed modes (quiet = 2000 rpm, nominal = 2500 rpm, aggressive = 2800 rpm)</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="comment">// none, butter, butter20_83, butter3, butter5, butter5_1, butter5_05</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structimu__integration_1_1ImuFilterParams.html#a1491b0798044b56352bd6b471d2eeffc">   27</a></span>&#160;  std::string <a class="code" href="structimu__integration_1_1ImuFilterParams.html#a1491b0798044b56352bd6b471d2eeffc">quiet_accel</a> = <span class="stringliteral">&quot;none&quot;</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structimu__integration_1_1ImuFilterParams.html#a44a64bb8b2b475b682df36434be1a8b2">   28</a></span>&#160;  std::string <a class="code" href="structimu__integration_1_1ImuFilterParams.html#a44a64bb8b2b475b682df36434be1a8b2">quiet_ang_vel</a> = <span class="stringliteral">&quot;none&quot;</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structimu__integration_1_1ImuFilterParams.html#a71d6835f474e6c536de9991a335692ba">   29</a></span>&#160;  std::string <a class="code" href="structimu__integration_1_1ImuFilterParams.html#a71d6835f474e6c536de9991a335692ba">nominal_accel</a> = <span class="stringliteral">&quot;none&quot;</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structimu__integration_1_1ImuFilterParams.html#ad2b67b7a6adfe4addeb62427676d2289">   30</a></span>&#160;  std::string <a class="code" href="structimu__integration_1_1ImuFilterParams.html#ad2b67b7a6adfe4addeb62427676d2289">nominal_ang_vel</a> = <span class="stringliteral">&quot;none&quot;</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structimu__integration_1_1ImuFilterParams.html#adab16891b24f69a75e6bd07c669ec21b">   31</a></span>&#160;  std::string <a class="code" href="structimu__integration_1_1ImuFilterParams.html#adab16891b24f69a75e6bd07c669ec21b">aggressive_accel</a> = <span class="stringliteral">&quot;none&quot;</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structimu__integration_1_1ImuFilterParams.html#ad55fb75f9c0a50e623d4dabe3021d5a0">   32</a></span>&#160;  std::string <a class="code" href="structimu__integration_1_1ImuFilterParams.html#ad55fb75f9c0a50e623d4dabe3021d5a0">aggressive_ang_vel</a> = <span class="stringliteral">&quot;none&quot;</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}  <span class="comment">// namespace imu_integration</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif  // IMU_INTEGRATION_IMU_FILTER_PARAMS_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespaceimu__integration_html"><div class="ttname"><a href="namespaceimu__integration.html">imu_integration</a></div><div class="ttdef"><b>Definition:</b> butterworth_lowpass_filter.h:26</div></div>
-<div class="ttc" id="astructimu__integration_1_1ImuFilterParams_html_a63cceb3898256ab95280ff78eb7172c4"><div class="ttname"><a href="structimu__integration_1_1ImuFilterParams.html#a63cceb3898256ab95280ff78eb7172c4">imu_integration::ImuFilterParams::type</a></div><div class="ttdeci">std::string type</div><div class="ttdef"><b>Definition:</b> imu_filter_params.h:26</div></div>
+<div class="ttc" id="astructimu__integration_1_1ImuFilterParams_html_ad55fb75f9c0a50e623d4dabe3021d5a0"><div class="ttname"><a href="structimu__integration_1_1ImuFilterParams.html#ad55fb75f9c0a50e623d4dabe3021d5a0">imu_integration::ImuFilterParams::aggressive_ang_vel</a></div><div class="ttdeci">std::string aggressive_ang_vel</div><div class="ttdef"><b>Definition:</b> imu_filter_params.h:32</div></div>
+<div class="ttc" id="astructimu__integration_1_1ImuFilterParams_html_a71d6835f474e6c536de9991a335692ba"><div class="ttname"><a href="structimu__integration_1_1ImuFilterParams.html#a71d6835f474e6c536de9991a335692ba">imu_integration::ImuFilterParams::nominal_accel</a></div><div class="ttdeci">std::string nominal_accel</div><div class="ttdef"><b>Definition:</b> imu_filter_params.h:29</div></div>
+<div class="ttc" id="astructimu__integration_1_1ImuFilterParams_html_adab16891b24f69a75e6bd07c669ec21b"><div class="ttname"><a href="structimu__integration_1_1ImuFilterParams.html#adab16891b24f69a75e6bd07c669ec21b">imu_integration::ImuFilterParams::aggressive_accel</a></div><div class="ttdeci">std::string aggressive_accel</div><div class="ttdef"><b>Definition:</b> imu_filter_params.h:31</div></div>
+<div class="ttc" id="astructimu__integration_1_1ImuFilterParams_html_a1491b0798044b56352bd6b471d2eeffc"><div class="ttname"><a href="structimu__integration_1_1ImuFilterParams.html#a1491b0798044b56352bd6b471d2eeffc">imu_integration::ImuFilterParams::quiet_accel</a></div><div class="ttdeci">std::string quiet_accel</div><div class="ttdef"><b>Definition:</b> imu_filter_params.h:27</div></div>
+<div class="ttc" id="anamespaceimu__integration_html"><div class="ttname"><a href="namespaceimu__integration.html">imu_integration</a></div><div class="ttdef"><b>Definition:</b> butterO1.h:26</div></div>
+<div class="ttc" id="astructimu__integration_1_1ImuFilterParams_html_a44a64bb8b2b475b682df36434be1a8b2"><div class="ttname"><a href="structimu__integration_1_1ImuFilterParams.html#a44a64bb8b2b475b682df36434be1a8b2">imu_integration::ImuFilterParams::quiet_ang_vel</a></div><div class="ttdeci">std::string quiet_ang_vel</div><div class="ttdef"><b>Definition:</b> imu_filter_params.h:28</div></div>
 <div class="ttc" id="astructimu__integration_1_1ImuFilterParams_html"><div class="ttname"><a href="structimu__integration_1_1ImuFilterParams.html">imu_integration::ImuFilterParams</a></div><div class="ttdef"><b>Definition:</b> imu_filter_params.h:24</div></div>
+<div class="ttc" id="astructimu__integration_1_1ImuFilterParams_html_ad2b67b7a6adfe4addeb62427676d2289"><div class="ttname"><a href="structimu__integration_1_1ImuFilterParams.html#ad2b67b7a6adfe4addeb62427676d2289">imu_integration::ImuFilterParams::nominal_ang_vel</a></div><div class="ttdeci">std::string nominal_ang_vel</div><div class="ttdef"><b>Definition:</b> imu_filter_params.h:30</div></div>
 <!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
 </body>

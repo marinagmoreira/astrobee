@@ -1,12 +1,13 @@
 <map id="localization/graph_localizer/include/graph_localizer/graph_localizer_params.h" name="localization/graph_localizer/include/graph_localizer/graph_localizer_params.h">
-<area shape="rect" id="node1" title=" " alt="" coords="1138,5,1324,76"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1214,5,1400,76"/>
 <area shape="rect" id="node2" href="$calibration__params_8h.html" title=" " alt="" coords="1067,310,1262,351"/>
 <area shape="rect" id="node5" href="$factor__params_8h.html" title=" " alt="" coords="559,213,722,255"/>
 <area shape="rect" id="node11" title=" " alt="" coords="1371,496,1430,523"/>
-<area shape="rect" id="node14" href="$feature__tracker__params_8h.html" title=" " alt="" coords="1574,124,1746,165"/>
-<area shape="rect" id="node15" href="$graph__initializer__params_8h.html" title=" " alt="" coords="1387,124,1550,165"/>
-<area shape="rect" id="node21" href="$graph__values__params_8h.html" title=" " alt="" coords="1150,124,1312,165"/>
+<area shape="rect" id="node14" href="$feature__tracker__params_8h.html" title=" " alt="" coords="1565,124,1737,165"/>
+<area shape="rect" id="node15" href="$graph__initializer__params_8h.html" title=" " alt="" coords="1378,124,1540,165"/>
+<area shape="rect" id="node21" href="$graph__values__params_8h.html" title=" " alt="" coords="1150,213,1312,255"/>
 <area shape="rect" id="node22" href="$noise__params_8h.html" title=" " alt="" coords="91,213,251,255"/>
+<area shape="rect" id="node23" href="$fan__speed__mode_8h.html" title=" " alt="" coords="1762,124,1964,165"/>
 <area shape="rect" id="node3" title=" " alt="" coords="645,414,844,441"/>
 <area shape="rect" id="node4" title=" " alt="" coords="1033,414,1218,441"/>
 <area shape="rect" id="node6" href="$loc__factor__adder__params_8h.html" title=" " alt="" coords="446,310,624,351"/>

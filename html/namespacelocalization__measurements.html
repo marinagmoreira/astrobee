@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.14.0</span>
+   &#160;<span id="projectnumber">0.14.1</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -90,6 +90,7 @@ $(document).ready(function(){initNavTree('namespacelocalization__measurements.ht
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">localization_measurements Namespace Reference</div>  </div>
@@ -126,6 +127,15 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a93bac38a5be1a3e273669c50ee067eaa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__measurements.html#a93bac38a5be1a3e273669c50ee067eaa">MatchedProjections</a> = std::vector&lt; <a class="el" href="structlocalization__measurements_1_1MatchedProjection.html">MatchedProjection</a> &gt;</td></tr>
 <tr class="separator:a93bac38a5be1a3e273669c50ee067eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a71648aafc67db80910f94a0f0fa5aa6b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6b">FanSpeedMode</a> { <a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6bacc9ab5e60ac2a9a675ba64bf4bb49dc8">FanSpeedMode::kOff</a>, 
+<a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6bad5b5f7a288e14dd7c92464e7c34ffb65">FanSpeedMode::kQuiet</a>, 
+<a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6bafd5251520c968cf5c8bfa990499d51de">FanSpeedMode::kNominal</a>, 
+<a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6babc0149f6dae93e2acdf0b7d45a15fd7d">FanSpeedMode::kAggressive</a>
+ }</td></tr>
+<tr class="separator:a71648aafc67db80910f94a0f0fa5aa6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a051fad43343e9d07cedf0639e40e1d14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlocalization__measurements_1_1MatchedProjectionsMeasurement.html">MatchedProjectionsMeasurement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__measurements.html#a051fad43343e9d07cedf0639e40e1d14">MakeMatchedProjectionsMeasurement</a> (const ff_msgs::VisualLandmarks &amp;visual_landmarks)</td></tr>
@@ -134,6 +144,8 @@ Functions</h2></td></tr>
 <tr class="separator:a84660484feb1eff66b3a351945186f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52376a42b5f97ebe369b56f6547e453b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlocalization__measurements_1_1FeaturePointsMeasurement.html">FeaturePointsMeasurement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__measurements.html#a52376a42b5f97ebe369b56f6547e453b">MakeFeaturePointsMeasurement</a> (const ff_msgs::Feature2dArray &amp;optical_flow_tracks)</td></tr>
 <tr class="separator:a52376a42b5f97ebe369b56f6547e453b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f3bf5029dcef6d3121284460ca446b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6b">FanSpeedMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__measurements.html#a5f3bf5029dcef6d3121284460ca446b5">ConvertFanSpeedMode</a> (const uint8_t speed)</td></tr>
+<tr class="separator:a5f3bf5029dcef6d3121284460ca446b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a8c8fa17fba5bb65924248e401c1a939e"></a>
@@ -220,7 +232,54 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a71648aafc67db80910f94a0f0fa5aa6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71648aafc67db80910f94a0f0fa5aa6b">&#9670;&nbsp;</a></span>FanSpeedMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6b">localization_measurements::FanSpeedMode</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a71648aafc67db80910f94a0f0fa5aa6bacc9ab5e60ac2a9a675ba64bf4bb49dc8"></a>kOff&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a71648aafc67db80910f94a0f0fa5aa6bad5b5f7a288e14dd7c92464e7c34ffb65"></a>kQuiet&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a71648aafc67db80910f94a0f0fa5aa6bafd5251520c968cf5c8bfa990499d51de"></a>kNominal&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a71648aafc67db80910f94a0f0fa5aa6babc0149f6dae93e2acdf0b7d45a15fd7d"></a>kAggressive&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a5f3bf5029dcef6d3121284460ca446b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3bf5029dcef6d3121284460ca446b5">&#9670;&nbsp;</a></span>ConvertFanSpeedMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6b">FanSpeedMode</a> localization_measurements::ConvertFanSpeedMode </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a84660484feb1eff66b3a351945186f31"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a84660484feb1eff66b3a351945186f31">&#9670;&nbsp;</a></span>FrameChangeMatchedProjectionsMeasurement()</h2>
 

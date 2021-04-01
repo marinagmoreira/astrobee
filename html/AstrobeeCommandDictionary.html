@@ -869,7 +869,7 @@ td.inner_table {
 
 <div class="commandSpec">
   <div class="commandSpecId"><a name="command_Mobility.simpleMove6DOF">Mobility.simpleMove6DOF</a></div>
-  <div class="commandSpecNotes">Moves the robot to the specified pose.<p/>Using the default trapezoidal planner, the move has the following steps:<br/>- If not in holonomic mode, the robot rotates to face the target position.<br/>- Once rotation is complete, the robot translates in a straight line to the target position.<br/>- Once translation is complete, the robot rotates to the target attitude.</div>
+  <div class="commandSpecNotes">Moves the robot to the specified pose.<p/>Using the default trapezoidal planner, the move works as follows: <br/>- If  holonomic mode is disabled (usual case), the robot will sequentially (1) rotate to face the target position, (2) translate to the target position while facing forward, (3) rotate to the target attitude. <br/>- If holonomic mode is enabled, the robot will simultaneously translate along a straight line to the target position while rotating to the target attitude.</div>
   <div class="commandSpecParams">
     <table class="params">
   <tr>
@@ -1577,7 +1577,7 @@ td.inner_table {
 
 <div class="commandSpec">
   <div class="commandSpecId"><a name="command_Settings.setHolonomicMode">Settings.setHolonomicMode</a></div>
-  <div class="commandSpecNotes">Enables/disables holonomic mode.<p/>Holonomic mode is sometimes called 'blind flying' because it relaxes the constraint to always point the HazCam forward in order to enable obstacle detection. When in holonomic mode, the default trapezoidal planner will skip its usual first step of slewing attitude to face toward the target position. Instead, it will generate a trajectory that maintains the robot's previous attitude during translation to the target position.</div>
+  <div class="commandSpecNotes">Enables/disables holonomic mode.<p/>Holonomic mode is sometimes called 'blind flying' because it relaxes the constraint to always point the HazCam in the direction of motion while translating in order to enable obstacle detection. When holonomic mode is enabled, the default trapezoidal planner will simultaneously translate to the target position and rotate to the target attitude.</div>
   <div class="commandSpecParams">
     <table class="params">
   <tr>
@@ -1781,7 +1781,7 @@ td.inner_table {
   </tr>
 </table>
 </td>
-    <td class="params_notes">Which planner to use:<ul><li>Trapezoidal planner: Generates a straight-line trajectory from the start position to the target position, with a trapezoidal velocity profile. If not in holonomic mode, the robot will rotate to face the target position before beginning to translate. After translating to the target position, the robot will turn to face the target attitude.</li><li>QP planner: An experimental planner that generates a curved trajectory from start to target, avoiding intervening obstacles. As of 10/2020, using the QP planner is not recommended, because it has not yet been tested on the ISS.</li></ul></td>
+    <td class="params_notes">Which planner to use:<ul><li>Trapezoidal planner: Generates a straight-line trajectory from the start position to the target position, using trapezoidal velocity profiles for translation and rotation. If holonomic mode is disabled (usual case), the robot will (1) rotate to face the target position, (2) translate to the target position while facing forward, (3) rotate to the target attitude. If holonomic mode is enabled, the robot will simultaneously translate along a straight line to the target position while rotating to the target attitude.</li><li>QP planner: An experimental planner that generates a curved trajectory from start to target, avoiding intervening obstacles. As of 10/2020, using the QP planner is not recommended, because it has not yet been tested on the ISS.</li></ul></td>
   </tr>
 </table>
 

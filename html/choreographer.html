@@ -100,12 +100,12 @@ $(document).ready(function(){initNavTree('choreographer.html',''); initResizable
 <li>It broadcasts the current inertia properties, which are used by peer nodes (fam) to reconfigure themselves.</li>
 <li>It broadcasts the current set of keep in and keep out zones, which are used by the mapper to check for collisions and build a clutter map.</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md336"></a>
+<h2><a class="anchor" id="autotoc_md335"></a>
 Basic operation</h2>
 <p>The choreographer supports a number of different motion requests &ndash; <code>executing</code> an existing plan, <code>moving</code> through a sequence of timestamped poses, <code>prepping</code> to a given flight mode, <code>stopping</code> as quickly as possible, and <code>idling</code> the propulsion system. Each request has different data in the payload, and so it makes sense to support multiple action types:</p>
 <p>The choreographer provides the callee with a single action-based entry point for control, called <code>ff_msgs::MotionAction</code>. This "motion action" accepts a command &ndash; PREP, MOVE, EXEC, STOP or IDLE &ndash; and carries it out in the background, sending periodic feedback to the callee. When the task completes a result is returned, along with a response code that captures any errors.</p>
 <p>The action supports only one goal, which is fully-preemptible. This means that a new goal always preempts the current goal (the previous goal's callee will be notified of preemption). Consequently, you must be careful not to interact with docking action, or any of its dependencies while active.</p>
-<h2><a class="anchor" id="autotoc_md337"></a>
+<h2><a class="anchor" id="autotoc_md336"></a>
 Configurable parameters</h2>
 <p>The choreographer exposes its configuration through <code>ff_common::ConfigServer</code> class. Thus, the <code>rqt_reconfigure</code> client can be used to change settings manually, or the <code>ff_common::ConfigClient</code> can be used to change the settings programatically.</p>
 <p>The following configurable parameters are supported:</p>
@@ -139,7 +139,7 @@ Configurable parameters</h2>
 </table>
 <p>Additional parameters are supported, but are not reconfigurable.</p>
 <p>A replanning approach is implemented to support obstacle avoidance using the qp-planner. To utilize this functionality set the following parameters: <code>planner</code> to "qp", <code>enable_faceforward</code> and <code>enable_collision_checking</code> to true.</p>
-<h2><a class="anchor" id="autotoc_md338"></a>
+<h2><a class="anchor" id="autotoc_md337"></a>
 Under the hood</h2>
 <p>Internally, the choreographer is encoded as a finite state machine depicted below and implemented using the ff_util/FSM class. This class essentially captures a map of (state, event) -&gt; lambda function relationships. The state of the system is moved forward by setting the initial state and then pushing a sequence of events to the FSM.</p>
 <p><div class="dotgraph">

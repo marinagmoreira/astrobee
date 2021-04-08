@@ -1,11 +1,11 @@
 <map id="localization/graph_localizer/include/graph_localizer/feature_tracker.h" name="localization/graph_localizer/include/graph_localizer/feature_tracker.h">
-<area shape="rect" id="node1" title=" " alt="" coords="275,5,473,61"/>
-<area shape="rect" id="node2" href="$feature__track_8h.html" title=" " alt="" coords="288,109,460,151"/>
+<area shape="rect" id="node1" title=" " alt="" coords="268,5,467,61"/>
+<area shape="rect" id="node2" href="$feature__track_8h.html" title=" " alt="" coords="281,109,453,151"/>
 <area shape="rect" id="node3" href="$feature__point_8h.html" title=" " alt="" coords="189,199,391,240"/>
 <area shape="rect" id="node4" href="$time_8h.html" title=" " alt="" coords="5,288,167,329"/>
 <area shape="rect" id="node5" title=" " alt="" coords="191,295,378,322"/>
-<area shape="rect" id="node7" title=" " alt="" coords="467,206,529,233"/>
-<area shape="rect" id="node8" href="$feature__tracker__params_8h.html" title=" " alt="" coords="536,109,708,151"/>
-<area shape="rect" id="node9" title=" " alt="" coords="733,117,783,143"/>
+<area shape="rect" id="node7" title=" " alt="" coords="466,206,517,233"/>
+<area shape="rect" id="node8" href="$feature__tracker__params_8h.html" title=" " alt="" coords="529,109,701,151"/>
+<area shape="rect" id="node9" title=" " alt="" coords="725,117,788,143"/>
 <area shape="rect" id="node6" title=" " alt="" coords="403,295,465,322"/>
 </map>

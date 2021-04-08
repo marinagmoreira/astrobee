@@ -70,9 +70,10 @@ var localization =
         [ "Old XML format and new \"config\" format", "markertracking.html#autotoc_md266", null ]
       ] ]
     ] ],
+    [ "Sparse Mapping", "sparsemapping.html", "sparsemapping" ],
     [ "Vive Localization", "vive_localization.html", [
-      [ "Calibration", "vive_localization.html#autotoc_md333", null ],
-      [ "Tracking (offline)", "vive_localization.html#autotoc_md334", null ],
-      [ "Notes", "vive_localization.html#autotoc_md335", null ]
+      [ "Calibration", "vive_localization.html#autotoc_md332", null ],
+      [ "Tracking (offline)", "vive_localization.html#autotoc_md333", null ],
+      [ "Notes", "vive_localization.html#autotoc_md334", null ]
     ] ]
 ];

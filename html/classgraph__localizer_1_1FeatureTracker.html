@@ -104,16 +104,32 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af9ce6157d69ed889b0cf76ce87b010fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3da37db484a562db839e7897ef1044b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a3da37db484a562db839e7897ef1044b9">UpdateFeatureTracks</a> (const <a class="el" href="namespacelocalization__measurements.html#a8c170d54b30c1da5b9b240441997e717">localization_measurements::FeaturePoints</a> &amp;feature_points)</td></tr>
 <tr class="separator:a3da37db484a562db839e7897ef1044b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a9b1e346629a866c6dc03315f76ca36"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacegraph__localizer.html#aff1ac21d66021408baa18f7ab281621f">FeatureTrackMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a2a9b1e346629a866c6dc03315f76ca36">feature_tracks</a> () const</td></tr>
-<tr class="separator:a2a9b1e346629a866c6dc03315f76ca36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e966a955db64787a7bd4da6ac735b9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a1e966a955db64787a7bd4da6ac735b9a">RemovePointsOutsideWindow</a> ()</td></tr>
-<tr class="separator:a1e966a955db64787a7bd4da6ac735b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ac07e77689015e88b849f420cb4e301"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a8ac07e77689015e88b849f420cb4e301">RemoveOldFeaturePoints</a> (<a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> oldest_allowed_time)</td></tr>
-<tr class="separator:a8ac07e77689015e88b849f420cb4e301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b365dc1d0ad90d2b81f694000a9bfd5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacegraph__localizer.html#a408e390b6c93fb9e1dfaf5aa740ae55a">FeatureTrackIdMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a5b365dc1d0ad90d2b81f694000a9bfd5">feature_tracks</a> () const</td></tr>
+<tr class="separator:a5b365dc1d0ad90d2b81f694000a9bfd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab90a2dae8439ca54a8dd7cb288c76847"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacegraph__localizer.html#a833f8d138f4c7d7a70a1e56af291debf">FeatureTrackLengthMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#ab90a2dae8439ca54a8dd7cb288c76847">feature_tracks_length_ordered</a> () const</td></tr>
+<tr class="separator:ab90a2dae8439ca54a8dd7cb288c76847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9344f037856e71bea7142a7448d0ff66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a9344f037856e71bea7142a7448d0ff66">NumTracksWithAtLeastNPoints</a> (int n) const</td></tr>
+<tr class="separator:a9344f037856e71bea7142a7448d0ff66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a003b7585544d66feb09284997ce5c917"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a003b7585544d66feb09284997ce5c917">RemoveUndetectedFeatures</a> (const <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> &amp;feature_point)</td></tr>
+<tr class="separator:a003b7585544d66feb09284997ce5c917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5859d582588c840dd1c6156423feb957"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a5859d582588c840dd1c6156423feb957">RemoveOldFeaturePointsAndSlideWindow</a> (boost::optional&lt; <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> &gt; oldest_allowed_time=boost::none)</td></tr>
+<tr class="separator:a5859d582588c840dd1c6156423feb957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d66e2155d36caee4ab4dba52c14ce5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a5d66e2155d36caee4ab4dba52c14ce5f">AddOrUpdateTrack</a> (const <a class="el" href="structlocalization__measurements_1_1FeaturePoint.html">localization_measurements::FeaturePoint</a> &amp;feature_point)</td></tr>
+<tr class="separator:a5d66e2155d36caee4ab4dba52c14ce5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a092cc181fc278745bccfa939852189"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a7a092cc181fc278745bccfa939852189">UpdateLengthMap</a> ()</td></tr>
+<tr class="separator:a7a092cc181fc278745bccfa939852189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cbc6835dd66096bb71f2f628157bb77"><td class="memItemLeft" align="right" valign="top">boost::optional&lt; const <a class="el" href="classgraph__localizer_1_1FeatureTrack.html">FeatureTrack</a> &amp; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a4cbc6835dd66096bb71f2f628157bb77">LongestFeatureTrack</a> () const</td></tr>
+<tr class="separator:a4cbc6835dd66096bb71f2f628157bb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e262809539b2b183f739d781194ad1a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a6e262809539b2b183f739d781194ad1a">size</a> () const</td></tr>
+<tr class="separator:a6e262809539b2b183f739d781194ad1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b6a4a6e88b513a1e29ea51a52b261be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a5b6a4a6e88b513a1e29ea51a52b261be">empty</a> () const</td></tr>
+<tr class="separator:a5b6a4a6e88b513a1e29ea51a52b261be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bd05d7003910c776c4b4345e811d90b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a6bd05d7003910c776c4b4345e811d90b">Clear</a> ()</td></tr>
+<tr class="separator:a6bd05d7003910c776c4b4345e811d90b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed62d15f3c2ef6aa346e9601a5acfbfc"><td class="memItemLeft" align="right" valign="top">boost::optional&lt; <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#aed62d15f3c2ef6aa346e9601a5acfbfc">OldestTimestamp</a> () const</td></tr>
 <tr class="separator:aed62d15f3c2ef6aa346e9601a5acfbfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1164f421a9f886bd328021e7673620f"><td class="memItemLeft" align="right" valign="top">boost::optional&lt; <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#ab1164f421a9f886bd328021e7673620f">latest_timestamp</a> () const</td></tr>
-<tr class="separator:ab1164f421a9f886bd328021e7673620f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb6157fd83f2f206221cefecaf1b394"><td class="memItemLeft" align="right" valign="top">boost::optional&lt; <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a0bb6157fd83f2f206221cefecaf1b394">LatestTimestamp</a> () const</td></tr>
+<tr class="separator:a0bb6157fd83f2f206221cefecaf1b394"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2cfe420a3ca4d06bb356d306b3df19b"><td class="memItemLeft" align="right" valign="top">boost::optional&lt; <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#ad2cfe420a3ca4d06bb356d306b3df19b">PreviousTimestamp</a> () const</td></tr>
 <tr class="separator:ad2cfe420a3ca4d06bb356d306b3df19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -150,41 +166,137 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2a9b1e346629a866c6dc03315f76ca36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a9b1e346629a866c6dc03315f76ca36">&#9670;&nbsp;</a></span>feature_tracks()</h2>
+<a id="a5d66e2155d36caee4ab4dba52c14ce5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d66e2155d36caee4ab4dba52c14ce5f">&#9670;&nbsp;</a></span>AddOrUpdateTrack()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacegraph__localizer.html#aff1ac21d66021408baa18f7ab281621f">FeatureTrackMap</a>&amp; graph_localizer::FeatureTracker::feature_tracks </td>
+          <td class="memname">void graph_localizer::FeatureTracker::AddOrUpdateTrack </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structlocalization__measurements_1_1FeaturePoint.html">localization_measurements::FeaturePoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>feature_point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6bd05d7003910c776c4b4345e811d90b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bd05d7003910c776c4b4345e811d90b">&#9670;&nbsp;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void graph_localizer::FeatureTracker::Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b6a4a6e88b513a1e29ea51a52b261be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b6a4a6e88b513a1e29ea51a52b261be">&#9670;&nbsp;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool graph_localizer::FeatureTracker::empty </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ab1164f421a9f886bd328021e7673620f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1164f421a9f886bd328021e7673620f">&#9670;&nbsp;</a></span>latest_timestamp()</h2>
+<a id="a5b365dc1d0ad90d2b81f694000a9bfd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b365dc1d0ad90d2b81f694000a9bfd5">&#9670;&nbsp;</a></span>feature_tracks()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">boost::optional&lt; <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">lc::Time</a> &gt; graph_localizer::FeatureTracker::latest_timestamp </td>
+          <td class="memname">const <a class="el" href="namespacegraph__localizer.html#a408e390b6c93fb9e1dfaf5aa740ae55a">FeatureTrackIdMap</a> &amp; graph_localizer::FeatureTracker::feature_tracks </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab90a2dae8439ca54a8dd7cb288c76847"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab90a2dae8439ca54a8dd7cb288c76847">&#9670;&nbsp;</a></span>feature_tracks_length_ordered()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacegraph__localizer.html#a833f8d138f4c7d7a70a1e56af291debf">FeatureTrackLengthMap</a> &amp; graph_localizer::FeatureTracker::feature_tracks_length_ordered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0bb6157fd83f2f206221cefecaf1b394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bb6157fd83f2f206221cefecaf1b394">&#9670;&nbsp;</a></span>LatestTimestamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::optional&lt; <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">lc::Time</a> &gt; graph_localizer::FeatureTracker::LatestTimestamp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4cbc6835dd66096bb71f2f628157bb77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cbc6835dd66096bb71f2f628157bb77">&#9670;&nbsp;</a></span>LongestFeatureTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::optional&lt; const <a class="el" href="classgraph__localizer_1_1FeatureTrack.html">FeatureTrack</a> &amp; &gt; graph_localizer::FeatureTracker::LongestFeatureTrack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9344f037856e71bea7142a7448d0ff66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9344f037856e71bea7142a7448d0ff66">&#9670;&nbsp;</a></span>NumTracksWithAtLeastNPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int graph_localizer::FeatureTracker::NumTracksWithAtLeastNPoints </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -226,17 +338,17 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a8ac07e77689015e88b849f420cb4e301"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ac07e77689015e88b849f420cb4e301">&#9670;&nbsp;</a></span>RemoveOldFeaturePoints()</h2>
+<a id="a5859d582588c840dd1c6156423feb957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5859d582588c840dd1c6156423feb957">&#9670;&nbsp;</a></span>RemoveOldFeaturePointsAndSlideWindow()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void graph_localizer::FeatureTracker::RemoveOldFeaturePoints </td>
+          <td class="memname">void graph_localizer::FeatureTracker::RemoveOldFeaturePointsAndSlideWindow </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a>&#160;</td>
-          <td class="paramname"><em>oldest_allowed_time</em></td><td>)</td>
+          <td class="paramtype">boost::optional&lt; <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> &gt;&#160;</td>
+          <td class="paramname"><em>oldest_allowed_time</em> = <code>boost::none</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -244,17 +356,35 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a1e966a955db64787a7bd4da6ac735b9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e966a955db64787a7bd4da6ac735b9a">&#9670;&nbsp;</a></span>RemovePointsOutsideWindow()</h2>
+<a id="a003b7585544d66feb09284997ce5c917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a003b7585544d66feb09284997ce5c917">&#9670;&nbsp;</a></span>RemoveUndetectedFeatures()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void graph_localizer::FeatureTracker::RemovePointsOutsideWindow </td>
+          <td class="memname">void graph_localizer::FeatureTracker::RemoveUndetectedFeatures </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> &amp;&#160;</td>
+          <td class="paramname"><em>feature_point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e262809539b2b183f739d781194ad1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e262809539b2b183f739d781194ad1a">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t graph_localizer::FeatureTracker::size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -272,6 +402,23 @@ Friends</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacelocalization__measurements.html#a8c170d54b30c1da5b9b240441997e717">localization_measurements::FeaturePoints</a> &amp;&#160;</td>
           <td class="paramname"><em>feature_points</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a092cc181fc278745bccfa939852189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a092cc181fc278745bccfa939852189">&#9670;&nbsp;</a></span>UpdateLengthMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void graph_localizer::FeatureTracker::UpdateLengthMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>

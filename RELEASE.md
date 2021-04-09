@@ -1,5 +1,11 @@
 # Releases
 
+## Release 0.14.2
+
+  * Updated Smart Factor Spacing and Added Separation Criteria
+  * Increase position/attitude tolerances
+  * Various smaller fixes fixes
+
 ## Release 0.14.1
 
   * Dynamic IMU Filtering

@@ -1,3 +1,11 @@
+astrobee (0.14.2) testing; urgency=medium
+
+  * Updated Smart Factor Spacing and Added Separation Criteria
+  * Increase position/attitude tolerances
+  * Various smaller fixes fixes
+
+ -- Astrobee Flight Software <astrobee-fsw@nx.arc.nasa.gov>  Thu, 08 Apr 2021 22:49:24 -0700
+
 astrobee (0.14.1) testing; urgency=medium
 
   * Dynamic IMU Filtering

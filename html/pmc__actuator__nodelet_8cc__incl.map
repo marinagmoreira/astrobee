@@ -1,5 +1,5 @@
 <map id="hardware/pmc_actuator/src/pmc_actuator_nodelet/pmc_actuator_nodelet.cc" name="hardware/pmc_actuator/src/pmc_actuator_nodelet/pmc_actuator_nodelet.cc">
-<area shape="rect" id="node1" title=" " alt="" coords="1833,5,2027,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1951,5,2146,61"/>
 <area shape="rect" id="node2" title=" " alt="" coords="237,191,316,218"/>
 <area shape="rect" id="node3" title=" " alt="" coords="341,191,477,218"/>
 <area shape="rect" id="node4" title=" " alt="" coords="501,184,644,225"/>
@@ -10,8 +10,9 @@
 <area shape="rect" id="node43" title=" " alt="" coords="2179,109,2385,136"/>
 <area shape="rect" id="node44" title=" " alt="" coords="2409,109,2587,136"/>
 <area shape="rect" id="node45" title=" " alt="" coords="2611,109,2750,136"/>
-<area shape="rect" id="node46" title=" " alt="" coords="2775,109,2837,136"/>
-<area shape="rect" id="node47" title=" " alt="" coords="2862,109,2929,136"/>
+<area shape="rect" id="node46" title=" " alt="" coords="2775,109,2917,136"/>
+<area shape="rect" id="node47" title=" " alt="" coords="2941,109,3004,136"/>
+<area shape="rect" id="node48" title=" " alt="" coords="3029,109,3095,136"/>
 <area shape="rect" id="node6" title=" " alt="" coords="5,281,60,307"/>
 <area shape="rect" id="node7" title=" " alt="" coords="84,281,155,307"/>
 <area shape="rect" id="node8" title=" " alt="" coords="179,281,257,307"/>

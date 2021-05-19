@@ -102,12 +102,12 @@ $(document).ready(function(){initNavTree('signal_lights.html',''); initResizable
 <li>4: Not available yet</li>
 <li>5: Turn on a single light at the index.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md200"></a>
+<h1><a class="anchor" id="autotoc_md201"></a>
 Using the commandline tool</h1>
 <p>The color of the light is specified with the red (-r), green (-g) and blue (-b) switches. Acceptable indexes (-d) run from 0 - 43 inclusive. The program is selected with -p and the mode is selected with -m. The mode should always be the default value of 1 unless s shutdown is required.</p>
 <p>To turn all lights blue, type the following </p><pre class="fragment">rosrun signal_lights signal_lights_tool -r 0 -g 0 -b 128 -p 3
 </pre><p>To turn the light at index 5 (the sixth LED) type the following </p><pre class="fragment">rosrun signal_lights signal_lights_tool -r 0 -g 128 -b 0 -p 5 -d 5
-</pre><h1><a class="anchor" id="autotoc_md201"></a>
+</pre><h1><a class="anchor" id="autotoc_md202"></a>
 Using the ROS interface</h1>
 <p>The <a class="el" href="namespacesignal__lights.html">signal_lights</a> nodelet provides a single service-based interface for control, located at /hw/sig/config. It takes the same arguments as the commandline tool, where the -d switch maps to the 'arg' message variable.</p>
 <p>For example, this turns LED at index 4 to white: </p><pre class="fragment">rosservice call /hw/sig/config "{mode: 1, program: 5, brightness: 0, red: 128, green: 128, 

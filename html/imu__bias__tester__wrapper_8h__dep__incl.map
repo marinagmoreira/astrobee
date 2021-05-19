@@ -1,9 +1,12 @@
 <map id="tools/imu_bias_tester/include/imu_bias_tester/imu_bias_tester_wrapper.h" name="tools/imu_bias_tester/include/imu_bias_tester/imu_bias_tester_wrapper.h">
-<area shape="rect" id="node1" title=" " alt="" coords="359,5,561,61"/>
-<area shape="rect" id="node2" href="$graph__bag_8h.html" title=" " alt="" coords="157,117,336,158"/>
-<area shape="rect" id="node5" href="$imu__bias__tester__nodelet_8h.html" title=" " alt="" coords="361,109,559,165"/>
-<area shape="rect" id="node7" href="$imu__bias__tester__wrapper_8cc.html" title=" " alt="" coords="584,109,747,165"/>
+<area shape="rect" id="node1" title=" " alt="" coords="499,5,701,61"/>
+<area shape="rect" id="node2" href="$graph__bag_8h.html" title=" " alt="" coords="171,117,349,158"/>
+<area shape="rect" id="node5" href="$imu__bias__tester__adder_8h.html" title=" " alt="" coords="499,109,701,165"/>
+<area shape="rect" id="node6" href="$imu__bias__tester__adder_8cc.html" title=" " alt="" coords="366,221,557,262"/>
+<area shape="rect" id="node8" href="$imu__bias__tester__nodelet_8h.html" title=" " alt="" coords="726,109,925,165"/>
+<area shape="rect" id="node10" href="$imu__bias__tester__wrapper_8cc.html" title=" " alt="" coords="949,109,1112,165"/>
 <area shape="rect" id="node3" href="$graph__bag_8cc.html" title=" " alt="" coords="5,221,155,262"/>
 <area shape="rect" id="node4" href="$run__graph__bag_8cc.html" title=" " alt="" coords="179,221,341,262"/>
-<area shape="rect" id="node6" href="$imu__bias__tester__nodelet_8cc.html" title=" " alt="" coords="379,213,541,269"/>
+<area shape="rect" id="node7" href="$run__imu__bias__tester__adder_8cc.html" title=" " alt="" coords="581,213,744,269"/>
+<area shape="rect" id="node9" href="$imu__bias__tester__nodelet_8cc.html" title=" " alt="" coords="768,213,931,269"/>
 </map>

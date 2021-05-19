@@ -568,6 +568,9 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>SetEnableImmediate()
 : <a class="el" href="classexecutive_1_1Executive.html#a35e3f37e4a88d503630916289512079d">executive::Executive</a>
 </li>
+<li>SetEnableReplan()
+: <a class="el" href="classexecutive_1_1Executive.html#a662743a6ed2dcfa8cc50d16cd6c071e8">executive::Executive</a>
+</li>
 <li>SetExec()
 : <a class="el" href="classexecutive_1_1OpState.html#acdc0e7f69054fb0cf663a8b88b348aef">executive::OpState</a>
 , <a class="el" href="classexecutive_1_1OpStateRepo.html#a6177ceec17a658b35c4fbf70f0db239d">executive::OpStateRepo</a>
@@ -885,9 +888,6 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>SetTimestamp()
 : <a class="el" href="classgraph__localizer_1_1FactorsToAdd.html#a66df2331b2ca084cbdd695f8d77990ab">graph_localizer::FactorsToAdd</a>
 </li>
-<li>SetTimeSync()
-: <a class="el" href="classexecutive_1_1Executive.html#afa24856ed00516e141c046724cc48290">executive::Executive</a>
-</li>
 <li>SetTransform()
 : <a class="el" href="classcamera_1_1CameraModel.html#a08f56f5c28d61195a8e7e305e64c0ec6">camera::CameraModel</a>
 </li>
@@ -939,8 +939,7 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classconfig__reader_1_1ConfigReader.html#a3b68c3d4c62e20b693382586ecd39158">config_reader::ConfigReader</a>
 </li>
 <li>Shutdown()
-: <a class="el" href="classexecutive_1_1Executive.html#ae7ae470645fcba799d704b1c888049d2">executive::Executive</a>
-, <a class="el" href="classperching__arm_1_1PerchingArm.html#ad704c264135aa24cc863f6c982bad338">perching_arm::PerchingArm</a>
+: <a class="el" href="classperching__arm_1_1PerchingArm.html#ad704c264135aa24cc863f6c982bad338">perching_arm::PerchingArm</a>
 , <a class="el" href="classstates_1_1StatesNodelet.html#ab7a64a89405979de47eece57be449d69">states::StatesNodelet</a>
 </li>
 <li>sigma
@@ -1007,6 +1006,9 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>slide_window_timer_
 : <a class="el" href="classgraph__localizer_1_1GraphStats.html#af238bd14a10ac066a50f2a0ad73bd884">graph_localizer::GraphStats</a>
 </li>
+<li>SlideAllowList()
+: <a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a97e5d89151b14de858e87fdc55c2202f">graph_localizer::FeatureTracker</a>
+</li>
 <li>slider_
 : <a class="el" href="classrviz_1_1SliderProperty.html#a7ca1ca80dab29e75369508a260217f8f">rviz::SliderProperty</a>
 </li>
@@ -1022,8 +1024,14 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>small_angle
 : <a class="el" href="structsparse__mapping_1_1FilterStats.html#a05361a43513286dce4e47ffaf2ccb4a9">sparse_mapping::FilterStats</a>
 </li>
+<li>smart_factor_timestamp_allow_list()
+: <a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a3b993501c8c930a27572100d2e93e9c7">graph_localizer::FeatureTracker</a>
+</li>
 <li>smart_projection_adder
 : <a class="el" href="structgraph__localizer_1_1FactorParams.html#a4326b182af38af05f401a50424e4979b">graph_localizer::FactorParams</a>
+</li>
+<li>smart_projection_adder_measurement_spacing
+: <a class="el" href="structgraph__localizer_1_1FeatureTrackerParams.html#a6cfffe63c527090db5f2d4151d166309">graph_localizer::FeatureTrackerParams</a>
 </li>
 <li>SmartDock()
 : <a class="el" href="classsmart__dock_1_1SmartDock.html#a3fce4739078cb69adfde810867e051b5">smart_dock::SmartDock</a>
@@ -1085,7 +1093,7 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="structgraph__bag_1_1GraphBagParams.html#a8e77e5b3c88a0c0d13f270aa895be825">graph_bag::GraphBagParams</a>
 </li>
 <li>SparseMap()
-: <a class="el" href="structsparse__mapping_1_1SparseMap.html#ad4db0bf556930e38de3a1901e44fac68">sparse_mapping::SparseMap</a>
+: <a class="el" href="structsparse__mapping_1_1SparseMap.html#a1eddcb87e21b90fb7fbd459c291d5243">sparse_mapping::SparseMap</a>
 </li>
 <li>SparseMappingDisplay()
 : <a class="el" href="classlocalization__rviz__plugins_1_1SparseMappingDisplay.html#a2e1d15afbb14479eca6856467af5f8eb">localization_rviz_plugins::SparseMappingDisplay</a>
@@ -1118,7 +1126,7 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="unionpmc__actuator_1_1Status2.html#a965425e705d7693ef1deb3065d716e37">pmc_actuator::Status2</a>
 </li>
 <li>SplineData()
-: <a class="el" href="structtraj__opt_1_1SplineData.html#a4d5e4b17d6149b09389e47a717877fa0">traj_opt::SplineData</a>
+: <a class="el" href="structtraj__opt_1_1SplineData.html#a362400eb94aa6f84b71fad65c893d414">traj_opt::SplineData</a>
 </li>
 <li>SplitSmartFactorsIfNeeded()
 : <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#aa8ca6d7c707373051ded7cea8c4023a7">graph_localizer::GraphLocalizer</a>
@@ -1169,8 +1177,8 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>standstill_enabled
 : <a class="el" href="structimu__augmentor_1_1ImuAugmentorParams.html#a7f78aefa9935f871b581fa94f77fb10d">imu_augmentor::ImuAugmentorParams</a>
 </li>
-<li>standstill_feature_tracker
-: <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#a0c6dd26cfbd7a8e709fd3041a84e9d0c">graph_localizer::GraphLocalizerParams</a>
+<li>standstill_feature_track_duration
+: <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#ae58a8a9ef589bfd56c7d93a189e5478d">graph_localizer::GraphLocalizerParams</a>
 </li>
 <li>standstill_min_num_points_per_track
 : <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#a7f743d727e2dd66a5cd4cbc755c90567">graph_localizer::GraphLocalizerParams</a>
@@ -1254,7 +1262,7 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classeps__driver_1_1EPS.html#a980258f0eb1f69a269050a97438f12e5">eps_driver::EPS</a>
 , <a class="el" href="classff__util_1_1FreeFlyerServiceClient.html#ac1f2380b7cf23472f74fa5f89495c520">ff_util::FreeFlyerServiceClient&lt; ServiceSpec &gt;</a>
 , <a class="el" href="classff__util_1_1FSM.html#a2bb9191d18ff8dd84264afbaae418a6c">ff_util::FSM</a>
-, <a class="el" href="classff__util_1_1State.html#aebbf9b14acc2934679b0f57bc7941466">ff_util::State</a>
+, <a class="el" href="classff__util_1_1State.html#a033a9f87878058a5967bf869eb622bff">ff_util::State</a>
 </li>
 <li>state
 : <a class="el" href="structOOTX.html#a7cc9d3d918d63a3c1076f77b1b59f4ce">OOTX</a>
@@ -1378,9 +1386,6 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 </li>
 <li>StopArm()
 : <a class="el" href="classexecutive_1_1Executive.html#aebdc6c580c2053df8a48d4efaccadb0c">executive::Executive</a>
-</li>
-<li>StopDownload()
-: <a class="el" href="classexecutive_1_1Executive.html#a8a6597b2a0dc72e9c070daf9d895a0eb">executive::Executive</a>
 </li>
 <li>StopGuestScience()
 : <a class="el" href="classexecutive_1_1Executive.html#a2838d7a19528630940d725d85c7fc55a">executive::Executive</a>
@@ -1564,7 +1569,7 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classjsonloader_1_1SwitchLocalizationCommand.html#a2c8760a1e3abc3f235afc67281c3b526">jsonloader::SwitchLocalizationCommand</a>
 </li>
 <li>SymbolicPoly()
-: <a class="el" href="classtraj__opt_1_1SymbolicPoly.html#a5d8f571b8ff04747df5de5b97a2c365f">traj_opt::SymbolicPoly</a>
+: <a class="el" href="classtraj__opt_1_1SymbolicPoly.html#aae9cc3f77605536dda1a07373f3778c5">traj_opt::SymbolicPoly</a>
 , <a class="el" href="classtraj__opt_1_1Variable.html#a3db0758eff1dcd2011e9695bc39c820e">traj_opt::Variable</a>
 </li>
 <li>syn

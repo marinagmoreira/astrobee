@@ -1,14 +1,15 @@
 <map id="localization/graph_localizer/src/feature_track.cc" name="localization/graph_localizer/src/feature_track.cc">
-<area shape="rect" id="node1" title=" " alt="" coords="504,5,663,61"/>
-<area shape="rect" id="node2" href="$feature__track_8h.html" title=" " alt="" coords="377,109,549,151"/>
-<area shape="rect" id="node8" href="$logger_8h.html" title=" " alt="" coords="653,109,815,151"/>
+<area shape="rect" id="node1" title=" " alt="" coords="568,5,727,61"/>
+<area shape="rect" id="node2" href="$feature__track_8h.html" title=" " alt="" coords="408,109,580,151"/>
+<area shape="rect" id="node9" href="$logger_8h.html" title=" " alt="" coords="720,109,881,151"/>
 <area shape="rect" id="node3" href="$feature__point_8h.html" title=" " alt="" coords="189,199,391,240"/>
 <area shape="rect" id="node6" title=" " alt="" coords="403,295,465,322"/>
 <area shape="rect" id="node7" title=" " alt="" coords="469,206,519,233"/>
+<area shape="rect" id="node8" title=" " alt="" coords="543,206,586,233"/>
 <area shape="rect" id="node4" href="$time_8h.html" title=" " alt="" coords="5,288,167,329"/>
 <area shape="rect" id="node5" title=" " alt="" coords="191,295,378,322"/>
-<area shape="rect" id="node9" title=" " alt="" coords="544,206,652,233"/>
-<area shape="rect" id="node10" title=" " alt="" coords="677,206,791,233"/>
-<area shape="rect" id="node11" title=" " alt="" coords="815,206,890,233"/>
-<area shape="rect" id="node12" title=" " alt="" coords="914,206,973,233"/>
+<area shape="rect" id="node10" title=" " alt="" coords="611,206,719,233"/>
+<area shape="rect" id="node11" title=" " alt="" coords="743,206,858,233"/>
+<area shape="rect" id="node12" title=" " alt="" coords="882,206,957,233"/>
+<area shape="rect" id="node13" title=" " alt="" coords="981,206,1039,233"/>
 </map>

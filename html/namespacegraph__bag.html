@@ -108,6 +108,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgraph__bag_1_1GraphLocalizerSimulatorParams.html">GraphLocalizerSimulatorParams</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__bag_1_1ImuBiasTesterAdder.html">ImuBiasTesterAdder</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__bag_1_1LiveMeasurementSimulator.html">LiveMeasurementSimulator</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgraph__bag_1_1LiveMeasurementSimulatorParams.html">LiveMeasurementSimulatorParams</a></td></tr>
@@ -148,10 +150,19 @@ Functions</h2></td></tr>
 <tr class="separator:a104c3651973d237475f1f488377569a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcb1e886cc8da0b2dd426fe2ff666cca"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="namespacegraph__bag.html#aab24313f4fc1411682b6e18fc68da0c5">SmartFactor</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__bag.html#abcb1e886cc8da0b2dd426fe2ff666cca">SmartFactors</a> (const <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html">graph_localizer::GraphLocalizer</a> &amp;graph)</td></tr>
 <tr class="separator:abcb1e886cc8da0b2dd426fe2ff666cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18554002d2c35b8ef4c44277269185d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__bag.html#a18554002d2c35b8ef4c44277269185d1">string_ends_with</a> (const std::string &amp;str, const std::string &amp;ending)</td></tr>
+<tr class="separator:a18554002d2c35b8ef4c44277269185d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42863c50d52df673ef8a56e8132aa8a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__bag.html#a42863c50d52df673ef8a56e8132aa8a7">SaveImuBiasTesterPredictedStates</a> (const std::vector&lt; <a class="el" href="classlocalization__common_1_1CombinedNavState.html">localization_common::CombinedNavState</a> &gt; &amp;imu_bias_tester_predicted_states, rosbag::Bag &amp;bag)</td></tr>
+<tr class="separator:a42863c50d52df673ef8a56e8132aa8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a918ddc85663e7523d5f3389944b7f2fe"><td class="memTemplParams" colspan="2">template&lt;typename MsgType &gt; </td></tr>
+<tr class="memitem:a918ddc85663e7523d5f3389944b7f2fe"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegraph__bag.html#a918ddc85663e7523d5f3389944b7f2fe">SaveMsg</a> (const MsgType &amp;msg, const std::string &amp;topic, rosbag::Bag &amp;bag)</td></tr>
+<tr class="separator:a918ddc85663e7523d5f3389944b7f2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4ed4b122640793beaf31b747051539c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__bag.html#aa4ed4b122640793beaf31b747051539c">LoadMessageBufferParams</a> (const std::string &amp;message_type, <a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, <a class="el" href="structgraph__bag_1_1MessageBufferParams.html">MessageBufferParams</a> &amp;params)</td></tr>
 <tr class="separator:aa4ed4b122640793beaf31b747051539c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1315b4c324b133fe98b315a569a6ca99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__bag.html#a1315b4c324b133fe98b315a569a6ca99">MarkSmartFactorPoints</a> (const std::vector&lt; const <a class="el" href="namespacegraph__bag.html#aab24313f4fc1411682b6e18fc68da0c5">SmartFactor</a> * &gt; smart_factors, const <a class="el" href="classcamera_1_1CameraParameters.html">camera::CameraParameters</a> &amp;camera_params, cv::Mat &amp;feature_track_image)</td></tr>
 <tr class="separator:a1315b4c324b133fe98b315a569a6ca99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfa4300e1f1e767b97447832248dbba2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__bag.html#acfa4300e1f1e767b97447832248dbba2">SaveImuBiasTesterPredictedStates</a> (const std::vector&lt; <a class="el" href="classlocalization__common_1_1CombinedNavState.html">lc::CombinedNavState</a> &gt; &amp;imu_bias_tester_predicted_states, rosbag::Bag &amp;bag)</td></tr>
+<tr class="separator:acfa4300e1f1e767b97447832248dbba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="af826fff6401da810b572aff359d1b4f9"></a>
@@ -543,6 +554,98 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="acfa4300e1f1e767b97447832248dbba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfa4300e1f1e767b97447832248dbba2">&#9670;&nbsp;</a></span>SaveImuBiasTesterPredictedStates() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void graph_bag::SaveImuBiasTesterPredictedStates </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classlocalization__common_1_1CombinedNavState.html">lc::CombinedNavState</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>imu_bias_tester_predicted_states</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">rosbag::Bag &amp;&#160;</td>
+          <td class="paramname"><em>bag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42863c50d52df673ef8a56e8132aa8a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42863c50d52df673ef8a56e8132aa8a7">&#9670;&nbsp;</a></span>SaveImuBiasTesterPredictedStates() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void graph_bag::SaveImuBiasTesterPredictedStates </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classlocalization__common_1_1CombinedNavState.html">localization_common::CombinedNavState</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>imu_bias_tester_predicted_states</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">rosbag::Bag &amp;&#160;</td>
+          <td class="paramname"><em>bag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a918ddc85663e7523d5f3389944b7f2fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a918ddc85663e7523d5f3389944b7f2fe">&#9670;&nbsp;</a></span>SaveMsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MsgType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void graph_bag::SaveMsg </td>
+          <td>(</td>
+          <td class="paramtype">const MsgType &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>topic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">rosbag::Bag &amp;&#160;</td>
+          <td class="paramname"><em>bag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="abcb1e886cc8da0b2dd426fe2ff666cca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abcb1e886cc8da0b2dd426fe2ff666cca">&#9670;&nbsp;</a></span>SmartFactors()</h2>
 
@@ -555,6 +658,34 @@ Functions</h2></td></tr>
           <td class="paramtype">const <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html">graph_localizer::GraphLocalizer</a> &amp;&#160;</td>
           <td class="paramname"><em>graph</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18554002d2c35b8ef4c44277269185d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18554002d2c35b8ef4c44277269185d1">&#9670;&nbsp;</a></span>string_ends_with()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool graph_bag::string_ends_with </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ending</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

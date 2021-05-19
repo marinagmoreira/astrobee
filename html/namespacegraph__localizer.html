@@ -224,8 +224,6 @@ Functions</h2></td></tr>
 <tr class="separator:aa6f828f1a1876d8289e622f2d3c7735b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afca8e41912c60dfac46a470525adcf87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__localizer.html#afca8e41912c60dfac46a470525adcf87">LoadFeatureTrackerParams</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, <a class="el" href="structgraph__localizer_1_1FeatureTrackerParams.html">FeatureTrackerParams</a> &amp;params)</td></tr>
 <tr class="separator:afca8e41912c60dfac46a470525adcf87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90edbb779e0cf5eb716b1609fae0858b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__localizer.html#a90edbb779e0cf5eb716b1609fae0858b">LoadStandstillFeatureTrackerParams</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, <a class="el" href="structgraph__localizer_1_1FeatureTrackerParams.html">FeatureTrackerParams</a> &amp;params)</td></tr>
-<tr class="separator:a90edbb779e0cf5eb716b1609fae0858b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e05e25d7a52d34e0db3d381b0cb3dc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__localizer.html#a6e05e25d7a52d34e0db3d381b0cb3dc5">LoadGraphValuesParams</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, <a class="el" href="structgraph__localizer_1_1GraphValuesParams.html">GraphValuesParams</a> &amp;params)</td></tr>
 <tr class="separator:a6e05e25d7a52d34e0db3d381b0cb3dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2affba6d71473eb03828eed1a063e9de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__localizer.html#a2affba6d71473eb03828eed1a063e9de">LoadImuIntegrationParams</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, <a class="el" href="structgraph__localizer_1_1GraphInitializerParams.html">GraphInitializerParams</a> &amp;params)</td></tr>
@@ -244,8 +242,8 @@ Functions</h2></td></tr>
 <tr class="separator:ac8d747aa649d2e8687c4da46fc980dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9513155f684587464ef8e076588e7ebe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__localizer.html#a9513155f684587464ef8e076588e7ebe">ValidPointSet</a> (const int num_points, const double average_distance_from_mean, const double min_avg_distance_from_mean, const int min_num_points)</td></tr>
 <tr class="separator:a9513155f684587464ef8e076588e7ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a632c8f9eaee4d1c0de9819c3e61abf8a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__localizer.html#a632c8f9eaee4d1c0de9819c3e61abf8a">AverageDistanceFromMean</a> (const <a class="el" href="classgraph__localizer_1_1FeatureTrack.html#adaba85067226a40edeb69dbce83f57dc">FeatureTrack::Points</a> &amp;points)</td></tr>
-<tr class="separator:a632c8f9eaee4d1c0de9819c3e61abf8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97489be0a208edb20da1e09688113477"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__localizer.html#a97489be0a208edb20da1e09688113477">AverageDistanceFromMean</a> (const std::vector&lt; <a class="el" href="structlocalization__measurements_1_1FeaturePoint.html">localization_measurements::FeaturePoint</a> &gt; &amp;points)</td></tr>
+<tr class="separator:a97489be0a208edb20da1e09688113477"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56646e2e4852100349f8aeffb4448920"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__localizer.html#a56646e2e4852100349f8aeffb4448920">ValidVLMsg</a> (const ff_msgs::VisualLandmarks &amp;visual_landmarks_msg, const int min_num_landmarks)</td></tr>
 <tr class="separator:a56646e2e4852100349f8aeffb4448920"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae236aec67d1ea4e32e2cc9e92291162f"><td class="memItemLeft" align="right" valign="top">ff_msgs::GraphState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__localizer.html#ae236aec67d1ea4e32e2cc9e92291162f">GraphStateMsg</a> (const <a class="el" href="classlocalization__common_1_1CombinedNavState.html">localization_common::CombinedNavState</a> &amp;combined_nav_state, const <a class="el" href="classlocalization__common_1_1CombinedNavStateCovariances.html">localization_common::CombinedNavStateCovariances</a> &amp;covariances, const <a class="el" href="structgraph__localizer_1_1FeatureCounts.html">FeatureCounts</a> &amp;detected_feature_counts, const bool estimating_bias, const double position_log_det_threshold, const double orientation_log_det_threshold, const bool standstill, const <a class="el" href="classgraph__localizer_1_1GraphStats.html">GraphStats</a> &amp;graph_stats, const <a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6b">localization_measurements::FanSpeedMode</a> fan_speed_mode)</td></tr>
@@ -266,6 +264,8 @@ Functions</h2></td></tr>
 <tr class="separator:af9a4f5604ebbb243c9e5d46712696af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5571b3cb338868bcd02571734d39cec2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegraph__localizer.html#ae7e54bb2b6a9e69db7f577cffd2c85c4">SharedRobustSmartFactor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__localizer.html#a5571b3cb338868bcd02571734d39cec2">RemoveSmartFactorMeasurements</a> (const <a class="el" href="namespacegraph__localizer.html#aec0709f3d8bd4cb5a8b3d10d42fd6a44">RobustSmartFactor</a> &amp;smart_factor, const std::unordered_set&lt; int &gt; &amp;factor_key_indices_to_remove, const <a class="el" href="structgraph__localizer_1_1SmartProjectionFactorAdderParams.html">SmartProjectionFactorAdderParams</a> &amp;params, const gtsam::SmartProjectionParams &amp;smart_projection_params)</td></tr>
 <tr class="separator:a5571b3cb338868bcd02571734d39cec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d6002fd1fd52102c180d0bcf15b07dc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__localizer.html#a3d6002fd1fd52102c180d0bcf15b07dc">AverageDistanceFromMean</a> (const std::vector&lt; <a class="el" href="structlocalization__measurements_1_1FeaturePoint.html">lm::FeaturePoint</a> &gt; &amp;points)</td></tr>
+<tr class="separator:a3d6002fd1fd52102c180d0bcf15b07dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="aea0e0328bad03b459ffa1eea178ff9be"></a>
@@ -425,8 +425,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a632c8f9eaee4d1c0de9819c3e61abf8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a632c8f9eaee4d1c0de9819c3e61abf8a">&#9670;&nbsp;</a></span>AverageDistanceFromMean()</h2>
+<a id="a3d6002fd1fd52102c180d0bcf15b07dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d6002fd1fd52102c180d0bcf15b07dc">&#9670;&nbsp;</a></span>AverageDistanceFromMean() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -434,7 +434,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">double graph_localizer::AverageDistanceFromMean </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgraph__localizer_1_1FeatureTrack.html#adaba85067226a40edeb69dbce83f57dc">FeatureTrack::Points</a> &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structlocalization__measurements_1_1FeaturePoint.html">lm::FeaturePoint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97489be0a208edb20da1e09688113477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97489be0a208edb20da1e09688113477">&#9670;&nbsp;</a></span>AverageDistanceFromMean() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double graph_localizer::AverageDistanceFromMean </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structlocalization__measurements_1_1FeaturePoint.html">localization_measurements::FeaturePoint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>points</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1047,34 +1065,6 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structgraph__localizer_1_1StandstillFactorAdderParams.html">StandstillFactorAdderParams</a> &amp;&#160;</td>
-          <td class="paramname"><em>params</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a90edbb779e0cf5eb716b1609fae0858b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90edbb779e0cf5eb716b1609fae0858b">&#9670;&nbsp;</a></span>LoadStandstillFeatureTrackerParams()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void graph_localizer::LoadStandstillFeatureTrackerParams </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;&#160;</td>
-          <td class="paramname"><em>config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structgraph__localizer_1_1FeatureTrackerParams.html">FeatureTrackerParams</a> &amp;&#160;</td>
           <td class="paramname"><em>params</em>&#160;</td>
         </tr>
         <tr>

@@ -106,6 +106,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3da37db484a562db839e7897ef1044b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b365dc1d0ad90d2b81f694000a9bfd5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacegraph__localizer.html#a408e390b6c93fb9e1dfaf5aa740ae55a">FeatureTrackIdMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a5b365dc1d0ad90d2b81f694000a9bfd5">feature_tracks</a> () const</td></tr>
 <tr class="separator:a5b365dc1d0ad90d2b81f694000a9bfd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b993501c8c930a27572100d2e93e9c7"><td class="memItemLeft" align="right" valign="top">const std::set&lt; <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a3b993501c8c930a27572100d2e93e9c7">smart_factor_timestamp_allow_list</a> () const</td></tr>
+<tr class="separator:a3b993501c8c930a27572100d2e93e9c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab90a2dae8439ca54a8dd7cb288c76847"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacegraph__localizer.html#a833f8d138f4c7d7a70a1e56af291debf">FeatureTrackLengthMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#ab90a2dae8439ca54a8dd7cb288c76847">feature_tracks_length_ordered</a> () const</td></tr>
 <tr class="separator:ab90a2dae8439ca54a8dd7cb288c76847"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9344f037856e71bea7142a7448d0ff66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a9344f037856e71bea7142a7448d0ff66">NumTracksWithAtLeastNPoints</a> (int n) const</td></tr>
@@ -118,6 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5d66e2155d36caee4ab4dba52c14ce5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a092cc181fc278745bccfa939852189"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a7a092cc181fc278745bccfa939852189">UpdateLengthMap</a> ()</td></tr>
 <tr class="separator:a7a092cc181fc278745bccfa939852189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b4dc3217628153acbe9674e42f709d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a0b4dc3217628153acbe9674e42f709d8">UpdateAllowList</a> (const <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> &amp;timestamp)</td></tr>
+<tr class="separator:a0b4dc3217628153acbe9674e42f709d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97e5d89151b14de858e87fdc55c2202f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a97e5d89151b14de858e87fdc55c2202f">SlideAllowList</a> (const <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> &amp;oldest_allowed_time)</td></tr>
+<tr class="separator:a97e5d89151b14de858e87fdc55c2202f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cbc6835dd66096bb71f2f628157bb77"><td class="memItemLeft" align="right" valign="top">boost::optional&lt; const <a class="el" href="classgraph__localizer_1_1FeatureTrack.html">FeatureTrack</a> &amp; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a4cbc6835dd66096bb71f2f628157bb77">LongestFeatureTrack</a> () const</td></tr>
 <tr class="separator:a4cbc6835dd66096bb71f2f628157bb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e262809539b2b183f739d781194ad1a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a6e262809539b2b183f739d781194ad1a">size</a> () const</td></tr>
@@ -385,6 +391,59 @@ Friends</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97e5d89151b14de858e87fdc55c2202f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97e5d89151b14de858e87fdc55c2202f">&#9670;&nbsp;</a></span>SlideAllowList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void graph_localizer::FeatureTracker::SlideAllowList </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> &amp;&#160;</td>
+          <td class="paramname"><em>oldest_allowed_time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b993501c8c930a27572100d2e93e9c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b993501c8c930a27572100d2e93e9c7">&#9670;&nbsp;</a></span>smart_factor_timestamp_allow_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::set&lt; <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">lc::Time</a> &gt; &amp; graph_localizer::FeatureTracker::smart_factor_timestamp_allow_list </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b4dc3217628153acbe9674e42f709d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b4dc3217628153acbe9674e42f709d8">&#9670;&nbsp;</a></span>UpdateAllowList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void graph_localizer::FeatureTracker::UpdateAllowList </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> &amp;&#160;</td>
+          <td class="paramname"><em>timestamp</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

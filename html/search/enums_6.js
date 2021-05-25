@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['graphaction_12330',['GraphAction',['../namespacegraph__localizer.html#a960c0c27b6206517a6c36c4f002cd9d2',1,'graph_localizer']]]
+  ['graphactioncompletertype_12472',['GraphActionCompleterType',['../namespacegraph__optimizer.html#ac9be893b60f34c285381b4cbf209f8cb',1,'graph_optimizer']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['outputbits_12346',['OutputBits',['../namespaceepson__imu.html#a9fa2cd952fd7bb7847c50ed8c5dc7253',1,'epson_imu']]]
+  ['nodeupdatertype_12488',['NodeUpdaterType',['../namespacegraph__optimizer.html#abefe0bb52dc98665faf57e63550fb4f6',1,'graph_optimizer']]]
 ];

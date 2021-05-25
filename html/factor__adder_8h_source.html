@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>NASA Astrobee Robot Software: localization/graph_localizer/include/graph_localizer/factor_adder.h Source File</title>
+<title>NASA Astrobee Robot Software: localization/graph_optimizer/include/graph_optimizer/factor_adder.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" href="favicon.png" type="image/png" />
 <script type="text/javascript" src="jquery.js"></script>
@@ -109,40 +109,40 @@ $(document).ready(function(){initNavTree('factor__adder_8h_source.html',''); ini
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * under the License.</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef GRAPH_LOCALIZER_FACTOR_ADDER_H_</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define GRAPH_LOCALIZER_FACTOR_ADDER_H_</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef GRAPH_OPTIMIZER_FACTOR_ADDER_H_</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define GRAPH_OPTIMIZER_FACTOR_ADDER_H_</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="factor__to__add_8h.html">graph_localizer/factor_to_add.h</a>&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="factor__to__add_8h.html">graph_optimizer/factor_to_add.h</a>&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegraph__localizer.html">graph_localizer</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegraph__optimizer.html">graph_optimizer</a> {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MEASUREMENT, <span class="keyword">typename</span> PARAMS&gt;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classgraph__localizer_1_1FactorAdder.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classgraph__localizer_1_1FactorAdder.html">FactorAdder</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classgraph__optimizer_1_1FactorAdder.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classgraph__optimizer_1_1FactorAdder.html">FactorAdder</a> {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classgraph__localizer_1_1FactorAdder.html#a07912089e360861d2944ac6f82c9e5f1">   30</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classgraph__localizer_1_1FactorAdder.html#a07912089e360861d2944ac6f82c9e5f1">FactorAdder</a>(<span class="keyword">const</span> PARAMS&amp; <a class="code" href="classgraph__localizer_1_1FactorAdder.html#a2b4bef759e08ea1f0cafd6313c3a40fd">params</a>) : params_(<a class="code" href="classgraph__localizer_1_1FactorAdder.html#a2b4bef759e08ea1f0cafd6313c3a40fd">params</a>) {}</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classgraph__optimizer_1_1FactorAdder.html#ac8326535bd07314c84f4d11cfe711d48">   30</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classgraph__optimizer_1_1FactorAdder.html#ac8326535bd07314c84f4d11cfe711d48">FactorAdder</a>(<span class="keyword">const</span> PARAMS&amp; <a class="code" href="classgraph__optimizer_1_1FactorAdder.html#ae80f49fd4cd35c76fa904241d6b66f67">params</a>) : params_(<a class="code" href="classgraph__optimizer_1_1FactorAdder.html#ae80f49fd4cd35c76fa904241d6b66f67">params</a>) {}</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classgraph__localizer_1_1FactorAdder.html#aaaa269b4f463c9930e777faf18a8f5a0">   32</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classgraph__localizer_1_1FactorAdder.html#aaaa269b4f463c9930e777faf18a8f5a0">~FactorAdder</a>() {}</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classgraph__optimizer_1_1FactorAdder.html#a33c12530b7d3bf52237113e242e89661">   32</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classgraph__optimizer_1_1FactorAdder.html#a33c12530b7d3bf52237113e242e89661">~FactorAdder</a>() {}</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classgraph__localizer_1_1FactorAdder.html#aacab9d79ee12f2c07c660d7529dcdfb0">   34</a></span>&#160;  <span class="keyword">virtual</span> std::vector&lt;FactorsToAdd&gt; <a class="code" href="classgraph__localizer_1_1FactorAdder.html#aacab9d79ee12f2c07c660d7529dcdfb0">AddFactors</a>(<span class="keyword">const</span> MEASUREMENT&amp; measurement) = 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classgraph__optimizer_1_1FactorAdder.html#a0600e113c97fe845c82dba4c31d430d2">   34</a></span>&#160;  <span class="keyword">virtual</span> std::vector&lt;FactorsToAdd&gt; <a class="code" href="classgraph__optimizer_1_1FactorAdder.html#a0600e113c97fe845c82dba4c31d430d2">AddFactors</a>(<span class="keyword">const</span> MEASUREMENT&amp; measurement) = 0;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classgraph__localizer_1_1FactorAdder.html#a2b4bef759e08ea1f0cafd6313c3a40fd">   36</a></span>&#160;  <span class="keyword">const</span> PARAMS&amp; <a class="code" href="classgraph__localizer_1_1FactorAdder.html#a2b4bef759e08ea1f0cafd6313c3a40fd">params</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> params_; }</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classgraph__optimizer_1_1FactorAdder.html#ae80f49fd4cd35c76fa904241d6b66f67">   36</a></span>&#160;  <span class="keyword">const</span> PARAMS&amp; <a class="code" href="classgraph__optimizer_1_1FactorAdder.html#ae80f49fd4cd35c76fa904241d6b66f67">params</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> params_; }</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  PARAMS params_;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}  <span class="comment">// namespace graph_localizer</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}  <span class="comment">// namespace graph_optimizer</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif  // GRAPH_LOCALIZER_FACTOR_ADDER_H_</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif  // GRAPH_OPTIMIZER_FACTOR_ADDER_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassgraph__localizer_1_1FactorAdder_html"><div class="ttname"><a href="classgraph__localizer_1_1FactorAdder.html">graph_localizer::FactorAdder</a></div><div class="ttdef"><b>Definition:</b> factor_adder.h:28</div></div>
-<div class="ttc" id="aclassgraph__localizer_1_1FactorAdder_html_aaaa269b4f463c9930e777faf18a8f5a0"><div class="ttname"><a href="classgraph__localizer_1_1FactorAdder.html#aaaa269b4f463c9930e777faf18a8f5a0">graph_localizer::FactorAdder::~FactorAdder</a></div><div class="ttdeci">virtual ~FactorAdder()</div><div class="ttdef"><b>Definition:</b> factor_adder.h:32</div></div>
-<div class="ttc" id="aclassgraph__localizer_1_1FactorAdder_html_a07912089e360861d2944ac6f82c9e5f1"><div class="ttname"><a href="classgraph__localizer_1_1FactorAdder.html#a07912089e360861d2944ac6f82c9e5f1">graph_localizer::FactorAdder::FactorAdder</a></div><div class="ttdeci">FactorAdder(const PARAMS &amp;params)</div><div class="ttdef"><b>Definition:</b> factor_adder.h:30</div></div>
+<div class="ttc" id="aclassgraph__optimizer_1_1FactorAdder_html_ae80f49fd4cd35c76fa904241d6b66f67"><div class="ttname"><a href="classgraph__optimizer_1_1FactorAdder.html#ae80f49fd4cd35c76fa904241d6b66f67">graph_optimizer::FactorAdder::params</a></div><div class="ttdeci">const PARAMS &amp; params() const</div><div class="ttdef"><b>Definition:</b> factor_adder.h:36</div></div>
+<div class="ttc" id="aclassgraph__optimizer_1_1FactorAdder_html_ac8326535bd07314c84f4d11cfe711d48"><div class="ttname"><a href="classgraph__optimizer_1_1FactorAdder.html#ac8326535bd07314c84f4d11cfe711d48">graph_optimizer::FactorAdder::FactorAdder</a></div><div class="ttdeci">FactorAdder(const PARAMS &amp;params)</div><div class="ttdef"><b>Definition:</b> factor_adder.h:30</div></div>
+<div class="ttc" id="aclassgraph__optimizer_1_1FactorAdder_html_a0600e113c97fe845c82dba4c31d430d2"><div class="ttname"><a href="classgraph__optimizer_1_1FactorAdder.html#a0600e113c97fe845c82dba4c31d430d2">graph_optimizer::FactorAdder::AddFactors</a></div><div class="ttdeci">virtual std::vector&lt; FactorsToAdd &gt; AddFactors(const MEASUREMENT &amp;measurement)=0</div></div>
+<div class="ttc" id="aclassgraph__optimizer_1_1FactorAdder_html"><div class="ttname"><a href="classgraph__optimizer_1_1FactorAdder.html">graph_optimizer::FactorAdder</a></div><div class="ttdef"><b>Definition:</b> factor_adder.h:28</div></div>
+<div class="ttc" id="anamespacegraph__optimizer_html"><div class="ttname"><a href="namespacegraph__optimizer.html">graph_optimizer</a></div><div class="ttdef"><b>Definition:</b> cumulative_factor_adder.h:26</div></div>
 <div class="ttc" id="afactor__to__add_8h_html"><div class="ttname"><a href="factor__to__add_8h.html">factor_to_add.h</a></div></div>
-<div class="ttc" id="anamespacegraph__localizer_html"><div class="ttname"><a href="namespacegraph__localizer.html">graph_localizer</a></div><div class="ttdef"><b>Definition:</b> calibration_params.h:24</div></div>
-<div class="ttc" id="aclassgraph__localizer_1_1FactorAdder_html_aacab9d79ee12f2c07c660d7529dcdfb0"><div class="ttname"><a href="classgraph__localizer_1_1FactorAdder.html#aacab9d79ee12f2c07c660d7529dcdfb0">graph_localizer::FactorAdder::AddFactors</a></div><div class="ttdeci">virtual std::vector&lt; FactorsToAdd &gt; AddFactors(const MEASUREMENT &amp;measurement)=0</div></div>
-<div class="ttc" id="aclassgraph__localizer_1_1FactorAdder_html_a2b4bef759e08ea1f0cafd6313c3a40fd"><div class="ttname"><a href="classgraph__localizer_1_1FactorAdder.html#a2b4bef759e08ea1f0cafd6313c3a40fd">graph_localizer::FactorAdder::params</a></div><div class="ttdeci">const PARAMS &amp; params() const</div><div class="ttdef"><b>Definition:</b> factor_adder.h:36</div></div>
+<div class="ttc" id="aclassgraph__optimizer_1_1FactorAdder_html_a33c12530b7d3bf52237113e242e89661"><div class="ttname"><a href="classgraph__optimizer_1_1FactorAdder.html#a33c12530b7d3bf52237113e242e89661">graph_optimizer::FactorAdder::~FactorAdder</a></div><div class="ttdeci">virtual ~FactorAdder()</div><div class="ttdef"><b>Definition:</b> factor_adder.h:32</div></div>
 <!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
 </body>

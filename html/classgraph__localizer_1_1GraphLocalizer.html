@@ -97,6 +97,15 @@ $(document).ready(function(){initNavTree('classgraph__localizer_1_1GraphLocalize
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="graph__localizer_8h_source.html">graph_localizer.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for graph_localizer::GraphLocalizer:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgraph__localizer_1_1GraphLocalizer__inherit__graph.png" border="0" usemap="#agraph__localizer_1_1GraphLocalizer_inherit__map" alt="Inheritance graph"/></div>
+<map name="graph__localizer_1_1GraphLocalizer_inherit__map" id="agraph__localizer_1_1GraphLocalizer_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,365,265,633"/>
+<area shape="rect" href="classgraph__optimizer_1_1GraphOptimizer.html" title=" " alt="" coords="16,5,255,317"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -104,8 +113,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aed4354350d092783d83ca4638341c0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a307387ff94dd57523d5b4c9526519d85"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a307387ff94dd57523d5b4c9526519d85">GraphLocalizer</a> ()</td></tr>
 <tr class="separator:a307387ff94dd57523d5b4c9526519d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c952a7c88e8cbb5f0eba1df716c97a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a2c952a7c88e8cbb5f0eba1df716c97a9">~GraphLocalizer</a> ()</td></tr>
-<tr class="separator:a2c952a7c88e8cbb5f0eba1df716c97a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac46fc08db3caf29f7813d8ae5f6296a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#ac46fc08db3caf29f7813d8ae5f6296a4">~GraphLocalizer</a> ()=default</td></tr>
+<tr class="separator:ac46fc08db3caf29f7813d8ae5f6296a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cadc5d96c9309978431f65985d47127"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a8cadc5d96c9309978431f65985d47127">AddImuMeasurement</a> (const <a class="el" href="structlocalization__measurements_1_1ImuMeasurement.html">localization_measurements::ImuMeasurement</a> &amp;imu_measurement)</td></tr>
 <tr class="separator:a8cadc5d96c9309978431f65985d47127"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a739b720641d58dccffcd12b54a4dcd56"><td class="memItemLeft" align="right" valign="top">boost::optional&lt; <a class="el" href="classlocalization__common_1_1CombinedNavState.html">localization_common::CombinedNavState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a739b720641d58dccffcd12b54a4dcd56">LatestCombinedNavState</a> () const</td></tr>
@@ -116,24 +125,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a13e41ef19015dc495f466df8642ddceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee056faf581b20772d6867ca76aa10b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#aee056faf581b20772d6867ca76aa10b5">AddOpticalFlowMeasurement</a> (const <a class="el" href="structlocalization__measurements_1_1FeaturePointsMeasurement.html">localization_measurements::FeaturePointsMeasurement</a> &amp;optical_flow_feature_points_measurement)</td></tr>
 <tr class="separator:aee056faf581b20772d6867ca76aa10b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7274ba17d4fa714b526d84cc2fe73e37"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a7274ba17d4fa714b526d84cc2fe73e37">TriangulateNewPoint</a> (<a class="el" href="classgraph__localizer_1_1FactorsToAdd.html">FactorsToAdd</a> &amp;factors_to_add)</td></tr>
-<tr class="separator:a7274ba17d4fa714b526d84cc2fe73e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4560b2268929dec30b10c0f24b17888d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a4560b2268929dec30b10c0f24b17888d">LocProjectionNoiseScaling</a> (<a class="el" href="classgraph__localizer_1_1FactorsToAdd.html">FactorsToAdd</a> &amp;factors_to_add)</td></tr>
-<tr class="separator:a4560b2268929dec30b10c0f24b17888d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa439f4afc604c3e3be686d5ca496f347"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#aa439f4afc604c3e3be686d5ca496f347">ARProjectionNoiseScaling</a> (<a class="el" href="classgraph__localizer_1_1FactorsToAdd.html">FactorsToAdd</a> &amp;factors_to_add)</td></tr>
-<tr class="separator:aa439f4afc604c3e3be686d5ca496f347"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6880cc3ad60b444785a989181f3f8f3b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a6880cc3ad60b444785a989181f3f8f3b">MapProjectionNoiseScaling</a> (const <a class="el" href="structgraph__localizer_1_1LocFactorAdderParams.html">LocFactorAdderParams</a> &amp;<a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#ad16143f89b5d2ac23579c89f22f903b4">params</a>, <a class="el" href="classgraph__localizer_1_1FactorsToAdd.html">FactorsToAdd</a> &amp;factors_to_add)</td></tr>
-<tr class="separator:a6880cc3ad60b444785a989181f3f8f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a602780299b287d2ab7effc7128015236"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a602780299b287d2ab7effc7128015236">CheckForStandstill</a> ()</td></tr>
 <tr class="separator:a602780299b287d2ab7effc7128015236"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60af908ca21db31b641660ac0728a95d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a60af908ca21db31b641660ac0728a95d">AddARTagMeasurement</a> (const <a class="el" href="structlocalization__measurements_1_1MatchedProjectionsMeasurement.html">localization_measurements::MatchedProjectionsMeasurement</a> &amp;matched_projections_measurement)</td></tr>
 <tr class="separator:a60af908ca21db31b641660ac0728a95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82407758ff94a7cc4b8265a566f43c17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a82407758ff94a7cc4b8265a566f43c17">AddSparseMappingMeasurement</a> (const <a class="el" href="structlocalization__measurements_1_1MatchedProjectionsMeasurement.html">localization_measurements::MatchedProjectionsMeasurement</a> &amp;matched_projections_measurement)</td></tr>
 <tr class="separator:a82407758ff94a7cc4b8265a566f43c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8ca6d7c707373051ded7cea8c4023a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#aa8ca6d7c707373051ded7cea8c4023a7">SplitSmartFactorsIfNeeded</a> (<a class="el" href="classgraph__localizer_1_1FactorsToAdd.html">FactorsToAdd</a> &amp;factors_to_add)</td></tr>
-<tr class="separator:aa8ca6d7c707373051ded7cea8c4023a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e8def41faa6bac36f80168905dc2229"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a2e8def41faa6bac36f80168905dc2229">Update</a> ()</td></tr>
-<tr class="separator:a2e8def41faa6bac36f80168905dc2229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15b20ce855d0377a523739a43ee5bd0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a15b20ce855d0377a523739a43ee5bd0c">DoPostOptimizeActions</a> () final</td></tr>
+<tr class="separator:a15b20ce855d0377a523739a43ee5bd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71c94fbff2c9a2b77b4aa579921c3841"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacegraph__localizer.html#a408e390b6c93fb9e1dfaf5aa740ae55a">FeatureTrackIdMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a71c94fbff2c9a2b77b4aa579921c3841">feature_tracks</a> () const</td></tr>
 <tr class="separator:a71c94fbff2c9a2b77b4aa579921c3841"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a826d5f71250d2d25d6515f25d728b8c9"><td class="memItemLeft" align="right" valign="top">boost::optional&lt; std::pair&lt; gtsam::imuBias::ConstantBias, <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a826d5f71250d2d25d6515f25d728b8c9">LatestBiases</a> () const</td></tr>
@@ -144,31 +143,51 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3ed0c1525d3ff8d109e4d5951eb8bb10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9dcef04a161f7e6f5c6b58f88b895ef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#aa9dcef04a161f7e6f5c6b58f88b895ef">NumOFFactors</a> (const bool check_valid=true) const</td></tr>
 <tr class="separator:aa9dcef04a161f7e6f5c6b58f88b895ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f0f561924dbef94635bdf2c079f6be5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a7f0f561924dbef94635bdf2c079f6be5">NumSmartFactors</a> (const bool check_valid=true) const</td></tr>
-<tr class="separator:a7f0f561924dbef94635bdf2c079f6be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ce4a32982513f3bbf40d3a4d64e7a72"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a5ce4a32982513f3bbf40d3a4d64e7a72">NumProjectionFactors</a> (const bool check_valid=true) const</td></tr>
 <tr class="separator:a5ce4a32982513f3bbf40d3a4d64e7a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5504411a668d474de33b071d3f105b8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgraph__localizer_1_1GraphValues.html">GraphValues</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#ad5504411a668d474de33b071d3f105b8">graph_values</a> () const</td></tr>
-<tr class="separator:ad5504411a668d474de33b071d3f105b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac89c5022f33511dd7d5568c0e5ac9be5"><td class="memItemLeft" align="right" valign="top">const gtsam::NonlinearFactorGraph &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#ac89c5022f33511dd7d5568c0e5ac9be5">factor_graph</a> () const</td></tr>
-<tr class="separator:ac89c5022f33511dd7d5568c0e5ac9be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d9c68d57359264faf91e504403b9766"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a4d9c68d57359264faf91e504403b9766">SaveGraphDotFile</a> (const std::string &amp;output_path=&quot;graph.dot&quot;) const</td></tr>
-<tr class="separator:a4d9c68d57359264faf91e504403b9766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c8f386e8fff34f3bd9c4ea5a9c6896a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a0c8f386e8fff34f3bd9c4ea5a9c6896a">standstill</a> () const</td></tr>
 <tr class="separator:a0c8f386e8fff34f3bd9c4ea5a9c6896a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad16143f89b5d2ac23579c89f22f903b4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html">GraphLocalizerParams</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#ad16143f89b5d2ac23579c89f22f903b4">params</a> () const</td></tr>
 <tr class="separator:ad16143f89b5d2ac23579c89f22f903b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a707367d1331fa2dd00d0720574a1d729"><td class="memTemplParams" colspan="2">template&lt;typename FactorType &gt; </td></tr>
-<tr class="memitem:a707367d1331fa2dd00d0720574a1d729"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a707367d1331fa2dd00d0720574a1d729">NumFactors</a> () const</td></tr>
-<tr class="separator:a707367d1331fa2dd00d0720574a1d729"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e8ad4c3452695f92e7e466d2b0af6da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a6e8ad4c3452695f92e7e466d2b0af6da">LogOnDestruction</a> (const bool log_on_destruction)</td></tr>
-<tr class="separator:a6e8ad4c3452695f92e7e466d2b0af6da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb5fb3413275ab923b49714bf4447318"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgraph__localizer_1_1GraphStats.html">GraphStats</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#acb5fb3413275ab923b49714bf4447318">graph_stats</a> () const</td></tr>
-<tr class="separator:acb5fb3413275ab923b49714bf4447318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f7581b34201512f257856a8dd9a03f1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgraph__localizer_1_1GraphLocalizerStats.html">GraphLocalizerStats</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a3f7581b34201512f257856a8dd9a03f1">graph_localizer_stats</a> () const</td></tr>
+<tr class="separator:a3f7581b34201512f257856a8dd9a03f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accfe1058efd0e3df7ed1c724129bb231"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#accfe1058efd0e3df7ed1c724129bb231">SetFanSpeedMode</a> (const <a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6b">localization_measurements::FanSpeedMode</a> <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a2245d1fbffc3c9765d4dd8f435004d71">fan_speed_mode</a>)</td></tr>
 <tr class="separator:accfe1058efd0e3df7ed1c724129bb231"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2245d1fbffc3c9765d4dd8f435004d71"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacelocalization__measurements.html#a71648aafc67db80910f94a0f0fa5aa6b">localization_measurements::FanSpeedMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a2245d1fbffc3c9765d4dd8f435004d71">fan_speed_mode</a> () const</td></tr>
 <tr class="separator:a2245d1fbffc3c9765d4dd8f435004d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classgraph__optimizer_1_1GraphOptimizer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html">graph_optimizer::GraphOptimizer</a></td></tr>
+<tr class="memitem:a4df7ffe5b76456246278cb4520219586 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a4df7ffe5b76456246278cb4520219586">GraphOptimizer</a> (const <a class="el" href="structgraph__optimizer_1_1GraphOptimizerParams.html">GraphOptimizerParams</a> &amp;<a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a5029bbab66aa5123da10a945f2696711">params</a>, std::unique_ptr&lt; <a class="el" href="classgraph__optimizer_1_1GraphStats.html">GraphStats</a> &gt; <a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a153eac1af83ea7bfbf5eb4f5f3226c1a">graph_stats</a>=std::unique_ptr&lt; <a class="el" href="classgraph__optimizer_1_1GraphStats.html">GraphStats</a> &gt;(new <a class="el" href="classgraph__optimizer_1_1GraphStats.html">GraphStats</a>()))</td></tr>
+<tr class="separator:a4df7ffe5b76456246278cb4520219586 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9decfe9a06ed0765575b4980cbad021 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#aa9decfe9a06ed0765575b4980cbad021">GraphOptimizer</a> ()</td></tr>
+<tr class="separator:aa9decfe9a06ed0765575b4980cbad021 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23093c5d99445fb96c1f93eaa6ce32d2 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a23093c5d99445fb96c1f93eaa6ce32d2">~GraphOptimizer</a> ()</td></tr>
+<tr class="separator:a23093c5d99445fb96c1f93eaa6ce32d2 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac54fe4c28e2de6b4323f172a8d3776be inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#ac54fe4c28e2de6b4323f172a8d3776be">AddGraphActionCompleter</a> (std::shared_ptr&lt; <a class="el" href="classgraph__optimizer_1_1GraphActionCompleter.html">GraphActionCompleter</a> &gt; graph_action_completer)</td></tr>
+<tr class="separator:ac54fe4c28e2de6b4323f172a8d3776be inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc293ab04fe1a02dfe12ed73c578270e inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#acc293ab04fe1a02dfe12ed73c578270e">AddNodeUpdater</a> (std::shared_ptr&lt; <a class="el" href="classgraph__optimizer_1_1NodeUpdater.html">NodeUpdater</a> &gt; node_updater)</td></tr>
+<tr class="separator:acc293ab04fe1a02dfe12ed73c578270e inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d012d9d09dae7c46140c6f6bdb79a70 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a9d012d9d09dae7c46140c6f6bdb79a70">BufferFactors</a> (const std::vector&lt; <a class="el" href="classgraph__optimizer_1_1FactorsToAdd.html">FactorsToAdd</a> &gt; &amp;factors_to_add_vec)</td></tr>
+<tr class="separator:a9d012d9d09dae7c46140c6f6bdb79a70 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1829d0324be016e4aec1db47a74e9c6c inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a1829d0324be016e4aec1db47a74e9c6c">Update</a> ()</td></tr>
+<tr class="separator:a1829d0324be016e4aec1db47a74e9c6c inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af59fdecc1a16cf501a64f11efdb97be4 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memItemLeft" align="right" valign="top">const gtsam::NonlinearFactorGraph &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#af59fdecc1a16cf501a64f11efdb97be4">graph_factors</a> () const</td></tr>
+<tr class="separator:af59fdecc1a16cf501a64f11efdb97be4 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7793eb104fba47a7c30f9792cc81d1ac inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memItemLeft" align="right" valign="top">gtsam::NonlinearFactorGraph &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a7793eb104fba47a7c30f9792cc81d1ac">graph_factors</a> ()</td></tr>
+<tr class="separator:a7793eb104fba47a7c30f9792cc81d1ac inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a246400388c2575b5220558c89caad706 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a246400388c2575b5220558c89caad706">SaveGraphDotFile</a> (const std::string &amp;output_path=&quot;graph.dot&quot;) const</td></tr>
+<tr class="separator:a246400388c2575b5220558c89caad706 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5029bbab66aa5123da10a945f2696711 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structgraph__optimizer_1_1GraphOptimizerParams.html">GraphOptimizerParams</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a5029bbab66aa5123da10a945f2696711">params</a> () const</td></tr>
+<tr class="separator:a5029bbab66aa5123da10a945f2696711 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aad919e4658b66c0e6f5f4aea948af2 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a7aad919e4658b66c0e6f5f4aea948af2">LogOnDestruction</a> (const bool log_on_destruction)</td></tr>
+<tr class="separator:a7aad919e4658b66c0e6f5f4aea948af2 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153eac1af83ea7bfbf5eb4f5f3226c1a inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgraph__optimizer_1_1GraphStats.html">GraphStats</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a153eac1af83ea7bfbf5eb4f5f3226c1a">graph_stats</a> () const</td></tr>
+<tr class="separator:a153eac1af83ea7bfbf5eb4f5f3226c1a inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cf167aef597d0a739cdf9424aedc58b inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgraph__optimizer_1_1GraphStats.html">GraphStats</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a9cf167aef597d0a739cdf9424aedc58b">graph_stats</a> ()</td></tr>
+<tr class="separator:a9cf167aef597d0a739cdf9424aedc58b inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3209c8d0c3b3fdd5b0807c8b5bff64b1 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memItemLeft" align="right" valign="top">const boost::optional&lt; gtsam::Marginals &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a3209c8d0c3b3fdd5b0807c8b5bff64b1">marginals</a> () const</td></tr>
+<tr class="separator:a3209c8d0c3b3fdd5b0807c8b5bff64b1 inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb3f71f75f1cf01e2f03dddd5ce9a7db inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; gtsam::Values &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#aeb3f71f75f1cf01e2f03dddd5ce9a7db">values</a> ()</td></tr>
+<tr class="separator:aeb3f71f75f1cf01e2f03dddd5ce9a7db inherit pub_methods_classgraph__optimizer_1_1GraphOptimizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -227,11 +246,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a2c952a7c88e8cbb5f0eba1df716c97a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c952a7c88e8cbb5f0eba1df716c97a9">&#9670;&nbsp;</a></span>~GraphLocalizer()</h2>
+<a id="ac46fc08db3caf29f7813d8ae5f6296a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac46fc08db3caf29f7813d8ae5f6296a4">&#9670;&nbsp;</a></span>~GraphLocalizer()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">graph_localizer::GraphLocalizer::~GraphLocalizer </td>
@@ -240,6 +262,11 @@ Friends</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -317,24 +344,6 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="aa439f4afc604c3e3be686d5ca496f347"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa439f4afc604c3e3be686d5ca496f347">&#9670;&nbsp;</a></span>ARProjectionNoiseScaling()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool graph_localizer::GraphLocalizer::ARProjectionNoiseScaling </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgraph__localizer_1_1FactorsToAdd.html">FactorsToAdd</a> &amp;&#160;</td>
-          <td class="paramname"><em>factors_to_add</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a602780299b287d2ab7effc7128015236"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a602780299b287d2ab7effc7128015236">&#9670;&nbsp;</a></span>CheckForStandstill()</h2>
 
@@ -352,20 +361,30 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ac89c5022f33511dd7d5568c0e5ac9be5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac89c5022f33511dd7d5568c0e5ac9be5">&#9670;&nbsp;</a></span>factor_graph()</h2>
+<a id="a15b20ce855d0377a523739a43ee5bd0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15b20ce855d0377a523739a43ee5bd0c">&#9670;&nbsp;</a></span>DoPostOptimizeActions()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const gtsam::NonlinearFactorGraph &amp; graph_localizer::GraphLocalizer::factor_graph </td>
+          <td class="memname">bool graph_localizer::GraphLocalizer::DoPostOptimizeActions </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html">graph_optimizer::GraphOptimizer</a>.</p>
 
 </div>
 </div>
@@ -429,31 +448,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="acb5fb3413275ab923b49714bf4447318"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb5fb3413275ab923b49714bf4447318">&#9670;&nbsp;</a></span>graph_stats()</h2>
+<a id="a3f7581b34201512f257856a8dd9a03f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f7581b34201512f257856a8dd9a03f1">&#9670;&nbsp;</a></span>graph_localizer_stats()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classgraph__localizer_1_1GraphStats.html">GraphStats</a> &amp; graph_localizer::GraphLocalizer::graph_stats </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad5504411a668d474de33b071d3f105b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5504411a668d474de33b071d3f105b8">&#9670;&nbsp;</a></span>graph_values()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classgraph__localizer_1_1GraphValues.html">GraphValues</a> &amp; graph_localizer::GraphLocalizer::graph_values </td>
+          <td class="memname">const <a class="el" href="classgraph__localizer_1_1GraphLocalizerStats.html">GraphLocalizerStats</a> &amp; graph_localizer::GraphLocalizer::graph_localizer_stats </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -531,97 +533,6 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a4560b2268929dec30b10c0f24b17888d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4560b2268929dec30b10c0f24b17888d">&#9670;&nbsp;</a></span>LocProjectionNoiseScaling()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool graph_localizer::GraphLocalizer::LocProjectionNoiseScaling </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgraph__localizer_1_1FactorsToAdd.html">FactorsToAdd</a> &amp;&#160;</td>
-          <td class="paramname"><em>factors_to_add</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6e8ad4c3452695f92e7e466d2b0af6da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e8ad4c3452695f92e7e466d2b0af6da">&#9670;&nbsp;</a></span>LogOnDestruction()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void graph_localizer::GraphLocalizer::LogOnDestruction </td>
-          <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>log_on_destruction</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6880cc3ad60b444785a989181f3f8f3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6880cc3ad60b444785a989181f3f8f3b">&#9670;&nbsp;</a></span>MapProjectionNoiseScaling()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool graph_localizer::GraphLocalizer::MapProjectionNoiseScaling </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structgraph__localizer_1_1LocFactorAdderParams.html">LocFactorAdderParams</a> &amp;&#160;</td>
-          <td class="paramname"><em>params</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classgraph__localizer_1_1FactorsToAdd.html">FactorsToAdd</a> &amp;&#160;</td>
-          <td class="paramname"><em>factors_to_add</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a707367d1331fa2dd00d0720574a1d729"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a707367d1331fa2dd00d0720574a1d729">&#9670;&nbsp;</a></span>NumFactors()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename FactorType &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int graph_localizer::GraphLocalizer::NumFactors </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a3ed0c1525d3ff8d109e4d5951eb8bb10"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ed0c1525d3ff8d109e4d5951eb8bb10">&#9670;&nbsp;</a></span>NumFeatures()</h2>
 
@@ -675,24 +586,6 @@ template&lt;typename FactorType &gt; </div>
 
 </div>
 </div>
-<a id="a7f0f561924dbef94635bdf2c079f6be5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f0f561924dbef94635bdf2c079f6be5">&#9670;&nbsp;</a></span>NumSmartFactors()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int graph_localizer::GraphLocalizer::NumSmartFactors </td>
-          <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>check_valid</em> = <code>true</code></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ad16143f89b5d2ac23579c89f22f903b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad16143f89b5d2ac23579c89f22f903b4">&#9670;&nbsp;</a></span>params()</h2>
 
@@ -703,24 +596,6 @@ template&lt;typename FactorType &gt; </div>
           <td class="memname">const <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html">GraphLocalizerParams</a> &amp; graph_localizer::GraphLocalizer::params </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4d9c68d57359264faf91e504403b9766"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d9c68d57359264faf91e504403b9766">&#9670;&nbsp;</a></span>SaveGraphDotFile()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void graph_localizer::GraphLocalizer::SaveGraphDotFile </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>output_path</em> = <code>&quot;graph.dot&quot;</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -746,24 +621,6 @@ template&lt;typename FactorType &gt; </div>
 
 </div>
 </div>
-<a id="aa8ca6d7c707373051ded7cea8c4023a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8ca6d7c707373051ded7cea8c4023a7">&#9670;&nbsp;</a></span>SplitSmartFactorsIfNeeded()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void graph_localizer::GraphLocalizer::SplitSmartFactorsIfNeeded </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgraph__localizer_1_1FactorsToAdd.html">FactorsToAdd</a> &amp;&#160;</td>
-          <td class="paramname"><em>factors_to_add</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a0c8f386e8fff34f3bd9c4ea5a9c6896a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0c8f386e8fff34f3bd9c4ea5a9c6896a">&#9670;&nbsp;</a></span>standstill()</h2>
 
@@ -775,41 +632,6 @@ template&lt;typename FactorType &gt; </div>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7274ba17d4fa714b526d84cc2fe73e37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7274ba17d4fa714b526d84cc2fe73e37">&#9670;&nbsp;</a></span>TriangulateNewPoint()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool graph_localizer::GraphLocalizer::TriangulateNewPoint </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgraph__localizer_1_1FactorsToAdd.html">FactorsToAdd</a> &amp;&#160;</td>
-          <td class="paramname"><em>factors_to_add</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2e8def41faa6bac36f80168905dc2229"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e8def41faa6bac36f80168905dc2229">&#9670;&nbsp;</a></span>Update()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool graph_localizer::GraphLocalizer::Update </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

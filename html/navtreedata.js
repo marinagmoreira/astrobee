@@ -110,6 +110,7 @@ var NAVTREE =
     ] ],
     [ "Astrobee Usage", "md_doc_general_documentation_astrobee_usage.html", "md_doc_general_documentation_astrobee_usage" ],
     [ "Subsystems", "subsystems.html", "subsystems" ],
+    [ "Graph Optimizer", "graphoptimizer.html", null ],
     [ "Simulation", "md_simulation_readme.html", "md_simulation_readme" ],
     [ "Tools", "tools.html", "tools" ],
     [ "Todo List", "todo.html", null ],
@@ -120,8 +121,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "access_control.html",
-"managing_debians.html#autotoc_md119",
-"sim_overview.html#autotoc_md438"
+"managing_debians.html#autotoc_md118",
+"sim_overview.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

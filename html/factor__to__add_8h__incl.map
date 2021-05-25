@@ -1,10 +1,11 @@
-<map id="localization/graph_localizer/include/graph_localizer/factor_to_add.h" name="localization/graph_localizer/include/graph_localizer/factor_to_add.h">
-<area shape="rect" id="node1" title=" " alt="" coords="247,5,437,61"/>
-<area shape="rect" id="node2" href="$graph__action_8h.html" title=" " alt="" coords="30,109,193,151"/>
-<area shape="rect" id="node3" href="$key__info_8h.html" title=" " alt="" coords="267,109,417,151"/>
-<area shape="rect" id="node4" href="$time_8h.html" title=" " alt="" coords="5,199,167,240"/>
-<area shape="rect" id="node7" title=" " alt="" coords="492,206,555,233"/>
-<area shape="rect" id="node8" title=" " alt="" coords="491,109,686,151"/>
-<area shape="rect" id="node5" title=" " alt="" coords="191,206,357,233"/>
-<area shape="rect" id="node6" title=" " alt="" coords="381,206,468,233"/>
+<map id="localization/graph_optimizer/include/graph_optimizer/factor_to_add.h" name="localization/graph_optimizer/include/graph_optimizer/factor_to_add.h">
+<area shape="rect" id="node1" title=" " alt="" coords="364,5,560,61"/>
+<area shape="rect" id="node2" href="$graph__action__completer__type_8h.html" title=" " alt="" coords="117,109,308,151"/>
+<area shape="rect" id="node3" href="$key__info_8h.html" title=" " alt="" coords="384,109,540,151"/>
+<area shape="rect" id="node5" href="$time_8h.html" title=" " alt="" coords="5,199,167,240"/>
+<area shape="rect" id="node8" title=" " alt="" coords="680,206,743,233"/>
+<area shape="rect" id="node9" title=" " alt="" coords="615,109,810,151"/>
+<area shape="rect" id="node4" href="$node__updater__type_8h.html" title=" " alt="" coords="191,199,355,240"/>
+<area shape="rect" id="node6" title=" " alt="" coords="379,206,545,233"/>
+<area shape="rect" id="node7" title=" " alt="" coords="569,206,656,233"/>
 </map>

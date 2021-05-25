@@ -109,7 +109,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 : <a class="el" href="classperch_1_1PerchNodelet.html#a4cc13935161b3593ddb10ad72093dc50">perch::PerchNodelet</a>
 </li>
 <li>SaveGraphDotFile()
-: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a4d9c68d57359264faf91e504403b9766">graph_localizer::GraphLocalizer</a>
+: <a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a246400388c2575b5220558c89caad706">graph_optimizer::GraphOptimizer</a>
 </li>
 <li>SaveLocalizationGraphDotFile()
 : <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#a0b501d76239e277c4ea7790e9f125aca">graph_localizer::GraphLocalizerWrapper</a>
@@ -328,6 +328,9 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 </li>
 <li>setColorV()
 : <a class="el" href="classtraj__opt_1_1TrajectoryVisual.html#ae35d4f65f7a82d524fbc53665ea37cef">traj_opt::TrajectoryVisual</a>
+</li>
+<li>SetCombinedNavStateGraphValues()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerStats.html#ac0383d1398e1457ab32770886fa98b4a">graph_localizer::GraphLocalizerStats</a>
 </li>
 <li>SetCommStatusRate()
 : <a class="el" href="classdds__ros__bridge_1_1DdsRosBridge.html#add2360ec01b0c2ca76861b6a62697e41">dds_ros_bridge::DdsRosBridge</a>
@@ -750,7 +753,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 , <a class="el" href="classff__util_1_1FreeFlyerServiceClient.html#a7e55a71a3754cbc81f7ad4d936af8439">ff_util::FreeFlyerServiceClient&lt; ServiceSpec &gt;</a>
 </li>
 <li>SetTimestamp()
-: <a class="el" href="classgraph__localizer_1_1FactorsToAdd.html#a66df2331b2ca084cbdd695f8d77990ab">graph_localizer::FactorsToAdd</a>
+: <a class="el" href="classgraph__optimizer_1_1FactorsToAdd.html#a2e8db5240cf1b0aa9b32f3339469e35f">graph_optimizer::FactorsToAdd</a>
 </li>
 <li>SetTransform()
 : <a class="el" href="classcamera_1_1CameraModel.html#a08f56f5c28d61195a8e7e305e64c0ec6">camera::CameraModel</a>
@@ -786,6 +789,12 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 : <a class="el" href="classdock_1_1DockNodelet.html#a4a6aee4603195a7f0233693f6f524717">dock::DockNodelet</a>
 , <a class="el" href="classperch_1_1PerchNodelet.html#a7f746a3f330731db12b06a459b780b0e">perch::PerchNodelet</a>
 </li>
+<li>shared_feature_point_graph_values()
+: <a class="el" href="classgraph__localizer_1_1FeaturePointNodeUpdater.html#a6082b8cf01e040ed6905d3e03c8404af">graph_localizer::FeaturePointNodeUpdater</a>
+</li>
+<li>shared_graph_values()
+: <a class="el" href="classgraph__localizer_1_1CombinedNavStateNodeUpdater.html#a226066ceb09cfc0937e91e51c05fb2c3">graph_localizer::CombinedNavStateNodeUpdater</a>
+</li>
 <li>shifted_legendre()
 : <a class="el" href="classtraj__opt_1_1PolyCalculusPro.html#aca56fd035994a126c2bbb8004320635f">traj_opt::PolyCalculusPro</a>
 </li>
@@ -818,9 +827,9 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 : <a class="el" href="classsim__wrapper_1_1SimWrapperNodelet.html#a1376addbb74e840601322ff958148a9d">sim_wrapper::SimWrapperNodelet</a>
 </li>
 <li>size()
-: <a class="el" href="classgraph__localizer_1_1FactorsToAdd.html#a4219b85141555e848670189ba33b43a9">graph_localizer::FactorsToAdd</a>
-, <a class="el" href="classgraph__localizer_1_1FeatureTrack.html#a6e2fa97c7166aeaa0730fea3a16ef3c2">graph_localizer::FeatureTrack</a>
+: <a class="el" href="classgraph__localizer_1_1FeatureTrack.html#a6e2fa97c7166aeaa0730fea3a16ef3c2">graph_localizer::FeatureTrack</a>
 , <a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a6e262809539b2b183f739d781194ad1a">graph_localizer::FeatureTracker</a>
+, <a class="el" href="classgraph__optimizer_1_1FactorsToAdd.html#a94b11a8261347be173e7c81f5c8ce30c">graph_optimizer::FactorsToAdd</a>
 </li>
 <li>Size()
 : <a class="el" href="classimu__integration_1_1ImuIntegrator.html#ae618fa1bafc582101c6aceccaeecea2b">imu_integration::ImuIntegrator</a>
@@ -847,11 +856,25 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 <li>SliderProperty()
 : <a class="el" href="classrviz_1_1SliderProperty.html#a38b816247bd12c450210ff3179b60e7b">rviz::SliderProperty</a>
 </li>
+<li>SlideWindow()
+: <a class="el" href="classgraph__localizer_1_1CombinedNavStateNodeUpdater.html#a2efe193fdb24d9723ae5b00ed77a69e8">graph_localizer::CombinedNavStateNodeUpdater</a>
+, <a class="el" href="classgraph__localizer_1_1FeaturePointNodeUpdater.html#a2c3bc4169ca4abf81cd296164df57d9d">graph_localizer::FeaturePointNodeUpdater</a>
+, <a class="el" href="classgraph__optimizer_1_1NodeUpdater.html#acf62f7eae595385df6d34a7bc592d1f5">graph_optimizer::NodeUpdater</a>
+</li>
 <li>SlideWindowNewOldestTime()
-: <a class="el" href="classgraph__localizer_1_1GraphValues.html#a424ce7e04d42c3a12887783dd312be96">graph_localizer::GraphValues</a>
+: <a class="el" href="classgraph__localizer_1_1CombinedNavStateGraphValues.html#a000f80586ff1875cef11e15f7fbe5d73">graph_localizer::CombinedNavStateGraphValues</a>
+, <a class="el" href="classgraph__localizer_1_1CombinedNavStateNodeUpdater.html#a7ee4af0dd16a3b2e095ac6470231a4d5">graph_localizer::CombinedNavStateNodeUpdater</a>
+, <a class="el" href="classgraph__localizer_1_1FeaturePointGraphValues.html#af9033585786ab0aee22d6f65e0e97a5a">graph_localizer::FeaturePointGraphValues</a>
+, <a class="el" href="classgraph__localizer_1_1FeaturePointNodeUpdater.html#a3089a17dbd66d354fbc87c915d6cee06">graph_localizer::FeaturePointNodeUpdater</a>
+, <a class="el" href="classgraph__optimizer_1_1GraphValues.html#af09184e493450945765a6f25201fba80">graph_optimizer::GraphValues</a>
+, <a class="el" href="classgraph__optimizer_1_1NodeUpdater.html#a900dbbde93531d973f7c34eaa909719f">graph_optimizer::NodeUpdater</a>
 </li>
 <li>smart_factor_timestamp_allow_list()
 : <a class="el" href="classgraph__localizer_1_1FeatureTracker.html#a3b993501c8c930a27572100d2e93e9c7">graph_localizer::FeatureTracker</a>
+</li>
+<li>smart_projection_params()
+: <a class="el" href="classgraph__localizer_1_1SmartProjectionCumulativeFactorAdder.html#aa4460e4dd6fb5c80b76cb0394263453d">graph_localizer::SmartProjectionCumulativeFactorAdder</a>
+, <a class="el" href="classgraph__localizer_1_1SmartProjectionGraphActionCompleter.html#ab18b1bf92e4377e48ad9354aec8d89bb">graph_localizer::SmartProjectionGraphActionCompleter</a>
 </li>
 <li>SmartDock()
 : <a class="el" href="classsmart__dock_1_1SmartDock.html#a3fce4739078cb69adfde810867e051b5">smart_dock::SmartDock</a>
@@ -861,6 +884,9 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 </li>
 <li>SmartProjectionCumulativeFactorAdder()
 : <a class="el" href="classgraph__localizer_1_1SmartProjectionCumulativeFactorAdder.html#a96c98872cdee15e56e674c95178a0e8f">graph_localizer::SmartProjectionCumulativeFactorAdder</a>
+</li>
+<li>SmartProjectionGraphActionCompleter()
+: <a class="el" href="classgraph__localizer_1_1SmartProjectionGraphActionCompleter.html#a68f29194e1916c8b4388f424c1b88701">graph_localizer::SmartProjectionGraphActionCompleter</a>
 </li>
 <li>SmoothCost()
 : <a class="el" href="structvive__localization_1_1SmoothCost.html#ad1120b29da75be90d17ac7a2094f1299">vive_localization::SmoothCost</a>
@@ -901,7 +927,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 : <a class="el" href="classgraph__localizer_1_1FeatureTrack.html#ad685cc44b0ffc55963839b98167a10eb">graph_localizer::FeatureTrack</a>
 </li>
 <li>SparseMap()
-: <a class="el" href="structsparse__mapping_1_1SparseMap.html#acc79cc4958beac0a3b60b7a82fcfe827">sparse_mapping::SparseMap</a>
+: <a class="el" href="structsparse__mapping_1_1SparseMap.html#a82d724638f8498219ff2551a70b02e7c">sparse_mapping::SparseMap</a>
 </li>
 <li>SparseMappingDisplay()
 : <a class="el" href="classlocalization__rviz__plugins_1_1SparseMappingDisplay.html#a2e1d15afbb14479eca6856467af5f8eb">localization_rviz_plugins::SparseMappingDisplay</a>
@@ -928,10 +954,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html',''); initResiza
 : <a class="el" href="classspeed__cam_1_1SpeedCamNode.html#a34d0745b69590dffdb8bbeb754636242">speed_cam::SpeedCamNode</a>
 </li>
 <li>SplineData()
-: <a class="el" href="structtraj__opt_1_1SplineData.html#a4d5e4b17d6149b09389e47a717877fa0">traj_opt::SplineData</a>
-</li>
-<li>SplitSmartFactorsIfNeeded()
-: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#aa8ca6d7c707373051ded7cea8c4023a7">graph_localizer::GraphLocalizer</a>
+: <a class="el" href="structtraj__opt_1_1SplineData.html#a362400eb94aa6f84b71fad65c893d414">traj_opt::SplineData</a>
 </li>
 <li>square()
 : <a class="el" href="classtraj__opt_1_1SymbolicPoly.html#a93477cf36e13a7558ef9f9e687dfdb17">traj_opt::SymbolicPoly</a>

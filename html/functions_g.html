@@ -192,7 +192,7 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 <li>Get()
 : <a class="el" href="classff__util_1_1ConfigClient.html#ab3b85c54f4dfd3d7c31f3271827405de">ff_util::ConfigClient</a>
 , <a class="el" href="classff__util_1_1ConfigServer.html#abb8291fb86c09e6f846e25c065c11f79">ff_util::ConfigServer</a>
-, <a class="el" href="classgraph__localizer_1_1FactorsToAdd.html#a7efb31f2652f3d368c9c1eb08e15af11">graph_localizer::FactorsToAdd</a>
+, <a class="el" href="classgraph__optimizer_1_1FactorsToAdd.html#ae46c75d41f4f8617f679ca441e3dbee4">graph_optimizer::FactorsToAdd</a>
 </li>
 <li>GetActionString()
 : <a class="el" href="classexecutive_1_1OpState.html#a335105546d6d1d5a9ba0e529968d8dca">executive::OpState</a>
@@ -262,8 +262,8 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 : <a class="el" href="classctl_1_1Ctl.html#aad009247deb2a001a35effb37cb2b08a">ctl::Ctl</a>
 </li>
 <li>GetCombinedNavState()
-: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a7cadc98f3e980237454cc65a3b02f97e">graph_localizer::GraphLocalizer</a>
-, <a class="el" href="classgraph__localizer_1_1GraphValues.html#a8f5a47ade692461a62dfedba9b067b4a">graph_localizer::GraphValues</a>
+: <a class="el" href="classgraph__localizer_1_1CombinedNavStateGraphValues.html#ab3f187e9dc146a331e7c95dd06ebc35a">graph_localizer::CombinedNavStateGraphValues</a>
+, <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a7cadc98f3e980237454cc65a3b02f97e">graph_localizer::GraphLocalizer</a>
 </li>
 <li>getCommand()
 : <a class="el" href="classtraj__opt_1_1Trajectory.html#a7080cb104186b7a7d4a8ae07246c71cb">traj_opt::Trajectory</a>
@@ -472,7 +472,12 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 : <a class="el" href="classtraj__opt_1_1LegendreTrajectory.html#abd13391de607bd3101655a7adb264de1">traj_opt::LegendreTrajectory</a>
 </li>
 <li>GetKey()
-: <a class="el" href="classgraph__localizer_1_1GraphValues.html#aee6aefc799778c11892b7c1292c8669d">graph_localizer::GraphValues</a>
+: <a class="el" href="classgraph__localizer_1_1CombinedNavStateGraphValues.html#a6577c419ebf89f8021285f58a5d3b5de">graph_localizer::CombinedNavStateGraphValues</a>
+, <a class="el" href="classgraph__localizer_1_1CombinedNavStateNodeUpdater.html#a615ea9d139c8b771ea4a3aea730de9ee">graph_localizer::CombinedNavStateNodeUpdater</a>
+, <a class="el" href="classgraph__localizer_1_1FeaturePointGraphValues.html#a8c8f5226e20567b27c198cfd0cd31d26">graph_localizer::FeaturePointGraphValues</a>
+, <a class="el" href="classgraph__localizer_1_1FeaturePointNodeUpdater.html#ae2922a61a24ebdc41a5f48760ac24882">graph_localizer::FeaturePointNodeUpdater</a>
+, <a class="el" href="classgraph__optimizer_1_1GraphValues.html#ac9ab253757474947a601770d935355c8">graph_optimizer::GraphValues</a>
+, <a class="el" href="classgraph__optimizer_1_1NodeUpdater.html#ac28beec2b93975584184826ee1a677aa">graph_optimizer::NodeUpdater</a>
 </li>
 <li>getKeypoints()
 : <a class="el" href="classinterest__point_1_1BriskScaleSpace.html#ab6f97f7d4d626b766b14c6969000cbf3">interest_point::BriskScaleSpace</a>
@@ -627,8 +632,8 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 : <a class="el" href="structsparse__mapping_1_1SparseMap.html#ac4c88dd747477b424ac14191d89316bd">sparse_mapping::SparseMap</a>
 </li>
 <li>GetReal()
-: <a class="el" href="classconfig__reader_1_1ConfigReader.html#aed4a14bb2a9b190246908943cb71b9eb">config_reader::ConfigReader</a>
-, <a class="el" href="classconfig__reader_1_1ConfigReader_1_1Table.html#a4fdff08bf8e9a83bf8df682684b08eb5">config_reader::ConfigReader::Table</a>
+: <a class="el" href="classconfig__reader_1_1ConfigReader.html#a51856b2425ff784221537d928225d2a1">config_reader::ConfigReader</a>
+, <a class="el" href="classconfig__reader_1_1ConfigReader_1_1Table.html#afbd0890c8d06b00cbec559ccb76ec4d0">config_reader::ConfigReader::Table</a>
 </li>
 <li>GetResolution()
 : <a class="el" href="classoctoclass_1_1OctoClass.html#a177648178a9f7d8d8b10115634c73aec">octoclass::OctoClass</a>
@@ -677,7 +682,7 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 </li>
 <li>GetStr()
 : <a class="el" href="classconfig__reader_1_1ConfigReader.html#a23dfa552354ee2d9d7abad19b20e84dc">config_reader::ConfigReader</a>
-, <a class="el" href="classconfig__reader_1_1ConfigReader_1_1Table.html#ad86b050a8090e89a00087e32b05299b2">config_reader::ConfigReader::Table</a>
+, <a class="el" href="classconfig__reader_1_1ConfigReader_1_1Table.html#a9c11b256079122da6b4c82d17d4d1279">config_reader::ConfigReader::Table</a>
 </li>
 <li>GetStrings()
 : <a class="el" href="classeps__driver_1_1EPS.html#ad1ff9335560cccd1e3e15bcd73bbeb0a">eps_driver::EPS</a>
@@ -789,11 +794,17 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 <li>global
 : <a class="el" href="structLightcapData.html#a176360eb50399500ff79dbab443f330b">LightcapData</a>
 </li>
+<li>global_N_body_start
+: <a class="el" href="structgraph__localizer_1_1CombinedNavStateNodeUpdaterParams.html#ad95c8936c39f6ab77280b86be35760cf">graph_localizer::CombinedNavStateNodeUpdaterParams</a>
+</li>
 <li>global_T_body_start
 : <a class="el" href="structgraph__localizer_1_1GraphInitializerParams.html#a2afa1ef3826a7bc805fc971cecaa56cd">graph_localizer::GraphInitializerParams</a>
 </li>
 <li>global_T_cam
 : <a class="el" href="structlocalization__measurements_1_1MatchedProjectionsMeasurement.html#a3ba45c5f45e432a623c22c094c5b8fd0">localization_measurements::MatchedProjectionsMeasurement</a>
+</li>
+<li>global_t_point
+: <a class="el" href="structlocalization__common_1_1FeaturePoint3d.html#a5b0bea3022958facccbb0dd7fa6d7c0d">localization_common::FeaturePoint3d</a>
 </li>
 <li>gnc_
 : <a class="el" href="classekf_1_1Ekf.html#a6f0951fa9e9fc3ef46aacc34c39dda44">ekf::Ekf</a>
@@ -937,8 +948,11 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 , <a class="el" href="classtraj__opt_1_1SymbolicPoly.html#a4785a18f52a51aa660e0f4d29077608d">traj_opt::SymbolicPoly</a>
 , <a class="el" href="classtraj__opt_1_1TimeBound.html#a7dec5cf21e404e744ee737cc5e0d1410">traj_opt::TimeBound</a>
 </li>
-<li>graph_action()
-: <a class="el" href="classgraph__localizer_1_1FactorsToAdd.html#a76204796be8bf1ddc21b4c4e7924f847">graph_localizer::FactorsToAdd</a>
+<li>graph_action_completer_type()
+: <a class="el" href="classgraph__optimizer_1_1FactorsToAdd.html#a360477d37b40f2143e7678eda09a4288">graph_optimizer::FactorsToAdd</a>
+</li>
+<li>graph_factors()
+: <a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#af59fdecc1a16cf501a64f11efdb97be4">graph_optimizer::GraphOptimizer</a>
 </li>
 <li>graph_initializer
 : <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#af7903c53583806ff385ad4165bb4d841">graph_localizer::GraphLocalizerParams</a>
@@ -946,22 +960,28 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 <li>graph_localizer()
 : <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#a07aa5c7761bb6c8bc1db97f61a37f9f8">graph_localizer::GraphLocalizerWrapper</a>
 </li>
+<li>graph_localizer_stats()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a3f7581b34201512f257856a8dd9a03f1">graph_localizer::GraphLocalizer</a>
+, <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#a6c7ce2a2eafc27d930a276112dc7884c">graph_localizer::GraphLocalizerWrapper</a>
+</li>
+<li>graph_optimizer
+: <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#af5c302b4fe23ff1a7ed22952dd27d337">graph_localizer::GraphLocalizerParams</a>
+</li>
 <li>graph_stats()
-: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#acb5fb3413275ab923b49714bf4447318">graph_localizer::GraphLocalizer</a>
-, <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#abf707bd8f0866b812e59c6107aac77d1">graph_localizer::GraphLocalizerWrapper</a>
+: <a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a9cf167aef597d0a739cdf9424aedc58b">graph_optimizer::GraphOptimizer</a>
 </li>
 <li>graph_sub_
 : <a class="el" href="classlocalization__rviz__plugins_1_1LocalizationGraphPanel.html#a1934e1fb783e373859ee1edf549454ce">localization_rviz_plugins::LocalizationGraphPanel</a>
 </li>
 <li>graph_values()
-: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#ad5504411a668d474de33b071d3f105b8">graph_localizer::GraphLocalizer</a>
-, <a class="el" href="structgraph__localizer_1_1GraphLocalizerParams.html#aacab78616723c326043cc1a43744f942">graph_localizer::GraphLocalizerParams</a>
+: <a class="el" href="classgraph__localizer_1_1CombinedNavStateNodeUpdater.html#a859436a66c0cf37fa00055ee5c0111b8">graph_localizer::CombinedNavStateNodeUpdater</a>
+, <a class="el" href="structgraph__localizer_1_1CombinedNavStateNodeUpdaterParams.html#a5bb798d72e82c94b7952c95dca5ccd81">graph_localizer::CombinedNavStateNodeUpdaterParams</a>
 </li>
 <li>GraphBag()
 : <a class="el" href="classgraph__bag_1_1GraphBag.html#a573a543928fadeac0c3746885ae4c55f">graph_bag::GraphBag</a>
 </li>
 <li>GraphLocalizer()
-: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#a307387ff94dd57523d5b4c9526519d85">graph_localizer::GraphLocalizer</a>
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html#aed4354350d092783d83ca4638341c0f8">graph_localizer::GraphLocalizer</a>
 </li>
 <li>GraphLocalizerInitializer()
 : <a class="el" href="classgraph__localizer_1_1GraphLocalizerInitializer.html#a9e6301cfba9c7b20a280d290f79ad571">graph_localizer::GraphLocalizerInitializer</a>
@@ -972,14 +992,20 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 <li>GraphLocalizerSimulator()
 : <a class="el" href="classgraph__bag_1_1GraphLocalizerSimulator.html#a929966c32c6d29453f0d6e45a2c65dc3">graph_bag::GraphLocalizerSimulator</a>
 </li>
+<li>GraphLocalizerStats()
+: <a class="el" href="classgraph__localizer_1_1GraphLocalizerStats.html#a6aeadc335b3b0557f19fde79e0d415ec">graph_localizer::GraphLocalizerStats</a>
+</li>
 <li>GraphLocalizerWrapper()
 : <a class="el" href="classgraph__localizer_1_1GraphLocalizerWrapper.html#a6f0121410d028eec47a3fe48cb070c49">graph_localizer::GraphLocalizerWrapper</a>
 </li>
+<li>GraphOptimizer()
+: <a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#aa9decfe9a06ed0765575b4980cbad021">graph_optimizer::GraphOptimizer</a>
+</li>
 <li>GraphStats()
-: <a class="el" href="classgraph__localizer_1_1GraphStats.html#ab976ed29d3a48385ef8cedcbd5903bfa">graph_localizer::GraphStats</a>
+: <a class="el" href="classgraph__optimizer_1_1GraphStats.html#a441bb4b2f59887c615366c54c24496e3">graph_optimizer::GraphStats</a>
 </li>
 <li>GraphValues()
-: <a class="el" href="classgraph__localizer_1_1GraphValues.html#a6ef12cece2853157345becabb96b6f9d">graph_localizer::GraphValues</a>
+: <a class="el" href="classgraph__optimizer_1_1GraphValues.html#a6e740c6bf03e3049cdeba0d3cf9594fd">graph_optimizer::GraphValues</a>
 </li>
 <li>gravity
 : <a class="el" href="structimu__integration_1_1ImuIntegratorParams.html#a203c5ee26b0c18a9677700d10c1d1c90">imu_integration::ImuIntegratorParams</a>

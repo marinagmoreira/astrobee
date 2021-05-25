@@ -91,16 +91,16 @@ $(document).ready(function(){initNavTree('planner_qp.html',''); initResizable();
 <div class="title">Quadratic Program (QP) planner </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md342"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md341"></a>
 Overview</h1>
 <p>This planner is based off Michael Watterson's PhD thesis. We generate trajectories by running an optimization which minimizes the functional:</p>
 <p><img src="../images/mobility/planner_qp_cost.png" alt="alt text" class="inline"/></p>
 <p>With collision avoidance constraints and scaling to ensure dynamic feasibility.</p>
-<h1><a class="anchor" id="autotoc_md343"></a>
+<h1><a class="anchor" id="autotoc_md342"></a>
 Usage</h1>
 <p>To generate and execute a optimized plan one should use the move command in conjunction with the "qp" planner flag. Here is an example command that shows how to move to the origin of the world: </p><pre class="fragment">rosrun mobility teleop -move -pos "0 0 0" -att "0" -planner qp
 </pre><p>By default the teleop tool configures the platform to operate in holomonic mode. To enforce face-forward mode the "-ff" flag can be used. For example: </p><pre class="fragment">rosrun mobility teleop -move -pos "0 0 0" -att "0" -planner qp -ff
-</pre><h1><a class="anchor" id="autotoc_md344"></a>
+</pre><h1><a class="anchor" id="autotoc_md343"></a>
 Trajectory Display</h1>
 <p>This planner comes with an rviz plug-in to view the generated trajectories. <br  />
 </p>
@@ -108,7 +108,7 @@ Trajectory Display</h1>
 <p>From the display panel, add the traj_opt_ros trajectory plug-in.</p>
 <p><img src="../images/mobility/planner_qp_rviz_2.png" alt="alt text" class="inline"/></p>
 <p>Change the topic in the plug-in to either the current trajectory or a debug version. Here the regular trajectory is plotted in magenta and the debug is plotted in red. The debug shows the optimization at each iteration as it converges to the current trajectory.</p>
-<h1><a class="anchor" id="autotoc_md345"></a>
+<h1><a class="anchor" id="autotoc_md344"></a>
 Parameter Description</h1>
 <p>The planner has adjustable parameters which can affect the optimizer's performance which are configurable through the reconfigure GUI. </p><pre class="fragment">rosrun rqt_reconfigure rqt_reconfigure
 </pre><p><img src="../images/mobility/planner_qp_config.png" alt="alt text" class="inline"/></p>

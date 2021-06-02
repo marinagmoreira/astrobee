@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.14.1</span>
+   &#160;<span id="projectnumber">0.14.3</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -250,8 +250,8 @@ Functions</h2></td></tr>
 <tr class="separator:a1a9e8ec27cf8039f05f27ef5e391d616"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5571b3cb338868bcd02571734d39cec2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegraph__localizer.html#ae7e54bb2b6a9e69db7f577cffd2c85c4">SharedRobustSmartFactor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__localizer.html#a5571b3cb338868bcd02571734d39cec2">RemoveSmartFactorMeasurements</a> (const <a class="el" href="namespacegraph__localizer.html#aec0709f3d8bd4cb5a8b3d10d42fd6a44">RobustSmartFactor</a> &amp;smart_factor, const std::unordered_set&lt; int &gt; &amp;factor_key_indices_to_remove, const <a class="el" href="structgraph__localizer_1_1SmartProjectionFactorAdderParams.html">SmartProjectionFactorAdderParams</a> &amp;params, const gtsam::SmartProjectionParams &amp;smart_projection_params)</td></tr>
 <tr class="separator:a5571b3cb338868bcd02571734d39cec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab230566517a6ae64667f182394d2f8e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__localizer.html#ab230566517a6ae64667f182394d2f8e8">NumSmartFactors</a> (const gtsam::NonlinearFactorGraph &amp;graph_factors, const bool check_valid)</td></tr>
-<tr class="separator:ab230566517a6ae64667f182394d2f8e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac312fd65092d26d32b9bd46e5fb1c2fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__localizer.html#ac312fd65092d26d32b9bd46e5fb1c2fb">NumSmartFactors</a> (const gtsam::NonlinearFactorGraph &amp;graph_factors, const gtsam::Values &amp;values, const bool check_valid)</td></tr>
+<tr class="separator:ac312fd65092d26d32b9bd46e5fb1c2fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d6002fd1fd52102c180d0bcf15b07dc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__localizer.html#a3d6002fd1fd52102c180d0bcf15b07dc">AverageDistanceFromMean</a> (const std::vector&lt; <a class="el" href="structlocalization__measurements_1_1FeaturePoint.html">lm::FeaturePoint</a> &gt; &amp;points)</td></tr>
 <tr class="separator:a3d6002fd1fd52102c180d0bcf15b07dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -1035,8 +1035,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab230566517a6ae64667f182394d2f8e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab230566517a6ae64667f182394d2f8e8">&#9670;&nbsp;</a></span>NumSmartFactors()</h2>
+<a id="ac312fd65092d26d32b9bd46e5fb1c2fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac312fd65092d26d32b9bd46e5fb1c2fb">&#9670;&nbsp;</a></span>NumSmartFactors()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1046,6 +1046,12 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const gtsam::NonlinearFactorGraph &amp;&#160;</td>
           <td class="paramname"><em>graph_factors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const gtsam::Values &amp;&#160;</td>
+          <td class="paramname"><em>values</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

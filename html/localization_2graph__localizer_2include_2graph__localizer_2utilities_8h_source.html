@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.14.1</span>
+   &#160;<span id="projectnumber">0.14.3</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -179,10 +179,11 @@ $(document).ready(function(){initNavTree('localization_2graph__localizer_2includ
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                                      <span class="keyword">const</span> <a class="code" href="structgraph__localizer_1_1SmartProjectionFactorAdderParams.html">SmartProjectionFactorAdderParams</a>&amp; params,</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                                      <span class="keyword">const</span> gtsam::SmartProjectionParams&amp; smart_projection_params);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespacegraph__localizer.html#ab230566517a6ae64667f182394d2f8e8">NumSmartFactors</a>(<span class="keyword">const</span> gtsam::NonlinearFactorGraph&amp; graph_factors, <span class="keyword">const</span> <span class="keywordtype">bool</span> check_valid);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}  <span class="comment">// namespace graph_localizer</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif  // GRAPH_LOCALIZER_UTILITIES_H_</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespacegraph__localizer.html#ac312fd65092d26d32b9bd46e5fb1c2fb">NumSmartFactors</a>(<span class="keyword">const</span> gtsam::NonlinearFactorGraph&amp; graph_factors, <span class="keyword">const</span> gtsam::Values&amp; values,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    <span class="keyword">const</span> <span class="keywordtype">bool</span> check_valid);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}  <span class="comment">// namespace graph_localizer</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif  // GRAPH_LOCALIZER_UTILITIES_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="afeature__track_8h_html"><div class="ttname"><a href="feature__track_8h.html">feature_track.h</a></div></div>
@@ -192,12 +193,12 @@ $(document).ready(function(){initNavTree('localization_2graph__localizer_2includ
 <div class="ttc" id="anamespacegraph__localizer_html_a56646e2e4852100349f8aeffb4448920"><div class="ttname"><a href="namespacegraph__localizer.html#a56646e2e4852100349f8aeffb4448920">graph_localizer::ValidVLMsg</a></div><div class="ttdeci">bool ValidVLMsg(const ff_msgs::VisualLandmarks &amp;visual_landmarks_msg, const int min_num_landmarks)</div><div class="ttdef"><b>Definition:</b> utilities.cc:60</div></div>
 <div class="ttc" id="aclasslocalization__common_1_1CombinedNavState_html"><div class="ttname"><a href="classlocalization__common_1_1CombinedNavState.html">localization_common::CombinedNavState</a></div><div class="ttdef"><b>Definition:</b> combined_nav_state.h:38</div></div>
 <div class="ttc" id="anamespacegraph__localizer_html_a97489be0a208edb20da1e09688113477"><div class="ttname"><a href="namespacegraph__localizer.html#a97489be0a208edb20da1e09688113477">graph_localizer::AverageDistanceFromMean</a></div><div class="ttdeci">double AverageDistanceFromMean(const std::vector&lt; localization_measurements::FeaturePoint &gt; &amp;points)</div></div>
+<div class="ttc" id="anamespacegraph__localizer_html_ac312fd65092d26d32b9bd46e5fb1c2fb"><div class="ttname"><a href="namespacegraph__localizer.html#ac312fd65092d26d32b9bd46e5fb1c2fb">graph_localizer::NumSmartFactors</a></div><div class="ttdeci">int NumSmartFactors(const gtsam::NonlinearFactorGraph &amp;graph_factors, const gtsam::Values &amp;values, const bool check_valid)</div><div class="ttdef"><b>Definition:</b> utilities.cc:254</div></div>
 <div class="ttc" id="agraph__localizer_8h_html"><div class="ttname"><a href="graph__localizer_8h.html">graph_localizer.h</a></div></div>
 <div class="ttc" id="anamespacegraph__localizer_html_a4ecdca25500189cfe5259cb3a37ffcb5"><div class="ttname"><a href="namespacegraph__localizer.html#a4ecdca25500189cfe5259cb3a37ffcb5">graph_localizer::GraphMsg</a></div><div class="ttdeci">ff_msgs::LocalizationGraph GraphMsg(const GraphLocalizer &amp;graph_localizer)</div><div class="ttdef"><b>Definition:</b> utilities.cc:107</div></div>
 <div class="ttc" id="agraph__localizer__stats_8h_html"><div class="ttname"><a href="graph__localizer__stats_8h.html">graph_localizer_stats.h</a></div></div>
 <div class="ttc" id="anamespacegraph__localizer_html_adec6793419e9e082ee51f84c6436cfe5"><div class="ttname"><a href="namespacegraph__localizer.html#adec6793419e9e082ee51f84c6436cfe5">graph_localizer::PoseMsg</a></div><div class="ttdeci">geometry_msgs::PoseStamped PoseMsg(const Eigen::Isometry3d &amp;global_T_body, const std_msgs::Header &amp;header)</div><div class="ttdef"><b>Definition:</b> utilities.cc:121</div></div>
 <div class="ttc" id="astructgraph__localizer_1_1FeatureCounts_html"><div class="ttname"><a href="structgraph__localizer_1_1FeatureCounts.html">graph_localizer::FeatureCounts</a></div><div class="ttdef"><b>Definition:</b> feature_counts.h:24</div></div>
-<div class="ttc" id="anamespacegraph__localizer_html_ab230566517a6ae64667f182394d2f8e8"><div class="ttname"><a href="namespacegraph__localizer.html#ab230566517a6ae64667f182394d2f8e8">graph_localizer::NumSmartFactors</a></div><div class="ttdeci">int NumSmartFactors(const gtsam::NonlinearFactorGraph &amp;graph_factors, const bool check_valid)</div><div class="ttdef"><b>Definition:</b> utilities.cc:254</div></div>
 <div class="ttc" id="anamespacegraph__localizer_html_ae7e54bb2b6a9e69db7f577cffd2c85c4"><div class="ttname"><a href="namespacegraph__localizer.html#ae7e54bb2b6a9e69db7f577cffd2c85c4">graph_localizer::SharedRobustSmartFactor</a></div><div class="ttdeci">boost::shared_ptr&lt; RobustSmartFactor &gt; SharedRobustSmartFactor</div><div class="ttdef"><b>Definition:</b> graph_localizer.h:71</div></div>
 <div class="ttc" id="aclassgraph__localizer_1_1GraphLocalizer_html"><div class="ttname"><a href="classgraph__localizer_1_1GraphLocalizer.html">graph_localizer::GraphLocalizer</a></div><div class="ttdef"><b>Definition:</b> graph_localizer.h:74</div></div>
 <div class="ttc" id="afeature__point_8h_html"><div class="ttname"><a href="feature__point_8h.html">feature_point.h</a></div></div>

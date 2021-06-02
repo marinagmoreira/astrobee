@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.14.1</span>
+   &#160;<span id="projectnumber">0.14.3</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -92,6 +92,14 @@ $(document).ready(function(){initNavTree('md_RELEASE.html',''); initResizable();
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md14"></a>
+Release 0.14.3</h1>
+<ul>
+<li>Rotation fallback fix</li>
+<li>Unified install instructions and Ubuntu 18 nasa install</li>
+<li>Various other minor fixes</li>
+<li>Note, Perching does not work in this release, use another version for this.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md15"></a>
 Release 0.14.1</h1>
 <ul>
 <li>Dynamic <a class="el" href="structIMU.html">IMU</a> Filtering</li>
@@ -99,7 +107,7 @@ Release 0.14.1</h1>
 <li>Tuning configurations</li>
 <li>Bug fixes Note: Perching does not work in this release, use another version for this.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md15"></a>
+<h1><a class="anchor" id="autotoc_md16"></a>
 Release 0.14.0</h1>
 <ul>
 <li>Added <a class="el" href="namespacegraph__localizer.html">graph_localizer</a> package</li>
@@ -108,7 +116,7 @@ Release 0.14.0</h1>
 <li>Added rviz plugins for graph localizer and associated packages in <a class="el" href="namespacelocalization__rviz__plugins.html">localization_rviz_plugins</a></li>
 <li>Added gtsam debian Note: Perching does not work in this release, use another version for this.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md16"></a>
+<h1><a class="anchor" id="autotoc_md17"></a>
 Release 0.13.0</h1>
 <ul>
 <li>Multiple updates to documentation, doxygen is exported to github pages</li>
@@ -119,19 +127,19 @@ Release 0.13.0</h1>
 <li>Cross compiling with docker</li>
 <li>Other fixes</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md17"></a>
+<h1><a class="anchor" id="autotoc_md18"></a>
 Release 0.12.0</h1>
 <ul>
 <li>Localization visualization improvements</li>
 <li>Changes for migration to github</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md18"></a>
+<h1><a class="anchor" id="autotoc_md19"></a>
 Release 0.11.1</h1>
 <ul>
 <li>Fix install error.</li>
 <li>Color in simulated scicam.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md19"></a>
+<h1><a class="anchor" id="autotoc_md20"></a>
 Release 0.11.0</h1>
 <ul>
 <li>Added Ubuntu 18 compatibility</li>
@@ -139,18 +147,18 @@ Release 0.11.0</h1>
 <li>Fixes to QP planner</li>
 <li>Various other minor fixes</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md20"></a>
+<h1><a class="anchor" id="autotoc_md21"></a>
 Release 0.10.4</h1>
 <ul>
 <li>Histogram correction for sparse mapping.</li>
 <li>Various other minor fixes.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md21"></a>
+<h1><a class="anchor" id="autotoc_md22"></a>
 Release 0.10.3</h1>
 <ul>
 <li>Don't use sparse mapping features more than once.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md22"></a>
+<h1><a class="anchor" id="autotoc_md23"></a>
 Release 0.10.2</h1>
 <ul>
 <li>Perching behavior implemented</li>
@@ -158,12 +166,12 @@ Release 0.10.2</h1>
 <li>Already there tolerances decreased to allow for smaller moves</li>
 <li>Other minor bug fixes/software improvements</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md23"></a>
+<h1><a class="anchor" id="autotoc_md24"></a>
 Release 0.10.1</h1>
 <ul>
 <li>Removed the new signal lights nodes from launch</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md24"></a>
+<h1><a class="anchor" id="autotoc_md25"></a>
 Release 0.10.0</h1>
 <ul>
 <li>New control scheme for some commands<ul>
@@ -185,7 +193,7 @@ Release 0.10.0</h1>
 </ul>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md25"></a>
+<h1><a class="anchor" id="autotoc_md26"></a>
 Release 0.9.3</h1>
 <ul>
 <li>Many localization improvements making the EKF much more stable and resilient to loss of mapped landmarks features.<ul>
@@ -198,12 +206,12 @@ Release 0.9.3</h1>
 <li>Added nodes to check the time synchronization between processors (with associated logging and fault generation)</li>
 <li>Re-positioned the dock location on ISS from the mapping activity.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md26"></a>
+<h1><a class="anchor" id="autotoc_md27"></a>
 Release 0.9.2</h1>
 <ul>
 <li>Drop bad images from camera.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md27"></a>
+<h1><a class="anchor" id="autotoc_md28"></a>
 Release 0.9.1</h1>
 <ul>
 <li>Honor "referenceFrame" for simpleMove6DOF commands (allows relative motion)</li>
@@ -213,7 +221,7 @@ Release 0.9.1</h1>
 <li>Camera driver double buffer fix</li>
 <li>As usual, other bug fixes too</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md28"></a>
+<h1><a class="anchor" id="autotoc_md29"></a>
 Release 0.8.0</h1>
 <ul>
 <li>Fixed simulator jump under some conditions on motion start</li>
@@ -226,39 +234,39 @@ Release 0.8.0</h1>
 <li>Heroic documentation effort</li>
 <li>As usual, many bug fixes</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md29"></a>
+<h1><a class="anchor" id="autotoc_md30"></a>
 Release 0.7.6</h1>
 <ul>
 <li>Fixes to sparse mapping and localization manager.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md30"></a>
+<h1><a class="anchor" id="autotoc_md31"></a>
 Release 0.7.5</h1>
 <ul>
 <li>Various fixes for flight units.</li>
 <li>Improvements to debians.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md31"></a>
+<h1><a class="anchor" id="autotoc_md32"></a>
 Release 0.7.4</h1>
 <ul>
 <li>Fixed compile for vive again.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md32"></a>
+<h1><a class="anchor" id="autotoc_md33"></a>
 Release 0.7.3</h1>
 <ul>
 <li>Fixed compile for vive.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md33"></a>
+<h1><a class="anchor" id="autotoc_md34"></a>
 Release 0.7.2</h1>
 <ul>
 <li>Fix cmake bug.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md34"></a>
+<h1><a class="anchor" id="autotoc_md35"></a>
 Release 0.7.1</h1>
 <ul>
 <li>Minor vive updates</li>
 <li>Bumps to submodules.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md35"></a>
+<h1><a class="anchor" id="autotoc_md36"></a>
 Release 0.7.0</h1>
 <ul>
 <li>Infrastructure to build the flight images completed, including HLP (Android) configuration methods not requiring touchscreen access<ul>
@@ -282,10 +290,10 @@ Release 0.7.0</h1>
 </ul>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md36"></a>
+<h1><a class="anchor" id="autotoc_md37"></a>
 Release 0.6.1</h1>
 <p>Added config files for new robots.</p>
-<h1><a class="anchor" id="autotoc_md37"></a>
+<h1><a class="anchor" id="autotoc_md38"></a>
 Release 0.6.0</h1>
 <p>Flight packaging candidate release</p>
 <ul>
@@ -293,43 +301,43 @@ Release 0.6.0</h1>
 <li>All DDS commands to support remote tests implemented.</li>
 <li>Adjustments and tools to support test procedures in place.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md38"></a>
+<h1><a class="anchor" id="autotoc_md39"></a>
 Release 0.5.0</h1>
 <p>Build 3 - CERT Release</p>
 <ul>
 <li>Everything ready for CERT testing</li>
 <li>Improved simulator</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md39"></a>
+<h1><a class="anchor" id="autotoc_md40"></a>
 Release 0.4.5</h1>
 <p>Updated external user install instructions.</p>
-<h1><a class="anchor" id="autotoc_md40"></a>
+<h1><a class="anchor" id="autotoc_md41"></a>
 Release 0.4.4</h1>
 <p>Remove astrobee-repo-version from publicly required packages list.</p>
-<h1><a class="anchor" id="autotoc_md41"></a>
+<h1><a class="anchor" id="autotoc_md42"></a>
 Release 0.4.3</h1>
 <p>Fix decomputil debian, revert to older version.</p>
-<h1><a class="anchor" id="autotoc_md42"></a>
+<h1><a class="anchor" id="autotoc_md43"></a>
 Release 0.4.2</h1>
 <p>This release fixes a bug where we attempted to build the smart dock even if DDS is not installed.</p>
-<h1><a class="anchor" id="autotoc_md43"></a>
+<h1><a class="anchor" id="autotoc_md44"></a>
 Release 0.4.1</h1>
 <p>This release fixes a bug in the smart dock interacting with GDS.</p>
-<h1><a class="anchor" id="autotoc_md44"></a>
+<h1><a class="anchor" id="autotoc_md45"></a>
 Release 0.4.0</h1>
 <p>This release includes improvements of map building and camera calibration, simulator performance and multi-robot support, new features for guest science, and many internal changes.</p>
-<h2><a class="anchor" id="autotoc_md45"></a>
+<h2><a class="anchor" id="autotoc_md46"></a>
 Map Building</h2>
 <ul>
 <li>Map building fixes.</li>
 <li>Multiple maps assembly pipeline optimized.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md46"></a>
+<h2><a class="anchor" id="autotoc_md47"></a>
 Sensor Calibration</h2>
 <ul>
 <li>Streamlined image cameras and depth cameras extrinsics relative to <a class="el" href="structIMU.html">IMU</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md47"></a>
+<h2><a class="anchor" id="autotoc_md48"></a>
 Simulator</h2>
 <ul>
 <li>Completed support for docking / un-docking.</li>
@@ -340,14 +348,14 @@ Simulator</h2>
 <li>Substantially better runtime performance through simplified collision meshes.</li>
 <li>More complete ISS mesh; improved dock and freeflyer meshes.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md48"></a>
+<h2><a class="anchor" id="autotoc_md49"></a>
 Management</h2>
 <ul>
 <li>The system monitor now triggers heartbeat faults for all nodes in the system.</li>
 <li>Management of operational limits.</li>
 <li>Improved "mode" management including support for IDLE.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md49"></a>
+<h2><a class="anchor" id="autotoc_md50"></a>
 Guest Science</h2>
 <ul>
 <li>A GS Manager stub was added so GS donâ€™t have to use Android to test their applications.</li>
@@ -355,7 +363,7 @@ Guest Science</h2>
 <li>A new method was added to the guest science library that will provide the base data path to a GS APK.</li>
 <li>Better GS examples added.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md50"></a>
+<h2><a class="anchor" id="autotoc_md51"></a>
 Internal (support for non-open source platform and avionics repos)</h2>
 <ul>
 <li>Mechanisms for local (robot) launch at startup.</li>
@@ -363,14 +371,14 @@ Internal (support for non-open source platform and avionics repos)</h2>
 <li>Smarter management of propulsion modules.</li>
 <li>Support for Software/Firmware Upgrade, EMI and Network tests.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md51"></a>
+<h2><a class="anchor" id="autotoc_md52"></a>
 Fixed from previous release</h2>
 <ul>
 <li>Fixed linear / angular acceleration limits in holonomic mode.</li>
 <li>Fixed keep in and keep out zone checking.</li>
 <li>DDS hanging on exit.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md52"></a>
+<h2><a class="anchor" id="autotoc_md53"></a>
 Limitations</h2>
 <ul>
 <li>Granite simulation not functional.</li>
@@ -378,53 +386,53 @@ Limitations</h2>
 <li>Some performance limitations with multiple robots.</li>
 <li>Some performance trouble with mobility on one computer.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md53"></a>
+<h1><a class="anchor" id="autotoc_md54"></a>
 Release 0.3.2</h1>
 <p>The previous hotfix updated the debians, but did not update the version numbers of which debians to install. This corrects that.</p>
-<h1><a class="anchor" id="autotoc_md54"></a>
+<h1><a class="anchor" id="autotoc_md55"></a>
 Release 0.3.1</h1>
 <p>This hotifx fixes the build with ROS' new opencv release, which moved the opencv libraries from /opt/ros/kinetic/lib to /opt/ros/kinetic/lib/PLATFORM, breaking our RPATHs.</p>
-<h1><a class="anchor" id="autotoc_md55"></a>
+<h1><a class="anchor" id="autotoc_md56"></a>
 Release 0.3.0</h1>
 <p>This release addresses several bugs identified by Guest Scientists, simulator improvements as well as many internal changes. The only API change is in the EkfState (removed augmented state).</p>
-<h2><a class="anchor" id="autotoc_md56"></a>
+<h2><a class="anchor" id="autotoc_md57"></a>
 Simulator</h2>
 <ul>
 <li>Stability improvements</li>
 <li>Better performance by optimized collision checking and new method for feature simulation</li>
 <li>More detailed CAD models and textures</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md57"></a>
+<h2><a class="anchor" id="autotoc_md58"></a>
 Mobility</h2>
 <ul>
 <li>New mapper node builds an Octomap from the HazCam data</li>
 <li>Collision checking performed at runtime agains the Octomap</li>
 <li>Docking and undocking complete</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md58"></a>
+<h2><a class="anchor" id="autotoc_md59"></a>
 Limitations</h2>
 <ul>
 <li>Angular velocities/acceleration in GDS not consistent with FSW (will be fixed in GDS)</li>
 <li>Keep in and keep out zones are not checked (during validation or execution)</li>
 <li>Simulated docking in a beta stage and should not be used</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md59"></a>
+<h1><a class="anchor" id="autotoc_md60"></a>
 Release 0.2.0</h1>
-<h2><a class="anchor" id="autotoc_md60"></a>
+<h2><a class="anchor" id="autotoc_md61"></a>
 Simulator</h2>
 <ul>
 <li>Perching Arm motion (and dynamics) functional</li>
 <li>PerchCam and HazCam depth sensors enabled</li>
 <li>Improved performance</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md61"></a>
+<h2><a class="anchor" id="autotoc_md62"></a>
 Guest Science</h2>
 <ul>
 <li>Guest Science Manager implementation available on Android</li>
 <li>Guest Science library for communication between the manager and guest apps</li>
 <li>Executive can command Guest Science apps</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md62"></a>
+<h2><a class="anchor" id="autotoc_md63"></a>
 Architecture</h2>
 <ul>
 <li>GN&amp;C decomposed into three separate ROS nodes for easier customization / extension:<ul>
@@ -435,7 +443,7 @@ Architecture</h2>
 </li>
 <li>Management of FlightModes handled on all levels (Exec, Mobility, GN&amp;C and Propulsion)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md63"></a>
+<h2><a class="anchor" id="autotoc_md64"></a>
 Localization</h2>
 <ul>
 <li>Feature map much smaller</li>
@@ -443,7 +451,7 @@ Localization</h2>
 <li>Visualization tool for localization features</li>
 <li><a class="el" href="structCalibration.html">Calibration</a> of depth cameras relative to <a class="el" href="structIMU.html">IMU</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md64"></a>
+<h2><a class="anchor" id="autotoc_md65"></a>
 Mobility</h2>
 <ul>
 <li>Fixed 6DoF face-forward bug with the trapezoidal path planner</li>
@@ -457,22 +465,22 @@ Mobility</h2>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md65"></a>
+<h2><a class="anchor" id="autotoc_md66"></a>
 Executive</h2>
 <ul>
 <li>Changed to new motion system</li>
 <li>Flight mode propagation</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md66"></a>
+<h2><a class="anchor" id="autotoc_md67"></a>
 Hardware drivers</h2>
 <ul>
 <li>Picoflexx driver produces depth images in addition to point clouds</li>
 <li>Picoflexx internal core (Royale) driver bumped to v3.9.0 LTS</li>
 <li>PMC actuator now determines its state (ramping up/down, ready) based on telemetry feedback</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md67"></a>
+<h1><a class="anchor" id="autotoc_md68"></a>
 Release 0.1.2</h1>
-<h2><a class="anchor" id="autotoc_md68"></a>
+<h2><a class="anchor" id="autotoc_md69"></a>
 Simulator</h2>
 <ul>
 <li>Use the same flight software stack that is run on the platform (but the HW drivers)</li>
@@ -492,7 +500,7 @@ Simulator</h2>
 <li>Supports muti-Astrobee simulation (no communication between them)</li>
 <li>Collision between Astrobee and ISS walls simulated</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md69"></a>
+<h3><a class="anchor" id="autotoc_md70"></a>
 Limitations</h3>
 <ul>
 <li>No AR target tracking</li>
@@ -503,19 +511,19 @@ Limitations</h3>
 <li>Arm simulation disabled</li>
 <li>No noise in the system</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md70"></a>
+<h2><a class="anchor" id="autotoc_md71"></a>
 Guest Science</h2>
 <ul>
 <li>JAVA API generated from XP-JSON command dictionary</li>
 <li>Commands can be send to the Executive using the API and provided ROS Java framework</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md71"></a>
+<h3><a class="anchor" id="autotoc_md72"></a>
 Limitations</h3>
 <ul>
 <li>Android framework to support ROS Java in development</li>
 <li>No guest science manager (life cycle of Guest Science apps)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md72"></a>
+<h2><a class="anchor" id="autotoc_md73"></a>
 Localization</h2>
 <ul>
 <li>Localize without external infrastructure (beacons, etc.)</li>
@@ -533,7 +541,7 @@ Localization</h2>
 <li>Tools to test localization performance from rosbag</li>
 <li>Custom visualizer (gViz) for EFK inspection</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md73"></a>
+<h3><a class="anchor" id="autotoc_md74"></a>
 Limitations</h3>
 <ul>
 <li>Sparse mapping runs only at 2Hz (vision processing + feature matching)</li>
@@ -545,7 +553,7 @@ Limitations</h3>
 <li>No tiling of large maps</li>
 <li>No perched localization (low power localization when perched)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md74"></a>
+<h2><a class="anchor" id="autotoc_md75"></a>
 Mobility</h2>
 <ul>
 <li>Provides 4 different motion types:<ul>
@@ -564,14 +572,14 @@ Mobility</h2>
 <li>Validation of trajectories: stationary end-point, hard limits (velocity and acceleration) and control frequency</li>
 <li>Velocity control is not allowed</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md75"></a>
+<h3><a class="anchor" id="autotoc_md76"></a>
 Limitations</h3>
 <ul>
 <li>On-board validation of trajectories against keep-in and keep-out not enabled</li>
 <li>Planner type cannot be changed from ground (DDS)</li>
 <li>Hazard detection not implemented</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md76"></a>
+<h2><a class="anchor" id="autotoc_md77"></a>
 Executive</h2>
 <ul>
 <li>Arbitrates commands regarding operating mode and current state</li>
@@ -584,25 +592,25 @@ Executive</h2>
 </li>
 </ul>
 <p>System management</p>
-<h3><a class="anchor" id="autotoc_md77"></a>
+<h3><a class="anchor" id="autotoc_md78"></a>
 Limitations</h3>
 <ul>
 <li>Full command dictionary is not implemented</li>
 <li>Guest Science management not supported yet</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md78"></a>
+<h2><a class="anchor" id="autotoc_md79"></a>
 Fault Management</h2>
 <ul>
 <li>Faults are managed in a spreadsheet, converted to a fault table read by the system</li>
 <li>Heart beat monitor for most nodes</li>
 <li>System monitor framework can trigger responses to published faults</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md79"></a>
+<h3><a class="anchor" id="autotoc_md80"></a>
 Limitations</h3>
 <ul>
 <li>Very few faults are published</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md80"></a>
+<h2><a class="anchor" id="autotoc_md81"></a>
 Framework</h2>
 <ul>
 <li>Leverages ROS framework for on-board framework</li>
@@ -613,7 +621,7 @@ Framework</h2>
 <li>Leverages rViz and Gazebo 7 integration</li>
 <li>Improved HTC Vive tracker, calibration procedure and integration for ground truth</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md81"></a>
+<h3><a class="anchor" id="autotoc_md82"></a>
 Limitations</h3>
 <ul>
 <li>Documentation is incomplete </li>

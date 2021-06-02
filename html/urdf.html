@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.14.1</span>
+   &#160;<span id="projectnumber">0.14.3</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -93,15 +93,15 @@ $(document).ready(function(){initNavTree('urdf.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><p>The Universal Robot Description Format (URDF) is a language for describing a robot in terms of its links and joints. It is used by rviz to render robots, robot_state_publisher to convert joint states to TF2 transforms, and by Gazebo to simulate a robot. Xacro is a scripting environment for generating URDF files, which allows one to pass parameters from launch files to the URDF, as well as create more modular functions and snippets that can be incorporated into a single larger URDF.</p>
 <p>This folder contains only the Xacro files for the free-flyer model. The dock, ISS and granite models are static URDFs that are included in the media distribution. This design choice enables us to load these entities from a world file, preventing race conditions in loading environmental elements with free-flyers in a simulated context.</p>
-<p>The way URDF works is best illustrated by this example, which is actually loosely representative of how the project's launch files actually work: </p><pre class="fragment">&lt;arg name="ns" value="honey"/&gt;
-&lt;group ns="$(arg ns)"&gt;
-  &lt;param name="robot_description" command="$(find xacro)/xacro --inorder $(find description)/urdf/astrobee.urdf.xacro" /&gt;
-  &lt;node name="spawn_astrobee" pkg="astrobee_gazebo" type="spawn_model"
-        args="-param robot_description -urdf -model $(arg ns)" /&gt;
-  &lt;node pkg="robot_state_publisher" type="robot_state_publisher"
-        name="astrobee_state_publisher" /&gt;
-&lt;/group&gt;
-</pre><p>Line (1) specifies the namespace on which the robot will operate. Line (2) creates the namespace. Line (3) invokes xacro to write URDF to parameter /honey/robot_description. Line (4) spawns a simulated and namespaced astrobee using the URDF parameter. Line (5) starts robot state publisher to map joint states to transforms.</p>
+<p>The way URDF works is best illustrated by this example, which is actually loosely representative of how the project's launch files actually work: </p><div class="fragment"><div class="line">&lt;<span class="keywordtype">arg</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;ns&quot;</span> <span class="keyword">value</span>=<span class="stringliteral">&quot;honey&quot;</span>/&gt;</div>
+<div class="line">&lt;<span class="keywordtype">group</span> <span class="keyword">ns</span>=<span class="stringliteral">&quot;$(arg ns)&quot;</span>&gt;</div>
+<div class="line">  &lt;<span class="keywordtype">param</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;robot_description&quot;</span> <span class="keyword">command</span>=<span class="stringliteral">&quot;$(find xacro)/xacro --inorder $(find description)/urdf/astrobee.urdf.xacro&quot;</span> /&gt;</div>
+<div class="line">  &lt;<span class="keywordtype">node</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;spawn_astrobee&quot;</span> <span class="keyword">pkg</span>=<span class="stringliteral">&quot;astrobee_gazebo&quot;</span> <span class="keyword">type</span>=<span class="stringliteral">&quot;spawn_model&quot;</span></div>
+<div class="line">        <span class="keyword">args</span>=<span class="stringliteral">&quot;-param robot_description -urdf -model $(arg ns)&quot;</span> /&gt;</div>
+<div class="line">  &lt;<span class="keywordtype">node</span> <span class="keyword">pkg</span>=<span class="stringliteral">&quot;robot_state_publisher&quot;</span> <span class="keyword">type</span>=<span class="stringliteral">&quot;robot_state_publisher&quot;</span></div>
+<div class="line">        <span class="keyword">name</span>=<span class="stringliteral">&quot;astrobee_state_publisher&quot;</span> /&gt;</div>
+<div class="line">&lt;/<span class="keywordtype">group</span>&gt;</div>
+</div><!-- fragment --><p>Line (1) specifies the namespace on which the robot will operate. Line (2) creates the namespace. Line (3) invokes xacro to write URDF to parameter /honey/robot_description. Line (4) spawns a simulated and namespaced astrobee using the URDF parameter. Line (5) starts robot state publisher to map joint states to transforms.</p>
 <p>There is a lot of information encoded in Line 5, and so it pays to expand upon what it does. Essentially it starts a robot_state_publisher node that listens to /joint_states, and with a knowledge of the robot description at URDF parameter /honey/robot_description produces TF2 transforms for all links. This is an extremely useful service, as rviz is only able to render models for which transforms exist, and we need some entity to produce those transforms. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

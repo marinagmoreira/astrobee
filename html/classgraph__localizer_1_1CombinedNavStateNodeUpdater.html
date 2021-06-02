@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.14.1</span>
+   &#160;<span id="projectnumber">0.14.3</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -101,7 +101,7 @@ Inheritance diagram for graph_localizer::CombinedNavStateNodeUpdater:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgraph__localizer_1_1CombinedNavStateNodeUpdater__inherit__graph.png" border="0" usemap="#agraph__localizer_1_1CombinedNavStateNodeUpdater_inherit__map" alt="Inheritance graph"/></div>
 <map name="graph__localizer_1_1CombinedNavStateNodeUpdater_inherit__map" id="agraph__localizer_1_1CombinedNavStateNodeUpdater_inherit__map">
-<area shape="rect" title=" " alt="" coords="25,461,284,759"/>
+<area shape="rect" title=" " alt="" coords="25,461,284,773"/>
 <area shape="rect" href="classgraph__optimizer_1_1NodeUpdaterWithPriors.html" title=" " alt="" coords="5,248,304,413"/>
 <area shape="rect" href="classgraph__optimizer_1_1NodeUpdater.html" title=" " alt="" coords="37,5,272,200"/>
 </map>
@@ -121,6 +121,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abf31412da2be6606bf9dbfe433867145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2efe193fdb24d9723ae5b00ed77a69e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1CombinedNavStateNodeUpdater.html#a2efe193fdb24d9723ae5b00ed77a69e8">SlideWindow</a> (const <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> oldest_allowed_timestamp, const boost::optional&lt; gtsam::Marginals &gt; &amp;marginals, const gtsam::KeyVector &amp;old_keys, const double huber_k, gtsam::NonlinearFactorGraph &amp;factors) final</td></tr>
 <tr class="separator:a2efe193fdb24d9723ae5b00ed77a69e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc439e2e1d375316bef1e96aa31bc634"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1CombinedNavStateNodeUpdater.html#afc439e2e1d375316bef1e96aa31bc634">ThresholdBiasUncertainty</a> (gtsam::Matrix &amp;bias_covariance) const</td></tr>
+<tr class="separator:afc439e2e1d375316bef1e96aa31bc634"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0c7695c051de3d5564ec92164f53f4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegraph__optimizer.html#abefe0bb52dc98665faf57e63550fb4f6">graph_optimizer::NodeUpdaterType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1CombinedNavStateNodeUpdater.html#ab0c7695c051de3d5564ec92164f53f4e">type</a> () const final</td></tr>
 <tr class="separator:ab0c7695c051de3d5564ec92164f53f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ee4af0dd16a3b2e095ac6470231a4d5"><td class="memItemLeft" align="right" valign="top">boost::optional&lt; <a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">localization_common::Time</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__localizer_1_1CombinedNavStateNodeUpdater.html#a7ee4af0dd16a3b2e095ac6470231a4d5">SlideWindowNewOldestTime</a> () const final</td></tr>
@@ -549,6 +551,24 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classgraph__optimizer_1_1NodeUpdater.html#a900dbbde93531d973f7c34eaa909719f">graph_optimizer::NodeUpdater</a>.</p>
+
+</div>
+</div>
+<a id="afc439e2e1d375316bef1e96aa31bc634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc439e2e1d375316bef1e96aa31bc634">&#9670;&nbsp;</a></span>ThresholdBiasUncertainty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void graph_localizer::CombinedNavStateNodeUpdater::ThresholdBiasUncertainty </td>
+          <td>(</td>
+          <td class="paramtype">gtsam::Matrix &amp;&#160;</td>
+          <td class="paramname"><em>bias_covariance</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

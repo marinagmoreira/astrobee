@@ -134,11 +134,7 @@ git submodule update --init --depth 1 submodules/avionics
 </pre><p>(Note: re-enter your username and password for every submodule that is cloned) The android module is necessary for guest science code; the avionics and platform module is used when cross-compiling to test on the robot hardware.</p>
 <h3><a class="anchor" id="autotoc_md136"></a>
 Dependencies</h3>
-<p>For <em>Ubuntu 18 only</em>: install openCV and Luajit beforehand with: </p><pre class="fragment">pushd $SOURCE_PATH
-cd scripts/setup
-./debians/install_luajit.sh
-./debians/install_opencv.sh
-</pre><p>Next, install all remaining dependencies dependencies: </p><pre class="fragment">pushd $SOURCE_PATH
+<p>Install dependencies: </p><pre class="fragment">pushd $SOURCE_PATH
 cd scripts/setup
 ./add_local_repository.sh
 ./add_ros_repository.sh

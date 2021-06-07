@@ -1,5 +1,7 @@
 <map id="ff::RapidSubRosPub" name="ff::RapidSubRosPub">
-<area shape="rect" id="node1" title="base class for rapid subscriber to ros publisher" alt="" coords="193,5,360,215"/>
-<area shape="rect" id="node2" href="$classff_1_1RapidCommandRosCommand.html" title=" " alt="" coords="5,270,247,362"/>
-<area shape="rect" id="node3" href="$classff_1_1RapidCompressedFileRosCompressedFile.html" title=" " alt="" coords="271,263,584,369"/>
+<area shape="rect" id="node1" title="base class for rapid subscriber to ros publisher" alt="" coords="475,5,641,215"/>
+<area shape="rect" id="node2" href="$classff_1_1RapidCommandRosCommand.html" title=" " alt="" coords="5,277,247,369"/>
+<area shape="rect" id="node3" href="$classff_1_1RapidCompressedFileRosCompressedFile.html" title=" " alt="" coords="271,270,584,377"/>
+<area shape="rect" id="node4" href="$classff_1_1RapidEkfToRos.html" title=" " alt="" coords="609,263,771,384"/>
+<area shape="rect" id="node5" href="$classff_1_1RapidGuestScienceDataToRos.html" title=" " alt="" coords="795,270,1035,377"/>
 </map>

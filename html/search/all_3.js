@@ -201,7 +201,7 @@ var searchData=
   ['cid_5fto_5fkeypoint_5fmap_5f_700',['cid_to_keypoint_map_',['../structsparse__mapping_1_1SparseMap.html#a84070c312be16bf9c7d56e73044adf75',1,'sparse_mapping::SparseMap']]],
   ['cidaffinetuple_701',['CIDAffineTuple',['../namespacesparse__mapping.html#a4ad9d92bcfd375ddffd823949741fdf5',1,'sparse_mapping']]],
   ['cidaffinetuplevec_702',['CIDAffineTupleVec',['../namespacesparse__mapping.html#aa29905ce33f41a2dcaa65fcd7e57b73a',1,'sparse_mapping']]],
-  ['cidpairaffinemap_703',['CIDPairAffineMap',['../namespacesparse__mapping.html#adee3df72fd40fc552b6750a6a6d44565',1,'sparse_mapping']]],
+  ['cidpairaffinemap_703',['CIDPairAffineMap',['../namespacesparse__mapping.html#abd088aff381de91829bef0082f919a86',1,'sparse_mapping']]],
   ['cj_704',['CJ',['../namespacetraj__opt.html#adab6fd0a18dccadf5fd8b999144c0476ac3f27ba5872afd8000fb54c2326d35c2',1,'traj_opt']]],
   ['clear_705',['Clear',['../classff__util_1_1PerfTimer.html#aeb73001d01a3c972822c20f8edd68e45',1,'ff_util::PerfTimer::Clear()'],['../classgraph__localizer_1_1FeatureTracker.html#a6bd05d7003910c776c4b4345e811d90b',1,'graph_localizer::FeatureTracker::Clear()']]],
   ['clearallfaults_706',['ClearAllFaults',['../classff__util_1_1FreeFlyerNodelet.html#a627d95db6c693ece412888ac59c46afe',1,'ff_util::FreeFlyerNodelet']]],
@@ -532,11 +532,12 @@ var searchData=
   ['customguestsciencecommand_1031',['CustomGuestScienceCommand',['../classjsonloader_1_1CustomGuestScienceCommand.html',1,'jsonloader::CustomGuestScienceCommand'],['../classjsonloader_1_1CustomGuestScienceCommand.html#a9839f7172417f36092569600ab6bae9f',1,'jsonloader::CustomGuestScienceCommand::CustomGuestScienceCommand()']]],
   ['cv_1032',['cv',['../namespacecv.html',1,'']]],
   ['cv_5f_1033',['cv_',['../namespaceperching__arm.html#abf4ffb7f9b10a24a10806a893fd3d019',1,'perching_arm']]],
-  ['cv_5fimu_5f_1034',['cv_imu_',['../classekf_1_1EkfWrapper.html#ab7ad770d1c18b02b8c666c6adaa03334',1,'ekf::EkfWrapper']]],
-  ['cvmattypestr_1035',['CvMatTypeStr',['../namespacesparse__mapping.html#adca120ecf01095aa43eb35b3d01590ec',1,'sparse_mapping']]],
-  ['cwaypoint_1036',['cwaypoint',['../classjsonloader_1_1Waypoint.html#a38f68f3cb9273b0858263a2c2fd3e8d2',1,'jsonloader::Waypoint']]],
-  ['get_3c_20std_3a_3astring_20_3e_1037',['Get&lt; std::string &gt;',['../namespaceff__util.html#ac38cfab140ecb764563b65fd2e03a36f',1,'ff_util::Get&lt; std::string &gt;(const std::string &amp;name, std::string &amp;value)'],['../namespaceff__util.html#a800e361314434244922839cce856fb42',1,'ff_util::Get&lt; std::string &gt;(const std::string &amp;name, std::string &amp;value)']]],
-  ['lim_3c_20std_3a_3astring_20_3e_1038',['Lim&lt; std::string &gt;',['../namespaceff__util.html#aead981a03953a49e17d02e85d6d54532',1,'ff_util']]],
-  ['creating_20a_20flight_20release_1039',['Creating a Flight Release',['../release.html',1,'md_doc_general_documentation_astrobee_usage']]],
-  ['set_3c_20std_3a_3astring_20_3e_1040',['Set&lt; std::string &gt;',['../namespaceff__util.html#a6ff3f858e1609463561ace9f58c38824',1,'ff_util::Set&lt; std::string &gt;(const std::string &amp;name, const std::string &amp;value)'],['../namespaceff__util.html#aa0a4f26ee25e50bc44aa6c661a134f4f',1,'ff_util::Set&lt; std::string &gt;(const std::string &amp;name, const std::string &amp;value)']]]
+  ['cv_5f_5fenable_5fc_5fapi_5fctors_1034',['CV__ENABLE_C_API_CTORS',['../marker__detector_8h.html#a02c620a4e45ed631232097c66c6d15f3',1,'CV__ENABLE_C_API_CTORS():&#160;marker_detector.h'],['../overhead__tracking__node_8cc.html#a02c620a4e45ed631232097c66c6d15f3',1,'CV__ENABLE_C_API_CTORS():&#160;overhead_tracking_node.cc']]],
+  ['cv_5fimu_5f_1035',['cv_imu_',['../classekf_1_1EkfWrapper.html#ab7ad770d1c18b02b8c666c6adaa03334',1,'ekf::EkfWrapper']]],
+  ['cvmattypestr_1036',['CvMatTypeStr',['../namespacesparse__mapping.html#adca120ecf01095aa43eb35b3d01590ec',1,'sparse_mapping']]],
+  ['cwaypoint_1037',['cwaypoint',['../classjsonloader_1_1Waypoint.html#a38f68f3cb9273b0858263a2c2fd3e8d2',1,'jsonloader::Waypoint']]],
+  ['get_3c_20std_3a_3astring_20_3e_1038',['Get&lt; std::string &gt;',['../namespaceff__util.html#ac38cfab140ecb764563b65fd2e03a36f',1,'ff_util::Get&lt; std::string &gt;(const std::string &amp;name, std::string &amp;value)'],['../namespaceff__util.html#a800e361314434244922839cce856fb42',1,'ff_util::Get&lt; std::string &gt;(const std::string &amp;name, std::string &amp;value)']]],
+  ['lim_3c_20std_3a_3astring_20_3e_1039',['Lim&lt; std::string &gt;',['../namespaceff__util.html#aead981a03953a49e17d02e85d6d54532',1,'ff_util']]],
+  ['creating_20a_20flight_20release_1040',['Creating a Flight Release',['../release.html',1,'md_doc_general_documentation_astrobee_usage']]],
+  ['set_3c_20std_3a_3astring_20_3e_1041',['Set&lt; std::string &gt;',['../namespaceff__util.html#a6ff3f858e1609463561ace9f58c38824',1,'ff_util::Set&lt; std::string &gt;(const std::string &amp;name, const std::string &amp;value)'],['../namespaceff__util.html#aa0a4f26ee25e50bc44aa6c661a134f4f',1,'ff_util::Set&lt; std::string &gt;(const std::string &amp;name, const std::string &amp;value)']]]
 ];

@@ -122,8 +122,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:adee3df72fd40fc552b6750a6a6d44565"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::pair&lt; int, int &gt;, Eigen::Affine3d, std::less&lt; std::pair&lt; int, int &gt; &gt;, Eigen::aligned_allocator&lt; std::pair&lt; std::pair&lt; const int, const int &gt;, Eigen::Affine3d &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#adee3df72fd40fc552b6750a6a6d44565">CIDPairAffineMap</a></td></tr>
-<tr class="separator:adee3df72fd40fc552b6750a6a6d44565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd088aff381de91829bef0082f919a86"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::pair&lt; int, int &gt;, Eigen::Affine3d, std::less&lt; std::pair&lt; int, int &gt; &gt;, Eigen::aligned_allocator&lt; std::pair&lt; std::pair&lt; int, int &gt; const, Eigen::Affine3d &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#abd088aff381de91829bef0082f919a86">CIDPairAffineMap</a></td></tr>
+<tr class="separator:abd088aff381de91829bef0082f919a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ad9d92bcfd375ddffd823949741fdf5"><td class="memItemLeft" align="right" valign="top">typedef std::array&lt; std::pair&lt; std::pair&lt; int, int &gt;, Eigen::Affine3d &gt;, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#a4ad9d92bcfd375ddffd823949741fdf5">CIDAffineTuple</a></td></tr>
 <tr class="separator:a4ad9d92bcfd375ddffd823949741fdf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa29905ce33f41a2dcaa65fcd7e57b73a"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="namespacesparse__mapping.html#a4ad9d92bcfd375ddffd823949741fdf5">CIDAffineTuple</a>, Eigen::aligned_allocator&lt; <a class="el" href="namespacesparse__mapping.html#a4ad9d92bcfd375ddffd823949741fdf5">CIDAffineTuple</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#aa29905ce33f41a2dcaa65fcd7e57b73a">CIDAffineTupleVec</a></td></tr>
@@ -246,21 +246,21 @@ Functions</h2></td></tr>
 <tr class="separator:a6203c8b2b84c1224c7b107d73621acb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a281aca88532d49ae464015d72a62ab75"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#a281aca88532d49ae464015d72a62ab75">RegistrationOrVerification</a> (std::vector&lt; std::string &gt; const &amp;data_files, bool verification, <a class="el" href="structsparse__mapping_1_1SparseMap.html">sparse_mapping::SparseMap</a> *s)</td></tr>
 <tr class="separator:a281aca88532d49ae464015d72a62ab75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7da838b78010eac697e083ea25878a21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#a7da838b78010eac697e083ea25878a21">WriteAffineCSV</a> (<a class="el" href="namespacesparse__mapping.html#adee3df72fd40fc552b6750a6a6d44565">CIDPairAffineMap</a> const &amp;relative_affines, std::string const &amp;output_filename)</td></tr>
+<tr class="memitem:a7da838b78010eac697e083ea25878a21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#a7da838b78010eac697e083ea25878a21">WriteAffineCSV</a> (<a class="el" href="namespacesparse__mapping.html#abd088aff381de91829bef0082f919a86">CIDPairAffineMap</a> const &amp;relative_affines, std::string const &amp;output_filename)</td></tr>
 <tr class="separator:a7da838b78010eac697e083ea25878a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee71ba33090fe4461d32af435b530803"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#aee71ba33090fe4461d32af435b530803">WriteAffineCSV</a> (<a class="el" href="namespacesparse__mapping.html#aa29905ce33f41a2dcaa65fcd7e57b73a">CIDAffineTupleVec</a> const &amp;relative_affines, std::string const &amp;output_filename)</td></tr>
 <tr class="separator:aee71ba33090fe4461d32af435b530803"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d89943025dace27589c420198d159c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#a1d89943025dace27589c420198d159c6">ReadAffineCSV</a> (std::string const &amp;input_filename, <a class="el" href="namespacesparse__mapping.html#adee3df72fd40fc552b6750a6a6d44565">CIDPairAffineMap</a> *relative_affines)</td></tr>
+<tr class="memitem:a1d89943025dace27589c420198d159c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#a1d89943025dace27589c420198d159c6">ReadAffineCSV</a> (std::string const &amp;input_filename, <a class="el" href="namespacesparse__mapping.html#abd088aff381de91829bef0082f919a86">CIDPairAffineMap</a> *relative_affines)</td></tr>
 <tr class="separator:a1d89943025dace27589c420198d159c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cd870d55ab1c7c3ac63ecd296abeb08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#a2cd870d55ab1c7c3ac63ecd296abeb08">ReadAffineCSV</a> (std::string const &amp;input_filename, <a class="el" href="namespacesparse__mapping.html#aa29905ce33f41a2dcaa65fcd7e57b73a">CIDAffineTupleVec</a> *relative_affines)</td></tr>
 <tr class="separator:a2cd870d55ab1c7c3ac63ecd296abeb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1198945d7af735f45660e3eef0b5fa42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#a1198945d7af735f45660e3eef0b5fa42">PrintTrackStats</a> (std::vector&lt; std::map&lt; int, int &gt; &gt;const &amp;pid_to_cid_fid, std::string const &amp;step)</td></tr>
 <tr class="separator:a1198945d7af735f45660e3eef0b5fa42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab69065b91f6818d1df5053edfe99eb25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#ab69065b91f6818d1df5053edfe99eb25">BuildMapFindEssentialAndInliers</a> (const Eigen::Matrix2Xd &amp;keypoints1, const Eigen::Matrix2Xd &amp;keypoints2, const std::vector&lt; cv::DMatch &gt; &amp;matches, <a class="el" href="classcamera_1_1CameraParameters.html">camera::CameraParameters</a> const &amp;camera_params, bool compute_inliers_only, size_t cam_a_idx, size_t cam_b_idx, std::mutex *match_mutex, <a class="el" href="namespacesparse__mapping.html#adee3df72fd40fc552b6750a6a6d44565">CIDPairAffineMap</a> *relative_b_t_a, std::vector&lt; cv::DMatch &gt; *inlier_matches, bool compute_rays_angle, double *rays_angle)</td></tr>
+<tr class="memitem:ab69065b91f6818d1df5053edfe99eb25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#ab69065b91f6818d1df5053edfe99eb25">BuildMapFindEssentialAndInliers</a> (const Eigen::Matrix2Xd &amp;keypoints1, const Eigen::Matrix2Xd &amp;keypoints2, const std::vector&lt; cv::DMatch &gt; &amp;matches, <a class="el" href="classcamera_1_1CameraParameters.html">camera::CameraParameters</a> const &amp;camera_params, bool compute_inliers_only, size_t cam_a_idx, size_t cam_b_idx, std::mutex *match_mutex, <a class="el" href="namespacesparse__mapping.html#abd088aff381de91829bef0082f919a86">CIDPairAffineMap</a> *relative_b_t_a, std::vector&lt; cv::DMatch &gt; *inlier_matches, bool compute_rays_angle, double *rays_angle)</td></tr>
 <tr class="separator:ab69065b91f6818d1df5053edfe99eb25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5979b33374b7e7ce64a9c1943f71462d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#a5979b33374b7e7ce64a9c1943f71462d">GenerateCIDToPIDFIDMap</a> (std::vector&lt; std::map&lt; int, int &gt; &gt; const &amp;pid_to_cid_fid, size_t num_of_cameras, std::vector&lt; std::map&lt; int, int &gt; &gt; *cid_to_pid_fid)</td></tr>
 <tr class="separator:a5979b33374b7e7ce64a9c1943f71462d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc8da2e2404bf8f251c32832ff74062e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#adc8da2e2404bf8f251c32832ff74062e">GenerateTupleListing</a> (<a class="el" href="namespacesparse__mapping.html#adee3df72fd40fc552b6750a6a6d44565">CIDPairAffineMap</a> const &amp;relative_affines, std::set&lt; std::tuple&lt; int, int, int &gt; &gt; *tuple_listing)</td></tr>
+<tr class="memitem:adc8da2e2404bf8f251c32832ff74062e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#adc8da2e2404bf8f251c32832ff74062e">GenerateTupleListing</a> (<a class="el" href="namespacesparse__mapping.html#abd088aff381de91829bef0082f919a86">CIDPairAffineMap</a> const &amp;relative_affines, std::set&lt; std::tuple&lt; int, int, int &gt; &gt; *tuple_listing)</td></tr>
 <tr class="separator:adc8da2e2404bf8f251c32832ff74062e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab55c00eeb6ac6ae911b4db0320b9172b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#ab55c00eeb6ac6ae911b4db0320b9172b">Triangulate</a> (bool rm_invalid_xyz, double focal_length, std::vector&lt; Eigen::Affine3d &gt; const &amp;cid_to_cam_t_global, std::vector&lt; Eigen::Matrix2Xd &gt; const &amp;cid_to_keypoint_map, std::vector&lt; std::map&lt; int, int &gt; &gt; *pid_to_cid_fid, std::vector&lt; Eigen::Vector3d &gt; *pid_to_xyz, std::vector&lt; std::map&lt; int, int &gt; &gt; *cid_fid_to_pid)</td></tr>
 <tr class="separator:ab55c00eeb6ac6ae911b4db0320b9172b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -284,7 +284,7 @@ Functions</h2></td></tr>
 <tr class="separator:acb3cb7411775bd26a4693ae19be409e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11a466bd59fe65d4cf7f79fb21c3bbb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#a11a466bd59fe65d4cf7f79fb21c3bbb9">WriteMatches</a> (openMVG::matching::PairWiseMatches const &amp;match_map, std::string const &amp;matches_file)</td></tr>
 <tr class="separator:a11a466bd59fe65d4cf7f79fb21c3bbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a097ed707a09e64622363e314d136fefe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#a097ed707a09e64622363e314d136fefe">BuildMapPerformMatching</a> (openMVG::matching::PairWiseMatches *match_map, std::vector&lt; Eigen::Matrix2Xd &gt; const &amp;cid_to_keypoint_map, std::vector&lt; cv::Mat &gt; const &amp;cid_to_descriptor_map, <a class="el" href="classcamera_1_1CameraParameters.html">camera::CameraParameters</a> const &amp;camera_params, <a class="el" href="namespacesparse__mapping.html#adee3df72fd40fc552b6750a6a6d44565">CIDPairAffineMap</a> *relative_affines, std::mutex *match_mutex, int i, int j, bool compute_rays_angle, double *rays_angle)</td></tr>
+<tr class="memitem:a097ed707a09e64622363e314d136fefe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#a097ed707a09e64622363e314d136fefe">BuildMapPerformMatching</a> (openMVG::matching::PairWiseMatches *match_map, std::vector&lt; Eigen::Matrix2Xd &gt; const &amp;cid_to_keypoint_map, std::vector&lt; cv::Mat &gt; const &amp;cid_to_descriptor_map, <a class="el" href="classcamera_1_1CameraParameters.html">camera::CameraParameters</a> const &amp;camera_params, <a class="el" href="namespacesparse__mapping.html#abd088aff381de91829bef0082f919a86">CIDPairAffineMap</a> *relative_affines, std::mutex *match_mutex, int i, int j, bool compute_rays_angle, double *rays_angle)</td></tr>
 <tr class="separator:a097ed707a09e64622363e314d136fefe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af046950757f05c004de871fd261b65d3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesparse__mapping.html#af046950757f05c004de871fd261b65d3">estimateCloseDistance</a> (std::vector&lt; Eigen::Vector3d &gt; const &amp;vec)</td></tr>
 <tr class="separator:af046950757f05c004de871fd261b65d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -372,14 +372,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adee3df72fd40fc552b6750a6a6d44565"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adee3df72fd40fc552b6750a6a6d44565">&#9670;&nbsp;</a></span>CIDPairAffineMap</h2>
+<a id="abd088aff381de91829bef0082f919a86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd088aff381de91829bef0082f919a86">&#9670;&nbsp;</a></span>CIDPairAffineMap</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::map&lt;std::pair&lt;int, int&gt;, Eigen::Affine3d, std::less&lt;std::pair&lt;int, int&gt; &gt;, Eigen::aligned_allocator&lt;std::pair&lt;std::pair&lt;const int, const int&gt;, Eigen::Affine3d&gt; &gt; &gt; <a class="el" href="namespacesparse__mapping.html#adee3df72fd40fc552b6750a6a6d44565">sparse_mapping::CIDPairAffineMap</a></td>
+          <td class="memname">typedef std::map&lt;std::pair&lt;int, int&gt;, Eigen::Affine3d, std::less&lt;std::pair&lt;int, int&gt; &gt;, Eigen::aligned_allocator&lt;std::pair&lt;std::pair&lt;int , int &gt; const, Eigen::Affine3d&gt; &gt; &gt; <a class="el" href="namespacesparse__mapping.html#abd088aff381de91829bef0082f919a86">sparse_mapping::CIDPairAffineMap</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -583,7 +583,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacesparse__mapping.html#adee3df72fd40fc552b6750a6a6d44565">CIDPairAffineMap</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacesparse__mapping.html#abd088aff381de91829bef0082f919a86">CIDPairAffineMap</a> *&#160;</td>
           <td class="paramname"><em>relative_b_t_a</em>, </td>
         </tr>
         <tr>
@@ -647,7 +647,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacesparse__mapping.html#adee3df72fd40fc552b6750a6a6d44565">CIDPairAffineMap</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacesparse__mapping.html#abd088aff381de91829bef0082f919a86">CIDPairAffineMap</a> *&#160;</td>
           <td class="paramname"><em>relative_affines</em>, </td>
         </tr>
         <tr>
@@ -1652,7 +1652,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void sparse_mapping::GenerateTupleListing </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacesparse__mapping.html#adee3df72fd40fc552b6750a6a6d44565">CIDPairAffineMap</a> const &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacesparse__mapping.html#abd088aff381de91829bef0082f919a86">CIDPairAffineMap</a> const &amp;&#160;</td>
           <td class="paramname"><em>relative_affines</em>, </td>
         </tr>
         <tr>
@@ -2893,7 +2893,7 @@ template&lt;class IterT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacesparse__mapping.html#adee3df72fd40fc552b6750a6a6d44565">CIDPairAffineMap</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacesparse__mapping.html#abd088aff381de91829bef0082f919a86">CIDPairAffineMap</a> *&#160;</td>
           <td class="paramname"><em>relative_affines</em>&#160;</td>
         </tr>
         <tr>
@@ -3480,7 +3480,7 @@ template&lt;class IterT &gt; </div>
         <tr>
           <td class="memname">void sparse_mapping::WriteAffineCSV </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacesparse__mapping.html#adee3df72fd40fc552b6750a6a6d44565">CIDPairAffineMap</a> const &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacesparse__mapping.html#abd088aff381de91829bef0082f919a86">CIDPairAffineMap</a> const &amp;&#160;</td>
           <td class="paramname"><em>relative_affines</em>, </td>
         </tr>
         <tr>

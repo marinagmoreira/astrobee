@@ -110,26 +110,26 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ad025557219ecbe1dffb1897a015dd083"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; int, Eigen::Matrix&lt; float, 4, 3 &gt;, std::less&lt; int &gt;, Eigen::aligned_allocator&lt; std::pair&lt; int, Eigen::Vector4f &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemarker__tracking.html#ad025557219ecbe1dffb1897a015dd083">ARTagMap</a></td></tr>
-<tr class="separator:ad025557219ecbe1dffb1897a015dd083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96aaa3f61f095e691827e9d641d53dd2"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; int, Eigen::Matrix&lt; float, 4, 3 &gt;, std::less&lt; int &gt;, Eigen::aligned_allocator&lt; std::pair&lt; int const, Eigen::Matrix&lt; float, 4, 3 &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemarker__tracking.html#a96aaa3f61f095e691827e9d641d53dd2">ARTagMap</a></td></tr>
+<tr class="separator:a96aaa3f61f095e691827e9d641d53dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad2230e3ed017b47d15be7d2e63cfcf71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemarker__tracking.html#ad2230e3ed017b47d15be7d2e63cfcf71">LoadARTagsConfig</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> *config, <a class="el" href="namespacemarker__tracking.html#ad025557219ecbe1dffb1897a015dd083">ARTagMap</a> *ar_corner_world_location)</td></tr>
+<tr class="memitem:ad2230e3ed017b47d15be7d2e63cfcf71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemarker__tracking.html#ad2230e3ed017b47d15be7d2e63cfcf71">LoadARTagsConfig</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> *config, <a class="el" href="namespacemarker__tracking.html#a96aaa3f61f095e691827e9d641d53dd2">ARTagMap</a> *ar_corner_world_location)</td></tr>
 <tr class="separator:ad2230e3ed017b47d15be7d2e63cfcf71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae85bcc00ea8ec1dc6690f4c1f1dcd9f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemarker__tracking.html#ae85bcc00ea8ec1dc6690f4c1f1dcd9f8">LoadARTagLocation</a> (std::string const &amp;filename, <a class="el" href="namespacemarker__tracking.html#ad025557219ecbe1dffb1897a015dd083">ARTagMap</a> *ar_corner_world_location)</td></tr>
+<tr class="memitem:ae85bcc00ea8ec1dc6690f4c1f1dcd9f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemarker__tracking.html#ae85bcc00ea8ec1dc6690f4c1f1dcd9f8">LoadARTagLocation</a> (std::string const &amp;filename, <a class="el" href="namespacemarker__tracking.html#a96aaa3f61f095e691827e9d641d53dd2">ARTagMap</a> *ar_corner_world_location)</td></tr>
 <tr class="separator:ae85bcc00ea8ec1dc6690f4c1f1dcd9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5b6210ca39abd2ef68a5715a721fdf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemarker__tracking.html#ad5b6210ca39abd2ef68a5715a721fdf1">AddCorners</a> (<a class="el" href="namespacemarker__tracking.html#ad025557219ecbe1dffb1897a015dd083">ARTagMap</a> *ar_corner_world_location, int id, Eigen::Matrix&lt; float, 4, 3 &gt; &amp;corners)</td></tr>
+<tr class="memitem:ad5b6210ca39abd2ef68a5715a721fdf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemarker__tracking.html#ad5b6210ca39abd2ef68a5715a721fdf1">AddCorners</a> (<a class="el" href="namespacemarker__tracking.html#a96aaa3f61f095e691827e9d641d53dd2">ARTagMap</a> *ar_corner_world_location, int id, Eigen::Matrix&lt; float, 4, 3 &gt; &amp;corners)</td></tr>
 <tr class="separator:ad5b6210ca39abd2ef68a5715a721fdf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8a947d8e50e9287a9033d8d225f0503"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemarker__tracking.html#ad8a947d8e50e9287a9033d8d225f0503">ParseToVector</a> (<a class="el" href="classconfig__reader_1_1ConfigReader_1_1Table.html">config_reader::ConfigReader::Table</a> *marker_specs, const char *<a class="el" href="eps__simulator_8cc.html#a9b45b3e13bd9167aab02e17e08916231">name</a>)</td></tr>
 <tr class="separator:ad8a947d8e50e9287a9033d8d225f0503"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9855961e56956a342b17259ed2efb397"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemarker__tracking.html#a9855961e56956a342b17259ed2efb397">AddSubTag</a> (int id, Eigen::Vector3f const &amp;origin, Eigen::Vector3f const &amp;ux, Eigen::Vector3f const &amp;uy, int ix, int iy, int size, <a class="el" href="namespacemarker__tracking.html#ad025557219ecbe1dffb1897a015dd083">ARTagMap</a> *ar_corner_world_location)</td></tr>
+<tr class="memitem:a9855961e56956a342b17259ed2efb397"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemarker__tracking.html#a9855961e56956a342b17259ed2efb397">AddSubTag</a> (int id, Eigen::Vector3f const &amp;origin, Eigen::Vector3f const &amp;ux, Eigen::Vector3f const &amp;uy, int ix, int iy, int size, <a class="el" href="namespacemarker__tracking.html#a96aaa3f61f095e691827e9d641d53dd2">ARTagMap</a> *ar_corner_world_location)</td></tr>
 <tr class="separator:a9855961e56956a342b17259ed2efb397"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5a19802f41fb43ea1231cee9a8b605e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemarker__tracking.html#ac5a19802f41fb43ea1231cee9a8b605e">ParseMultiScaleTag</a> (int id, Eigen::Matrix&lt; float, 4, 3 &gt; const &amp;corners, <a class="el" href="namespacemarker__tracking.html#ad025557219ecbe1dffb1897a015dd083">ARTagMap</a> *ar_corner_world_location)</td></tr>
+<tr class="memitem:ac5a19802f41fb43ea1231cee9a8b605e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemarker__tracking.html#ac5a19802f41fb43ea1231cee9a8b605e">ParseMultiScaleTag</a> (int id, Eigen::Matrix&lt; float, 4, 3 &gt; const &amp;corners, <a class="el" href="namespacemarker__tracking.html#a96aaa3f61f095e691827e9d641d53dd2">ARTagMap</a> *ar_corner_world_location)</td></tr>
 <tr class="separator:ac5a19802f41fb43ea1231cee9a8b605e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a793b0809f9cae1a42d656ea7bdc291df"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; float, 3, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemarker__tracking.html#a793b0809f9cae1a42d656ea7bdc291df">ParseToVector</a> (std::string const &amp;input)</td></tr>
 <tr class="separator:a793b0809f9cae1a42d656ea7bdc291df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5c04a9d6baf079181f4a6b44d3f76bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemarker__tracking.html#ae5c04a9d6baf079181f4a6b44d3f76bb">ParseArTag</a> (TiXmlNode *node, <a class="el" href="namespacemarker__tracking.html#ad025557219ecbe1dffb1897a015dd083">ARTagMap</a> *ar_corner_world_location)</td></tr>
+<tr class="memitem:ae5c04a9d6baf079181f4a6b44d3f76bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemarker__tracking.html#ae5c04a9d6baf079181f4a6b44d3f76bb">ParseArTag</a> (TiXmlNode *node, <a class="el" href="namespacemarker__tracking.html#a96aaa3f61f095e691827e9d641d53dd2">ARTagMap</a> *ar_corner_world_location)</td></tr>
 <tr class="separator:ae5c04a9d6baf079181f4a6b44d3f76bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -154,14 +154,14 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This is a modification of the ALVAR method to use our camera object and hopefully modified to use less memory </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="ad025557219ecbe1dffb1897a015dd083"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad025557219ecbe1dffb1897a015dd083">&#9670;&nbsp;</a></span>ARTagMap</h2>
+<a id="a96aaa3f61f095e691827e9d641d53dd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96aaa3f61f095e691827e9d641d53dd2">&#9670;&nbsp;</a></span>ARTagMap</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::map&lt;int, Eigen::Matrix&lt;float, 4, 3&gt;, std::less&lt;int&gt;, Eigen::aligned_allocator&lt;std::pair&lt;int, Eigen::Vector4f&gt; &gt; &gt; <a class="el" href="namespacemarker__tracking.html#ad025557219ecbe1dffb1897a015dd083">marker_tracking::ARTagMap</a></td>
+          <td class="memname">typedef std::map&lt;int, Eigen::Matrix&lt;float, 4, 3&gt;, std::less&lt;int&gt;, Eigen::aligned_allocator&lt;std::pair&lt;int const, Eigen::Matrix&lt;float, 4, 3&gt; &gt; &gt; &gt; <a class="el" href="namespacemarker__tracking.html#a96aaa3f61f095e691827e9d641d53dd2">marker_tracking::ARTagMap</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -178,7 +178,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void marker_tracking::AddCorners </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacemarker__tracking.html#ad025557219ecbe1dffb1897a015dd083">ARTagMap</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacemarker__tracking.html#a96aaa3f61f095e691827e9d641d53dd2">ARTagMap</a> *&#160;</td>
           <td class="paramname"><em>ar_corner_world_location</em>, </td>
         </tr>
         <tr>
@@ -254,7 +254,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacemarker__tracking.html#ad025557219ecbe1dffb1897a015dd083">ARTagMap</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacemarker__tracking.html#a96aaa3f61f095e691827e9d641d53dd2">ARTagMap</a> *&#160;</td>
           <td class="paramname"><em>ar_corner_world_location</em>&#160;</td>
         </tr>
         <tr>
@@ -282,7 +282,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacemarker__tracking.html#ad025557219ecbe1dffb1897a015dd083">ARTagMap</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacemarker__tracking.html#a96aaa3f61f095e691827e9d641d53dd2">ARTagMap</a> *&#160;</td>
           <td class="paramname"><em>ar_corner_world_location</em>&#160;</td>
         </tr>
         <tr>
@@ -310,7 +310,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacemarker__tracking.html#ad025557219ecbe1dffb1897a015dd083">ARTagMap</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacemarker__tracking.html#a96aaa3f61f095e691827e9d641d53dd2">ARTagMap</a> *&#160;</td>
           <td class="paramname"><em>ar_corner_world_location</em>&#160;</td>
         </tr>
         <tr>
@@ -338,7 +338,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacemarker__tracking.html#ad025557219ecbe1dffb1897a015dd083">ARTagMap</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacemarker__tracking.html#a96aaa3f61f095e691827e9d641d53dd2">ARTagMap</a> *&#160;</td>
           <td class="paramname"><em>ar_corner_world_location</em>&#160;</td>
         </tr>
         <tr>
@@ -372,7 +372,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacemarker__tracking.html#ad025557219ecbe1dffb1897a015dd083">ARTagMap</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacemarker__tracking.html#a96aaa3f61f095e691827e9d641d53dd2">ARTagMap</a> *&#160;</td>
           <td class="paramname"><em>ar_corner_world_location</em>&#160;</td>
         </tr>
         <tr>

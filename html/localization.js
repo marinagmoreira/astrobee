@@ -14,6 +14,7 @@ var localization =
       [ "Inputs", "graphlocalizer.html#autotoc_md235", null ],
       [ "Outputs", "graphlocalizer.html#autotoc_md236", null ]
     ] ],
+    [ "Graph Optimizer", "graphoptimizer.html", null ],
     [ "Ground Truth Localizer", "groundtruthlocalizer.html", [
       [ "Package overview", "groundtruthlocalizer.html#autotoc_md237", null ]
     ] ],

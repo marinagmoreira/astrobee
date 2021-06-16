@@ -92,21 +92,21 @@ $(document).ready(function(){initNavTree('rvizvisualizer.html',''); initResizabl
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This helper node publishes various topics that aid in visualization using rviz. It currently publishes a model of the granite table and the rviz tf2 transform.</p>
-<h2><a class="anchor" id="autotoc_md505"></a>
+<h2><a class="anchor" id="autotoc_md511"></a>
 Getting RVIZ Overhead Cam Display</h2>
 <p><img src="../images/mobility/overhead_cropped.png" alt="RVIZ" class="inline"/></p>
 <p>ROS can project the RVIZ display into the camera frame of the overhead camera and overlay it on the image in real time.</p>
-<h3><a class="anchor" id="autotoc_md506"></a>
+<h3><a class="anchor" id="autotoc_md512"></a>
 Prereqs</h3>
 <p>You will need the Kumar Robotics version of the flea3 driver (<a href="https://github.com/KumarRobotics/flea3">https://github.com/KumarRobotics/flea3</a>, <a href="https://github.com/KumarRobotics/camera_base">https://github.com/KumarRobotics/camera_base</a>). This needs to be built with the catkin build system.</p>
 <p>mkdir -p catkin_ws/src &amp;&amp; cd catkin_ws/src git clone <a href="https://github.com/KumarRobotics/flea3">https://github.com/KumarRobotics/flea3</a> &amp;&amp; git clone <a href="https://github.com/KumarRobotics/camera_base">https://github.com/KumarRobotics/camera_base</a> cd .. &amp;&amp; source /opt/ros/kinetic/setup.bash &amp;&amp; catkin init catkin config -DCMAKE_BUILD_TYPE=Release catkin build &ndash;jobs 12 echo source <code>pwd</code>/devel/setup.bash &ndash;extend &gt;&gt; ~/.bashrc <br  />
 </p>
 <p>You will also need the jsk-visiualization plugins. (Don't try to build these from source, it's doable, but a mess)</p>
 <p>sudo apt-get install ros-kinetic-jsk-visualization</p>
-<h3><a class="anchor" id="autotoc_md507"></a>
+<h3><a class="anchor" id="autotoc_md513"></a>
 Setup</h3>
 <p>The camera_info directory inside rviz_visualizer needs to be copied to ~/.ros The rules.d/40-pgr.rules file needs to be copied to /etc/udev/rules.d/ and the user needs to be added to the plugdev group.</p>
-<h3><a class="anchor" id="autotoc_md508"></a>
+<h3><a class="anchor" id="autotoc_md514"></a>
 Launching</h3>
 <p>roslaunch rviz_visualizer cam.launch</p>
 <p><img src="../images/mobility/display2_marked_up.png" alt="RVIZ" class="inline"/> After launching, add the CameraOverlay to the rviz window</p>

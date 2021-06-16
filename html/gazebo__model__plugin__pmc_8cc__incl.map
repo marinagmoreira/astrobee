@@ -1,5 +1,5 @@
 <map id="simulation/src/gazebo_model_plugin_pmc/gazebo_model_plugin_pmc.cc" name="simulation/src/gazebo_model_plugin_pmc/gazebo_model_plugin_pmc.cc">
-<area shape="rect" id="node1" title=" " alt="" coords="1215,5,1417,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1277,5,1480,61"/>
 <area shape="rect" id="node2" title=" " alt="" coords="1355,295,1434,322"/>
 <area shape="rect" id="node3" href="$config__reader_8h.html" title=" " alt="" coords="675,288,829,329"/>
 <area shape="rect" id="node15" title=" " alt="" coords="1829,467,1888,493"/>
@@ -11,8 +11,9 @@
 <area shape="rect" id="node29" title=" " alt="" coords="600,295,651,322"/>
 <area shape="rect" id="node30" title=" " alt="" coords="1683,117,1821,143"/>
 <area shape="rect" id="node31" title=" " alt="" coords="1846,117,2029,143"/>
-<area shape="rect" id="node32" href="$blowers_8h.html" title=" " alt="" coords="1480,117,1659,143"/>
-<area shape="rect" id="node35" href="$astrobee__gazebo_8h.html" title=" " alt="" coords="2983,109,3177,151"/>
+<area shape="rect" id="node32" title=" " alt="" coords="2053,117,2195,143"/>
+<area shape="rect" id="node33" href="$blowers_8h.html" title=" " alt="" coords="1480,117,1659,143"/>
+<area shape="rect" id="node36" href="$astrobee__gazebo_8h.html" title=" " alt="" coords="2983,109,3177,151"/>
 <area shape="rect" id="node4" title=" " alt="" coords="690,385,745,411"/>
 <area shape="rect" id="node5" title=" " alt="" coords="769,385,839,411"/>
 <area shape="rect" id="node6" title=" " alt="" coords="863,385,942,411"/>
@@ -32,31 +33,31 @@
 <area shape="rect" id="node21" title=" " alt="" coords="403,467,503,493"/>
 <area shape="rect" id="node22" title=" " alt="" coords="527,467,601,493"/>
 <area shape="rect" id="node28" title=" " alt="" coords="515,295,575,322"/>
-<area shape="rect" id="node33" title=" " alt="" coords="1012,199,1204,240"/>
-<area shape="rect" id="node34" title=" " alt="" coords="1228,199,1420,240"/>
-<area shape="rect" id="node36" title=" " alt="" coords="3398,295,3557,322"/>
-<area shape="rect" id="node37" title=" " alt="" coords="3901,206,4168,233"/>
-<area shape="rect" id="node38" title=" " alt="" coords="4193,206,4394,233"/>
-<area shape="rect" id="node39" title=" " alt="" coords="4419,199,4613,240"/>
-<area shape="rect" id="node40" title=" " alt="" coords="4638,206,4802,233"/>
-<area shape="rect" id="node41" title=" " alt="" coords="1495,206,1732,233"/>
-<area shape="rect" id="node42" title=" " alt="" coords="1755,206,1954,233"/>
-<area shape="rect" id="node43" title=" " alt="" coords="1979,206,2181,233"/>
-<area shape="rect" id="node44" href="$ff__nodelet_8h.html" title=" " alt="" coords="2206,206,2346,233"/>
-<area shape="rect" id="node53" title=" " alt="" coords="3116,295,3180,322"/>
-<area shape="rect" id="node54" title=" " alt="" coords="2421,206,2632,233"/>
-<area shape="rect" id="node55" title=" " alt="" coords="2656,206,2851,233"/>
-<area shape="rect" id="node56" title=" " alt="" coords="2875,206,3072,233"/>
-<area shape="rect" id="node57" title=" " alt="" coords="3097,206,3277,233"/>
-<area shape="rect" id="node58" title=" " alt="" coords="3301,206,3523,233"/>
-<area shape="rect" id="node59" title=" " alt="" coords="3547,206,3674,233"/>
-<area shape="rect" id="node60" title=" " alt="" coords="3699,206,3776,233"/>
-<area shape="rect" id="node45" title=" " alt="" coords="2107,295,2243,322"/>
-<area shape="rect" id="node46" title=" " alt="" coords="2267,288,2410,329"/>
-<area shape="rect" id="node47" title=" " alt="" coords="2434,295,2641,322"/>
-<area shape="rect" id="node48" title=" " alt="" coords="2665,295,2785,322"/>
-<area shape="rect" id="node49" title=" " alt="" coords="1509,295,1664,322"/>
-<area shape="rect" id="node50" title=" " alt="" coords="1689,295,1821,322"/>
-<area shape="rect" id="node51" href="$ff__faults_8h.html" title=" " alt="" coords="1795,385,1923,411"/>
-<area shape="rect" id="node52" href="$ff__names_8h.html" title=" " alt="" coords="1897,295,2031,322"/>
+<area shape="rect" id="node34" title=" " alt="" coords="1012,199,1204,240"/>
+<area shape="rect" id="node35" title=" " alt="" coords="1228,199,1420,240"/>
+<area shape="rect" id="node37" title=" " alt="" coords="3398,295,3557,322"/>
+<area shape="rect" id="node38" title=" " alt="" coords="3901,206,4168,233"/>
+<area shape="rect" id="node39" title=" " alt="" coords="4193,206,4394,233"/>
+<area shape="rect" id="node40" title=" " alt="" coords="4419,199,4613,240"/>
+<area shape="rect" id="node41" title=" " alt="" coords="4638,206,4802,233"/>
+<area shape="rect" id="node42" title=" " alt="" coords="1495,206,1732,233"/>
+<area shape="rect" id="node43" title=" " alt="" coords="1755,206,1954,233"/>
+<area shape="rect" id="node44" title=" " alt="" coords="1979,206,2181,233"/>
+<area shape="rect" id="node45" href="$ff__nodelet_8h.html" title=" " alt="" coords="2206,206,2346,233"/>
+<area shape="rect" id="node54" title=" " alt="" coords="3116,295,3180,322"/>
+<area shape="rect" id="node55" title=" " alt="" coords="2421,206,2632,233"/>
+<area shape="rect" id="node56" title=" " alt="" coords="2656,206,2851,233"/>
+<area shape="rect" id="node57" title=" " alt="" coords="2875,206,3072,233"/>
+<area shape="rect" id="node58" title=" " alt="" coords="3097,206,3277,233"/>
+<area shape="rect" id="node59" title=" " alt="" coords="3301,206,3523,233"/>
+<area shape="rect" id="node60" title=" " alt="" coords="3547,206,3674,233"/>
+<area shape="rect" id="node61" title=" " alt="" coords="3699,206,3776,233"/>
+<area shape="rect" id="node46" title=" " alt="" coords="2107,295,2243,322"/>
+<area shape="rect" id="node47" title=" " alt="" coords="2267,288,2410,329"/>
+<area shape="rect" id="node48" title=" " alt="" coords="2434,295,2641,322"/>
+<area shape="rect" id="node49" title=" " alt="" coords="2665,295,2785,322"/>
+<area shape="rect" id="node50" title=" " alt="" coords="1509,295,1664,322"/>
+<area shape="rect" id="node51" title=" " alt="" coords="1689,295,1821,322"/>
+<area shape="rect" id="node52" href="$ff__faults_8h.html" title=" " alt="" coords="1795,385,1923,411"/>
+<area shape="rect" id="node53" href="$ff__names_8h.html" title=" " alt="" coords="1897,295,2031,322"/>
 </map>

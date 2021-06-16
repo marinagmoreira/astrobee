@@ -198,7 +198,7 @@ source devel/setup.bash
 popd
 </pre><p>After this command has completed, you should be able to run a simulator from any directory in your Linux filesystem. So, for example, to start a simulation of a single Astrobee in the Granite Lab, run the following: </p><pre class="fragment">roslaunch astrobee sim.launch
 </pre><p>This command tells ROS to look for the <code>sim.launch</code> file provided by the <code>astrobee</code> package, and use roslaunch to run it. Internally, ROS maintains a cache of information about package locations, libraries and executables. If you find that the above command doesn't work, try rebuilding the cache: </p><pre class="fragment">rospack profile
-</pre><p>A simulator readme was created for guest science users. However this readme may be beneficial to interns and/or new members. If you fall into one of these categories, please see the <a class="el" href="sim__overview_8md.html">simulation instructions</a>.</p>
+</pre><p>For more information on running the simulator and moving the robot, please see the <a class="el" href="sim-readme.html">Simulation</a>.</p>
 <h2><a class="anchor" id="autotoc_md145"></a>
 Running the code on a real robot</h2>
 <p>In order to do this, you will need to have followed the cross-compile build instructions. Once the code has been built, you also need to install the code to a singular location. CMake remembers what <code>$INSTALL_PATH</code> you specified, and will copy all products into this directory. </p><pre class="fragment">pushd $BUILD_PATH

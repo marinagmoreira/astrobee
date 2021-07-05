@@ -95,13 +95,13 @@ $(document).ready(function(){initNavTree('sim-readme.html',''); initResizable();
 <p>There is once key exception to the rule above: although we do simulate cameras, we do not simulate any vision-based localization. That is, for sparse mapping, optical flow and AR target tracking, instead of running the feature detectors and localization algorithms on the images produced by the simulator, we draw features from the intersection of random rays cast through a virtual image plane with the environment. This approach provides immense performance gains that enables us to run simulations at many times wall clock speed.</p>
 <p>At its core, Gazebo provides a headless server which loads a collection of shared library plugins and performs the simulation itself. One can optionally load the client interface which provides a high-fidelity rendering of the world, and an interface that enables basic interaction with the elements.</p>
 <p>Note that if the simulation is run any speed over real-time then the NavCam, DockCam, and SciCam plugins are disabled. We do this because there is large computational overhead required to generate the images: they are wide-angle cameras and hence require multiple projections to be taken and fused, which does not scale well as you increase the requested speed multiplier.</p>
-<h2><a class="anchor" id="autotoc_md417"></a>
+<h2><a class="anchor" id="autotoc_md452"></a>
 Obtaining media</h2>
 <p>If you you are not cross-compiling, then the build process started with "make" will download and extract a correct version of the media automatically for you. This is done by the <em>description</em> package [media], as the media is shared between rviz and Gazebo. To see if the media was installed correctly, check that there are subdirectories in the <em>description/media</em> directory.</p>
-<h2><a class="anchor" id="autotoc_md418"></a>
+<h2><a class="anchor" id="autotoc_md453"></a>
 Running the Simulator</h2>
 <p>Please see the <a class="el" href="running-the-sim.html">Running the Astrobee Simulator</a> documentation.</p>
-<h2><a class="anchor" id="autotoc_md419"></a>
+<h2><a class="anchor" id="autotoc_md454"></a>
 Advanced Simulator Information</h2>
 <p>If you would like more information on running localization only mode, collisions, performance, frame consistency, debugging, changing properties, or the Astrobee specific plugins, please see the <a class="el" href="advanced-sim-info.html">Advanced Simulation Information</a>.</p>
 <p>For common simulation issues and workarounds, check <a class="el" href="sim-issues.html">Common Simulation Issues</a> </p>

@@ -91,16 +91,16 @@ $(document).ready(function(){initNavTree('imubiastester.html',''); initResizable
 <div class="title">Imu Bias Tester </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2><a class="anchor" id="autotoc_md502"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md537"></a>
 ImuBiasTester</h2>
 <p>The imu bias tester provides a way to evaluate the accuracy of imu biases without having bias groundtruth. It works by relying on some sort of localization groundtruth instead. The bias tester integrates imu measurements but updates biases as localization estimates are provided. Thus, if the biases are perfectly estimated by the localizer, the integrated imu measurements should perfectly match localization groundtruth. The nodelet subscribes to the imu and localization state and published a imu bias pose.</p>
-<h1><a class="anchor" id="autotoc_md503"></a>
+<h1><a class="anchor" id="autotoc_md538"></a>
 Inputs</h1>
 <ul>
 <li><code>/hw/imu</code></li>
 <li><code>graph_loc/state</code></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md504"></a>
+<h1><a class="anchor" id="autotoc_md539"></a>
 Outputs</h1>
 <ul>
 <li><code>imu_bias_tester/pose</code> </li>

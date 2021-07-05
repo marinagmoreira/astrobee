@@ -132,7 +132,8 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="classchoreographer_1_1ChoreographerNodelet.html#a49d48e0781db1ad626996d44b6bd6352a1d229cb58d341b4beaca858e71e60d33">TOLERANCE_OMEGA</a> = (1&lt;&lt;16), 
 <a class="el" href="classchoreographer_1_1ChoreographerNodelet.html#a49d48e0781db1ad626996d44b6bd6352a678278bebe8e2e55a2f5ec2967b1cb85">OBSTACLE_DETECTED</a> = (1&lt;&lt;17), 
-<a class="el" href="classchoreographer_1_1ChoreographerNodelet.html#a49d48e0781db1ad626996d44b6bd6352a7c5d56f2f7fdb47f55fb7a076dbcb25d">MANUAL_STATE_SET</a> = (1&lt;&lt;18)
+<a class="el" href="classchoreographer_1_1ChoreographerNodelet.html#a49d48e0781db1ad626996d44b6bd6352a7c5d56f2f7fdb47f55fb7a076dbcb25d">MANUAL_STATE_SET</a> = (1&lt;&lt;18), 
+<a class="el" href="classchoreographer_1_1ChoreographerNodelet.html#a49d48e0781db1ad626996d44b6bd6352ae6b7c297e4afd688ab9d8001425b03ec">REPLAN_TIMEOUT</a> = (1&lt;&lt;19)
 <br />
  }</td></tr>
 <tr class="separator:a49d48e0781db1ad626996d44b6bd6352"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,6 +211,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a42f49f9d0ae31db985e99984ddcae16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96bd36ac519f1f6b5761989e1651de9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classchoreographer_1_1ChoreographerNodelet.html#a96bd36ac519f1f6b5761989e1651de9a">PResultCallback</a> (<a class="el" href="classff__util_1_1FreeFlyerActionState.html#a801b8b9bda4451b3b3403fe0233db2a7">ff_util::FreeFlyerActionState::Enum</a> result_code, ff_msgs::PlanResultConstPtr const &amp;result)</td></tr>
 <tr class="separator:a96bd36ac519f1f6b5761989e1651de9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9d5cfc81a5664f1d7e1c63985d12d5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classchoreographer_1_1ChoreographerNodelet.html#aa9d5cfc81a5664f1d7e1c63985d12d5e">ReplanCallback</a> (const ros::TimerEvent &amp;)</td></tr>
+<tr class="separator:aa9d5cfc81a5664f1d7e1c63985d12d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02be9d77a218b1c9e65aa60702159344"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classchoreographer_1_1ChoreographerNodelet.html#a02be9d77a218b1c9e65aa60702159344">FlightMode</a> ()</td></tr>
 <tr class="separator:a02be9d77a218b1c9e65aa60702159344"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69a6fe42d0125bfcf888b60ba69ee09e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classchoreographer_1_1ChoreographerNodelet.html#a69a6fe42d0125bfcf888b60ba69ee09e">PmcStateCallback</a> (ff_hw_msgs::PmcState::ConstPtr const &amp;msg)</td></tr>
@@ -282,6 +285,7 @@ Additional Inherited Members</h2></td></tr>
 <tr><td class="fieldname"><a id="a49d48e0781db1ad626996d44b6bd6352a1d229cb58d341b4beaca858e71e60d33"></a>TOLERANCE_OMEGA&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a49d48e0781db1ad626996d44b6bd6352a678278bebe8e2e55a2f5ec2967b1cb85"></a>OBSTACLE_DETECTED&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a49d48e0781db1ad626996d44b6bd6352a7c5d56f2f7fdb47f55fb7a076dbcb25d"></a>MANUAL_STATE_SET&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a49d48e0781db1ad626996d44b6bd6352ae6b7c297e4afd688ab9d8001425b03ec"></a>REPLAN_TIMEOUT&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -890,6 +894,32 @@ Additional Inherited Members</h2></td></tr>
           <td>(</td>
           <td class="paramtype">dynamic_reconfigure::Config &amp;&#160;</td>
           <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9d5cfc81a5664f1d7e1c63985d12d5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9d5cfc81a5664f1d7e1c63985d12d5e">&#9670;&nbsp;</a></span>ReplanCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void choreographer::ChoreographerNodelet::ReplanCallback </td>
+          <td>(</td>
+          <td class="paramtype">const ros::TimerEvent &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>

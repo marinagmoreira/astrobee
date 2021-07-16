@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jointinfo_7014',['JointInfo',['../structarm_1_1JointInfo.html',1,'arm']]]
+  ['jointinfo_7016',['JointInfo',['../structarm_1_1JointInfo.html',1,'arm']]]
 ];

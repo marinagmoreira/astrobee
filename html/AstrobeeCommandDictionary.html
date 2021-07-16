@@ -188,7 +188,7 @@ td.inner_table {
 
 <div class="commandSpec">
   <div class="commandSpecId"><a name="command_Admin.loadNodelet">Admin.loadNodelet</a></div>
-  <div class="commandSpecNotes">Not implemented. This command is intended to load a ROS nodelet in the Astrobee flight software.<p/>There is an internal service advertised by the system monitor that provides a method very similar to this command, but as of Oct 2020, there is no way to invoke it through a standard Astrobee API call. Also note, the underlying system monitor service can't load nodelets that run on the HLP.</div>
+  <div class="commandSpecNotes">This command is intended to load a ROS nodelet in the Astrobee flight software. Please note, the underlying system monitor service can't load nodelets that run on the HLP.</div>
   <div class="commandSpecParams">
     <table class="params">
   <tr>
@@ -204,16 +204,16 @@ td.inner_table {
     <td class="params_notes">Name of nodelet</td>
   </tr>
   <tr>
-    <td class="params_parameter">Type</td>
-    <td class="params_type">string</td>
-    <td class="params_default"><span style="font-family: 'Courier';">&quot;&quot;</span></td>
-    <td class="params_notes">Type of nodelet (namespace/classname). If left blank, the system monitor will default to the type specified in its config file, which should normally work fine.</td>
-  </tr>
-  <tr>
     <td class="params_parameter">Manager Name</td>
     <td class="params_type">string</td>
     <td class="params_default"><span style="font-family: 'Courier';">&quot;&quot;</span></td>
     <td class="params_notes">Which nodelet manager should load the nodelet. If left blank, the system monitor will default to using the managerName specified in the last heartbeat it received from the requested nodelet. (That should normally work fine, assuming the nodelet sent out at least one valid heartbeat.)</td>
+  </tr>
+  <tr>
+    <td class="params_parameter">Type</td>
+    <td class="params_type">string</td>
+    <td class="params_default"><span style="font-family: 'Courier';">&quot;&quot;</span></td>
+    <td class="params_notes">Type of nodelet (namespace/classname). If left blank, the system monitor will default to the type specified in its config file, which should normally work fine.</td>
   </tr>
   <tr>
     <td class="params_parameter">Bond Id</td>
@@ -323,7 +323,7 @@ td.inner_table {
 
 <div class="commandSpec">
   <div class="commandSpecId"><a name="command_Admin.unloadNodelet">Admin.unloadNodelet</a></div>
-  <div class="commandSpecNotes">Not implemented. This command is intended to unload a ROS nodelet in Astrobee's flight software. Its primary use is in the system monitor's fault response table, where it is the usual response if initialization of a nodelet fails. As of Oct 2020, there is an internal service that implements this function, but there is no way to invoke it through a standard Astrobee API call. Also, the internal service can't unload nodes running on the HLP.</div>
+  <div class="commandSpecNotes">This command is intended to unload a ROS nodelet in Astrobee's flight software. Its primary use is in the system monitor's fault response table, where it is the usual response if initialization of a nodelet fails. Please note, the internal service can't unload nodes running on the HLP.</div>
   <div class="commandSpecParams">
     <table class="params">
   <tr>

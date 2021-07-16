@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['utility_20code_14072',['Utility code',['../ff_util.html',1,'shared']]],
-  ['using_20faro_14073',['Using Faro',['../using_faro.html',1,'sparsemapping']]]
+  ['utility_20code_14076',['Utility code',['../ff_util.html',1,'shared']]],
+  ['using_20faro_14077',['Using Faro',['../using_faro.html',1,'sparsemapping']]]
 ];

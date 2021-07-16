@@ -239,7 +239,7 @@ var searchData=
   ['isleft_2799',['isLeft',['../classlight__flow_1_1Frame.html#a3bad9b2b2dba07a38ef2052a20ecebdb',1,'light_flow::Frame']]],
   ['ismax2d_2800',['isMax2D',['../classinterest__point_1_1BriskScaleSpace.html#a017f4d76d6980137db21dbaf78e2d7fd',1,'interest_point::BriskScaleSpace']]],
   ['ismodified_2801',['isModified',['../classconfig__reader_1_1ActiveFile.html#a8bc115ee7cfabf5ff0f1e79a0964b9f5',1,'config_reader::ActiveFile']]],
-  ['ison_2802',['ison',['../structTracker.html#a7945595dd1899230ab8351b27336feed',1,'Tracker::ison()'],['../classcpu__mem__monitor_1_1Core.html#af1f6ec14772bf696d2818450d4306176',1,'cpu_mem_monitor::Core::IsOn()']]],
+  ['ison_2802',['IsOn',['../classcpu__mem__monitor_1_1Core.html#af1f6ec14772bf696d2818450d4306176',1,'cpu_mem_monitor::Core::IsOn()'],['../structTracker.html#a7945595dd1899230ab8351b27336feed',1,'Tracker::ison()']]],
   ['isopen_2803',['IsOpen',['../classconfig__reader_1_1ConfigReader.html#aa9b90b296a8268793bbdff8409bd571d',1,'config_reader::ConfigReader::IsOpen()'],['../classff__serial_1_1Serial.html#ae36e6dfaf1cd2fa05e0fc6f6687b39b7',1,'ff_serial::Serial::IsOpen()']]],
   ['ispointwithinfrustum_2804',['IsPointWithinFrustum',['../classalgebra__3d_1_1FrustumPlanes.html#ae2c892d1b4b5a6e43cd4e64e91c73756',1,'algebra_3d::FrustumPlanes']]],
   ['isready_2805',['IsReady',['../classepson__imu_1_1G362P.html#aa0a203c0538e6596e505eef4503e01b9',1,'epson_imu::G362P']]],

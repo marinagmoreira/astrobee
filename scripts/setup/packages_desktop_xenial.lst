@@ -3,7 +3,9 @@ gazebo7
 gazebo7-common
 ros-kinetic-gazebo-ros-pkgs
 libgazebo7-dev
-python-pyqtgraph
+python3-numpy
+python3-pyqtgraph
+python3-rospkg-modules
 doxygen
 zlib1g-dev
 libjson0-dev

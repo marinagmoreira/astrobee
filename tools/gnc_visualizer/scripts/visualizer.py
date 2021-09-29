@@ -362,8 +362,8 @@ class Visualizer(QtGui.QMainWindow):
         self.setWindowTitle("GNC Visualizer")
 
         self.settings = QtCore.QSettings("NASA", "gnc_visualizer")
-        self.restoreGeometry(self.settings.value("geometry", "").toByteArray())
-        self.restoreState(self.settings.value("windowState", "").toByteArray())
+        self.restoreGeometry(self.settings.value("geometry", ""))
+        self.restoreState(self.settings.value("windowState", ""))
 
         QtGui.qApp.installEventFilter(self)
         # make sure initial window size includes menubar

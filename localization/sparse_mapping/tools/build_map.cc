@@ -160,9 +160,15 @@ void DetectAllFeatures(int argc, char** argv) {
   }
   argc = index;
 
-  std::vector<std::string> files(argc - 1);
+  std::vector<std::string> files;
   for (int i = 0; i < argc - 1; i++) {
-    files[i] = std::string(argv[i + 1]);
+    // Confirm that image exists
+    std::ifstream f(argv[i + 1]);
+    if (!f.good()) {
+      LOG(ERROR) << "Path " << argv[i + 1] << " does not exist.";
+      continue;
+    }
+    files.push_back(std::string(argv[i + 1]));
   }
 
   // This is so that we can do loop closure later

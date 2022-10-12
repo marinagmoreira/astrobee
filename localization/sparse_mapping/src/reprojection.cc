@@ -145,8 +145,10 @@ void BundleAdjust(std::vector<std::map<int, int> > const& pid_to_cid_fid,
     }
 
     for (size_t pid = 0; pid < p_pid_to_xyz->size(); pid++) {
-      if ((*p_pid_to_cid_fid)[pid].size() < 2)
-        LOG(FATAL) << "Found a track of size < 2.";
+      if ((*p_pid_to_cid_fid)[pid].size() < 2) {
+        LOG(ERROR) << "Found a track of size < 2.";
+        continue;
+      }
 
       // Don't vary points which project only into cameras which we don't vary.
       bool fix_pid = true;

@@ -27,6 +27,7 @@ At this point you need to decide where you'd like to put the source code
     export ASTROBEE_WS=$HOME/astrobee
 
 First, clone the flight software repository and media:
+(if in Ubuntu 16, don't set `--depth 1`, that option leads to errors)
 
     git clone https://github.com/nasa/astrobee.git $ASTROBEE_WS/src
     pushd $ASTROBEE_WS/src

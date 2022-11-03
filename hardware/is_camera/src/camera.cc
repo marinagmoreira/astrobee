@@ -231,6 +231,7 @@ namespace is_camera {
       bayer_camera_topic_ = camera_topic_ + "_bayer";
       bayer_pub_ = nh->advertise<sensor_msgs::Image>(bayer_camera_topic_, 1);
     }
+
     pub_exposure_ = nh->advertise<std_msgs::Int32MultiArray>(camera_topic_ + "_ctrl", 1);
 
     // Allocate space for our output msg buffer
@@ -304,6 +305,8 @@ namespace is_camera {
     }
     // Check if bayer configuration changed
     EnableBayer(bayer_enable);
+
+    LoadCameraInfo();
 
     // Auto Exposure Parameters
     if (!camera.GetBool("auto_exposure", &auto_exposure_)) {

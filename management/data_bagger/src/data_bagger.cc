@@ -23,8 +23,10 @@
 
 namespace data_bagger {
 
-DataBagger::DataBagger() :
-  ff_util::FreeFlyerNodelet(NODE_DATA_BAGGER, true),
+FF_DEFINE_LOGGER("data_bagger");
+
+DataBagger::DataBagger(const rclcpp::NodeOptions & options) :
+  ff_util::FreeFlyerComponent(options, NODE_DATA_BAGGER, true),
   delayed_recorder_(nullptr),
   immediate_recorder_(nullptr),
   pub_queue_size_(10),
@@ -38,7 +40,7 @@ DataBagger::~DataBagger() {
   ResetRecorders(false);
 }
 
-void DataBagger::Initialize(ros::NodeHandle *nh) {
+void DataBagger::Initialize(NodeHandle &nh) {
   config_params_.AddFile("management/data_bagger.config");
   if (!ReadParams()) {
     return;
@@ -46,34 +48,30 @@ void DataBagger::Initialize(ros::NodeHandle *nh) {
 
   // Setup the publishers
   // All states should be latched
-  pub_data_state_ = nh->advertise<ff_msgs::DataToDiskState>(
+  pub_data_state_ = FF_CREATE_PUBLISHER(nh, ff_msgs::DataToDiskState,
                                             TOPIC_MANAGEMENT_DATA_BAGGER_STATE,
-                                            pub_queue_size_,
-                                            true);
+                                            pub_queue_size_);
 
   // Publish empty state
   PublishState();
 
-  pub_data_topics_ = nh->advertise<ff_msgs::DataTopicsList>(
+  pub_data_topics_ = FF_CREATE_PUBLISHER(nh, ff_msgs::DataTopicsList,
                                             TOPIC_MANAGEMENT_DATA_BAGGER_TOPICS,
-                                            pub_queue_size_,
-                                            true);
+                                            pub_queue_size_);
 
-  set_service_ =
-          nh->advertiseService(SERVICE_MANAGEMENT_DATA_BAGGER_SET_DATA_TO_DISK,
-                               &DataBagger::SetDelayedDataToDiskService,
-                               this);
+  set_service_ = FF_CREATE_SERVICE(
+    nh, ff_msgs::SetDataToDisk, SERVICE_MANAGEMENT_DATA_BAGGER_SET_DATA_TO_DISK,
+    std::bind(&DataBagger::SetDelayedDataToDiskService, this, std::placeholders::_1, std::placeholders::_2));
 
-  record_service_ =
-          nh->advertiseService(SERVICE_MANAGEMENT_DATA_BAGGER_ENABLE_RECORDING,
-                               &DataBagger::EnableDelayedRecordingService,
-                               this);
+  record_service_ = FF_CREATE_SERVICE(
+    nh, ff_msgs::EnableRecording, SERVICE_MANAGEMENT_DATA_BAGGER_ENABLE_RECORDING,
+    std::bind(&DataBagger::EnableDelayedRecordingService, this, std::placeholders::_1, std::placeholders::_2));
 
   // Timer used to determine when to query ros for the topic list. Timer is one
   // shot since it is only used at start up and it is started right away
-  startup_timer_ = nh->createTimer(ros::Duration(startup_time_secs_),
-                                   &DataBagger::OnStartupTimer,
-                                   this,
+  startup_timer_.createTimer(startup_time_secs_,
+                                   std::bind(&DataBagger::OnStartupTimer, this),
+                                   nh,
                                    true);
 }
 
@@ -94,13 +92,13 @@ bool DataBagger::ReadParams() {
 
   // Get startup time. Used to determine when to query ros for topic names
   if (!config_params_.GetUInt("startup_time_secs", &startup_time_secs_)) {
-    NODELET_WARN("Unable to read startup time.");
+    FF_WARN("Unable to read startup time.");
     startup_time_secs_ = 20;
   }
 
   // Get max bag size in bytes.
   if (!config_params_.GetLongLong("bag_size_bytes", &bag_size_bytes_)) {
-    NODELET_WARN("Unable to read bag size bytes. Setting to 96 MB.");
+    FF_WARN("Unable to read bag size bytes. Setting to 96 MB.");
     bag_size_bytes_ = 96000000;
   }
 
@@ -143,7 +141,7 @@ bool DataBagger::ReadParams() {
       }
 
       if (downlink == "immediate" || downlink == "Immediate") {
-        save_settings.downlinkOption = ff_msgs::SaveSettings::IMMEDIATE;
+        save_settings.downlink_option = ff_msgs::SaveSettings::IMMEDIATE;
       } else {
         this->AssertFault(ff_util::INITIALIZATION_FAILED,
                           "Downlink option invalid! Must be immediate!");
@@ -159,7 +157,7 @@ bool DataBagger::ReadParams() {
       default_data_state_.topic_save_settings.push_back(save_settings);
     }
   } else {
-    NODELET_WARN("Default topics table doesn't exist so no bag started.");
+    FF_WARN("Default topics table doesn't exist so no bag started.");
   }
 
   return true;
@@ -167,17 +165,13 @@ bool DataBagger::ReadParams() {
 
 void DataBagger::GetTopicNames() {
   ff_msgs::DataTopicsList data_topics_msg;
-
-  ros::master::V_TopicInfo master_topics;
-  ros::master::getTopics(master_topics);
-
-  for (ros::master::V_TopicInfo::iterator it = master_topics.begin();
-                                              it != master_topics.end(); it++) {
-    data_topics_msg.topic_names.push_back(it->name);
+  auto topic_names_and_types = immediate_recorder_->get_topic_names_and_types();
+  for (const auto &[topic_name, topic_types] : topic_names_and_types) {
+    data_topics_msg.topic_names.push_back(topic_name);
   }
 
-  data_topics_msg.header.stamp = ros::Time::now();
-  pub_data_topics_.publish(data_topics_msg);
+  data_topics_msg.header.stamp = GetTimeNow();
+  pub_data_topics_->publish(data_topics_msg);
 }
 
 // Recursive make dir function
@@ -263,7 +257,7 @@ void DataBagger::AddTopicNamespace(std::string &topic) {
   }
 }
 
-void DataBagger::OnStartupTimer(ros::TimerEvent const& event) {
+void DataBagger::OnStartupTimer() {
   std::string err_msg = "";
 
   GetTopicNames();
@@ -277,104 +271,102 @@ void DataBagger::OnStartupTimer(ros::TimerEvent const& event) {
   }
 }
 
-bool DataBagger::SetDelayedDataToDiskService(ff_msgs::SetDataToDisk::Request &req,
-                                      ff_msgs::SetDataToDisk::Response &res) {
+bool DataBagger::SetDelayedDataToDiskService(const std::shared_ptr<ff_msgs::SetDataToDisk::Request> req,
+                                      std::shared_ptr<ff_msgs::SetDataToDisk::Response> res) {
   // Don't allow set data to disk when we are recording
   if (combined_data_state_.recording) {
-    res.status = "Can't set data to disk while recording data. Please stop ";
-    res.status += "recording and try again.";
-    res.success = false;
+    res->status = "Can't set data to disk while recording data. Please stop ";
+    res->status += "recording and try again.";
+    res->success = false;
     return true;
   }
 
   // Clear delayed topics if we get new delayed topics to record
-  recorder_options_delayed_.topics.clear();
+  record_options_delayed_.topics.clear();
 
   // Also clear current profile name
   delayed_profile_name_ = "";
 
   // Check for empty topic size
-  if (req.state.topic_save_settings.size() == 0) {
+  if (req->state.topic_save_settings.size() == 0) {
     GenerateCombinedState(NULL);
     PublishState();
-    res.success = true;
+    res->success = true;
     return true;
   }
 
-  for (auto & setting : req.state.topic_save_settings) {
+  for (auto & setting : req->state.topic_save_settings) {
     // Check to see if a ground user is trying to bag an immediate topic. This
     // is currently not allowed. Only internal fsw data topics can be immediate
-    if (setting.downlinkOption == setting.IMMEDIATE) {
-      res.status = "Please don't try to record immediate data. Immediate ";
-      res.status += "data is for internal fsw only.";
-      res.success = false;
+    if (setting.downlink_option == setting.IMMEDIATE) {
+      res->status = "Please don't try to record immediate data. Immediate ";
+      res->status += "data is for internal fsw only.";
+      res->success = false;
       return true;
     }
 
     AddTopicNamespace(setting.topic_name);
-    recorder_options_delayed_.topics.push_back(setting.topic_name);
+    record_options_delayed_.topics.push_back(setting.topic_name);
 
     // TODO(Someone) Need to figure out how to record topics at different
     // frequencies. For now, report error if frequency is valid to let the
     // operator know that this functionality isn't implemented yet
     if (setting.frequency != -1) {
-      res.status = "Frequency for every topic must be -1. Different ";
-      res.status += "frequencies for each topic is not suported yet!";
-      res.success = false;
+      res->status = "Frequency for every topic must be -1. Different ";
+      res->status += "frequencies for each topic is not suported yet!";
+      res->success = false;
       return true;
     }
   }
 
-  delayed_profile_name_ = req.state.name;
+  delayed_profile_name_ = req->state.name;
 
-  GenerateCombinedState(&req.state);
+  GenerateCombinedState(&req->state);
   PublishState();
 
-  res.success = true;
+  res->success = true;
   return true;
 }
 
-bool DataBagger::EnableDelayedRecordingService(ff_msgs::EnableRecording::Request &req,
-                                      ff_msgs::EnableRecording::Response &res) {
+bool DataBagger::EnableDelayedRecordingService(const std::shared_ptr<ff_msgs::EnableRecording::Request> req,
+                                      std::shared_ptr<ff_msgs::EnableRecording::Response> res) {
   // Check if we are starting a recording or stopping a recording
-  if (req.enable) {
+  if (req->enable) {
     // Check to see if we are already recording a bag. If we are, reject
     // starting a new recording.
     if (combined_data_state_.recording) {
-      res.status = "Can't start a recording while already recording data. ";
-      res.status += "Please stop the current recording first!";
-      res.success = false;
+      res->status = "Can't start a recording while already recording data. ";
+      res->status += "Please stop the current recording first!";
+      res->success = false;
       return true;
     }
 
     // Check to make sure a delayed profile is loaded
     if (delayed_profile_name_ == "" ||
-                                recorder_options_delayed_.topics.size() == 0) {
-      res.status = "Delayed profile not uploaded or no topics in last ";
-      res.status += "uploaded delayed profile. Please upload a valid profile";
-      res.status += " before recording.";
-      res.success = false;
+                                record_options_delayed_.topics.size() == 0) {
+      res->status = "Delayed profile not uploaded or no topics in last ";
+      res->status += "uploaded delayed profile. Please upload a valid profile";
+      res->status += " before recording.";
+      res->success = false;
       return true;
     }
 
     std::string dated_dir = save_dir_ + GetDate(false) + "/" + robot_name_ +
                                                                     "/delayed/";
-    if (!MakeDir(dated_dir, false, res.status)) {
-      res.success = false;
+    if (!MakeDir(dated_dir, false, res->status)) {
+      res->success = false;
       return true;
     }
 
-    if (req.bag_description == "") {
-      recorder_options_delayed_.prefix = dated_dir + GetDate(true) + "_" +
+    if (req->bag_description == "") {
+      storage_options_delayed_.uri = dated_dir + GetDate(true) + "_" +
                                          delayed_profile_name_;
     } else {
-      recorder_options_delayed_.prefix = dated_dir + GetDate(true) + "_" +
-                              delayed_profile_name_ + "_" + req.bag_description;
+      storage_options_delayed_.uri = dated_dir + GetDate(true) + "_" +
+                              delayed_profile_name_ + "_" + req->bag_description;
     }
 
-    recorder_options_delayed_.split = true;
-    recorder_options_delayed_.max_size = bag_size_bytes_;
-    recorder_options_delayed_.append_date = false;
+    storage_options_delayed_.max_bagfile_size = bag_size_bytes_;
 
     delayed_thread_ = std::thread(&DataBagger::StartDelayedRecording, this);
 
@@ -388,7 +380,7 @@ bool DataBagger::EnableDelayedRecordingService(ff_msgs::EnableRecording::Request
     PublishState();
   }
 
-  res.success = true;
+  res->success = true;
   return true;
 }
 
@@ -404,7 +396,7 @@ std::string DataBagger::GetDate(bool with_time) {
   time_info = localtime_r(&rawtime, time_info);
 
   if (time_info == NULL) {
-    ROS_ERROR_STREAM("Unable to get local time. Errno is " <<
+    FF_ERROR_STREAM("Unable to get local time. Errno is " <<
                                                           std::strerror(errno));
     return "invalid_time";
   }
@@ -428,12 +420,12 @@ bool DataBagger::SetImmediateDataToDisk(std::string &err_msg) {
   ResetRecorders(true);
 
   // Clear record options if we get new immediate data
-  recorder_options_immediate_.topics.clear();
+  record_options_immediate_.topics.clear();
 
   for (auto & setting : default_data_state_.topic_save_settings) {
     // Can assume all downlink options are immediate since this comes from the
     // config file and was already checked when the config file was read in
-    recorder_options_immediate_.topics.push_back(setting.topic_name);
+    record_options_immediate_.topics.push_back(setting.topic_name);
 
     // TODO(Someone) Need to figure out how to record topics at different
     // frequencies. For now, report error if frequency is valid to let the
@@ -452,11 +444,9 @@ bool DataBagger::SetImmediateDataToDisk(std::string &err_msg) {
     return false;
   }
 
-  recorder_options_immediate_.prefix = dated_dir + GetDate(true) + "_" +
+  storage_options_immediate_.uri = dated_dir + GetDate(true) + "_" +
                                                       default_data_state_.name;
-  recorder_options_immediate_.split = true;
-  recorder_options_immediate_.max_size = bag_size_bytes_;
-  recorder_options_immediate_.append_date = false;
+  storage_options_immediate_.max_bagfile_size = bag_size_bytes_;
 
   immediate_thread_ = std::thread(&DataBagger::StartImmediateRecording, this);
 
@@ -467,13 +457,13 @@ bool DataBagger::SetImmediateDataToDisk(std::string &err_msg) {
 }
 
 void DataBagger::StartDelayedRecording() {
-  delayed_recorder_ = new astrobee_rosbag::Recorder(recorder_options_delayed_);
-  delayed_recorder_->run();
+  delayed_recorder_ = new astrobee_rosbag::Recorder(storage_options_delayed_, record_options_delayed_);
+  delayed_recorder_->record();
 }
 
 void DataBagger::StartImmediateRecording() {
-  immediate_recorder_ = new astrobee_rosbag::Recorder(recorder_options_immediate_);
-  immediate_recorder_->run();
+  immediate_recorder_ = new astrobee_rosbag::Recorder(storage_options_immediate_, record_options_immediate_);
+  immediate_recorder_->record();
 }
 
 // clear topics, stop recording, detach recording threads
@@ -518,10 +508,15 @@ void DataBagger::GenerateCombinedState(ff_msgs::DataToDiskState *ground_state) {
 }
 
 void DataBagger::PublishState() {
-  combined_data_state_.header.stamp = ros::Time::now();
-  pub_data_state_.publish(combined_data_state_);
+  combined_data_state_.header.stamp = GetTimeNow();
+  pub_data_state_->publish(combined_data_state_);
 }
 
 }  // namespace data_bagger
 
-PLUGINLIB_EXPORT_CLASS(data_bagger::DataBagger, nodelet::Nodelet)
+#include "rclcpp_components/register_node_macro.hpp"
+
+// Register the component with class_loader.
+// This acts as a sort of entry point, allowing the component to be discoverable when its library
+// is being loaded into a running process.
+RCLCPP_COMPONENTS_REGISTER_NODE(data_bagger::DataBagger)

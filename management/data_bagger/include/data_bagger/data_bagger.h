@@ -27,21 +27,25 @@
 
 #include <errno.h>
 
-#include <ff_msgs/DataToDiskState.h>
-#include <ff_msgs/DataTopicsList.h>
-#include <ff_msgs/EnableRecording.h>
-#include <ff_msgs/SetDataToDisk.h>
-
-#include <ff_util/ff_names.h>
-#include <ff_util/ff_nodelet.h>
-
-#include <pluginlib/class_list_macros.h>
-
-#include <ros/ros.h>
-#include <ros/package.h>
+#include <ff_common/ff_ros.h>
+#include <ff_common/ff_names.h>
+#include <ff_util/ff_component.h>
 
 #include <sys/stat.h>
 #include <sys/types.h>
+
+#include <ff_msgs/msg/data_to_disk_state.hpp>
+#include <ff_msgs/msg/data_topics_list.hpp>
+#include <ff_msgs/srv/enable_recording.hpp>
+#include <ff_msgs/srv/set_data_to_disk.hpp>
+namespace ff_msgs {
+typedef msg::DataToDiskState DataToDiskState;
+typedef msg::DataTopicsList DataTopicsList;
+typedef msg::SaveSettings SaveSettings;
+typedef srv::EnableRecording EnableRecording;
+typedef srv::SetDataToDisk SetDataToDisk;
+}  // namespace ff_msgs
+
 
 #include <string>
 #include <vector>
@@ -49,21 +53,21 @@
 
 namespace data_bagger {
 
-class DataBagger : public ff_util::FreeFlyerNodelet {
+class DataBagger : public ff_util::FreeFlyerComponent {
  public:
-  DataBagger();
+  explicit DataBagger(const rclcpp::NodeOptions & options);
   ~DataBagger();
 
   // Service that sets delayed recording settings
-  bool SetDelayedDataToDiskService(ff_msgs::SetDataToDisk::Request &req,
-                            ff_msgs::SetDataToDisk::Response &res);
+bool SetDelayedDataToDiskService(const std::shared_ptr<ff_msgs::SetDataToDisk::Request> req,
+                                      std::shared_ptr<ff_msgs::SetDataToDisk::Response> res);
 
   // This service enables and disables the delayed recording
-  bool EnableDelayedRecordingService(ff_msgs::EnableRecording::Request &req,
-                              ff_msgs::EnableRecording::Response &res);
+  bool EnableDelayedRecordingService(const std::shared_ptr<ff_msgs::EnableRecording::Request> req,
+                                      std::shared_ptr<ff_msgs::EnableRecording::Response> res);
 
  protected:
-  virtual void Initialize(ros::NodeHandle *nh);
+  virtual void Initialize(NodeHandle &nh);
   bool ReadParams();  // Reads data bagger parameters and default profile
 
  private:
@@ -80,7 +84,7 @@ class DataBagger : public ff_util::FreeFlyerNodelet {
   void AddTopicNamespace(std::string &topic);
 
   // Timer for when the robot finishes startup, starts immediate recording
-  void OnStartupTimer(ros::TimerEvent const& event);
+  void OnStartupTimer();
 
   // Sets immediate recording settings
   bool SetImmediateDataToDisk(std::string &err_msg);
@@ -111,13 +115,17 @@ class DataBagger : public ff_util::FreeFlyerNodelet {
   unsigned int startup_time_secs_;
   int64_t bag_size_bytes_;
 
-  ros::Publisher pub_data_state_, pub_data_topics_;
-  ros::Timer startup_timer_;
+  rclcpp::Publisher<ff_msgs::DataToDiskState>::SharedPtr pub_data_state_;
+  rclcpp::Publisher<ff_msgs::DataTopicsList>::SharedPtr pub_data_topics_;
+  ff_util::FreeFlyerTimer startup_timer_;
 
-  ros::ServiceServer set_service_, record_service_;
+  rclcpp::Service<ff_msgs::SetDataToDisk>::SharedPtr set_service_;
+  rclcpp::Service<ff_msgs::EnableRecording>::SharedPtr record_service_;
 
-  rosbag::RecorderOptions recorder_options_delayed_;
-  rosbag::RecorderOptions recorder_options_immediate_;
+  rosbag2_storage::StorageOptions storage_options_delayed_;
+  rosbag2_storage::StorageOptions storage_options_immediate_;
+  rosbag2_transport::RecordOptions record_options_delayed_;
+  rosbag2_transport::RecordOptions record_options_immediate_;
 
   std::thread delayed_thread_, immediate_thread_;
   std::string save_dir_, robot_name_, delayed_profile_name_;

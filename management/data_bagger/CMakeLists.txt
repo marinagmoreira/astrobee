@@ -15,33 +15,26 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 project(data_bagger)
 
-## Compile as C++14, supported in ROS Kinetic and newer
-add_compile_options(-std=c++14)
-add_definitions(-DROS1)
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
 
-## Find catkin macros and libraries
-find_package(catkin2 REQUIRED COMPONENTS
-  roscpp
-  ff_msgs
-  nodelet
-  ff_util
-  config_reader
-  rosbag
-)
+set( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -Wall -O3 -fPIC" )
 
-catkin_package(
-  LIBRARIES data_bagger astrobee_recorder 
-  CATKIN_DEPENDS
-    roscpp
-    ff_msgs
-    nodelet
-    ff_util
-    config_reader
-    rosbag
-)
+# Find amend and libraries
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(rclcpp_components REQUIRED)
+find_package(rcutils REQUIRED)
+
+find_package(ff_common REQUIRED)
+find_package(ff_util REQUIRED)
+find_package(ff_msgs REQUIRED)
+find_package(config_reader REQUIRED)
 
 ###########
 ## Build ##
@@ -50,46 +43,46 @@ catkin_package(
 # Specify additional locations of header files
 include_directories(
   include
-  ${catkin_INCLUDE_DIRS}
 )
 
 # Declare C++ libraries
 add_library(astrobee_recorder
   src/astrobee_recorder.cc
 )
-add_dependencies(astrobee_recorder ${catkin_EXPORTED_TARGETS})
 target_link_libraries(astrobee_recorder ${catkin_LIBRARIES})
+ament_target_dependencies(astrobee_recorder rclcpp)
 
 # Declare C++ libraries
-add_library(data_bagger
+add_library(data_bagger SHARED
   src/data_bagger.cc
 )
-add_dependencies(data_bagger ${catkin_EXPORTED_TARGETS})
-target_link_libraries(data_bagger astrobee_recorder ${catkin_LIBRARIES})
+target_compile_definitions(data_bagger
+  PRIVATE "COMPOSITION_BUILDING_DLL")
+target_link_libraries(data_bagger astrobee_recorder)
+ament_target_dependencies(data_bagger rclcpp rclcpp_components ff_util)
+rclcpp_components_register_nodes(data_bagger "data_bagger::DataBagger")
 
 #############
 ## Install ##
 #############
 
+ament_export_include_directories(include)
+
 # Mark libraries for installation
 install(TARGETS astrobee_recorder
-  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
 )
 install(TARGETS ${PROJECT_NAME}
-  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
-)
-
-# Mark nodelet_plugin for installation
-install(FILES nodelet_plugins.xml
-        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
 )
 
 # Mark launch files for installation
-install(DIRECTORY launch/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
   PATTERN ".svn" EXCLUDE)
 
+ament_package()

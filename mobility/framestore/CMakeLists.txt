@@ -46,9 +46,6 @@ find_package(msg_conversions REQUIRED)
 # Specify additional locations of header files
 include_directories(
   include
-  ${ff_common_INCLUDE_DIRS}
-  ${config_reader_INCLUDE_DIRS}
-  ${msg_conversions_INCLUDE_DIRS}
 )
 
 # Declare C++ libraries

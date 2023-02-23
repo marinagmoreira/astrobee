@@ -46,12 +46,14 @@
 #include <boost/thread/mutex.hpp>
 #include <boost/regex.hpp>
 
-#include <ros/ros.h>
-#include <ros/time.h>
-#include <ros/callback_queue.h>
 
-#include <std_msgs/Empty.h>
-#include <topic_tools/shape_shifter.h>
+#include <rosbag2_transport/recorder.hpp>
+
+#include <std_msgs/msg/empty.hpp>
+namespace std_msgs {
+typedef msg::Empty Empty;
+}  // namespace std_msgs
+// #include <topic_tools/shape_shifter.h>
 
 #include <queue>
 #include <set>
@@ -61,64 +63,36 @@
 #include <mutex>
 #include <condition_variable> // NOLINT
 
-#include "rosbag/bag.h"
-#include "rosbag/stream.h"
-#include "rosbag/macros.h"
-#include "rosbag/recorder.h"
-
 namespace astrobee_rosbag {
 
-using rosbag::OutgoingMessage;
-using rosbag::OutgoingQueue;
-using rosbag::RecorderOptions;
-using rosbag::Bag;
+// using rosbag::OutgoingMessage;
+// using rosbag::OutgoingQueue;
+using rosbag2_transport::RecordOptions;
+using rosbag2_storage::StorageOptions;
+using rosbag2_cpp::Writer;
+using namespace std::chrono_literals;  // NOLINT
 
-class ROSBAG_DECL Recorder {
+class Recorder : public rosbag2_transport::Recorder{
  public:
-  explicit Recorder(RecorderOptions const& options);
+  explicit Recorder(const StorageOptions & storage_options, const RecordOptions & record_options);
+  ~Recorder();
 
-  void doTrigger();
-
-  bool isSubscribed(std::string const& topic) const;
-
-  boost::shared_ptr<ros::Subscriber> subscribe(std::string const& topic);
-
-  int run();
+  int record();
 
   void stop();
 
  private:
-  void printUsage();
-
-  void updateFilenames();
-  void startWriting();
-  void stopWriting();
-
   bool checkLogging();
   bool scheduledCheckDisk();
   bool checkDisk();
 
-  void snapshotTrigger(std_msgs::Empty::ConstPtr trigger);
-  void doQueue(const ros::MessageEvent<topic_tools::ShapeShifter const>& msg_event,
-               std::string const& topic,
-               boost::shared_ptr<ros::Subscriber> subscriber,
-               boost::shared_ptr<int> count);
-  void doRecord();
   void checkNumSplits();
-  bool checkSize();
-  bool checkDuration(const ros::Time&);
-  void doRecordSnapshotter();
-  void doCheckMaster(ros::TimerEvent const& e, ros::NodeHandle& node_handle);
 
-  bool shouldSubscribeToTopic(std::string const& topic, bool from_node = false);
-
-  template<class T>
-  static std::string timeToStr(T ros_t);
 
  private:
-    RecorderOptions               options_;
-
-    Bag                           bag_;
+    std::shared_ptr<rosbag2_cpp::Writer> writer_;
+    StorageOptions                storage_options_;
+    RecordOptions                 record_options_;
 
     std::string                   target_filename_;
     std::string                   write_filename_;
@@ -131,27 +105,25 @@ class ROSBAG_DECL Recorder {
 
     boost::condition_variable_any queue_condition_;      //!< conditional variable for queue
     boost::mutex                  queue_mutex_;          //!< mutex for queue
-    std::queue<OutgoingMessage>*  queue_;                //!< queue for storing
+    // std::queue<OutgoingMessage>*  queue_;                //!< queue for storing
     uint64_t                      queue_size_;           //!< queue size
     uint64_t                      max_queue_size_;       //!< max queue size
 
     uint64_t                      split_count_;          //!< split count
 
-    std::queue<OutgoingQueue>     queue_queue_;          //!< queue of queues to be used by the snapshot recorders
+    // std::queue<OutgoingQueue>     queue_queue_;          //!< queue of queues to be used by the snapshot recorders
 
-    ros::Time                     last_buffer_warn_;
+    rclcpp::Time                     last_buffer_warn_;
 
-    ros::Time                     start_time_;
+    rclcpp::Time                     start_time_;
 
     bool                          writing_enabled_;
     boost::mutex                  check_disk_mutex_;
-    ros::WallTime                 check_disk_next_;
-    ros::WallTime                 warn_next_;
-    ros::NodeHandle               node_handle_;
-    ros::CallbackQueue            callback_queue_;
-    std::mutex                    mutex_;
-    bool                          should_stop_;
-    std::condition_variable       condition_variable_;
+    // ros::WallTime                 check_disk_next_;
+    // ros::WallTime                 warn_next_;
+    // ros::NodeHandle               node_handle_;
+    // ros::CallbackQueue            callback_queue_;
+    std::unique_ptr<rclcpp::executors::SingleThreadedExecutor> exec_;
 };
 
 }  // namespace astrobee_rosbag

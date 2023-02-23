@@ -165,7 +165,7 @@ class FreeFlyerServiceClient {
       }
     // Case: disconnected
     } else {
-      FF_CREATE_SERVICE_CLIENT(service_client_, ServiceSpec, topic_);
+      service_client_ = FF_CREATE_SERVICE_CLIENT(node_, ServiceSpec, topic_);
       state_ = WAITING_FOR_CONNECT;
       StartOptionalTimer(timer_connected_, to_connected_);
       StartOptionalTimer(timer_poll_, to_poll_);

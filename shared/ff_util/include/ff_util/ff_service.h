@@ -29,6 +29,7 @@
 #include <memory>
 
 namespace ff_util {
+FF_DEFINE_LOGGER("ff_util_ff_service")
 
 template < class ServiceSpec >
 struct FreeFlyerService {
@@ -117,14 +118,22 @@ class FreeFlyerServiceClient {
   }
   bool call(const std::shared_ptr<typename ServiceSpec::Request> & request,
             std::shared_ptr<typename ServiceSpec::Response> & response) {
+      FF_ERROR_STREAM("call!!!");
     if (IsConnected()) {
       auto result = service_client_->async_send_request(request);
+      FF_ERROR_STREAM("sent request");
       std::future_status status = result.wait_for((std::chrono::seconds)10);  // timeout to guarantee a graceful finish
+      FF_ERROR_STREAM("after wait; ready:" << (status == std::future_status::ready)
+                                           << " deferred:" << (status == std::future_status::deferred)
+                                           << " timeout:" << (status == std::future_status::timeout));
 
       if (status == std::future_status::ready) {
         response = result.get();
+        FF_ERROR_STREAM("after call service success: " << response->success << " status: " << response->status);
         return true;
       }
+      // response = result.get();
+      FF_ERROR_STREAM("after call service fail: ");
     }
     return false;
   }

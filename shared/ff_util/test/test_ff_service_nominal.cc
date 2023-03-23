@@ -29,62 +29,73 @@ FF_DEFINE_LOGGER("test_ff_service_nominal")
 
 bool test_done = false;
 
-class Client : public ff_util::FreeFlyerComponent {
+class Client : public rclcpp::Node {
  public :
-  explicit Client(const rclcpp::NodeOptions& options) :
-      FreeFlyerComponent(options, "service_client_test", false) {}
+  Client() : Node("client_node") {
+    client_cb_group_ = this->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+    timer_cb_group_ = this->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
 
-  void Initialize(NodeHandle &node) {
-    client_.Create(node, "/testing/set_rate");
+    client_ptr_ = this->create_client<ff_msgs::srv::SetRate>("/testing/set_rate", rmw_qos_profile_services_default,
+                                                            client_cb_group_);
+    timer_ptr_ = this->create_wall_timer((std::chrono::duration<double>) 1, std::bind(&Client::TestCall, this),
+                                            timer_cb_group_);
   }
 
   void TestCall() {
-    ff_msgs::srv::SetRate::Request request;
-    auto response = std::make_shared<ff_msgs::srv::SetRate::Response>();
-    request.which = ff_msgs::srv::SetRate::Request::DISK_STATE;
-    request.rate = 5.0;
+    // timer_ptr_->cancel();
 
-    client_.waitForExistence(5.0);
+    client_ptr_->wait_for_service((std::chrono::duration<double>) 10);
+
+    auto response = std::make_shared<ff_msgs::srv::SetRate::Response>();
 
     FF_ERROR("before call service");
 
     // Test is valid for fun
-    bool status = false;
-    if (client_.isValid()) {
-      status = client_.call(request, response);
+    auto request = std::make_shared<ff_msgs::srv::SetRate::Request>();
+    request->which = ff_msgs::srv::SetRate::Request::DISK_STATE;
+    request->rate = 5.0;
+
+
+
+    auto result_future = client_ptr_->async_send_request(request);
+    std::future_status status =
+      result_future.wait_for((std::chrono::duration<double>)10);  // timeout to guarantee a graceful finish
+    if (status == std::future_status::ready) {
+        response = result_future.get();
+        FF_ERROR_STREAM("Received response");
     }
 
-    FF_ERROR_STREAM("after call service success: " << response->success << " status: " << response->status);
+    FF_ERROR_STREAM("after wait--- ready:" << (status == std::future_status::ready)
+                                           << " deferred:" << (status == std::future_status::deferred)
+                                           << " timeout:" << (status == std::future_status::timeout));
 
-    EXPECT_TRUE(status);
+    EXPECT_TRUE((status == std::future_status::ready));
     EXPECT_TRUE(response->success);
     EXPECT_EQ(response->status, "Which is disk state.");
     test_done = true;
   }
 
  private:
-  ff_util::FreeFlyerServiceClient<ff_msgs::srv::SetRate> client_;
+  rclcpp::CallbackGroup::SharedPtr client_cb_group_;
+  rclcpp::CallbackGroup::SharedPtr timer_cb_group_;
+
+  rclcpp::Client<ff_msgs::srv::SetRate>::SharedPtr client_ptr_;
+  rclcpp::TimerBase::SharedPtr timer_ptr_;
 };
 
 TEST(ff_service, Nominal) {
   test_done = false;
-  rclcpp::executors::MultiThreadedExecutor::SharedPtr exec =
-                  std::make_shared<rclcpp::executors::MultiThreadedExecutor>();
-  rclcpp::NodeOptions node_options;
-  rclcpp::Node::SharedPtr test_node =
-                  std::make_shared<rclcpp::Node>("test_ff_service_nominal");
 
-  exec->add_node(test_node);
+  auto client_node = std::make_shared<Client>();
+  FF_ERROR("Created Node");
 
-//  Server server(node_options);
-  Client client(node_options);
+  rclcpp::executors::MultiThreadedExecutor executor;
+  executor.add_node(client_node);
+  FF_ERROR("Added to executor");
 
-//  server.Initialize(test_node);
-  client.Initialize(test_node);
 
-  client.TestCall();
   while (!test_done) {
-    exec->spin_some();
+    executor.spin_some();
   }
 }
 

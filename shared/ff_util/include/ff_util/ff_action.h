@@ -531,14 +531,19 @@ class FreeFlyerActionClient {
 
   // Cancel the goal that is currently running
   bool CancelGoal() {
-    if (!sac_ || !current_goal_handle_) return false;
+      FF_ERROR_STREAM("CancelGoal");
+      if (!sac_ || !current_goal_handle_) return false;
+      FF_ERROR_STREAM("CancelGoal2");
     // Only cancel a goal if we are in the correct state
     switch (state_) {
       case WAITING_FOR_ACTIVE:
       case WAITING_FOR_RESPONSE:
       case WAITING_FOR_DEADLINE:
+        FF_ERROR_STREAM("waiting");
         StopAllTimers();
+        FF_ERROR_STREAM("waiting2");
         sac_->async_cancel_goal(current_goal_handle_);
+        FF_ERROR_STREAM("waiting3");
         // Set goal handle to null so we stop tracking the goal
         current_goal_handle_ = nullptr;
         state_ = WAITING_FOR_GOAL;

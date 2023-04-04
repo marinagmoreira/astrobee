@@ -688,6 +688,7 @@ class ChoreographerComponent : public ff_util::FreeFlyerComponent {
 
   // Complete the current dock or undock action
   int32_t Result(int32_t response) {
+    FF_ERROR_STREAM("Result in choreographer " << response);
     ff_msgs::action::Motion::Result result;
     // Teardown any child services correctly
     switch (response) {
@@ -748,12 +749,16 @@ class ChoreographerComponent : public ff_util::FreeFlyerComponent {
       result.fsm_result = "Endpoint position tolerance violated";
       break;
     case RESPONSE::TOLERANCE_VIOLATION_POSITION:
+      FF_ERROR_STREAM("Position tolerance violated");
       result.fsm_result = "Position tolerance violated";
       client_c_.CancelGoal();
+      FF_ERROR_STREAM("Position tolerance violated2");
       break;
     case RESPONSE::TOLERANCE_VIOLATION_ATTITUDE:
+      FF_ERROR_STREAM("Attitude tolerance violated");
       result.fsm_result = "Attitude tolerance violated";
       client_c_.CancelGoal();
+      FF_ERROR_STREAM("Attitude tolerance violated2");
       break;
     case RESPONSE::TOLERANCE_VIOLATION_VELOCITY:
       result.fsm_result = "Velocity tolerance violated";
@@ -822,18 +827,21 @@ class ChoreographerComponent : public ff_util::FreeFlyerComponent {
       }
       break;
     }
+    FF_ERROR_STREAM("made response");
     // If we get here then we are in a valid action state, so we will need
     // to produce a meaningful result for the callee.
     result.response = response;
     result.segment = segment_;
     result.flight_mode = flight_mode_;
     auto result_s = std::make_shared<ff_msgs::action::Motion::Result>(result);
+    FF_ERROR_STREAM("made result");
     if (response > 0)
       server_.SendResult(ff_util::FreeFlyerActionState::SUCCESS, result_s);
     else if (response < 0)
       server_.SendResult(ff_util::FreeFlyerActionState::ABORTED, result_s);
     else
       server_.SendResult(ff_util::FreeFlyerActionState::PREEMPTED, result_s);
+    FF_ERROR_STREAM("xxx  SendResult " << response);
     // Special case: IDLING needs to move to an IDLE state
     if (fsm_.GetState() == STATE::IDLING && response == RESPONSE::SUCCESS)
       return STATE::IDLE;
@@ -1273,6 +1281,7 @@ class ChoreographerComponent : public ff_util::FreeFlyerComponent {
   // MOTION ACTION SERVER
 
   void GoalCallback(std::shared_ptr<const ff_msgs::action::Motion::Goal> const& goal) {
+    FF_ERROR("Goal Callback in choreographer");
     auto result = std::make_shared<ff_msgs::action::Motion::Result>();
     // We can only accept new commands if we are currently in an idle state.
     // This should be the case if Preempt() was called beforehand -- as it

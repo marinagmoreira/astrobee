@@ -29,7 +29,7 @@
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 
 // FSW includes
-#include <ff_util/ff_names.h>
+#include <ff_common/ff_names.h>
 #include <ff_util/ff_action.h>
 #include <ff_util/config_client.h>
 
@@ -105,7 +105,6 @@ TEST(choreographer_nominal, ZoneBreach) {
   cfg.Set<bool>("enable_validation", true);
   cfg.Set<bool>("enable_bootstrapping", true);
   cfg.Set<bool>("enable_immediate", true);
-  cfg.Set<bool>("enable_timesync", false);
   cfg.Set<bool>("enable_replanning", true);
   cfg.Set<bool>("enable_faceforward", false);
   cfg.Set<std::string>("planner", "trapezoidal");

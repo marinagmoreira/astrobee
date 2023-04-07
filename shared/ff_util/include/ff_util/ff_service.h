@@ -21,6 +21,7 @@
 
 // ROS includes
 #include <ff_common/ff_ros.h>
+#include <ff_util/ff_timer.h>
 
 // C++ includes
 #include <string>
@@ -29,21 +30,21 @@
 
 namespace ff_util {
 
-template < class ServiceRequestSpec, class ServiceResponseSpec >
+template < class ServiceSpec >
 struct FreeFlyerService {
   FreeFlyerService() {
-    request = std::make_shared<ServiceRequestSpec>();
-    response = std::make_shared<ServiceResponseSpec>();
+    request = std::make_shared<typename ServiceSpec::Request>();
+    response = std::make_shared<typename ServiceSpec::Response>();
   }
-  std::shared_ptr<ServiceRequestSpec> request;
-  std::shared_ptr<ServiceResponseSpec> response;
+  std::shared_ptr<typename ServiceSpec::Request> request;
+  std::shared_ptr<typename ServiceSpec::Response> response;
 };
 
 ///////////////////////////// SERVICE CLIENT CODE /////////////////////////////
 
 // This is a simple wrapper around a ROS2 service client.
 
-template < class ServiceSpec, class ServiceRequestSpec, class  ServiceResponseSpec >
+template < class ServiceSpec >
 class FreeFlyerServiceClient {
  protected:
   enum State {
@@ -89,6 +90,8 @@ class FreeFlyerServiceClient {
     // Save the node handle and topic to support reconnects
     node_ = node;
     topic_ = topic;
+    client_group_ = node->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+
     return IsConnected();
   }
 
@@ -100,23 +103,34 @@ class FreeFlyerServiceClient {
     return false;
   }
 
-  bool Call(FreeFlyerService<ServiceRequestSpec, ServiceResponseSpec> &
-                                                                    service) {
+  bool Call(FreeFlyerService<ServiceSpec> & service) {
     return call(service);
   }
 
+  bool Call(const typename ServiceSpec::Request & request, std::shared_ptr<typename ServiceSpec::Response> & response) {
+    return call(request, response);
+  }
+
   // ROS1 functions
-  bool call(FreeFlyerService<ServiceRequestSpec, ServiceResponseSpec>& service) {
+  bool call(const typename ServiceSpec::Request & request, std::shared_ptr<typename ServiceSpec::Response> & response) {
+    return call(std::make_shared<typename ServiceSpec::Request>(request), response);
+  }
+  bool call(const std::shared_ptr<typename ServiceSpec::Request> & request,
+            std::shared_ptr<typename ServiceSpec::Response> & response) {
     if (IsConnected()) {
-      auto result = service_client_->async_send_request(service.request);
-      rclcpp::FutureReturnCode return_code =
-                            rclcpp::spin_until_future_complete(node_, result);
-      service.response = result.get();
-      if (return_code == rclcpp::FutureReturnCode::SUCCESS) {
+      auto result = service_client_->async_send_request(request);
+      std::future_status status = result.wait_for((std::chrono::seconds)10);  // timeout to guarantee a graceful finish
+
+      if (status == std::future_status::ready) {
+        response = result.get();
         return true;
       }
     }
     return false;
+  }
+
+  bool call(FreeFlyerService<ServiceSpec> & service) {
+    return call(service.request.get(), service.response);
   }
 
   bool exists() {
@@ -165,7 +179,8 @@ class FreeFlyerServiceClient {
       }
     // Case: disconnected
     } else {
-      service_client_ = FF_CREATE_SERVICE_CLIENT(node_, ServiceSpec, topic_);
+      service_client_ = node_->create_client<ServiceSpec>(topic_, rmw_qos_profile_services_default,
+                                                                client_group_);
       state_ = WAITING_FOR_CONNECT;
       StartOptionalTimer(timer_connected_, to_connected_);
       StartOptionalTimer(timer_poll_, to_poll_);
@@ -187,6 +202,7 @@ class FreeFlyerServiceClient {
   TimeoutCallbackType cb_timeout_;
   ConnectedCallbackType cb_connected_;
   ServiceClient<ServiceSpec> service_client_;
+  rclcpp::CallbackGroup::SharedPtr client_group_;
   ff_util::FreeFlyerTimer timer_connected_;
   ff_util::FreeFlyerTimer timer_poll_;
   std::string topic_;

@@ -28,7 +28,7 @@
 
 // Required for the test cases
 #include <ff_msgs/FaultState.h>
-#include <ff_util/ff_names.h>
+#include <ff_common/ff_names.h>
 
 // Required for the test framework
 #include <gtest/gtest.h>
@@ -44,7 +44,7 @@ void FaultStateCallback(ff_msgs::FaultStateConstPtr const& state) {
   fault_state = state;
 }
 
-void FaultCheckTimeoutCallback(ros::TimerEvent const& te) {
+void FaultCheckTimeoutCallback() {
   bool found = false;
   for (unsigned int i = 0; i < fault_state->faults.size() && !found; i++) {
     if (static_cast<int>(fault_state->faults[i].id) == init_fault_id) {

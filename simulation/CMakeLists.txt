@@ -65,7 +65,7 @@ find_package(gazebo_dev REQUIRED)
 find_package(gazebo_ros REQUIRED)
 
 # Find jsoncpp
-SET(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/../cmake")
+LIST(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/../cmake")
 find_package(JsonCpp REQUIRED)
 
 
@@ -284,6 +284,7 @@ install(TARGETS
 
 # Also install some other resources
 install(DIRECTORY worlds DESTINATION share/${PROJECT_NAME})
+install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
 
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION include/${PROJECT_NAME}

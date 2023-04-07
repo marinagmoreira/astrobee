@@ -19,50 +19,57 @@
 #ifndef FF_UTIL_CONFIG_CLIENT_H_
 #define FF_UTIL_CONFIG_CLIENT_H_
 
-#include <ros/ros.h>
-
+#include <ff_common/ff_ros.h>
 #include <ff_common/ff_names.h>
-
-#include <dynamic_reconfigure/Reconfigure.h>
 
 #include <string>
 #include <list>
 
 namespace ff_util {
+
 class ConfigClient {
  public:
   // Constructor and destructor
-  explicit ConfigClient(ros::NodeHandle *platform_nh, const std::string &node);
+  explicit ConfigClient(NodeHandle & platform_nh, const std::string &node);
   virtual ~ConfigClient();
   // Call a reconfigure with all set variables
   bool Reconfigure();
   // Getters and Setters
-  template<typename T> bool Set(const std::string &name, const T &value);
-  template<typename T> bool Get(const std::string &name, T &value);
-  template<typename T> T Get(const std::string &name) {
+  template<typename T>
+  bool Get(const std::string &name, T &value) {
+    if (!parameters_client_->has_parameter(name)) {
+        Error("Cannot query parameter " + name);
+        return false;
+    }
+    value = parameters_client_->get_parameter<T>(name);
+    return true;
+  }
+
+  template<typename T>
+  bool Set(const std::string &name, const T &value) {
+    rclcpp::Parameter p(name, value);
+    auto result = parameters_client_->set_parameters({p});
+    if (result.size() != 1 || !result[0].successful) {
+      Error("Failed to set parameter " + name);
+      return false;
+    }
+    return true;
+  }
+
+  template<typename T>
+  T Get(const std::string &name) {
     T tmp;
     if (!Get(name, tmp)) {
-      ROS_ERROR_STREAM("Cannot query parameter " << name);
+      Error("Cannot query parameter " + name);
     }
     return tmp;
   }
+
  private:
+  void Error(std::string out);
   // Private members
-  ros::NodeHandle nh_;
-  ros::ServiceClient service_;
-  dynamic_reconfigure::ReconfigureRequest request_;
+  std::shared_ptr<rclcpp::SyncParametersClient> parameters_client_;
 };
-
-template<> bool ConfigClient::Get<int>(const std::string &name, int &value);
-template<> bool ConfigClient::Get<double>(const std::string &name, double &value);
-template<> bool ConfigClient::Get<bool>(const std::string &name, bool &value);
-template<> bool ConfigClient::Get<std::string>(const std::string &name, std::string &value);
-
-template<> bool ConfigClient::Set<int>(const std::string &name, const int &value);
-template<> bool ConfigClient::Set<double>(const std::string &name, const double &value);
-template<> bool ConfigClient::Set<bool>(const std::string &name, const bool &value);
-template<> bool ConfigClient::Set<std::string>(const std::string &name, const std::string &value);
-
 }  // namespace ff_util
 
 #endif  // FF_UTIL_CONFIG_CLIENT_H_

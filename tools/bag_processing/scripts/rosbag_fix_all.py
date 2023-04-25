@@ -41,7 +41,14 @@ def dosys(cmd):
 
 
 def rosbag_fix_all(
-    inbag_paths_in, jobs, debayer, decode_haz, filter_args, no_merge, deserialize=False
+    inbag_paths_in,
+    jobs,
+    debayer,
+    decode_haz,
+    add_image,
+    filter_args,
+    no_merge,
+    deserialize=False,
 ):
     this_folder = os.path.dirname(os.path.realpath(__file__))
     makefile = os.path.join(this_folder, "Makefile.rosbag_fix_all")
@@ -94,18 +101,24 @@ def rosbag_fix_all(
             )
             return 1
 
+    if add_image == "":
+        rosbag_image_adder_args = "-n"
+    else:
+        rosbag_image_adder_args = "--image-dir" + add_image
+
     # Rosbag filter
     rosbag_filter_args = filter_args
 
     # Call entire pipeline on all the files
     # "1>&2": redirect stdout to stderr to see make's command echo in rostest output
     ret1 = dosys(
-        'REWRITE_TYPES_ARGS="%s" ROSBAG_VERIFY_ARGS="%s" ROSBAG_DEBAYER_ARGS="%s" ROSBAG_SPLIT_DEPTH_ARGS="%s" ROSBAG_FILTER_ARGS="%s" make -f%s -j%s %s 1>&2'
+        'REWRITE_TYPES_ARGS="%s" ROSBAG_VERIFY_ARGS="%s" ROSBAG_DEBAYER_ARGS="%s" ROSBAG_SPLIT_DEPTH_ARGS="%s" ROSBAG_IMAGE_ADDER_ARGS="%s" ROSBAG_FILTER_ARGS="%s" make -f%s -j%s %s 1>&2'
         % (
             rewrite_types_args,
             rosbag_verify_args,
             rosbag_debayer_args,
             rosbag_pico_split_extended_args,
+            rosbag_image_adder_args,
             rosbag_filter_args,
             makefile,
             jobs,
@@ -184,6 +197,12 @@ if __name__ == "__main__":
         type=str,
     )
     parser.add_argument(
+        "--add-image",
+        help="add cam image to bag, specify images path",
+        default="",
+        type=str,
+    )
+    parser.add_argument(
         "--filter",
         help='filter the bagfile. Use with "" quotes. Example:  --filter "--accept /loc/* --reject /loc/ml/features"',
         default="",
@@ -205,6 +224,7 @@ if __name__ == "__main__":
         args.jobs,
         args.debayer,
         args.decode_haz,
+        args.add_image,
         args.filter,
         args.no_merge,
         deserialize=args.deserialize,

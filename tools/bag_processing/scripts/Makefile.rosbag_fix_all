@@ -53,6 +53,12 @@ ifeq (,${ROSBAG_SPLIT_DEPTH})
     $(error could not find path to pico_split_extended.py)
   endif
 endif
+ifeq (,${ROSBAG_IMAGE_ADDER})
+  ROSBAG_IMAGE_ADDER := $(shell catkin_find --first-only bag_processing scripts/rosbag_add_images.py || echo FAIL)
+  ifneq (,$(findstring FAIL,$(ROSBAG_IMAGE_ADDER)))
+    $(error could not find path to rosbag_add_images.py)
+  endif
+endif
 ifeq (,${ROSBAG_FILTER})
   ROSBAG_FILTER := $(shell catkin_find --first-only bag_processing scripts/rosbag_topic_filter.py || echo FAIL)
   ifneq (,$(findstring FAIL,$(ROSBAG_FILTER)))
@@ -105,8 +111,13 @@ migrate_check2-%: %.migrate_old.bag
 	${ROSBAG_SPLIT_DEPTH} ${ROSBAG_SPLIT_DEPTH_ARGS} $< -o $@
 	if [ -f $< ]; then rm $< ; fi  # explicitly delete right away to save disk space
 
+# Add images to bag
+%.image_adder.bag: %.depth_split.bag
+  ${ROSBAG_SPLIT_DEPTH} ${ROSBAG_IMAGE_ADDER_ARGS} $< -o $@
+  if [ -f $< ]; then rm $< ; fi  # explicitly delete right away to save disk space
+
 # Filter the rosbag topics
-%.fix_all.bag: %.depth_split.bag
+%.fix_all.bag: %.image_adder.bag
 ifeq (,${ROSBAG_FILTER_ARGS})
 	mv $< $@  # skip no-op filtering
 else
@@ -114,4 +125,4 @@ else
 endif
 	if [ -f $< ]; then rm $< ; fi  # explicitly delete right away to save disk space
 
-.PRECIOUS: %.rewrite_types.bag %.migrate_old.bag %.debayer.bag %.depth_split.bag
+.PRECIOUS: %.rewrite_types.bag %.migrate_old.bag %.debayer.bag %.depth_split.bag %.image_adder.bag
